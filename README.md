@@ -1,73 +1,73 @@
 # 13.10.1307 — MENE, MENE, TEKEL, UPHARSIN
 
-Добро пожаловать в 13.10.1307 — собранный и структурированный корпус исследований (2020–2026) по пересечению безопасности облаков для DoD, eBPF/ядра, Kubernetes-платформ и связанной академической библиографии.
+Welcome to 13.10.1307 — a curated and structured research corpus (2020–2026) covering the intersection of U.S. Department of Defense cloud security requirements, kernel/eBPF topics, Kubernetes platform security, and a compiled academic bibliography.
 
-Этот репозиторий — не просто набор CSV и одного длинного документа: это интерактивный справочник и набор данных для исследователей, инженеров и аналитиков политики.
-
----
-
-## Быстрое содержание
-
-- Research_Report_DoD_Cloud_eBPF_Security.md — полноформатный исследовательский отчёт и библиография (основной документ).
-- master_index.csv — индекс по всем наборам данных / темам в репозитории.
-- comprehensive_research_report.csv — компилированная база источников и записей (большой CSV).
-- year_distribution.png — визуализация распределения по годам (подсказка: можно встроить в ноутбук).
-- множество *scholar_*.csv и тематических CSV (eBPF, Starlink, submarine_cables, DoD-политики и т.д.) — готовые для анализа наборы данных.
-- LICENSE — лицензия репозитория (см. файл).
-- אמת.bin — бинарный файл с именем на иврите (оставлен как артефакт/ресурс).
-
-Полный список файлов и папок можно просмотреть на GitHub: https://github.com/Daothecreator/13.10.1307
+This repository is more than a collection of CSVs and a long report: it's an interactive reference and dataset collection intended for researchers, engineers, and policy analysts.
 
 ---
 
-## Для кого это
+## Quick contents
 
-- Архитекторы безопасности и инженеры облачных платформ (особенно DoD IL5/IL6).
-- Исследователи ядра/обеспечения безопасности eBPF и XDP.
-- Политические аналитики, документалисты и библиографы.
-- Любые люди, которым интересна историческая и тематическая компиляция источников (2020–2026).
+- Research_Report_DoD_Cloud_eBPF_Security.md — the full research report and bibliography (primary document).
+- master_index.csv — index of datasets and topics across the repo.
+- comprehensive_research_report.csv — compiled source records (large CSV).
+- year_distribution.png — visualization of year distribution (good for notebooks).
+- many `scholar_*.csv` and topical CSVs (e.g., eBPF, Starlink, submarine_cables, DoD policies) — ready for analysis.
+- LICENSE — repository license (see file).
+- אמת.bin — a binary file with a Hebrew filename (artifact/resource).
+
+Full file listing and browser view: https://github.com/Daothecreator/13.10.1307
 
 ---
 
-## Как начать (интерактивно)
+## Who this is for
 
-1) Клонировать репозиторий:
+- DoD cloud security architects and platform engineers (especially IL5/IL6 contexts).
+- Kernel/eBPF security researchers and XDP practitioners.
+- Policy analysts, bibliographers, and technical documentarians.
+- Anyone interested in a curated, thematic compilation of sources from 2020–2026.
+
+---
+
+## Getting started (interactive)
+
+1) Clone the repository:
 
 ```bash
 git clone https://github.com/Daothecreator/13.10.1307.git
 cd 13.10.1307
 ```
 
-2) Быстро просмотреть индекс и несколько файлов (однострочно):
+2) Quick command-line checks:
 
 ```bash
-# показать первые 10 строк master_index.csv
+# show first 10 lines of the index
 head -n 10 master_index.csv
 
-# посчитать количество CSV
+# count CSV files
 ls *.csv | wc -l
 ```
 
-3) Открыть CSV в Python / Jupyter для интерактивного анализа (рекомендуется):
+3) Open CSVs in Python / Jupyter for interactive analysis (recommended):
 
 ```python
 # requirements: pandas, jupyterlab
 import pandas as pd
 
-# загрузить индекс
+# load index
 idx = pd.read_csv('master_index.csv')
 print(idx.head())
 
-# пример: посмотреть распределение по годам
+# example: year distribution
 years = pd.read_csv('comprehensive_research_report.csv')
 print(years['year'].value_counts().sort_index())
 
-# быстро визуализировать year_distribution.png в ноутбуке
+# display the included image in a notebook
 from IPython.display import Image, display
 display(Image('year_distribution.png'))
 ```
 
-4) Искать статьи / авторов среди scholar_*.csv:
+4) Search authors/articles among `scholar_*.csv`:
 
 ```python
 import glob
@@ -79,14 +79,12 @@ for f in files[:5]:
     print(f, df.shape)
 ```
 
-5) Генерировать собственные сводки (пример — собрать все строки по теме eBPF):
+5) Create quick summaries (example: combine eBPF CSVs):
 
 ```python
 import pandas as pd
 from glob import glob
 
-paths = glob('ebpf_*.csv') + ['Research_Report_DoD_Cloud_eBPF_Security.md']
-# объединить CSV
 dfs = [pd.read_csv(p) for p in glob('ebpf_*.csv')]
 all_ebpf = pd.concat(dfs, ignore_index=True)
 print(all_ebpf.head())
@@ -94,66 +92,69 @@ print(all_ebpf.head())
 
 ---
 
-## Интерфейс исследования (удобное взаимодействие)
+## Usability improvements (suggested)
 
-Чтобы сделать работу с репозиторием приятной для всех, предлагаю следующие интерактивные улучшения — вы можете помочь с PR:
+To make the repo more friendly and interactive, consider these enhancements (I can prepare PRs):
 
-- Добавить Jupyter notebooks/examples:
-  - notebooks/01-explore-index.ipynb — автоматическое чтение master_index и визуализация.
-  - notebooks/02-ebpf-summary.ipynb — быстрая тематическая сводка по eBPF.
-- Добавить tiny web-ui (Streamlit) для поиска по master_index и preview CSV.
-- Разбить Research_Report_DoD_Cloud_eBPF_Security.md на отдельные markdown-файлы по разделам и создать оглавление.
-- Добавить GitHub Actions, которые:
-  - проверяют целостность CSV (читаемость, UTF-8),
-  - генерируют актуальную year_distribution.png из comprehensive_research_report.csv и пушат в docs/.
+- Add Jupyter notebooks/examples:
+  - notebooks/01-explore-index.ipynb — automatic index reading and visualizations.
+  - notebooks/02-ebpf-summary.ipynb — quick thematic summary for eBPF.
+- Add a tiny web UI (Streamlit) for searching master_index and previewing CSVs.
+- Split Research_Report_DoD_Cloud_eBPF_Security.md into separate markdown files per section and add a table of contents with anchors.
+- Add GitHub Actions to:
+  - validate CSV readability (UTF-8, parseable),
+  - regenerate year_distribution.png from comprehensive_research_report.csv and push to docs/.
 
-Если хотите, я могу создать шаблоны для этих улучшений и открыть PR с примерами.
-
----
-
-## Что в отчёте (коротко)
-
-Research_Report_DoD_Cloud_eBPF_Security.md — это сводная работа по следующим темам (обзор):
-
-- Требования DoD к облакам: SCCA, DoD SRG, CNSSI 1253, уровни IL5/IL6.
-- Идентификационные модели: CAC/PKI, TCCM и управление учётными записями.
-- Модель Zero Trust для DoD-окружений.
-- eBPF: возможности, угрозы, проверка байт-кода и формальная верификация верификатора eBPF.
-- Kubernetes операторные подходы (bpfd/bpfman) и предложения по безопасному разворачиванию eBPF.
-- Анализ цепочек поставок, аудита и безопасного распределения OCI-образов для eBPF.
-
-Для детальной информации — откройте Research_Report_DoD_Cloud_eBPF_Security.md.
+If you want, I can create starter notebooks, a Streamlit demo, or a minimal GitHub Actions workflow and open a pull request.
 
 ---
 
-## Вклад и правила
+## Report summary (short)
 
-Мы приветствуем вкладчиков. Чтобы внести изменения:
+Research_Report_DoD_Cloud_eBPF_Security.md summarizes analysis across these topics:
 
-1. Найдите интересующую часть: разделы README, CSV или Research_Report.
-2. Откройте issue с кратким описанием и ссылками на файлы.
-3. Создайте ветку feature/your-topic, внесите изменения и отправьте PR.
+- DoD cloud security requirements: SCCA, DoD SRG, CNSSI 1253, IL5/IL6 considerations.
+- Identity and credential models: CAC/PKI, TCCM, and account/credential management.
+- Zero Trust architectures tailored for DoD cloud environments.
+- eBPF: capabilities, risks, bytecode verification, and formal verification of the eBPF verifier.
+- Kubernetes operator patterns (bpfd/bpfman) and safe deployment strategies for eBPF in cloud-native platforms.
+- Supply-chain, audit, and secure distribution of OCI artifacts for eBPF.
 
-Пожалуйста, указывайте источники и лицензии для добавляемых материалов. Если вы добавляете код или ноутбуки, добавьте файл LICENSE для кода или отметьте лицензию внутри файла.
-
-Если нужно, я могу:
-- автоматически разбить текущий Research_Report на отдельные markdown-файлы; или
-- подготовить первые Jupyter notebooks и CI для проверки CSV.
-
----
-
-## Лицензия
-
-См. файл LICENSE в корне репозитория для условий использования.
+Open Research_Report_DoD_Cloud_eBPF_Security.md for details.
 
 ---
 
-## Контакты
+## Contributing
 
-Автор / владелец: @Daothecreator
+We welcome contributions. Workflow suggestion:
 
-Если хотите, я прямо сейчас могу:
-- 1) создать структуру notebooks и открыть PR с примерами; или
-- 2) заменить текущий README.md на эту версию (я могу сделать коммит сюда). 
+1. Identify the part you want to change (README, CSV, or Research_Report).
+2. Open an issue with a short description and links to relevant files.
+3. Create a branch `feature/your-topic`, make your changes, and open a PR.
 
-Скажите, какой вариант предпочитаете — я уже подготовил README и могу применить его в репозитории.
+Please cite sources and include licensing information for added materials. For code or notebooks, add a license header or a LICENSE file for code if different from the repo license.
+
+I can also:
+- split the main report into multiple markdown files automatically; or
+- prepare the first Jupyter notebooks and a CI job for CSV checks.
+
+---
+
+## License
+
+See LICENSE in the repository root for usage terms.
+
+---
+
+## Contact
+
+Repository owner: @Daothecreator
+
+Next steps I can take immediately (pick one):
+
+1) Create and open a PR with starter notebooks (notebooks/01-explore-index.ipynb, notebooks/02-ebpf-summary.ipynb).
+2) Add a minimal Streamlit demo under tools/streamlit and open a PR.
+3) Add a GitHub Actions workflow to validate CSVs and rebuild year_distribution.png and open a PR.
+4) Revert README to the previous version if you prefer the earlier text.
+
+Tell me which option you prefer and I will implement it and open a PR.
