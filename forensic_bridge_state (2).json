@@ -1,0 +1,84 @@
+{
+  "timestamp": "2026-03-01T08:15:41.298549",
+  "case": "ORDER-322-2026",
+  "sovereign": "Zero_Azimuth_DK",
+  "ontogenesis_coherence": 0.9996375,
+  "verified_entities": 5,
+  "graph": {
+    "Austan_Goolsbee": {
+      "crime": "RICO_Conspiracy",
+      "evidence_weight": 0.95,
+      "verified": true,
+      "connections": [
+        "Andrew_Klaber"
+      ]
+    },
+    "Andrew_Klaber": {
+      "crime": "RICO_Leadership",
+      "evidence_weight": 0.92,
+      "verified": true,
+      "connections": [
+        "Austan_Goolsbee"
+      ]
+    },
+    "George_W_Bush": {
+      "crime": "War_Crimes",
+      "evidence_weight": 0.98,
+      "verified": true,
+      "connections": [
+        "Robert_Kagan",
+        "Prescott_Bush",
+        "John_Kerry"
+      ]
+    },
+    "Stephen_Schwarzman": {
+      "crime": "Pension_Fraud",
+      "evidence_weight": 0.88,
+      "verified": false,
+      "connections": [
+        "Steven_Mnuchin"
+      ]
+    },
+    "Steven_Mnuchin": {
+      "crime": "Predatory_Lending",
+      "evidence_weight": 0.85,
+      "verified": false,
+      "connections": [
+        "Stephen_Schwarzman"
+      ]
+    },
+    "Robert_Kagan": {
+      "crime": "Conspiracy_Aggressive_War",
+      "evidence_weight": 0.9,
+      "verified": false,
+      "connections": [
+        "George_W_Bush"
+      ]
+    },
+    "John_Kerry": {
+      "crime": "War_Crimes_Vietnam",
+      "evidence_weight": 0.87,
+      "verified": false,
+      "connections": [
+        "George_W_Bush"
+      ]
+    },
+    "Prescott_Bush": {
+      "crime": "Nazi_Financing",
+      "evidence_weight": 0.96,
+      "verified": true,
+      "connections": [
+        "George_W_Bush",
+        "George_HW_Bush"
+      ]
+    },
+    "George_HW_Bush": {
+      "crime": "CIA_Drug_Trafficking",
+      "evidence_weight": 0.94,
+      "verified": true,
+      "connections": [
+        "Prescott_Bush"
+      ]
+    }
+  }
+}

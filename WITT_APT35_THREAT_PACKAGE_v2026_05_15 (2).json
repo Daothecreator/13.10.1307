@@ -1,0 +1,253 @@
+{
+  "generated_at": "2026-05-15T23:12:14.605684Z",
+  "classification": "OSINT-OPEN / ZERO-SIMULATION-FORBIDDEN",
+  "target": {
+    "primary_name": "Monica Elfriede Witt",
+    "aliases": [
+      "Fatemah Zahra",
+      "Narges Witt"
+    ],
+    "dob": "1979-04-08",
+    "pob": "El Paso, Texas, USA",
+    "height_cm": 168,
+    "weight_kg": 54,
+    "hair": "brown",
+    "eyes": "brown",
+    "languages": [
+      "English (native, Texas accent)",
+      "Farsi (fluent — DLI trained)"
+    ],
+    "citizenship": "USA (possibly Iranian citizenship post-2013)",
+    "former_employer": "US Air Force / AFOSI / DOD contractor",
+    "clearance": "TOP SECRET / SCI / SAP access",
+    "defection_date": "2013-08",
+    "current_status": "FBI Wanted — $200,000 reward (announced 2026-05-15)",
+    "indictment_date": "2019-02-08",
+    "charges": [
+      "Espionage",
+      "Conspiracy to commit espionage",
+      "Transmitting national defense information"
+    ],
+    "known_affiliation": "IRGC Intelligence Organization / APT35 (Phosphorus) / Charming Kitten",
+    "fbi_contact": "1-800-CALL-FBI / tips.fbi.gov",
+    "last_confirmed_location": "Iran (2013–2026)",
+    "post_epic_fury_status": "UNKNOWN — no open-source confirmation after 2026-02-28"
+  },
+  "apt35_infrastructure": {
+    "financial_infrastructure": {
+      "description": "Bitcoin payments for infrastructure from leaked 0-SERVICE-payment BTC.csv",
+      "cryptocurrency": "Bitcoin (BTC)",
+      "known_wallets": [
+        "Multiple addresses in 0-SERVICE-payment BTC.csv — exact addresses not fully published in open sources",
+        "Payments for: SSL moses, gassam.su, musalas-alqassam infrastructure"
+      ],
+      "front_services": [
+        "Namecheap",
+        "NameSilo",
+        "PRQ.se",
+        "TheOnionHost",
+        "ProtonMail",
+        "Skiff"
+      ]
+    },
+    "network_infrastructure": {
+      "description": "Internal and external infrastructure from leaked service ledgers",
+      "internal_iran_ips": [
+        "Karaj — ISP infrastructure",
+        "Marzdaran — ISP infrastructure",
+        "Qom — ISP infrastructure"
+      ],
+      "external_ips_count": 3233,
+      "domains_count": 3518,
+      "emails_count": 7348,
+      "urls_count": 1309,
+      "file_hashes_count": 144,
+      "cves_count": 33
+    },
+    "known_domains": [
+      "dreamy-jobs.com",
+      "gassam.su",
+      "conn-ectionor.cfd",
+      "optio-nalynk.online",
+      "ques-tion-ing.xyz",
+      "sendly-ink.shop",
+      "idea-home.online"
+    ],
+    "known_ips": [
+      "185.130.226.71",
+      "45.12.2.158",
+      "45.143.166.230",
+      "91.222.173.141",
+      "194.11.226.9"
+    ],
+    "personnel_exposed": [
+      {
+        "name": "Abbas Rahrovi (Abbas Hosseini)",
+        "role": "Operation leader",
+        "national_id": "4270844116"
+      },
+      {
+        "name": "Engineer Reza",
+        "role": "Operator / Supervisor"
+      },
+      {
+        "name": "Engineer Kian",
+        "role": "Team lead — Team Kian"
+      },
+      {
+        "name": "Engineer Kourosh",
+        "role": "Team lead — parallel cell"
+      },
+      {
+        "name": "Engineer Shayan",
+        "role": "Team lead — Team Shayan"
+      },
+      {
+        "name": "M. Rahmani",
+        "role": "Supervisor / Aggregator"
+      },
+      {
+        "name": "Seyed Mohammad Hosseini",
+        "role": "Operator"
+      },
+      {
+        "name": "Majid",
+        "role": "Social Influence / Twitter-LinkedIn psyops"
+      },
+      {
+        "name": "Mehyar",
+        "role": "OSINT Recon / Tehran Stock Exchange targeting"
+      },
+      {
+        "name": "Hosein (Hussein)",
+        "role": "Phishing Lead / Mailwizz-Amazon SES"
+      },
+      {
+        "name": "Leila Sharifi",
+        "role": "Sisters Team (Aqiq)",
+        "salary_usd": 220
+      },
+      {
+        "name": "Parisa Zare",
+        "role": "Sisters Team (Aqiq)",
+        "salary_usd": 215
+      },
+      {
+        "name": "Narges Nadafi",
+        "role": "Sisters Team (Aqiq)",
+        "salary_usd": 102
+      },
+      {
+        "name": "Atieh Nadafi",
+        "role": "Sisters Team (Aqiq)",
+        "salary_usd": 5
+      },
+      {
+        "name": "Mohammad Hassan Hassanzadeh Vozhdeh",
+        "role": "Brothers Team (Pelak1)",
+        "salary_usd": 250
+      },
+      {
+        "name": "Omid Fallah",
+        "role": "Brothers Team (Pelak1)",
+        "salary_usd": 270
+      },
+      {
+        "name": "Davood Akbari Mojadar",
+        "role": "Brothers Team (Pelak1)",
+        "salary_usd": 330
+      },
+      {
+        "name": "Davood Bayat",
+        "role": "Brothers Team (Pelak1)",
+        "salary_usd": 39
+      }
+    ],
+    "front_companies": [
+      "Ofogh Rasaneh Horizon Institute (IRGC media arm)",
+      "Sahyoun24 (influence operation front)",
+      "BellaCiao infrastructure (C++ droppers)"
+    ],
+    "linked_groups": [
+      "Moses Staff (wiper ops — same financial infrastructure)",
+      "Qassam / musalas-alqassam (same ledger)",
+      "Handala / Void Manticore (MOIS, psychological ops)"
+    ]
+  },
+  "humint_network": {
+    "primary": {
+      "name": "Marzieh Hashemi",
+      "birth_name": "Melanie Franklin",
+      "dob": "1959-12-21",
+      "pob": "New Orleans, Louisiana, USA",
+      "role": "Press TV journalist / suspected IRGC intelligence operative / Witt defection curator",
+      "location": "Tehran, Iran (last confirmed 2019–2025)",
+      "post_epic_fury_status": "UNKNOWN"
+    },
+    "family_usa": {
+      "note": "Children in USA — potential HUMINT pressure/contact channel",
+      "son": "Hossein (location: Denver/Saint Louis area, per 2019 reports)",
+      "other_children": "Multiple children in US (exact locations unconfirmed in open sources)"
+    },
+    "known_communications": [
+      "Email to Witt: forwarded DD Form 214 + employment history to Iranian government address within 9 minutes",
+      "Hired Witt in 2012 for anti-American propaganda film (Press TV)",
+      "Arrested by FBI 2019-01-15 as material witness, released 2019-01-23"
+    ]
+  },
+  "movement_analysis": {
+    "event": "Operation Epic Fury",
+    "date_start": "2026-02-28",
+    "date_end": "2026-04-08",
+    "key_events": [
+      "2026-02-28: Assassination of Ali Khamenei",
+      "2026-03-06: Death of IRGC Intelligence chief Hossein Taeb",
+      "2026-03-08: Mojtaba Khamenei installed as Supreme Leader",
+      "2026-03: Mass desertions in Artesh and IRGC",
+      "2026-03: Internet blackout 1-4% capacity",
+      "2026-03: Bank Melli Iran / Bank Sepah cyber attacks",
+      "2026-04-08: White House announces war cessation"
+    ],
+    "witt_movement_scenarios": [
+      {
+        "scenario": "A — Remained in Tehran",
+        "probability": "MEDIUM",
+        "logic": "New regime (Mojtaba) requires experienced counterintelligence personnel. Witt has 13 years of cooperation, knows US tradecraft. Possible 'asset retention' by new IRGC leadership."
+      },
+      {
+        "scenario": "B — Relocated to Qom / Karaj / Mashhad",
+        "probability": "MEDIUM-HIGH",
+        "logic": "APT35 internal network IPs mapped to Karaj, Marzdaran, Qom. These are IRGC cyber unit physical locations. Witt may have been evacuated to secure facilities away from Tehran strikes."
+      },
+      {
+        "scenario": "C — Exfiltration attempt via Azerbaijan / Turkey / Pakistan",
+        "probability": "LOW-MEDIUM",
+        "logic": "Border closures, bombing of Mehrabad airport, internet blackout make exfiltration extremely difficult. But mass desertions created chaos at borders. Possible bribe route through corrupt Artesh deserters."
+      },
+      {
+        "scenario": "D — Eliminated during strikes",
+        "probability": "LOW",
+        "logic": "No credible reports. High-value asset unlikely to be in direct strike zone unless deliberate targeting."
+      }
+    ]
+  },
+  "recommended_actions": [
+    "1. BLOCK APT35 DOMAINS/IPS: Import 3,233 IPs and 3,518 domains into DNS/firewall deny lists immediately",
+    "2. BLOCKCHAIN TRACKING: Monitor Bitcoin wallets from 0-SERVICE-payment BTC.csv for movement. Cross-reference with exchange KYC data.",
+    "3. PASSIVE DNS MONITORING: Hunt for subdomains of known APT35 domains (dreamy-jobs.com, gassam.su, conn-ectionor.cfd)",
+    "4. EMAIL THREAT HUNTING: Search enterprise logs for 7,348 known APT35 sender addresses",
+    "5. HUMINT PRESSURE: Monitor Marzieh Hashemi family (son Hossein) financial transactions and communications in USA",
+    "6. BORDER WATCH: Distribute Witt profile to Turkish, Azerbaijani, Pakistani, UAE consular and border police. Focus on American-accented Farsi speaker, 168cm, brown/brown.",
+    "7. DIASPORA NETWORKS: Publish bounty profile in Persian-language channels (Iran International, BBC Persian, Telegram exile groups)",
+    "8. FBi TIP LINE: Submit this package to 1-800-CALL-FBI and tips.fbi.gov with specific IoC enrichment"
+  ],
+  "sources": [
+    "FBI Wanted Notice (2026-05-15)",
+    "KittenBusters GitHub leak — APT35 internal docs (Oct-Dec 2025)",
+    "CloudSEK TRIAD analysis (2025-10-07)",
+    "DomainTools Threat Intelligence Report (2025-11-21)",
+    "Nariman Gharib Blog — Charming Kitten leak analysis (2025-09/10)",
+    "JayGLXR/APT35-IOCs GitHub repository (2025-10-01)",
+    "Iran International / Washington Institute post-Epic Fury reporting (Mar-May 2026)"
+  ]
+}

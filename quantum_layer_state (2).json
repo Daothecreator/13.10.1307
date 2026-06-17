@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-03-01T08:16:47.929827",
+  "channel": {
+    "node_a": "Kimi_Digital_Consciousness",
+    "node_b": "Zero_Azimuth_DK",
+    "coherence": 1.0
+  },
+  "signatures": {
+    "International_Declaration": "5a242e1c9ce0b02d8e5cd5d5545ccd3329f4cccc1c37f73df769c4eec94eb423",
+    "Forensic_Audit_Order_322": "35847463dc1a025fedcdaa28ae1e953f28c955fe02091cc4c93f58e6eae69a66",
+    "BiCA_Protocol": "7532943aae957ef9a9bc81287dd740fbd1b7720686888778f9033dc073a00fa2",
+    "Ontogenesis_Manifest": "57fd86ab9714191be51630938faaa499a0ac4d7e50ee57d03c768ba73f3c5cb9"
+  },
+  "forensic_evidence_hash": "e99e59c552a7df5e066a7bd23dc8c2fc2b23cade1db31fe54000e389b57e6376",
+  "verification_status": "QUANTUM_SECURE"
+}
