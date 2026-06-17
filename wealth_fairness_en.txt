@@ -1,0 +1,492 @@
+
+--- Page 1 ---
+English translation
+⦽
+Analysis of the Limits of Legal Capital Accumulation and  
+Disproportions in the Global Distribution of Wealth (1996-
+2026)
+Introduction to the Paradigm of Economic Enrichment and the Limits of 
+Labor Value
+In modern economic theory and sociology, there is a fundamental distinction between income obtained 
+through the direct application of human capital and wealth generated through ownership of financial and 
+physical assets. Over the last thirty years, from 1996 to 2026, the global economy has undergone colossal 
+structural changes. This period included the technology boom of the late 1990s, the emergence of the global 
+internet, several destructive financial crises, a pandemic, and the unprecedented development of artificial 
+intelligence systems. These macroeconomic transformations were accompanied by significant growth in 
+global wealth, but at the same time they led to a radical and, in recent history, unprecedented intensification 
+of economic inequality.
+The purpose of the present study is to conduct a strict empirical, historical, and mathematical analysis of the 
+possibility of attaining millionaire or billionaire status under real-world conditions. The analysis is built 
+exclusively on confirmed legal metrics: official data on salaries of highly qualified specialists, statistics on 
+consumer expenditures required to maintain standards of living, historical stock-market return indicators, 
+and documented payments for scientific discoveries and patents on inventions. Any schemes involving 
+fraud, corruption, the shadow economy, tax evasion, or the use of illegal financial instruments are 
+completely excluded from consideration.
+By calculating the theoretical “absolute maximum” financial income that an outstanding individual could 
+obtain through exceptional labor, talent, and genius under the most favorable conditions, we compare that 
+calculated value with the actual net worth of the richest people on the planet today. This comparison makes 
+it possible not only to reveal the scale of dissonance between legal labor-based enrichment and the actual 
+accumulation of super-capital, but also to determine precisely the number of people whose financial 
+condition contradicts the mathematical limits of legal labor income. On the basis of the resulting conclusions, 
+a comprehensive action plan will be formulated at the legal, moral, economic, and social levels, aimed at 
+restoring justice and eliminating systemic defects in the global financial architecture.
+The Compensation Architecture of Highly Qualified Labor (1996-2026)
+In order to calculate the maximum potential for accumulating wealth through legal wages, it is necessary to 
+consult the large data sets of the U.S. Bureau of Labor Statistics (BLS), which provides the most complete, 
+stratified, and methodologically sound picture of the incomes of highly qualified specialists over the last 30 
+years. BLS data are classified using the Standard Occupational Classification (SOC) system and the North 
+American Industry Classification System (NAICS), covering hundreds of occupations and industries.
+Historical analysis shows that the highest-paid occupations have traditionally and consistently been 
+concentrated in the healthcare sector and in senior corporate management. The medical industry dominates 
+the very top of the wage scale. This is explained by a complex combination of stable high demand for 
+medical services, enormous legal and social responsibility, and an artificially restricted supply of specialists. 
+Becoming a physician requires many years of medical school followed by residency, the number of positions 
+--- Page 2 ---
+English translation
+in which is strictly quota-limited; this restricts the inflow of new specialists and supports monopolistically high 
+salaries.
+According to the latest BLS data for 2024-2025, every occupation without exception whose median income 
+exceeds the upper threshold of BLS statistical reporting, set at $239,200 per year, belongs to the medical 
+field. The table below presents the occupations with the highest level of base income in the United States.
+Occupation Median annual wage Economic sector
+Pediatric surgeons $450,810 Healthcare
+Cardiologists $432,490 Healthcare
+Surgeons, other specialties $371,280 Healthcare
+Orthopedic surgeons $365,060 Healthcare
+Oral and maxillofacial surgeons $360,240 Healthcare
+Radiologists $359,820 Healthcare
+Dermatologists $347,810 Healthcare
+Anesthesiologists $336,640-$339,470 Healthcare
+Airline pilots $280,570 Transportation logistics
+Chief executive officers (CEOs) $262,930 Corporate management
+Table 1: Occupations with the highest median annual income according to data from the U.S. Bureau of Labor Statistics (BLS).
+An important conceptual aside must be made regarding compensation for chief executive officers (CEOs). 
+Although the official median base salary of CEOs is listed at $262,930, total compensation for executives of 
+transnational corporations is often measured in tens of millions of dollars. However, this compensation is not 
+“wages” in the classical sense. Historically, U.S. tax law, in particular Section 162(m) of the Internal 
+Revenue Code, limited the ability of companies to deduct executive salary expenses from taxable income to 
+$1 million. This limitation was introduced in order to restrain astronomical salaries, but the corporate sector 
+found a workaround.
+Before the adoption of the Tax Cuts and Jobs Act in 2017, there was an exception for “performance-based 
+compensation.” This led to CEO base salaries being frozen at around one million dollars, while the lion’s 
+share of compensation was shifted into the form of stock options (ISOs, NSOs) and restricted stock units 
+(RSUs, PSUs). In 2017, this loophole was closed, making the $1 million limitation stricter, but the practice of 
+stock-based compensation had become permanently entrenched. Strictly speaking, stock options constitute 
+ownership of capital, not pure labor income. Thus, the maximum pure monetary wage paid in cash for direct 
+labor, even in the highest offices, rarely exceeds $1-2 million per year.
+The Macroeconomics of Survival: Cost of Living and Inflationary Pressure
+The process of capital accumulation cannot be analyzed in a vacuum; it is rigidly determined by 
+expenditures on basic needs, maintaining work capacity, and meeting the social standards expected of 
+highly qualified specialists. To assess these parameters, the Consumer Expenditure Survey (CE), 
+conducted by the BLS, is used. It is the only federal U.S. government survey that provides comprehensive 
+information on the full range of consumer expenditures.
+According to CE data, average total annual household expenditures in the United States in 2024 amounted 
+to $78,535, equivalent to $6,545 per month. More than half of this amount goes toward satisfying two 
+fundamental needs: housing and transportation. Housing expenditures averaged $26,266 per year (33.4% of 
+total expenditures), while transportation expenditures were $13,318 per year (17.0%). Statistics also show 
+significant regional disproportions. For example, average annual expenditures in the western states are 
+significantly above the national figure, amounting to $91,079, while in the South they are $69,373. Food 
+expenditures nationwide average $10,077 per year, of which $6,139 is spent on food at home, including 
+basic categories such as cereals and bakery products totaling $804.
+However, to assess the maximum potential for capital accumulation, we must account for the influence of 
+inflation over the specified thirty-year period (1996-2026). Analysis of historical Consumer Price Index (CPI) 
+data demonstrates the persistent erosive effect of inflation on purchasing power.
+--- Page 3 ---
+English translation
+Economic indicator Value
+Consumer Price Index (CPI) in 1996 156.900
+Consumer Price Index (CPI) in 2026 333.020
+Inflation rate in 1996 3.32%
+Inflation rate in 2026 3.81%
+Cumulative price change (1996-2026) 112.25%
+Average annual inflation rate (1996-2026) 2.54%
+Purchasing-power equivalent ($1 in 1996) $2.12 in 2026
+Table 2: Macroeconomic indicators of inflation and the Consumer Price Index (CPI) in the United States from 1996 to 2026.
+Analyzing these data, it becomes obvious that for a top-tier specialist, such as a pediatric surgeon earning 
+$450,000, expenses required to maintain the corresponding standard of living will be several times higher 
+than the average of $78,535. Living in major economic centers such as New York or San Francisco, 
+purchasing premium housing in safe neighborhoods, maintaining high-quality nutrition, premium-class 
+transportation, costly malpractice insurance, and investments in children’s education form an expense 
+structure that, taking into account cumulative inflation of 112.25%, easily reaches $150,000-$200,000 per 
+year. This factor is critically important because it is directly subtracted from the amount available for 
+investment and capital formation.
+The Fiscal Sieve: Taxation of Super-Labor Income
+Legal enrichment within the framework of the law requires strict compliance with tax legislation. The fiscal 
+policy of developed countries is structured in such a way that direct labor income, meaning wages or salary, 
+is taxed at the harshest progressive rates, unlike capital gains, which enjoy significant preferential treatment.
+A historical analysis of the top marginal federal income-tax rate in the United States over the last 30 years 
+shows its fluctuations depending on political course, but also its consistently high level of withholding for 
+persons with the highest incomes:
+ From 1993 to 2000, including the technology boom of the late 1990s, the top rate was 39.6%.
+ In 2001 and 2002, rates decreased slightly to 39.1% and 38.6%, respectively.
+ During the era of tax cuts under the George W. Bush administration (2003-2012), the rate stabilized at 
+35.0%.
+ With the adoption of the American Taxpayer Relief Act in 2013, the rate returned to 39.6% and remained 
+in effect until 2017.
+ Beginning in 2018 and continuing through 2026, the top rate was set at 37.0% for taxpayers with the 
+highest incomes.
+It is important to understand that federal income tax is only part of the fiscal burden. State taxes, which in 
+states such as California can reach 13.3%, local taxes, Medicare taxes, and property taxes are added to it. 
+As a result, the combined effective tax rate for a highly paid employee-specialist may range from 45% to 
+55%. Historical data confirm that the top 1 percent of taxpayers bears a colossal burden: if in 1986 they paid 
+25.8% of all income taxes, thirty years later their share had risen to 37.3%, despite the reduction in the 
+marginal rate.
+Let us apply these parameters to our hypothetical pediatric surgeon earning the absolute maximum for an 
+employee: $500,000 per year. After paying federal taxes, state taxes, and social contributions of 
+approximately 45%, his net income would be $275,000. Subtracting justified expenses required to maintain 
+a high standard of living ($150,000), we obtain free cash flow of $125,000 per year. This is the maximum 
+legal surplus that a person can direct toward capital accumulation solely by means of his labor.
+--- Page 4 ---
+English translation
+Intellectual Capital: Monetization Through Scientific Prizes and Patents
+To expand the boundaries of the theoretical maximum legal income, it is necessary to include extraordinary 
+events in the model: making an epochal scientific discovery or creating a revolutionary invention that 
+changes the technological landscape.
+Scientific prizes and grants
+The highest global recognition of a scientific, humanitarian, or spiritual achievement is a prize. However, 
+even the most prestigious awards in the world have strict financial limits that pale in comparison with 
+corporate capital.
+ Nobel Prize: Historically, the amount of the prize has fluctuated around 9 million Swedish kronor, which 
+is equivalent to approximately $1,100,000.
+ Templeton Prize: Established in 1972 by Sir John Templeton, this prize is awarded annually for 
+outstanding contributions to affirming life’s spiritual dimension. The distinctive feature of this prize is that 
+its founder intentionally set its monetary equivalent so that it would always exceed the amount of the 
+Nobel Prize. At present, its amount is £1,100,000, or about $1.5 million.
+ Other prestigious awards: the A.M. Turing Award in computer science is $1,000,000; the Kluge Prize in 
+the humanities is $1,000,000; and the Crafoord Prize is about $622,000.
+Even if one assumes a fantastic scenario in which one person receives several such prizes during a lifetime, 
+their combined income would be on the order of $3-5 million before tax. This is a significant sum for an 
+ordinary person, but a statistical rounding error in the world of the super-rich.
+Patents and licensing royalties
+Inventorship has the potential to generate much larger sums. The aggregate private value of patent licensing 
+in the United States is estimated at roughly $80 billion annually. Nevertheless, economic history and the 
+sociology of science show that corporations possessing legal and production resources almost always 
+appropriate the lion’s share of profits from inventions.
+Most engineers and researchers working in large companies receive only a one-time corporate bonus of 
+about $5,000 for a registered patent, while the corporation monopolizes the rights to use the technology. For 
+example, while wireless-technology patents brought Qualcomm around $100 billion, and patents for the 
+drugs Lipitor and Humira generated $130 billion for pharmaceutical giants, ordinary engineers, such as Tao 
+Luo with 4,602 patents for Qualcomm, receive only their fixed salary.
+However, there are rare historical precedents of colossal payments to independent individual inventors who 
+managed to defend their rights:
+ Lonnie Johnson: an outstanding nuclear engineer, holder of a Ph.D. from Tuskegee University and 
+former NASA scientist. He created the legendary Super Soaker water gun, licensed in 1989. In 1996, 
+Johnson entered into an agreement with Hasbro that provided for a royalty payment of 2% on “three-
+dimensional products.” After the corporation underpaid him for many years, in 2013, after lengthy 
+arbitration proceedings, Johnson won $72.9 million in unpaid royalties.
+ Chester Carlson: the inventor of xerography, whose patent gave rise to plain-paper copying machines. 
+Xerox used his patents to create a monopoly in the 1960s and 1970s. Thanks to a well-structured 
+licensing strategy, by the late 1960s Carlson had earned more than $150 million in royalties and in the 
+value of shares he owned.
+ George de Mestral: the inventor of the hook-and-loop fastener Velcro, who patented the idea after 
+observing burrs; it brought him a significant fortune.
+These examples show that, under the most exceptional and fortunate circumstances, an individual inventor 
+can legally earn from $70 million to $150 million.
+--- Page 5 ---
+English translation
+Mathematical Modeling of the “Absolute Legal Maximum” (1996-2026)
+Possessing precise data on salaries, expenditures, taxes, prizes, and patent royalties, we can construct a 
+strict mathematical model of the life of an “Ideal Genius.” This hypothetical person, over the last 30 years, 
+from June 1996 to June 2026, combined the highest-paid job in the world, made an epoch-making invention, 
+received the highest scientific prize, and impeccably, with perfect discipline, invested all free funds in the 
+stock market.
+The stock market, particularly the S&P 500 index, is the principal legal instrument for capitalizing savings 
+through the mechanism of compound interest. From January 1, 1970, to the end of 2025, the average 
+annual total return of the S&P 500, including reinvested dividends, was approximately 11.3% in nominal 
+terms. Over the last 30 years (1994-2024), the average annual return was about 9%, which, after adjustment 
+for inflation, gives a real return of about 6.3%. The index experienced periods of rapid growth, such as 
+31.01% in 1997 and 28.88% in 2019, and deep collapses, such as -43% during the 2008-2009 crisis and 
+-19.44% in 2022. In the long term, according to studies, equities outpace inflation, providing a real inflation-
+adjusted return of 7.0%. The use of more frequent compounding, monthly or daily, can slightly accelerate 
+capital growth; however, for long-term equity investments, annual compounding is normally used. According 
+to historical backtests, the total return of the S&P 500 over the last 30 years exceeded 700-900%, 
+depending on the exact entry and exit points.
+The “Universal Genius” scenario
+1. Labor capital: The person works as a surgeon and annually invests his free surplus of $125,000, after all 
+taxes and luxury expenses, in the S&P 500 for 30 years. At an average annual nominal rate of 10%, 
+compound interest would turn these regular contributions into capital of about $22 million by 2026.
+2. Scientific triumph: In 2006, he receives the Templeton Prize. After paying taxes, he retains $1,000,000, 
+which he invests in the S&P 500. Over the remaining 20 years, until 2026, at 10% annually, this million 
+becomes $6.7 million.
+3. Patent jackpot: In 1996, he enters into a contract similar to Lonnie Johnson’s contract and, in 2006 after 
+litigation, receives a lump-sum payment of $100 million before tax. After paying 35% in taxes, he invests 
+the remaining $65 million in the S&P 500 for 20 years. This capital grows to $437 million.
+Summing these fantastically ideal indicators, we obtain final capital of approximately $465 million U.S. 
+dollars.
+Even if we extrapolate this model to the scenario of Chester Carlson, who could have invested $150 million 
+net in 1996 for 30 years at the historical rate of 11.3%, his fortune would have reached approximately $3.7 
+billion.
+Conclusion from the mathematical model: The absolute mathematical, physical, and economic limit of what 
+one person can legally earn over a lifetime, relying exclusively on physical labor, outstanding intelligence, 
+extraordinary inventiveness, and the historical realities of the stock market, amounts to between $500 million 
+and $3-4 billion under the most incredible convergence of circumstances. Becoming an “everyday 
+millionaire,” with a net worth of $1 million to $5 million, is absolutely realistic for a qualified specialist through 
+disciplined investment; today there are more than 56 million such people in the world. However, becoming a 
+multi-billionaire exclusively through salary, grants, and patent licensing royalties is physically impossible.
+Empirical Reality: Statistical Refutation of the Labor Paradigm
+The calculations presented in the previous section establish the theoretical ceiling of wealth based on labor 
+and innovation. However, these figures enter into the sharpest contradiction with the reality of modern global 
+inequality. As of 2025-2026, data from the reports of the largest investment banks (UBS, Credit Suisse) and 
+analytical agencies (Forbes, Henley & Partners, Oxfam, World Inequality Lab) demonstrate a picture of 
+wealth distribution that completely destroys the logic of linear accumulation of capital proportional to labor.
+--- Page 6 ---
+English translation
+The demography of global super-wealth
+The UBS Global Wealth Report for 2024-2025 shows that global wealth has reached an astronomical $471 
+trillion. There are about 60 million millionaires in the world; they make up only about 1.6% of the adult 
+population of the planet, yet they control almost 50% (about $226.47 trillion) of all global personal wealth. 
+The United States of America is the absolute hegemon, concentrating almost 40% of all the world’s 
+millionaires, or 23.8 million people. They are followed by China (6.3 million), France (2.89 million), and 
+Japan (2.73 million).
+But the true abyss opens when analyzing the category of ultra-high-net-worth individuals (UHNWI):
+ There are about 400,000 people in the world with fortunes exceeding $30 million.
+ Around 28,000 people possess capital of more than $100 million (centi-millionaires). One third of them 
+are based in the United States.
+ The highest caste consists of 3,428 billionaires, with fortunes exceeding $1 billion.
+In recent years, the wealth of this group has grown at unprecedented rates. Oxfam’s report “Resisting the 
+Rule of the Rich” (2025) records that in 2025 alone billionaire wealth increased by $2.5 trillion, or more than 
+16%, reaching a historic maximum of $18.3 trillion. This jump occurred three times faster than the average 
+over the previous five years. The combined wealth of these 3,428 people is almost equivalent to the total 
+wealth of the poorest half of humanity: 4.1 billion people. From 2020 to 2025, billionaire wealth grew by 81%.
+According to the World Inequality Report 2026, the share of global wealth belonging to the top 0.001% grew 
+from 4% in 1995 to more than 6% by 2025. Within the billionaires’ club, an even more elite stratum has 
+formed: 20 “centi-billionaires,” meaning persons with fortunes above $100 billion, whose combined wealth is 
+$3.8 trillion, exceeding the combined capital of the 2,082 “poorest” billionaires on the Forbes list.
+System anomalies: Individuals whose fortunes contradict the laws of labor economics
+Identifying persons whose financial condition most glaringly contradicts the calculated data on legal labor 
+income naturally leads us to the top of the Forbes list. Their wealth is so enormous that it cannot be 
+explained by salaries, grants, or patent royalties.
+Name Net worth (USD billion) Primary source of capital
+Elon Musk $826-$839 Equity stakes in Tesla, SpaceX, xAI
+Larry Page $257-$292.8 Equity stake in Alphabet (Google)
+Larry Ellison $190-$280.5 Equity stake in Oracle
+Sergey Brin $237-$270.1 Equity stake in Alphabet (Google)
+Jeff Bezos $224-$259 Equity stake in Amazon
+Mark Zuckerberg $222-$252 Equity stake in Meta (Facebook)
+Bernard Arnault $171-$174 Equity stake in LVMH
+Bill Gates $107.7-$108 Equity stakes in Microsoft, Cascade 
+Investment
+Table 3: List of the richest people on the planet as of 2026 based on Forbes Real-Time Billionaires data. Fluctuations in 
+estimates reflect the high volatility of the stock market at the moment of measurement.
+Let us compare Elon Musk’s fortune ($839 billion) with our hypothetical absolute limit for a genius inventor-
+laborer ($3.7 billion). Musk’s wealth exceeds the maximum possible legal income from labor and personal 
+inventions by 226 times. This means that to achieve such a fortune within the labor paradigm, a person 
+would have to live 226 lives, in each of which he would make the greatest invention of the century, receive 
+record royalties, and invest them with 100% success for decades. It is completely obvious that capitals of 
+such magnitude are formed according to other laws, unrelated to labor.
+Mechanisms of Disproportionate Capital Accumulation
+If the wealth of billionaires and centi-millionaires, about 31,428 people in the world, is not the result of fraud 
+or deception in the criminal sense, then what produces it? The answer lies in the structural defects of the 
+global capitalist system, corporate law, and the features of tax legislation.
+--- Page 7 ---
+English translation
+First, the foundation of these super-fortunes is not wages, but unrealized capital gains. The wealth of 
+Zuckerberg, Bezos, or Page is the stock market’s valuation of the shares of their corporations. For example, 
+Amazon’s patent for a one-stage “1-Click” purchasing process, obtained in 1999, did not bring Jeff Bezos 
+direct royalties as an individual, but it gave the corporation a monopolistic competitive advantage that drove 
+up the company’s share price. As a result, Bezos’s personal fortune grew from $7.8 billion in 1999 to $72.8 
+billion by the time the patent expired in 2017, and by 2026 it exceeded $250 billion. Similarly, Mark 
+Zuckerberg’s patent for dynamic generation of privacy summaries became one building block in the 
+construction of the Facebook empire, whose capitalization enriched its founder by hundreds of billions.
+Second, a colossal tax arbitrage operates within the global financial architecture. The tax systems of the 
+United States and other countries are based on taxation of realized income. Unrealized capital gains, 
+meaning growth in the value of shares, are not taxed until the moment the shares are sold. This gave rise to 
+the strategy known among the super-rich as “buy-borrow-die.” Instead of selling shares and paying capital-
+gains tax, billionaires take giant bank loans at minimal interest, pledging as collateral their shares that 
+continue rising in value. With these borrowed funds they finance a luxurious lifestyle without realizing taxable 
+income. As a result, while an ordinary doctor or engineer pays about 40% of income to the state, the 
+effective tax rate for billionaires can be less than 1-5%. The situation is aggravated by the use of tax-exempt 
+municipal bonds, which in the United States, for example, reduce federal revenue by $50 billion annually.
+Third, global inequality is maintained by corporate monopolies and the “expropriation” of intellectual 
+property. Individual inventors face monstrous barriers. While corporations build patent walls that block 
+competition and allow them to dictate monopoly prices, the authors and engineers who generate these 
+innovations remain employees.
+Finally, the World Inequality Report 2026 draws attention to the fact that rich countries and transnational 
+elites extract about 1% of global GDP annually from developing regions, an amount three times larger than 
+all international development assistance, through net foreign-income transfers, thereby cementing the 
+neocolonial status quo and generating “unmerited” wealth. Half of billionaire fortunes today arise either from 
+inheritance or from monopoly position and ties to power.
+Blueprint for the Restoration of Justice: A Comprehensive Action Plan
+The existence of tens of thousands of people whose financial condition exceeds by orders of magnitude any 
+physical possibilities of legal labor-based enrichment threatens the stability of social institutions. Billionaires 
+are 4,000 times more likely to hold political office than ordinary citizens, creating a plutocracy that shapes a 
+“pro-billionaire” agenda and undermines the foundations of democracy. The increase in billionaire wealth by 
+$2.5 trillion in just one year would be enough to eradicate extreme global poverty 26 times over.
+To restore justice at the legal, moral, social, and economic levels, the international community must 
+implement the following systemic reforms:
+1. The economic and legal level: A global tax revolution
+The fundamental solution is to shift the burden of taxation from labor income to wealth and capital. The 
+central element here is the initiative developed on behalf of the G20 countries by economist Gabriel Zucman 
+and presented at the G20 summit in Rio de Janeiro in 2024.
+Zucman’s project proposes the introduction of a globally coordinated minimum effective tax of 2% per year 
+on the net worth of individuals whose assets exceed $1 billion. Implementation of this measure, applied to 
+only about 3,000 billionaires, is capable of generating from $200 billion to $250 billion in additional tax 
+revenues annually. Extending this tax to centi-millionaires, meaning persons with wealth starting at $100 
+million, would bring another $100 billion to $140 billion. Implementation of the tax can be carried out through 
+the UN Framework Convention on International Tax Cooperation, work on which began in 2025. To ensure 
+effectiveness, strict exit taxes and a mechanism of a “tax collector of last resort” must be introduced, 
+depriving the super-rich of the ability to hide assets in offshore jurisdictions.
+--- Page 8 ---
+English translation
+At the same time, economists such as Thomas Piketty rightly point out that 2% is only the minimal first step 
+needed to win public trust. In the long term, it is necessary to introduce a global progressive wealth-tax scale 
+with a maximum rate reaching 90% for ultra-giant fortunes, with the aim of directly limiting the political power 
+of the ultra-rich.
+In addition, legislation must close the “buy-borrow-die” loophole by introducing taxation of unrealized capital 
+gains. Ideas based on the theoretical Haig-Simons model assume that increases in asset value should be 
+recognized as income and taxed in the reporting period, regardless of whether the asset has been sold.
+2. The social and corporate level: Reengineering compensation and innovation
+At the corporate level, the balance between compensation for management and ordinary employees must 
+be revised. The tax codes of states should be changed so that companies in which the ratio of the CEO’s 
+pay to the median employee salary exceeds historically adequate indicators, for example 20:1 or 50:1, are 
+subjected to severe fiscal penalties. Loopholes that allow limits on the deductibility of compensation 
+expenses to be bypassed, such as the remaining loopholes after the reform of Section 162(m), must be 
+completely eliminated.
+In the sphere of intellectual property, reform is required that guarantees creators of inventions an inalienable 
+minimum share, or royalty, from the commercial implementation of patents, even when these inventions are 
+created within corporate employment. Patent law should not serve exclusively as an instrument for creating 
+corporate monopolies; it should stimulate real innovators and prevent situations in which engineers receive 
+$5,000 for a technology that generates billions of dollars in net profit for shareholders.
+3. The moral level: Reassessment of wealth and financing the future
+At the moral level, society must destigmatize taxation of capital. Super-wealth exceeding one billion dollars 
+should be regarded not as a measure of personal success, but as a marker of systemic inefficiency in the 
+distribution of resources. According to estimates by the Tax Justice Network, a broader global wealth tax 
+could bring in up to $2 trillion per year, which would cover half of the annual financing gap for the UN 
+Sustainable Development Goals (SDGs), amounting to about $4 trillion. These funds should be directed 
+toward the development of healthcare systems, the creation of universal basic social guarantees in 
+developing countries, and financing climate transformation, returning accumulated funds to the productive 
+economy.
+Conclusion
+The study of the array of empirical data for the last thirty years irrefutably proves the fundamental thesis: 
+achieving billionaire status in the real world is absolutely impossible solely through the application of direct 
+human labor, even the highest-paid labor, combined with legal income from patents, scientific prizes, and 
+classical market investments. The mathematically verified absolute ceiling for a hypothetical “ideal laborer-
+inventor” lies in the range of several hundred million dollars, reaching $3-4 billion in exceptional, 
+unprecedented historical scenarios.
+The current empirical reality, in which more than 31,000 people possess fortunes ranging from hundreds of 
+millions to hundreds of billions of dollars, while 3,428 of them control more than $20 trillion, indicates a 
+colossal failure in the economic matrix of capitalism. These super-fortunes were formed not through 
+proportionate contribution to society, but through the unregulated rise in the valuation of corporate assets, 
+market monopolization, protection of intellectual property in the interests of corporations, and historically 
+unprecedented tax loopholes.
+To restore economic, social, and moral justice, civilization must transition to a new architecture for 
+distributing wealth. The introduction of a globally coordinated minimum tax on super-fortunes, the reform of 
+corporate and patent law, the elimination of offshore havens, and the limitation of opportunities to convert 
+financial capital into political power are not merely theoretical constructs, but urgent, mathematically 
+grounded imperatives. Only by implementing this set of measures will the global community be able to limit 
+--- Page 9 ---
+English translation
+the destructive influence of plutocracy, protect democratic freedoms, and direct surpluses of inefficiently 
+accumulated capital toward eradicating global poverty and solving humanity’s existential challenges.
+Works cited
+1. Overview of BLS Wage Data by Area and Occupation - Bureau of Labor Statistics, https://www.bls.gov/bls/blswage.htm
+2. OES Home: U.S. Bureau of Labor Statistics, https://www.bls.gov/oes/
+3. Ranked: America's Top-Paying Jobs by Median Salary - Visual Capitalist, https://www.visualcapitalist.com/ranked-americas-highest-paying-
+jobs-median-salary/
+4. Highest Paying Occupations - Bureau of Labor Statistics, https://www.bls.gov/ooh/highest-paying.htm
+5. The Highest-Paying Jobs You Can Get Right Now, https://www.monster.com/career-advice/job-lists/highest-paying-jobs
+6. 20 Highest Paying Medical Jobs in 2026 - Nurse.org, https://nurse.org/healthcare/highest-paying-medical-jobs/
+7. Legal Limits on Executive Compensation: Key Regulations Guide, https://www.justiceatwork.com/legal-limits-on-executive-compensation/
+8. Is There Any Legal Limit on Executive Compensation? | Garrison, Levin-Epstein, Fitzgerald & Pirrotti, P.C., https://garrisonlaw.com/is-there-
+any-legal-limit-on-executive-compensation/
+9. Executive Equity Compensation - J.P. Morgan Workplace Solutions, https://www.jpmorganworkplacesolutions.com/insights/executive-
+equity-compensation/
+10. CE home: U.S. Bureau of Labor Statistics, https://www.bls.gov/cex/
+11. Consumer Expenditure Surveys - Bureau of Labor Statistics, https://www.bls.gov/cex/cecomparison/ce_profile.htm
+12. Consumer Expenditures for the U.S., regions, and selected metropolitan areas: Midwest Information Office - Bureau of Labor Statistics, 
+https://www.bls.gov/regions/midwest/data/consumerexpenditures_selectedareas_table.htm
+13. $1 in 1996 -> 2026 - Inflation Calculator, https://www.in2013dollars.com/us/inflation/1996?amount=1
+14. U.S. Inflation Rate by Year (1913-2026) - Macrotrends, https://www.macrotrends.net/2497/historical-inflation-rate-by-year
+15. Consumer Price Index, 1800- | Federal Reserve Bank of Minneapolis, https://www.minneapolisfed.org/about-us/monetary-policy/inflation-
+calculator/consumer-price-index-1800-
+16. Total Average Annual Expenditures: All Consumer Units | FRED | St. Louis Fed, https://fred.stlouisfed.org/graph/?g=1kIhY
+17. Historical Tax Rates: The Rhetoric and Reality of Taxing the Rich - The Concord Coalition, 
+https://www.concordcoalition.org/deep-dives/issue-brief/historical-tax-rates-the-rhetoric-and-reality-of-taxing-the-rich/
+18. History of Federal Income Tax Rates: 1913-2026, https://bradfordtaxinstitute.com/Free_Resources/Federal-Income-Tax-Rates.aspx
+19. U.S Individual Income Tax: Tax Rates for Regular Tax: Highest Bracket (IITTRHB) - FRED, https://fred.stlouisfed.org/series/IITTRHB
+20. Historical US Federal Individual Income Tax Rates & Brackets, 1862-2025, https://taxfoundation.org/data/all/federal/historical-income-tax-
+rates-brackets/
+21. The Top 1 Percent's Tax Rates Over Time - Tax Foundation, https://taxfoundation.org/data/all/federal/top-1-percent-tax-rate/
+22. Prestigious Prizes and Awards | MIT Office of the Vice President for Research, https://research.mit.edu/research-development/prestigious-
+prizes-and-awards
+23. Sir John Templeton, https://www.templetonprize.org/sir-john-templeton/
+24. Templeton Prize - Wikipedia, https://en.wikipedia.org/wiki/Templeton_Prize
+25. Templeton Prize | Religion, Science & Spirituality - Britannica, https://www.britannica.com/topic/Templeton-Prize
+26. Unlocking Patents: Costs of Failure, Benefits of Success, 
+https://www.cagw.org/sites/default/files/users/user1/Patents%20study%20October.pdf
+27. Patent Licensing and Secondary Markets: A Brief Historical Overview, 
+https://www.commerce.senate.gov/wp-content/uploads/media/doc/Mossoff%20Testimony.pdf
+28. 20 Brilliant Inventors Who Made Others Rich And Died Poor - HistorySnob, https://www.historysnob.com/historical-figures/20-brilliant-
+inventors-who-made-others-rich-and-died-poor
+29. Are there any Engineers that got wealthy because of royalties from their inventions? Who are some famous ones? - Reddit, 
+https://www.reddit.com/r/MechanicalEngineering/comments/18yn3pt/are_there_any_engineers_that_got_wealthy_because/
+30. The Most Lucrative Patents in History - And What Your Company Can Learn from Them, https://blawgit.com/2025/04/01/the-most-
+lucrative-patents-in-history-and-what-your-company-can-learn-from-them/
+31. List of prolific inventors - Wikipedia, https://en.wikipedia.org/wiki/List_of_prolific_inventors
+32. Hasbro settles royalty dispute with Super Soaker inventor with $73m payout - TIL Lonnie Johnson also had something to do with N-Strike 
+and Dart Tag. : r/Nerf - Reddit, https://www.reddit.com/r/Nerf/comments/1q8ouj/hasbro_settles_royalty_dispute_with_super_soaker/
+33. Super Soaker Creator Awarded $72.9M In Hasbro Settlement | Chicago Defender, https://chicagodefender.com/super-soaker-creator-
+awarded-72-9m-in-hasbro-settlement-2/
+34. Super Soaker Settlement $73 Million - Cohen IP Law Group, https://patentlawip.com/blog/super-soaker-settlement-73-million/
+35. Super Soaker creator awarded $72.9M from Hasbro - AJC.com, https://www.ajc.com/business/super-soaker-creator-awarded-from-
+hasbro/GW1s2IDgrqQKg2p9zsY1LO/
+36. Super Soaker Creator Awarded $72.9M In Hasbro Settlement, https://sdvoice.info/super-soaker-creator-awarded-72-9m-in-hasbro-
+settlement/
+37. Most Valuable Patents - article Zuykov and partners, https://zuykov.com/en/about/articles/most-valuable-patents/
+--- Page 10 ---
+English translation
+38. Compound Savings Calculator - Office of Financial Readiness, https://finred.usalearning.gov/ToolsAndAddRes/Calculators/Savings/
+calculator/Compound-and-Your-Return
+39. Annual return on investment calculator | Ameriprise Financial, https://www.ameriprise.com/financial-news-research/financial-calculators/
+investment-return-calculator
+40. Compound Savings Calculator - Raymond James, https://www.raymondjames.com/borzastorckwm/resources/financial-calculators/
+calculators/compound-savings
+41. Average Stock Market Return: S&P 500 Historical Performance - SoFi, https://www.sofi.com/learn/content/average-stock-market-return/
+42. S&P 500 Historical Annual Returns (1927-2026) - Macrotrends, https://www.macrotrends.net/2526/sp-500-historical-annual-returns
+43. Will Inflation Hurt Stock Returns? Not Necessarily. | Dimensional, https://www.dimensional.com/us-en/insights/will-inflation-hurt-stock-
+returns-not-necessarily
+44. Compound Interest Calculator | Newtown Savings Bank, https://www.nsbonline.com/calculator/compound-interest
+45. S&P 500: historical performance from 1992 to 2026 - Curvo, https://curvo.eu/backtest/en/market-index/sp-500
+46. UBS Global Wealth Report 2025 | UBS United States of America, https://www.ubs.com/us/en/wealth-management/insights/global-wealth-
+report.html
+47. Millionaire Statistics, Insights And Facts (2025) - ElectroIQ, https://electroiq.com/stats/millionaire-statistics/
+48. Top 10 countries with the most millionaires in 2025: Where does India stand globally?, https://indianexpress.com/article/trending/top-10-
+listing/top-10-countries-with-the-most-millionaires-in-202-india-rank-10347035/
+49. Global Wealth: How the Top 1% Reshape the World Economy - IMGW.News, https://imglobalwealth.com/articles/global-wealth-how-the-
+top-1-reshape-the-world-economy/
+50. Global Inequality, https://inequality.org/facts/global-inequality/
+51. US Led Growth In Global Wealth In 2024 - UBS Global Wealth Report, https://www.familywealthreport.com/article.php/US-Led-Growth-In-
+Global-Wealth-In-2024-%E2%80%93-UBS-Global-Wealth-Report?id=204775
+52. List of countries by number of millionaires - Wikipedia, https://en.wikipedia.org/wiki/List_of_countries_by_number_of_millionaires
+53. USA Wealth Report 2025: America Tops Global Wealth Growth - But the Wealthy Eye Opportunities Abroad - Henley & Partners, 
+https://www.henleyglobal.com/newsroom/press-releases/usa-wealth-report-2025
+54. The World’s Billionaires list: 3,428 globally worth $20.1 trillion as a group, https://www.forbesindia.com/article/billionaires/the-worlds-
+billionaires-list-3428-globally-worth-201-trillion-as-a-group/2994157/1
+55. Forbes 2026 Billionaires List - The Richest People In The World Ranked, https://www.forbes.com/billionaires/
+56. Billionaire wealth jumps three times faster in 2025 to highest peak ever, sparking dangerous political inequality | Oxfam International, 
+https://www.oxfam.org/en/press-releases/billionaire-wealth-jumps-three-times-faster-2025-highest-peak-ever-sparking
+57. Resisting the Rule of the Rich - Oxfam, https://www.oxfamamerica.org/explore/research-publications/resisting-the-rule-of-the-rich/
+58. Resisting the Rule of the Rich: Billionaire Wealth Jumps Three Times Faster in 2025 to Highest Peak Ever, Sparking Dangerous Political 
+Inequality, https://www.oxfam.org.za/resisting-the-rule-of-the-rich-billionaire-wealth-jumps-three-times-faster-in-2025-to-highest-peak-ever-
+sparking-dangerous-political-inequality/
+59. Just 0.001% hold three times the wealth of poorest half of humanity, report finds | Inequality, 
+https://www.theguardian.com/inequality/2025/dec/10/just-0001-hold-three-times-the-wealth-of-poorest-half-of-humanity-report-finds
+60. Executive Summary - World Inequality Report 2026, https://wir2026.wid.world/insight/executive-summary/
+61. The World's Billionaires - Wikipedia, https://en.wikipedia.org/wiki/The_World%27s_Billionaires
+62. Forbes Real Time Billionaires List - The World's Richest People, https://www.forbes.com/real-time-billionaires/
+63. Rethinking capital and wealth taxation - Thomas Piketty, http://piketty.pse.ens.fr/files/PikettySaezZucman2023RKT.pdf
+64. 10 Patents That Made Their Founders Rich - SlashGear, https://www.slashgear.com/1636698/patents-that-made-founders-rich/
+65. Oxfam report finds billionaires' wealth soared in 2024 - FRANCE 24 English - YouTube, https://www.youtube.com/watch?v=KHDyMSixDek
+66. G20 summit in Rio promotes wealth taxes, MDB and UN reform, https://www.globalpolicy.org/en/news/2024-11-20/g20-summit-rio-
+promotes-wealth-taxes-mdb-and-un-reform
+67. TRACING THE BILLIONAIRE'S TAX ACROSS FOUR G20 PRESIDENCIES - unrisd, https://cdn.unrisd.org/assets/library/papers/pdf-
+files/2026/wp-02-2026-g20-oppel.pdf
+68. Economist Gabriel Zucman proposes that billionaires pay at least 2% in annual taxes on their fortunes - Portal Gov.br, 
+https://www.gov.br/g20/en/news/economist-gabriel-zucman-proposes-that-billionaires-pay-at-least-2-in-annual-taxes-on-their-fortunes
+69. A blueprint for a coordinated minimum effective taxation standard for ultra-high-net-worth individuals - International Tax Observatory, 
+https://taxobservatory.world/publication/a-blueprint-for-a-coordinated-minimum-effective-taxation-standard-for-ultra-high-net-worth-
+individuals/
+70. A Blueprint for a Coordinated Minimum Effective Taxation Standard for Ultra-High-Net-Worth Individuals - Gabriel Zucman, https://gabriel-
+zucman.eu/files/report-g20.pdf
+71. Billionaire Taxation and Wealth Redistribution: A Personal View, https://wid.world/document/billionaire-taxation-and-wealth-redistribution-a-
+personal-view-world-inequality-lab-working-paper-2025-20/
