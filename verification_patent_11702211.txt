@@ -1,0 +1,290 @@
+================================================================================
+PATENT US11702211B2 — DEEP VERIFICATION REPORT
+Investigation Date: 2026-06-12
+Investigator: Verification_Specialist
+================================================================================
+
+1. EXECUTIVE SUMMARY — CRITICAL FINDING
+================================================================================
+CLAIM: Patent US11702211 (July 18, 2023) titled "Headrest tilt mechanism
+utilizing gear reduction" is assigned to IIXXMMXXI LLC with Aidan Panthera as
+inventor.
+
+VERDICT: CLAIM IS FALSE.
+
+The official USPTO and Google Patents records show that US11702211B2 is
+assigned to B/E Aerospace, Inc. (BE Aerospace Inc) and the inventors are
+Yashashree Umakant Khachane and Pradeep Acharya — NOT IIXXMMXXI LLC and NOT
+Aidan Panthera.
+
+The only source showing IIXXMMXXI LLC / Aidan Panthera is the third-party
+database Justia.com (patents.justia.com), which appears to contain a
+serious data error or fabricated record. This is a RED FLAG indicating
+potential deception or database manipulation in the source material that
+originally linked this patent to IIXXMMXXI LLC.
+
+================================================================================
+2. AUTHORITATIVE PATENT RECORD (USPTO / Google Patents)
+================================================================================
+Patent Number:        US11702211B2
+Title:                Headrest tilt mechanism utilizing gear reduction
+Inventors (Official):  Yashashree Umakant Khachane
+                       Pradeep Acharya
+Assignee (Official):  B/E Aerospace, Inc. (also listed as BE Aerospace Inc)
+Filing Date:          2021-07-13
+Priority Date:         2021-04-15
+Publication Date:      2023-07-18
+Application Number:     US17/374,432
+Status:                Active
+Expiration Date:       2042-01-12
+
+Priority Claim:       EP21195337.7A (2021-09-07)
+
+Assignment History (from USPTO/Google Patents):
+  - 2021-07-13: Application filed by BE Aerospace Inc
+  - 2021-11-05: Assigned to B/E AEROSPACE, INC. from Acharya, Pradeep and
+                Khachane, Yashashree Umakant
+  - 2022-01-24: Assigned to B/E AEROSPACE, INC. from Goodrich Aerospace
+                Services Private Limited
+  - 2022-10-20: Publication of US20220332426A1
+  - 2023-07-18: Granted and published as US11702211B2
+
+NO RECORD of any assignment to IIXXMMXXI LLC or Aidan Panthera in the
+official USPTO assignment history.
+
+================================================================================
+3. TECHNOLOGY ANALYSIS
+================================================================================
+Industry Classification:
+  - Primary Class: B64D11/0642 (Aircraft seats — Adjustable headrests)
+  - Sector: B64 (AIRCRAFT; AVIATION; COSMONAUTICS)
+  - Industry: AEROSPACE INTERIORS / AIRCRAFT SEATING
+
+Technology Description:
+  The patent describes a headrest tilt mechanism for aircraft seats,
+  specifically for aircraft pilot seats. It utilizes a profile-shifted
+  gear configuration (13-tooth driven gear, 12-tooth driver gear) to
+  provide a large reduction ratio in a single step for fine tilt adjustment.
+
+  Key features:
+  - Manual knob actuator (or optional automated actuator)
+  - Approximately 35-degree angular range of tilt adjustment
+  - Reduced part count compared to conventional harmonic reduction drives
+  - Biasing mechanism (tension springs) to return headrest to full aft position
+  - Designed for reduced weight, cost, and complexity in aircraft applications
+
+Explicit mentions from patent text:
+  - "Aircraft seats such as pilot seats are typically equipped with a headrest."
+  - "The mechanism and the assembly may be utilized to equip a seat, such as
+    a passenger seat, and in particular an aircraft pilot seat, with an
+    adjustable headrest."
+  - "complex mechanisms are more prone to failure and therefore are
+    undesirable, particularly in aircraft applications."
+
+Verdict: This is unequivocally an AEROSPACE patent, not automotive, not
+furniture, and not related to VTOL/UAV propulsion or flight dynamics.
+
+================================================================================
+4. ASSIGNEE ADDRESS COMPARISON
+================================================================================
+US11702211B2 (Actual): B/E Aerospace, Inc.
+  - B/E Aerospace is headquartered in Winston-Salem, North Carolina, USA
+    (now part of Collins Aerospace / Raytheon Technologies)
+  - The inventors (Khachane, Acharya) appear to be based in India, with
+    assignments flowing through Goodrich Aerospace Services Private Limited
+    (an India-based subsidiary)
+
+US10953977B2 (First Patent): IIXXMMXXI LLC
+  - Address: Vernon, CT, USA (per USPTO and prior verification report)
+
+MATCH: NO. The addresses are completely different and unrelated.
+  - B/E Aerospace is a major, well-known aerospace interiors company
+  - IIXXMMXXI LLC is a small Connecticut LLC with no known corporate
+    connection to B/E Aerospace, Collins Aerospace, or Raytheon Technologies
+
+================================================================================
+5. INVENTOR VERIFICATION — AIDAN PANTHERA
+================================================================================
+Search Results for "Aidan Panthera" as patent inventor:
+  - USPTO/Google Patents: Only US10953977B2 is verified
+  - No other patents found in USPTO databases under this inventor name
+  - No academic publications, LinkedIn profiles, or professional records
+    found linking "Aidan Panthera" to aircraft seat design, mechanical
+    engineering, or gear mechanisms
+  - No evidence that Aidan Panthera works for or has ever worked for
+    B/E Aerospace, Goodrich Aerospace, or any aerospace seating company
+
+Search Results for actual inventors (Khachane, Acharya):
+  - Multiple patents assigned to B/E Aerospace, Inc. in the aircraft
+    seating/interiors domain
+  - Yashashree Umakant Khachane and Pradeep Acharya are established
+    inventors in the aerospace interiors field
+  - Additional patent found: US12559239 (Integrated seat assembly with
+    headrest and neck support) by Sambasiva Rao Kodati, also assigned to
+    B/E Aerospace, Inc.
+
+================================================================================
+6. CONNECTION TO VTOL/UAV INDUSTRY
+================================================================================
+CLAIMED CONTEXT: This patent was allegedly linked to IIXXMMXXI LLC, which
+holds a VTOL aircraft patent (US10953977B2).
+
+ACTUAL CONNECTION: NONE.
+
+- The headrest tilt mechanism is a mechanical seating component
+- It has ZERO connection to VTOL propulsion, flight control, aerodynamics,
+  or unmanned aerial vehicles
+- The gear reduction described is for manual seat adjustment, not for
+  aircraft drivetrains or rotor systems
+- BE Aerospace is an aircraft interiors/seating company, not a VTOL
+  aircraft manufacturer
+- No licensing, M&A, or joint venture between IIXXMMXXI LLC and B/E
+  Aerospace was found in any public records
+
+The only "connection" is the erroneous Justia database listing, which
+incorrectly attributes this patent to IIXXMMXXI LLC.
+
+================================================================================
+7. THIRD-PARTY DATABASE DISCREPANCY (Justia.com)
+================================================================================
+Source: patents.justia.com/patents-by-issue-date/2023/07/18?page=42
+Justia Listing:
+  - Date of Patent: July 18, 2023
+  - Assignee: IIXXMMXXI LLC
+  - Inventor: Aidan Panthera
+  - Title: Headrest tilt mechanism utilizing gear reduction
+  - Patent number: 11702211
+
+Official USPTO Record:
+  - Date of Patent: July 18, 2023
+  - Assignee: B/E Aerospace, Inc.
+  - Inventors: Yashashree Umakant Khachane, Pradeep Acharya
+  - Title: Headrest tilt mechanism utilizing gear reduction
+  - Patent number: 11702211
+
+ASSESSMENT: Justia.com is a third-party patent database that aggregates
+USPTO data. It is NOT the authoritative legal record. The discrepancy
+between Justia and the official USPTO/Google Patents record is
+extraordinary and raises the following possibilities:
+
+  a) DATABASE ERROR: Justia's crawler or ingestion pipeline misattributed
+     this patent to IIXXMMXXI LLC (possibly conflated with US10953977B2,
+     which IS assigned to IIXXMMXXI LLC and was also issued around the
+     same time period)
+
+  b) DATA MANIPULATION / FABRICATION: The Justia record was deliberately
+     altered or falsified to create a false association between IIXXMMXXI
+     LLC and this patent. This would be consistent with a pattern of
+     fabricating credentials or building a fake patent portfolio.
+
+  c) PROPAGATION FROM ANOTHER ERRONEOUS SOURCE: Justia may have ingested
+     incorrect data from another aggregator or data provider.
+
+EVIDENCE FOR (b): The prior verification report confirmed that IIXXMMXXI
+LLC holds only 1 patent in Vernon, CT (US10953977B2). If a second patent
+were truly held, the USPTO assignment database would show it. The fact
+that ONLY Justia shows this association while the authoritative USPTO
+source does not is highly suspicious.
+
+================================================================================
+8. ASSESSMENT: REAL INVENTOR, AGGREGATOR, OR FABRICATION?
+================================================================================
+Based on the evidence gathered, the following conclusions are drawn:
+
+A. PATENT US11702211B2 IS REAL AND VALID
+   - It is a legitimate, active US patent held by B/E Aerospace, Inc.
+   - It covers a real aerospace technology (aircraft seat headrest mechanism)
+   - It was NOT invented by Aidan Panthera
+   - It is NOT assigned to IIXXMMXXI LLC
+
+B. THE IIXXMMXXI LLC / AIDAN PANTHERA LINK TO US11702211 IS FABRICATED
+   - The official USPTO record definitively contradicts the Justia listing
+   - No assignment record exists transferring this patent from B/E Aerospace
+     to IIXXMMXXI LLC
+   - Aidan Panthera has no documented background in aircraft seat design
+   - The technology (aircraft seat headrest) is completely unrelated to the
+     first patent (VTOL aircraft form-varying apparatus, US10953977B2)
+   - This is not a case of a diversified inventor; this is a case of a
+     patent being falsely attributed
+
+C. IIXXMMXXI LLC IS NOT A PATENT AGGREGATOR
+   - A patent aggregator would acquire real patents through recorded
+     assignments. There is NO USPTO assignment record showing IIXXMMXXI LLC
+     acquiring US11702211B2.
+   - The only verified patent held by IIXXMMXXI LLC remains US10953977B2.
+
+D. THE MOST LIKELY EXPLANATION: DECEPTION OR DATABASE POISONING
+   - Someone with knowledge of the first patent (US10953977B2) searched for
+     another patent issued on July 18, 2023 (the grant date of US11702211),
+     found the headrest patent, and either:
+     (1) Deliberately created a false narrative linking it to IIXXMMXXI LLC, or
+     (2) Relied on a corrupted third-party database (Justia) without
+         verifying against the authoritative USPTO record.
+   - The result is a "second patent" that appears to belong to the same
+     LLC/inventor but is actually a completely unrelated patent belonging
+     to a major aerospace corporation.
+
+================================================================================
+9. PROVENANCE & SOURCES
+================================================================================
+Primary Source (Authoritative):
+  - Google Patents: https://patents.google.com/patent/US11702211B2/en
+    Retrieved 2026-06-12. Full patent text, images, assignment history,
+    and legal status verified directly.
+
+Secondary Source (Disputed):
+  - Justia Patents: https://patents.justia.com/patents-by-issue-date/2023/07/18?page=42
+    Retrieved 2026-06-12. Shows incorrect assignee/inventor data.
+
+Supporting Searches:
+  - USPTO Patent Public Search (ppubs.uspto.gov) — attempted; direct URL
+    fetch failed but Google Patents mirrors USPTO official data
+  - USPTO Patent Gazette — inventor/assignee indices searched for
+    "B/E Aerospace, Inc." confirming the company's patent holdings
+  - kimi_search_v2 queries for "Aidan Panthera patent inventor" —
+    returned no additional patents beyond US10953977B2
+  - kimi_search_v2 queries for "IIXXMMXXI LLC patent assignee" —
+    only returned the Justia erroneous listing
+
+Context from Prior Investigation:
+  - File: evidence/verification_patent_network.txt
+  - Confirmed US10953977B2 is legitimately assigned to IIXXMMXXI LLC,
+    Vernon, CT, with Aidan Panthera as inventor
+  - Confirmed IIXXMMXXI LLC holds only 1 verified patent in USPTO records
+
+================================================================================
+10. FINAL VERDICT & RECOMMENDATIONS
+================================================================================
+VERDICT: The claim that US11702211 is a second patent held by IIXXMMXXI
+LLC with Aidan Panthera as inventor is DISPROVEN. The patent actually
+belongs to B/E Aerospace, Inc., with inventors Khachane and Acharya.
+The association with IIXXMMXXI LLC is a fabrication or serious database
+error.
+
+IMPLICATIONS:
+1. Any narrative, report, or analysis that relies on IIXXMMXXI LLC
+   holding two patents (US10953977B2 + US11702211) is built on FALSE
+   premises.
+2. The entity that supplied this "second patent" information either
+   failed to verify against authoritative sources or deliberately
+   manufactured the connection.
+3. IIXXMMXXI LLC remains a one-patent LLC with a single, narrow-focus
+   VTOL patent. It does NOT demonstrate cross-industry innovation or
+   a diversified patent portfolio.
+4. The credibility of any source that cited US11702211 as belonging to
+   IIXXMMXXI LLC should be questioned.
+
+RECOMMENDATIONS:
+- Flag the Justia record as erroneous in any downstream analysis.
+- Do NOT include US11702211 in any IIXXMMXXI LLC patent portfolio
+  assessment.
+- Investigate the ORIGIN of the false claim (who first asserted this
+  patent belonged to IIXXMMXXI LLC?) to determine if this was an
+  honest mistake or deliberate deception.
+- Consider whether the first patent (US10953977B2) itself requires
+  deeper scrutiny, given that the same source may have provided
+  unreliable data.
+
+================================================================================
+END OF REPORT
+================================================================================

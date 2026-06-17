@@ -1,0 +1,544 @@
+ 
+:   
+Liber Primus, -
+   
+ Cicada 3301
+   - 
+        ,      ,   ,    Cicada 3301.          4chan 4  2012 ,          .         (Alternate Reality Games, ARG),         ,  ,  ,     .          2012, 2013  2014    PGP- (Pretty Good Privacy).      ,             ,            .     Cicada 3301      (Cypherpunks),    1980-  1990- .   ,   , -   ,                Web 2.0.   ,   « »   (1988)  « »   (1993), ,    ,   ,                .      PGP-  Cicada 3301      :       ,   ,     ,      ,    .  
+
+  «Cicada»,    ,          1990- .                 ,        @cicada.berkeley.edu. -           ,  ,   .  ,       Cicada 3301    «  » (Puzzle Hunt),        (MUMS)   2000- .  2004  -            ,   WikiLeaks,        .   MUMS --         (  GPS-),   ,   ,       --            Cicada 3301.                .    (      )     (,   MI6),    ,      ,   - Tor.           .         CAKES (Cicada Anonymous Key Escrow System --     Cicada).  CAKES     ,    « » (dead man's switch).                ,   (  )   ,        (keep-alive signal)     .   CAKES       -        ,       Cicada 3301      -.
+   
+   
+          ,      .  2012          ,      (prime numbers).       : «   ,  
+
+  .jpg. 3301 --   .     .         .com,    ».     ,      509     503   .      .      (3301 \times 509 \times 503)  845145127.       - http://845145127.com,          .    OutGuess       : «  ,   .  --  .   17:00  , 9  2012  UTC. 3301».    PGP-.    ,   845145127        RSA ,     MIT (Massachusetts Institute of Technology).  : Type: 4096R/7A35090F, Date: 2012-01-05, User ID: Cicada 3301 (845145127).  (Hex)    -- 7A35090F --     .        ,  32-  7A35090F  ,      ,           AES-256.
+   
+Gematria Primus
+        2014     --  Liber Primus (  « »),   74 .      ,     Gematria Primus.         ,       ,     (  0  55)        .      Liber Primus     .  29-  ,       ,    2013         (XOR)     Twitter-      ,     761.mp3 (  The Instar Emergence).    Gematria Primus      .   29      ,     ,     ,       (Prime)  2  109,       0  28.    Gematria Primus:
+
+
+
+
+
+    (Prime)
+
+
+
+
+
+F
+
+0
+
+2
+
+
+
+U/V
+
+1
+
+3
+
+
+
+TH
+
+2
+
+5
+
+
+
+O
+
+3
+
+7
+
+
+
+R
+
+4
+
+11
+
+
+
+C/K
+
+5
+
+13
+
+
+
+G
+
+6
+
+17
+
+
+
+W
+
+7
+
+19
+
+
+
+H
+
+8
+
+23
+
+
+
+N
+
+9
+
+29
+
+
+
+I
+
+10
+
+31
+
+
+
+J
+
+11
+
+37
+
+
+
+EO
+
+12
+
+41
+
+
+
+P
+
+13
+
+43
+
+
+
+X
+
+14
+
+47
+
+
+
+S/Z
+
+15
+
+53
+
+
+
+T
+
+16
+
+59
+
+
+
+B
+
+17
+
+61
+
+
+
+E
+
+18
+
+67
+
+
+
+M
+
+19
+
+71
+
+
+
+L
+
+20
+
+73
+
+
+
+ING
+
+21
+
+79
+
+
+
+OE
+
+22
+
+83
+
+
+
+D
+
+23
+
+89
+
+
+
+A
+
+24
+
+97
+
+
+
+AE
+
+25
+
+101
+
+
+
+Y
+
+26
+
+103
+
+
+
+IA/IO
+
+27
+
+107
+
+
+
+EA
+
+28
+
+109
+
+    ,   
+
+ ( , , )    
+
+29 (modulo 29).        28 
+
+  0,    (wraparound), 
+
+  .     
+
+      ,  «
+
+ »       .
+
+  (   ,  
+
+)        
+
+ .  ,      «Patience is a
+
+virtue»       761.     
+
+  The Instar Emergence (167  -- 167  
+
+    761)     761.mp3. 
+
+ , Interconnectedness,    772,   
+
+  277  (277 --  ).  
+
+      :  The Instar Emergence     -     Db-Ab-Db-Gb-Ab-Db       .               .    «A Warning»        : «        ...   ».           :    ,      ,       .  ,   «Believe nothing from this book»  757,   «Except what you know to be true»  1009. ,               ,         .       - ,      ,   "Instar Emergence".    --      .   Cicada 3301     ,        "   ",       ,      .
+   
+   ( 0-55)
+ ,        ,           0-55      (substitution ciphers),     , ""  .        :
+  «A Warning»       Atbash   decimal[i] = 28 - decimal[i].
+  «Welcome»      (Vigenère)    DIVINITY.       -      (48, 74, 84, 132  .).
+  «Koan 1»     Atbash       3  (decimal[i] = (decimal[i] + 3) \pmod{29}).
+            0-55      .            (Frequency Analysis)     (Index of Coincidence, IC).     ,      
+
+   .  ,   
+
+IC    1.73,     (  E, T, A, O)
+
+    .     12
+
+956    0-55    , 
+
+ .
+
+      Liber Primus:
+
+ ()   
+
+ 
+
+
+
+ 
+
+
+
+(IC)
+
+Cross
+
+0-2
+
+729
+
+0.988
+
+4
+
+0.549%
+
+Spirals
+
+3-7
+
+1145
+
+1.004
+
+6
+
+0.524%
+
+Branches
+
+8-14
+
+1729
+
+0.999
+
+9
+
+0.520%
+
+Möbius
+
+15-22
+
+1903
+
+1.000
+
+10
+
+0.525%
+
+Mayfly
+
+23-26
+
+1021
+
+0.993
+
+11
+
+1.078%
+
+Wing/Tree 27-32
+
+1433
+
+0.991
+
+13
+
+0.907%
+
+Cuneiform 33-39
+
+1680
+
+0.996
+
+12
+
+0.714%
+
+Spiral/Branche 40-53
+
+3008
+
+1.001
+
+18
+
+0.598%
+
+s
+
+Hollow
+
+54-55
+
+308
+
+0.980
+
+3
+
+0.977%
+
+Total
+
+0-55
+
+12 956
+
+0.999
+
+86
+
+0.663%
+
+        0.999.  
+
+ ,    
+
+.        (random)
+
+  (    ),   
+
+   ( RSA  AES),   
+
+   .
+
+   ,    
+
+   Atbash,     ""
+
+--  ,    ,    EE, SS, OO. 
+
+       (, 
+
+ book, see, happen, need).      
+
+      3.45%.  
+
+  Liber Primus    
+
+0.663% ( 86     13 000 ).
+
+ ,       
+
+    , 
+
+   (autokey cipher),     
+
+  (plaintext),  ,    
+
+   (ciphertext).    
+
+        
+
+.
+
+  :  RSA   
+
+       
+
+  Liber Primus,  «Some Wisdom» ( ).         : "SOME WISDOM THE PRIMES ARE SACRED THE TOTIENT FVNCTIAN IS SACRED ALL THNGS SHOVLD BE ENCRYPTED. KNOW THIS." (« :   .   .     .  »).      ( ),      \phi(n) = (p-1)(q-1),          RSA (Rivest-Shamir-Adleman).  Cicada 3301  ,     0-55     ,       (BigInt),      RSA.     (     )      d    c    : m \equiv c^d \pmod n.  ,     (  )  RSA     Cicada 3301.    2014          .            RSA:   e=65537   n,     432  (  130  ).          2048  4096    (   )        .   Cicada 3301   ,  432- ,           .      (Number Field Sieve, NFS)     cado-nfs,      9   ,        p  q.   ,      \phi(n) = (p-1)(q-1),           d,     onion-  .          Liber Primus:   RSA      ;     \phi(n)   ;    n        .     Liber Primus         5x5,       «Some Wisdom».           (shadows, aethereal, buffers, void, obscura, mobius, analog, cabal).           -.           ,      1033.  1033           :    (emirp)  3301.  ( prime,  ) --   ,     
+
+   ,        .    n    Liber Primus          : n = 1033 \times 3301 = 3410533.     RSA-    ,     :   4, 6, 21, 22, 35, 40, 42  43     (  )     (  ).          ,          RSA-.       ,     ,   ,        BigInt.
+  
+2422826321411203
+    n=3410533,  RSA-     ,          .       16-   : 2422826321411203.     «  » (Recursive Transposition Key)       ,        «    » (Low-Prime Bottleneck).    2422826321411203      :
+1.   ( ):     16 .    Liber Primus    ,  16  (,   32, 48  64   /).          « » (sliding window)       "" ,   .
+2.  :        (  1  2).    Gematria Primus       ().             (  89, 97, 101)        (A, E, I, O).       ,        29.
+3.   (Mirror Protocol):         (0.663%)     .     (, 1, 33, 57) 16-      (2422826321411203),     (20, 56)         (3021141236282242).
+4.  :  ,     
+
+   RSA-        33.01%.               .       --   1203 (The 1203 Trailer).       (padding),         :   (Timestamp):      UTC 12:03,        .    :  1203     1203-    ,   9739.     ,    ,  9739     ,     2026 .    (Checksum):   16     43.         ( 58)      (43),      3301,   ,   .   Tor-:          Base-32,   1203     .      v3: cyccicada2422826321411203v3.onion.   «  » (Hybrid Block Approach),          RSA,      2422826321411203,       .   33 (The Master Page)      89,   : "TRUTH IS INSIDE".   40        "DIVINITY".           57: "Parable: Like the instar tunneling to the surface. We must shed our own circumferences. Find the divinity within and emerge." («:  ,    .      .      »).
+  : 
+  (Global Hybrid Solution)
+          RSA-   ,   56  .        : "AN END. WITHIN THE DEEP WEB, THERE EXISTS A PAGE THAT HASHES TO 36367763ab73783c7af284446c59466b4cd653239a311cb7116d4618dee09a8425893dc7500b4 64fdaf1672d7bef5e891c6e2274568926a49fb4f45132c2a8b4. IT IS THE DUTY OF EVERY PILGRIM TO SEEK OUT THIS PAGE." (   ,   ...      ).
+
+        ,   Tor Project    onion-  v2,    512-  (, SHA-512  BLAKE2b)      IPFS  Freenet    .          2026      «  » (Global Hybrid Solution),     IntrepidIdeal2376.  ,       ,  ,            " " (Mayan Trap),                 (   20 / Base-20).               --  (Incan Khipu Logic).         (Base-10).     ,       « » (Positional Zero) -- ,    ( )  .            Liber Primus           Base-20  ,     Base-10.           58   3301  1033     ,       .
+   
+:     
+           --      .    «» (Clockmaker),    34-35 Liber Primus, ,      ,     .    (   )      1461    ( 1461    -),   ,    ,      .   1461      ( Value \pmod{1461})         Gematria Primus.    ,  2026     « »    ,      ,        Cicada 3301        4- .    --   ,   « » (ÞRÍTTU). ,            (Old Norse),       .  « »
+
+  ,        -- « » (Triple Junctions),                     :
+1.  :       /  .
+2.  :    (Afar Triple Junction, /),   ,    .
+3.  :        / -.
+    (Prime Meridian)         ,    29.979^\circ \text{N}.
+    AES-256:
+ 
+    -       « » (Vanity Grids),    50, 51  52 Liber Primus.       ,    .      3D-   .        :
+1.   50, 51  52     . 2.    (Base-10)    
+    . 3.        (Sum \pmod{1461}). 4.       (Hexadecimal) .        256-    AES (Advanced Encryption Standard).        :      0x7A,        7A35090F.      2  , 7A35090F     PGP- (Fingerprint / Key ID)  Cicada 3301,   MIT keyservers   2012 .       14    « » (Self-Authenticating Handshake),    .      AES-    Triple Junctions  512- « »   56   onion-   ,  IPv6-   (IPv6 node).        ,    : "VAKNA INSTAR" (  /:   / Awaken Instar). "VERTHA LOK" (:   /   / Become the lock).     ,  Liber Primus      .    (Hardware Manual)         ,
+
+    4-  ,     (Khipu),  (1461)   (ÞRÍTTU) .
+ ,  
+ RaaS- Cicada3301
+ ,        Liber Primus (2012-2014)          "Cicada 3301"           . ,     -           (gamejacking).       ,     . ,    (Thomas Schoenberger)       -,        Cicada 3301 Metaverse LLC.                NFT-.      .    ,          2021 ,    .  ,   -  ,        QAnon,       Cicada 3301    .          ,      «,  ».   ,           2024     ,    Ransomware-as-a-Service (RaaS),    "Cicada3301".           (               ),    ,       . - (forensic) -   RaaS- -Cicada3301,     Truesec  Morphisec,          .         RaaS- ALPHV (BlackCat).   2024 ,      22      Change Healthcare,  BlackCat   - (exit-scam):      -,      ()  .        
+
+  ,      "Cicada3301",      .    BlackCat  -Cicada3301     :
+  :   Rust. Rust    ,      ,   -  ,   Rust --   RaaS-,     ALPHV.
+ :    :      ChaCha20      OsRng,        RSA.
+  :     VMware ESXi.    Linux (   esxcli    vim-cmd vmsvc/snapshot.removeall          ).
+   (Anti-Sandbox):          (payloads)       .   Cicada3301     44  (     0x2C).
+   :    VPN  RDP   - Brutus,        (EDR - Endpoint Detection and Response)      EDRSandBlast.
+   ( 2026) 
+   
+       ,       BlackFog  Comparitech   2026     «Rochester».  (    RaaS- Akira,     -Cicada3301)        (Rochester Philharmonic Orchestra, RPO)   -.   VPN- ,       .      ,    (NDA) ,   ,   :    (SSNs),   (DLs)    .   ,     Tor- : «    .    (SSN, DL,   ..), ...».   -   ,    «Rochester»   RaaS-,  ,          Cicada 3301.  -,    ,    , 
+
+-Cicada3301,    --      (PGP payload).     PGP- ,        9739 .                 .       .  9739    1203-   (1203rd prime number).       "  ",  1203       (trailer)  16-   Liber Primus: 2422826321411203.    9739- PGP-         ,     :
+1.  RaaS- BlackCat/Cicada3301,    -    ,      Liber Primus              .
+2.   - Cicada 3301  2012    . ,                 ,     "" (  ,     )         ,   - .
+   
+-
+ -   Cicada 3301   ,      Liber Primus        2026 . -,  RSA-  .    0-55 Liber Primus     .    (0.999)      (0.663%)  ,      BigInt,     RSA.   n = 3410533        (1033)      (3301). -,      16-    2422826321411203.      ,      33.01%      "TRUTH IS INSIDE"  "DIVINITY".    (1203)    ,   1203-   (9739)   onion-.
+
+-,  «  » (Global Hybrid Solution)        -20.       56      Base-10      .     (1461 )         (ÞRÍTTU)           (, ,  ),      IPv6.   (Vanity Grids)    AES-256   7A35090F,       : "VAKNA INSTAR" ( )  "VERTHA LOK" ( ).  ,  Liber Primus         . -,    Cicada      .   RaaS- -Cicada3301,            2026 ,         BlackCat.   ,  9739- PGP-      ,    2012        -,      .     ,      2026 ,   Liber Primus,       -  ,   ,   .  Cicada 3301     ,                   .
+
+1. The Cicada 3301 Mystery - Reddit, https://www.reddit.com/r/mystery/comments/1pc7hfr/the_cicada_3301_mystery/ 2. Záhada Cicada 3301 : r/mystery - Reddit, https://www.reddit.com/r/mystery/comments/1pc7hfr/the_cicada_3301_mystery/?tl=cs 3. Unsolved!: The History and Mystery of the World's Greatest Ciphers from Ancient Egypt to Online Secret Societies 9781400884797 - DOKUMEN.PUB, https://dokumen.pub/unsolved-the-history-and-mystery-of-the-worlds-greatest-ciphers-from-anci ent-egypt-to-online-secret-societies-9781400884797.html 4. What Happened (2012) | Uncovering Cicada Wiki - Fandom, https://uncovering-cicada.fandom.com/wiki/What_Happened_(2012) 5. PGP TUTORIAL | Uncovering Cicada Wiki - Fandom, https://uncovering-cicada.fandom.com/wiki/PGP_TUTORIAL 6. Did everyone give up on CICADA 3301 , and what happened ? : r/nonmurdermysteries, https://www.reddit.com/r/nonmurdermysteries/comments/1havlsp/did_everyone_give_up_on_cic ada_3301_and_what/ 7. What Happened Part 1 (2014) | Uncovering Cicada Wiki - Fandom, https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2014) 8. CICADA 3301 2014 PUZZLE FACTS PART 3 | Uncovering Cicada Wiki - Fandom, https://uncovering-cicada.fandom.com/wiki/CICADA_3301_2014_PUZZLE_FACTS_PART_3 9.
+
+Frequency Analysis Unsolved Pages | Uncovering Cicada Wiki - Fandom, https://uncovering-cicada.fandom.com/wiki/Frequency_Analysis_Unsolved_Pages 10. Fake puzzles | Uncovering Cicada Wiki - Fandom, https://uncovering-cicada.fandom.com/wiki/Fake_puzzles 11. Liber Primus Unsolved Pages Uncovering Cicada Wiki - Fandom, https://uncovering-cicada.fandom.com/wiki/Uncovering_Cicada_Wiki 12. product/usr/srec/en-US/TERSE_LSTM_LM.lstm_lm.syms - GitLab, https://code.input.sh/jeanrivera/ASUS_AI2201/-/blob/3367ea0c343d57ec09fc04a10f73d9c9918 9931f/product/usr/srec/en-US/TERSE_LSTM_LM.lstm_lm.syms 13. tradition principally with reference to mythology and the law of nations. - Project Gutenberg, https://www.gutenberg.org/files/47127/47127-h/47127-h.htm 14. Kya sabne CICADA 3301 ko chhod diya, aur kya hua? : r/nonmurdermysteries - Reddit, https://www.reddit.com/r/nonmurdermysteries/comments/1havlsp/did_everyone_give_up_on_cic ada_3301_and_what/?tl=hi-latn 15. Ressources et développements - Ransomware resource The Council of Europe, https://www.coe.int/fr/web/ransomware/resources-and-developments 16. Ransomware Minute: Latest Attacks And News - Cybercrime Magazine, https://cybersecurityventures.com/ransomware-minute/ 17. Recent ransomware attacks visualized on US map - Comparitech, https://www.comparitech.com/ransomware-attack-map/ 18. akira details - RansomLook, https://www.ransomlook.io/group/akira 19. The State of Ransomware 2025 - BlackFog, https://www.blackfog.com/the-state-of-ransomware-2025/ 20. 7905 victims for United States - Ransomware.live, https://www.ransomware.live/map/US 21. akira - Ransomware.live, https://www.ransomware.live/group/akira
+
+

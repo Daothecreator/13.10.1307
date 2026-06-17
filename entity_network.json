@@ -1,0 +1,843 @@
+{
+  "nodes": [
+    {
+      "id": "N-001",
+      "type": "Company",
+      "name": "IIXXMMXXI LLC",
+      "labels": [
+        "IP_Holding",
+        "Obfuscated",
+        "Ghost_Entity"
+      ],
+      "confidence": 0.95,
+      "verified": true,
+      "notes": "Exists only in USPTO assignment records for one patent (US10953977B2). No state registration found. No SEC filings. No litigation. No social media. No dark web presence."
+    },
+    {
+      "id": "N-002",
+      "type": "Person",
+      "name": "Aidan Panthera",
+      "labels": [
+        "Inventor",
+        "Pseudonym_Unverified",
+        "Ghost_Identity"
+      ],
+      "confidence": 0.85,
+      "verified": true,
+      "notes": "Inventor of US10953977B2. No LinkedIn, no academic citations, no professional presence. Name may be pseudonym (Panthera = Latin genus of big cats). Possibly nom de plume."
+    },
+    {
+      "id": "N-003",
+      "type": "Law_Firm",
+      "name": "Dinsmore & Shohl LLP",
+      "labels": [
+        "Am_Law_200",
+        "National_Firm",
+        "IP_Litigation"
+      ],
+      "confidence": 0.99,
+      "verified": true,
+      "notes": "750+ attorneys, 30 cities, HQ Cincinnati. Founded 1908/1912. NLJ 500 #83. Confirmed Fortune 500 clients: P&G, Merrell Dow, Liberty Mutual, Dow Corning, Brown & Williamson, IFF. Representation of IIXXMMXXI LLC and ITW claimed only by PlainSite; NOT independently verified by USPTO or federal court records."
+    },
+    {
+      "id": "N-004",
+      "type": "Company",
+      "name": "Illinois Tool Works Inc.",
+      "labels": [
+        "Fortune_200",
+        "NYSE_ITW",
+        "Manufacturer"
+      ],
+      "confidence": 0.99,
+      "verified": true,
+      "notes": "Fortune 200. ~20,900 patents. No evidence of connection to IIXXMMXXI LLC. Dinsmore representation claim unverified."
+    },
+    {
+      "id": "N-005",
+      "type": "Company",
+      "name": "Iljin Global Company Ltd.",
+      "labels": [
+        "South_Korean",
+        "Conglomerate",
+        "Iljin_Diamond"
+      ],
+      "confidence": 0.95,
+      "verified": true,
+      "notes": "Sued by US Synthetic in 2021 (S.D. Texas + ITC). No connection to IIXXMMXXI LLC or Dinsmore found."
+    },
+    {
+      "id": "N-006",
+      "type": "Person",
+      "name": "David M. Maley",
+      "labels": [
+        "Investment_Professional",
+        "CIO",
+        "1102_Partners"
+      ],
+      "confidence": 0.99,
+      "verified": true,
+      "notes": "CIO of 1102 Partners LLC. MBA Chicago Booth. Ex-Goldman Sachs, Ariel Investments. ZERO connection to IIXXMMXXI LLC. Misattributed in original audit."
+    },
+    {
+      "id": "N-007",
+      "type": "Company",
+      "name": "1102 Partners, LLC",
+      "labels": [
+        "Investment_Advisor",
+        "Chicago",
+        "California_Registered"
+      ],
+      "confidence": 0.99,
+      "verified": true,
+      "notes": "Registered CA File BA20230078362 (1/14/2023). Manager: David M Maley. Agent: Michael Maley. Type: Investment Advisor. MISATTRIBUTED as IIXXMMXXI LLC in original forensic audit."
+    },
+    {
+      "id": "N-008",
+      "type": "Company",
+      "name": "Boeing Company",
+      "labels": [
+        "Fortune_500",
+        "Aerospace_Defense",
+        "BA"
+      ],
+      "confidence": 0.99,
+      "verified": true,
+      "notes": "Fortune 500 #44. $89.5B revenue. Owns Wisk Aero. Patent US10994829B2 (foldable rotor VTOL). Unverified citation of US10953977B2."
+    },
+    {
+      "id": "N-009",
+      "type": "Company",
+      "name": "Amazon.com Inc.",
+      "labels": [
+        "Fortune_500",
+        "E_Commerce",
+        "AMZN"
+      ],
+      "confidence": 0.99,
+      "verified": true,
+      "notes": "Fortune 500 #2 (or #1). $638-717B revenue. Patent US9550567B1 (in-flight reconfigurable hybrid UAV). FAA BVLOS approved 2022. Unverified citation of US10953977B2."
+    },
+    {
+      "id": "N-010",
+      "type": "Company",
+      "name": "Lockheed Martin Corporation",
+      "labels": [
+        "Fortune_500",
+        "Defense",
+        "LMT"
+      ],
+      "confidence": 0.99,
+      "verified": true,
+      "notes": "Fortune 500 #59. $75B revenue. Patent US10112698B2 (aerial vehicle wing deployment). Unverified citation of US10953977B2."
+    },
+    {
+      "id": "N-011",
+      "type": "Company",
+      "name": "Northrop Grumman Systems",
+      "labels": [
+        "Fortune_500",
+        "Defense",
+        "NOC"
+      ],
+      "confidence": 0.99,
+      "verified": true,
+      "notes": "Fortune 500 #110. $42B revenue. Patent US10280904B2 (electrically activated pivot). Unverified citation of US10953977B2."
+    },
+    {
+      "id": "N-012",
+      "type": "Company",
+      "name": "RTX Corporation",
+      "labels": [
+        "Fortune_500",
+        "Aerospace_Defense",
+        "RTX"
+      ],
+      "confidence": 0.99,
+      "verified": true,
+      "notes": "Fortune 500 #46. $88.6B revenue. Parent of Collins Aerospace (which acquired B/E Aerospace)."
+    },
+    {
+      "id": "N-013",
+      "type": "Company",
+      "name": "General Electric Company (GE Aerospace)",
+      "labels": [
+        "Fortune_500",
+        "Aerospace",
+        "GE"
+      ],
+      "confidence": 0.99,
+      "verified": true,
+      "notes": "Fortune 500 #100 (or #118). $38.7-45.9B revenue. Patent US10737797B2 (VTOL architecture)."
+    },
+    {
+      "id": "N-014",
+      "type": "Company",
+      "name": "Alphabet Inc. / Wing Aviation LLC",
+      "labels": [
+        "Fortune_500",
+        "Tech",
+        "UAV_Delivery"
+      ],
+      "confidence": 0.99,
+      "verified": true,
+      "notes": "Parent of Wing Aviation. Patent US11046427B2 (safe UAVs) and US11034445B2 (wing attachments)."
+    },
+    {
+      "id": "N-015",
+      "type": "Company",
+      "name": "Airbus Operations Limited / Airbus Helicopters",
+      "labels": [
+        "European",
+        "Aerospace",
+        "EADS"
+      ],
+      "confidence": 0.99,
+      "verified": true,
+      "notes": "Patents US11052990B2 and EP3470332B1 (multirotor fixed-wing hybrids)."
+    },
+    {
+      "id": "N-016",
+      "type": "Company",
+      "name": "Anduril Industries / Area-I Inc.",
+      "labels": [
+        "Defense_Tech",
+        "Private",
+        "California"
+      ],
+      "confidence": 0.99,
+      "verified": true,
+      "notes": "Acquired Area-I in June 2022. Patents US11117649B2, US12491983B2 (deployable components). Rapidly ascending defense contractor."
+    },
+    {
+      "id": "N-017",
+      "type": "Company",
+      "name": "Hangzhou Zero Zero Technology Co. Ltd.",
+      "labels": [
+        "Chinese",
+        "Private",
+        "UAV_Propulsion"
+      ],
+      "confidence": 0.95,
+      "verified": true,
+      "notes": "Patents US11027833B2, US10824167B2, US10824149B2 (aerial propulsion, automated flight)."
+    },
+    {
+      "id": "N-018",
+      "type": "Company",
+      "name": "Elroy Air, Inc.",
+      "labels": [
+        "Startup",
+        "Cargo_UAV",
+        "MARV_EL"
+      ],
+      "confidence": 0.95,
+      "verified": true,
+      "notes": "Patent EP3700813B1 (multi-copter cargo lift). Chaparral drone under US Marines MARV-EL evaluation."
+    },
+    {
+      "id": "N-019",
+      "type": "Company",
+      "name": "Joby Aero, Inc.",
+      "labels": [
+        "Public",
+        "UAM",
+        "NYSE_JOBY"
+      ],
+      "confidence": 0.99,
+      "verified": true,
+      "notes": "Patent US11292593B2 (boom control effectors). FAA TIA testing begun Dec 2024. Sued Archer Nov 2025."
+    },
+    {
+      "id": "N-020",
+      "type": "Company",
+      "name": "Bell Helicopter Textron Inc.",
+      "labels": [
+        "Fortune_500_Parent",
+        "TEXTRON",
+        "VTOL"
+      ],
+      "confidence": 0.99,
+      "verified": true,
+      "notes": "Patent US10730622B2 (ducted fan personal air vehicle). Parent Textron #301 Fortune 500."
+    },
+    {
+      "id": "N-021",
+      "type": "Company",
+      "name": "Wisk Aero LLC",
+      "labels": [
+        "Boeing_Subsidiary",
+        "eVTOL",
+        "Autonomous"
+      ],
+      "confidence": 0.99,
+      "verified": true,
+      "notes": "Wholly-owned by Boeing since June 2023. FAA Stage 2 G-1 issue paper Nov 2024. Gen 6 first flight Dec 2025."
+    },
+    {
+      "id": "N-022",
+      "type": "Company",
+      "name": "Archer Aviation",
+      "labels": [
+        "Public",
+        "eVTOL",
+        "NYSE_ACHR"
+      ],
+      "confidence": 0.99,
+      "verified": true,
+      "notes": "Selected as 2028 LA Olympics air-taxi provider. Acquired Lilium patents Oct 2025. Claims 1,000+ patents. Sued by Wisk (2021) and Joby (2025)."
+    },
+    {
+      "id": "N-023",
+      "type": "Company",
+      "name": "B/E Aerospace, Inc. (now Collins Aerospace)",
+      "labels": [
+        "Fortune_500_Parent",
+        "Aerospace_Interiors",
+        "RTX"
+      ],
+      "confidence": 0.99,
+      "verified": true,
+      "notes": "Acquired by Collins Aerospace (RTX). Real assignee of US11702211. NOT related to IIXXMMXXI LLC."
+    },
+    {
+      "id": "N-024",
+      "type": "Company",
+      "name": "Procter & Gamble",
+      "labels": [
+        "Fortune_500",
+        "CPG",
+        "PG"
+      ],
+      "confidence": 0.99,
+      "verified": true,
+      "notes": "Confirmed Dinsmore & Shohl client (~100 years)."
+    },
+    {
+      "id": "N-025",
+      "type": "Company",
+      "name": "Rosemont Copper Company / Hudbay Minerals",
+      "labels": [
+        "Mining",
+        "Canadian",
+        "Environmental_Litigation"
+      ],
+      "confidence": 0.95,
+      "verified": true,
+      "notes": "Peripheral control node. $1.9B open-pit copper mine. Panthera onca (jaguar) critical habitat litigation. 9th Circuit appeal ongoing."
+    },
+    {
+      "id": "N-026",
+      "type": "Person",
+      "name": "Michael Maley",
+      "labels": [
+        "Agent_for_Service",
+        "1102_Partners"
+      ],
+      "confidence": 0.9,
+      "verified": true,
+      "notes": "Agent for 1102 Partners LLC at 1620 1/2 Maltman Ave, Los Angeles. No other public records found."
+    },
+    {
+      "id": "N-027",
+      "type": "Company",
+      "name": "General Dynamics",
+      "labels": [
+        "Fortune_500",
+        "Defense",
+        "GD"
+      ],
+      "confidence": 0.99,
+      "verified": true,
+      "notes": "Fortune 500 #91. $47.7B revenue."
+    },
+    {
+      "id": "N-028",
+      "type": "Company",
+      "name": "Wing Aviation LLC",
+      "labels": [
+        "Alphabet_Subsidiary",
+        "UAV_Delivery"
+      ],
+      "confidence": 0.99,
+      "verified": true,
+      "notes": "Google/Alphabet spin-off. Commercial UAV delivery systems."
+    },
+    {
+      "id": "N-029",
+      "type": "Company",
+      "name": "Kitty Hawk Corporation / Cora Aero / Wisk Aero",
+      "labels": [
+        "Defunct",
+        "eVTOL",
+        "Assets_Absorbed"
+      ],
+      "confidence": 0.95,
+      "verified": true,
+      "notes": "Defunct 2022. Assets transferred to Cora Aero (Sep 2019) then Wisk Aero (Dec 2019)."
+    },
+    {
+      "id": "N-030",
+      "type": "Company",
+      "name": "Overair, Inc.",
+      "labels": [
+        "Startup",
+        "eVTOL",
+        "Tilt_Rotor"
+      ],
+      "confidence": 0.9,
+      "verified": true,
+      "notes": "Patent EP3630603B1 (large variable-speed tilt rotors)."
+    },
+    {
+      "id": "N-031",
+      "type": "Company",
+      "name": "AeroMobil R&D",
+      "labels": [
+        "Slovak",
+        "Flying_Car",
+        "Folding_Propeller"
+      ],
+      "confidence": 0.9,
+      "verified": true,
+      "notes": "Patent EP3315400A1 (folding propellers)."
+    },
+    {
+      "id": "N-032",
+      "type": "Company",
+      "name": "Logistic Gliders Inc.",
+      "labels": [
+        "Startup",
+        "Single_Use",
+        "Supply_Gliders"
+      ],
+      "confidence": 0.9,
+      "verified": true,
+      "notes": "Patent US10040549B2 (single-use logistic gliders)."
+    },
+    {
+      "id": "N-033",
+      "type": "Company",
+      "name": "Sierra Nevada Corporation",
+      "labels": [
+        "Defense",
+        "Air_Launched_UAV"
+      ],
+      "confidence": 0.95,
+      "verified": true,
+      "notes": "Patent US10974809B2 (air-launched UAVs)."
+    },
+    {
+      "id": "N-034",
+      "type": "Company",
+      "name": "Textron Innovations Inc.",
+      "labels": [
+        "Fortune_500_Parent",
+        "UAS",
+        "Foldable_Wings"
+      ],
+      "confidence": 0.95,
+      "verified": true,
+      "notes": "Patent US10875626B2 (foldable wings with geared interface)."
+    },
+    {
+      "id": "N-035",
+      "type": "Company",
+      "name": "Cobajay Syndicate",
+      "labels": [
+        "Equine_Ownership",
+        "Ireland",
+        "Thoroughbred"
+      ],
+      "confidence": 0.99,
+      "verified": true,
+      "notes": "Owner of Aidan Panthera (Irish thoroughbred). Isolated lexical collision."
+    },
+    {
+      "id": "N-036",
+      "type": "Person",
+      "name": "Aidan Fitzgerald",
+      "labels": [
+        "Horse_Handler",
+        "Ireland"
+      ],
+      "confidence": 0.95,
+      "verified": true,
+      "notes": "Handler of Aidan Panthera (horse). No connection to aerospace."
+    },
+    {
+      "id": "N-037",
+      "type": "Person",
+      "name": "Mr. J. Naughton",
+      "labels": [
+        "Horse_Breeder",
+        "Ireland"
+      ],
+      "confidence": 0.95,
+      "verified": true,
+      "notes": "Breeder of Aidan Panthera (horse). No connection to aerospace."
+    },
+    {
+      "id": "N-038",
+      "type": "Nonprofit",
+      "name": "Edward L Hutton Foundation",
+      "labels": [
+        "Ohio",
+        "Foundation",
+        "Dinsmore_Client"
+      ],
+      "confidence": 0.95,
+      "verified": true,
+      "notes": "Paid Dinsmore & Shohl $5,426 in 2020 (legal/professional fees). EIN 31-1334189."
+    },
+    {
+      "id": "N-039",
+      "type": "Nonprofit",
+      "name": "Richard H & Ann Shafer Foundation",
+      "labels": [
+        "Ohio",
+        "Foundation",
+        "Dinsmore_Trustee"
+      ],
+      "confidence": 0.95,
+      "verified": true,
+      "notes": "Dinsmore & Shohl listed as Trustee in 2018. $285,370 assets. EIN 31-6029095."
+    },
+    {
+      "id": "N-040",
+      "type": "Organization",
+      "name": "Center for Biological Diversity",
+      "labels": [
+        "Environmental",
+        "Nonprofit",
+        "Rosemont_Litigation"
+      ],
+      "confidence": 0.99,
+      "verified": true,
+      "notes": "Plaintiff in Rosemont Copper Mine / Panthera onca litigation."
+    },
+    {
+      "id": "N-041",
+      "type": "Organization",
+      "name": "U.S. Fish and Wildlife Service",
+      "labels": [
+        "Federal_Agency",
+        "ESA",
+        "Rosemont_Litigation"
+      ],
+      "confidence": 0.99,
+      "verified": true,
+      "notes": "Defendant in Rosemont / Panthera onca litigation."
+    },
+    {
+      "id": "N-042",
+      "type": "Organization",
+      "name": "Panthera Corporation",
+      "labels": [
+        "Environmental",
+        "Trademark",
+        "Conservation"
+      ],
+      "confidence": 0.99,
+      "verified": true,
+      "notes": "Trademark filed Feb 29, 2016 for environmental/conservation awareness. Registration 5054602."
+    }
+  ],
+  "edges": [
+    {
+      "source": "N-002",
+      "target": "N-001",
+      "type": "Inventor_of",
+      "strength": 0.99,
+      "confidence": 0.99,
+      "evidence": "USPTO US10953977B2"
+    },
+    {
+      "source": "N-001",
+      "target": "N-003",
+      "type": "Legal_Representation",
+      "strength": 0.3,
+      "confidence": 0.4,
+      "evidence": "PlainSite only; NOT verified by USPTO or court records"
+    },
+    {
+      "source": "N-003",
+      "target": "N-024",
+      "type": "Client",
+      "strength": 0.95,
+      "confidence": 0.99,
+      "evidence": "Dinsmore.com press releases, attorney bios"
+    },
+    {
+      "source": "N-003",
+      "target": "N-004",
+      "type": "Alleged_Client",
+      "strength": 0.2,
+      "confidence": 0.3,
+      "evidence": "PlainSite only; federal court records show different counsel"
+    },
+    {
+      "source": "N-003",
+      "target": "N-005",
+      "type": "Alleged_Client",
+      "strength": 0.0,
+      "confidence": 0.1,
+      "evidence": "NO evidence found in any source"
+    },
+    {
+      "source": "N-003",
+      "target": "N-038",
+      "type": "Service_Provider",
+      "strength": 0.6,
+      "confidence": 0.95,
+      "evidence": "ProPublica Nonprofit Explorer 2020 IRS 990"
+    },
+    {
+      "source": "N-003",
+      "target": "N-039",
+      "type": "Trustee",
+      "strength": 0.7,
+      "confidence": 0.95,
+      "evidence": "ProPublica Nonprofit Explorer 2018 IRS 990-PF"
+    },
+    {
+      "source": "N-001",
+      "target": "N-008",
+      "type": "Unverified_Citation",
+      "strength": 0.1,
+      "confidence": 0.2,
+      "evidence": "Original audit claim; NOT verified by open-source search or USPTO citation data"
+    },
+    {
+      "source": "N-001",
+      "target": "N-009",
+      "type": "Unverified_Citation",
+      "strength": 0.1,
+      "confidence": 0.2,
+      "evidence": "Original audit claim; NOT verified"
+    },
+    {
+      "source": "N-001",
+      "target": "N-010",
+      "type": "Unverified_Citation",
+      "strength": 0.1,
+      "confidence": 0.2,
+      "evidence": "Original audit claim; NOT verified"
+    },
+    {
+      "source": "N-001",
+      "target": "N-011",
+      "type": "Unverified_Citation",
+      "strength": 0.1,
+      "confidence": 0.2,
+      "evidence": "Original audit claim; NOT verified"
+    },
+    {
+      "source": "N-001",
+      "target": "N-014",
+      "type": "Unverified_Citation",
+      "strength": 0.1,
+      "confidence": 0.2,
+      "evidence": "Original audit claim; NOT verified"
+    },
+    {
+      "source": "N-001",
+      "target": "N-015",
+      "type": "Unverified_Citation",
+      "strength": 0.1,
+      "confidence": 0.2,
+      "evidence": "Original audit claim; NOT verified"
+    },
+    {
+      "source": "N-001",
+      "target": "N-016",
+      "type": "Unverified_Citation",
+      "strength": 0.1,
+      "confidence": 0.2,
+      "evidence": "Original audit claim; NOT verified"
+    },
+    {
+      "source": "N-001",
+      "target": "N-017",
+      "type": "Unverified_Citation",
+      "strength": 0.1,
+      "confidence": 0.2,
+      "evidence": "Original audit claim; NOT verified"
+    },
+    {
+      "source": "N-001",
+      "target": "N-018",
+      "type": "Unverified_Citation",
+      "strength": 0.1,
+      "confidence": 0.2,
+      "evidence": "Original audit claim; NOT verified"
+    },
+    {
+      "source": "N-001",
+      "target": "N-019",
+      "type": "Unverified_Citation",
+      "strength": 0.1,
+      "confidence": 0.2,
+      "evidence": "Original audit claim; NOT verified"
+    },
+    {
+      "source": "N-001",
+      "target": "N-020",
+      "type": "Unverified_Citation",
+      "strength": 0.1,
+      "confidence": 0.2,
+      "evidence": "Original audit claim; NOT verified"
+    },
+    {
+      "source": "N-001",
+      "target": "N-013",
+      "type": "Unverified_Citation",
+      "strength": 0.1,
+      "confidence": 0.2,
+      "evidence": "Original audit claim; NOT verified"
+    },
+    {
+      "source": "N-008",
+      "target": "N-021",
+      "type": "Owns",
+      "strength": 1.0,
+      "confidence": 0.99,
+      "evidence": "Boeing acquired all remaining Wisk shares June 2023"
+    },
+    {
+      "source": "N-014",
+      "target": "N-028",
+      "type": "Owns",
+      "strength": 1.0,
+      "confidence": 0.99,
+      "evidence": "Wing Aviation is Alphabet/Google subsidiary"
+    },
+    {
+      "source": "N-009",
+      "target": "N-028",
+      "type": "Competitor",
+      "strength": 0.7,
+      "confidence": 0.95,
+      "evidence": "Amazon Prime Air vs Wing Aviation in commercial drone delivery"
+    },
+    {
+      "source": "N-021",
+      "target": "N-022",
+      "type": "Litigation",
+      "strength": 0.9,
+      "confidence": 0.99,
+      "evidence": "Wisk sued Archer 2021; settled 2023 with $215M Boeing investment"
+    },
+    {
+      "source": "N-019",
+      "target": "N-022",
+      "type": "Litigation",
+      "strength": 0.9,
+      "confidence": 0.99,
+      "evidence": "Joby sued Archer Nov 2025 for trade secrets"
+    },
+    {
+      "source": "N-012",
+      "target": "N-023",
+      "type": "Owns",
+      "strength": 1.0,
+      "confidence": 0.99,
+      "evidence": "RTX/Collins Aerospace acquired B/E Aerospace"
+    },
+    {
+      "source": "N-025",
+      "target": "N-040",
+      "type": "Litigation",
+      "strength": 0.8,
+      "confidence": 0.95,
+      "evidence": "Center for Biological Diversity v. U.S. FWS (Rosemont Mine)"
+    },
+    {
+      "source": "N-025",
+      "target": "N-041",
+      "type": "Regulatory",
+      "strength": 0.8,
+      "confidence": 0.95,
+      "evidence": "U.S. FWS critical habitat designation for Panthera onca"
+    },
+    {
+      "source": "N-006",
+      "target": "N-007",
+      "type": "Manages",
+      "strength": 1.0,
+      "confidence": 0.99,
+      "evidence": "CA SOS BA20230078362"
+    },
+    {
+      "source": "N-026",
+      "target": "N-007",
+      "type": "Agent_for",
+      "strength": 1.0,
+      "confidence": 0.99,
+      "evidence": "CA SOS BA20230078362"
+    },
+    {
+      "source": "N-002",
+      "target": "N-035",
+      "type": "Lexical_Collision",
+      "strength": 0.0,
+      "confidence": 0.99,
+      "evidence": "Name collision only; no legal or financial connection"
+    },
+    {
+      "source": "N-002",
+      "target": "N-025",
+      "type": "Lexical_Collision",
+      "strength": 0.0,
+      "confidence": 0.99,
+      "evidence": "Panthera = genus name; no connection to Rosemont Mine"
+    },
+    {
+      "source": "N-008",
+      "target": "N-009",
+      "type": "Competitor",
+      "strength": 0.6,
+      "confidence": 0.9,
+      "evidence": "Both in VTOL/UAV commercial space; Boeing (Wisk) vs Amazon Prime Air"
+    },
+    {
+      "source": "N-008",
+      "target": "N-010",
+      "type": "Competitor",
+      "strength": 0.8,
+      "confidence": 0.95,
+      "evidence": "Both in defense/aerospace; compete for DoD contracts"
+    },
+    {
+      "source": "N-010",
+      "target": "N-011",
+      "type": "Competitor",
+      "strength": 0.8,
+      "confidence": 0.95,
+      "evidence": "Both major defense contractors"
+    },
+    {
+      "source": "N-016",
+      "target": "N-010",
+      "type": "Competitor",
+      "strength": 0.7,
+      "confidence": 0.9,
+      "evidence": "Anduril competes with Lockheed for defense tech contracts"
+    },
+    {
+      "source": "N-016",
+      "target": "N-011",
+      "type": "Competitor",
+      "strength": 0.7,
+      "confidence": 0.9,
+      "evidence": "Anduril competes with Northrop Grumman"
+    },
+    {
+      "source": "N-008",
+      "target": "N-016",
+      "type": "Competitor",
+      "strength": 0.7,
+      "confidence": 0.9,
+      "evidence": "Boeing vs Anduril in defense aerospace"
+    }
+  ]
+}

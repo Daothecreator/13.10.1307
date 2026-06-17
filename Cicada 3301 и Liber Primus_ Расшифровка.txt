@@ -1,0 +1,181 @@
+ :
+ 
+  Liber
+Primus,   
+ Cicada 3301
+      
+        4chan 4  2012  ,   Cicada 3301,      ,        .   : «   .   ,   ».            (2012, 2013  2014 ),     ,   ,  , ,  , ,    .         (ARG),            ,      .     2014      --  Liber Primus (  -- « »),       .        ,    PGP-  (     2017 ),        .          .            Cicada 3301,            ,        2026 .          Liber Primus,      ,   ,             .
+ I.  :       Cicada
+
+3301?
+          ,  Cicada 3301      ,      (),    (),  MI6   .       ,     .     ,  ,   ,           .   Cicada 3301         ,     .
+   
+  (Cypherpunks),    1980-   1990- ,  ,    ,           .   ,    ,  « »   (1988 )  « »   (1993 ),     ,             .    «   .  »,      ,  PGP,      ,     Tor.     Cicada 3301      .        : « --  .    .    .     ...    :        ,     ,       ».    .  ,   ,     . ,   1990-          ,    @cicada.berkeley.edu.   «Cicada»  2012        ,              .
+      
+-       Cicada 3301    .  ,       Cicada    «  » (Puzzle Hunt),         (MUMS)   2000- .  2004  -       
+
+   ,    WikiLeaks.  MUMS        .        ,  ,         .  ,     ,     ,     .     ,      Cicada 3301  2012 , ,              ,        .
+  :  CAKES
+     Cicada 3301  ,    ,     .   ,   «»,           .   (Marcus Wanner),    ,       2012    15 ,        .          Tor,        . ,          .    CAKES --   Cicada Anonymous Key Escrow System (    Cicada).   CAKES      ,    « » (dead man's switch).     ,              ,   ( , ,  )  ,              .             CAKES,        Cicada 3301. ,   ,      .     ,     ,        .          ,      CAKES  ,       .       CAKES      GitHub          .  ,     ,     Cicada 3301,   :    ,                   
+
+.
+ II.     Liber Primus
+    ,  Cicada 3301  2014           -- Liber Primus.   ,   74  (      75  76 ,    ),     ,      .
+   : Gematria Primus
+        ,    Gematria Primus.      2013       (XOR)    Twitter-       The Instar Emergence (761.mp3). Gematria Primus   29 ,    .      ,           ,           2  109.    « »  ,      .  Cicada 3301    :             . ,  «Patience is a virtue»   761,      The Instar Emergence (167  --   ,   761).   Interconnectedness    772,     277  (277 --  , 772 --   ).
+   2026      
+   ,       ,   ,  ,     Atbash.     2026          17  .     --    ( 56-  57-   ).      0   55    .      -, -    .         .
+
+1.  (A Warning)
+         .  : «.      ,  ,     .  .   .   .         ,  ,   ,   ,   ».  :  «  ,   ,   »    .    ,         .        .  ,         ,            (,  «Believe nothing from this book»  757, «Except what you know to be true» -- 1009, «experience your death» -- 769).       .
+2.  1:  (Chapter 1: Intus)
+    ,   ,     .   (): « .  , ,       .    ,   ,    ,  .          ,  ,  ,     .        ».   ( ): «         .   ,    .      (Instar),   ,   . .  --    .  --    .   .  ,  , . :   ».  ,   «Instar Emergence» (     )             .
+3.     (Some Wisdom)
+        Liber Primus.      ,     ,   .  : « :   .   ( ) .     .  ».       5x5,     :
+
+ 1
+
+ 2
+
+ 3
+
+ 4
+
+ 5
+
+272
+
+138
+
+shadows
+
+131
+
+151
+
+aethereal
+
+buffers
+
+void
+
+carnal
+
+18
+
+226
+
+obscura
+
+form
+
+245
+
+mobius
+
+18
+
+analog
+
+void
+
+mournful
+
+aethereal
+
+151
+
+131
+
+cabal
+
+138
+
+272
+
+ Cicada  ,      
+
+  (  Gematria Primus).  ,  
+
+       , 
+
+  X, Y, Z, A, B  .   
+
+  ,    ,    
+
+ N :
+
+
+
+
+
+
+
+
+
+
+
+       : B = 320, A = 199,
+
+Z = 91, Y = 341, X = 366.  ,     N
+
+  1033.  1033 --   ,   
+
+(emirp)  3301 ( ,        
+
+ ).    ,    
+
+     .
+
+4.    (A Koan / The Loss of Divinity)
+
+    ,    - .   ():        .    : «  ,    ?».     .    , : «  ,   ,   ,   ».     «» (), « » ( ) , , «,    ».          ,       .       ,        «»,   : «    ».     : «     ».   ( ):         . ,     «» ( ) -   .
+      : « ,    ,    »  « ,  ,    ,   ;       ,   ,   ».
+     : « 
+
+,   ,   .    ,     ,    .  ».
+5.  56 (Deep Hash)
+           .  : «.    (Deep Web)  ,    36367763ab73783c7af284446c59466b4cd653239a311cb7116d4618dee09a8425893dc7500b4 64fdaf1672d7bef5e891c6e2274568926a49fb4f45132c2a8b4.    --   ».    ,     Tor deprecate ( ) onion-  v2,      3301.       ,          Tor.
+ III.   :   ( 0-55)
+ ,  56  Liber Primus       ,   ,       .      n-,             .     2025-2026        .
+   
+     : «  ( ) ».   \phi(n)      .         RSA,  \phi(n) = (p-1)(q-1)     p  q.  ,           .        (BigInt),        RSA.        d    c   m \equiv c^d \pmod n.  n           3301  1033.
+ :    ()   
+       « »,               20.       «»  
+
+.   ,   «  », ,        Liber Primus (    OutGuess )           --  (Khipu),      ( 10).
+   :           .          Liber Primus     .
+  :       .               «» (salt).         (  ),  1461 .     1461 (Value \pmod{1461})         Gematria Primus,     1033  3301,   .
+      «16-  » -- 2422826321411203,         RSA-.        RSA         Liber Primus.
+ IV.      (2014-2026)
+    Cicada 3301  2014 ,     .                ,   -.         .
+     QAnon
+       (Thomas Schoenberger), 64-     .  2014       Cicada 3301 Metaverse LLC   ,         .        « » (gamejacking).      2021 ,    (Laura Dilley),     (MSU),       « QAnon     :  ,   ».     ,     (   )     
+
+,    QAnon, ,  -  Cicada 3301.   ,         Cicada    ,  «»      QAnon   .       (Arturo Tafoya),   ,      2017      Cicada.   ,            QAnon,     ,    Cicada  « »,    .
+      (2025-2026)
+    QAnon       ,         .    ,   2025      . 11  2025                       (     )   ,      .    (,  Docket No. 25-000186-MZ)       QAnon,   «       »  « ».     , ,      Twitter     («  »).   ,         MSU   2023     ,             .    2026     ,   .    ,            (CAKES)         .
+ V.  : - Cicada3301 (2024-2026)
+,           2024    ,    «-  » (Ransomware-as-a-Service, RaaS)   Cicada3301.       ,               Tor.   2025                ,  ,   .  :           ,      
+
+     .         .
+  - :  BlackCat
+ -   Cicada3301,      (  Truesec  Morphisec),    ,               -- ALPHV (BlackCat).   2024   BlackCat     22        Change Healthcare.     BlackCat  «-» (    ),           .          ALPHV    -- Cicada3301,       . -     :
+1.  :   BlackCat, - Cicada3301    Rust (  1.79.0).  Rust     (Windows, Linux, ESXi)        ,       RaaS.
+2.  :       ChaCha20,     OsRng,         RSA.
+3.    ESXi:          .  ,    esxcli      ,      vim-cmd vmsvc/snapshot.removeall      ,        .
+4.     :  BlackCat,  Cicada3301         ( Cicada3301      0x2C  44 )       (anti-sandbox evasion).  ,     --ui         .
+5.   :   ,          VPN-    ,   Brutus (IP-,   91.92.249.203),      BlackCat   2024 .        (EDR)    ,   EDRSandBlast.
+:   Cicada     ,        . ,        , 
+
+     BlackCat  2024 .
+   
+   Cicada 3301    ,          .   2012­2014 ,       ,   :          (CAKES),   .          .     ,  Liber Primus     ,     .   ,         ,      ,      QAnon          2025-2026 .   ,     - ALPHV          .       --   56  Liber Primus --         .       (   RSA,      1033  3301)     ,    -10        .   Liber Primus      .     Cicada  2026     ,   .
+
+1. Cicada 3301 - Wikipedia, https://en.wikipedia.org/wiki/Cicada_3301 2. Cicada 3301 Puzzles: Inside The Internet's Greatest Mystery - All That's Interesting, https://allthatsinteresting.com/cicada-3301 3. Liber Primus, the Puzzle that Baffled the Internet | by Maaz Shaikh | Medium, https://medium.com/@shaikhsaimaaz10/liber-primus-the-puzzle-that-baffled-the-internet-bfdfcdc 2efc1 4. Meet The Man That Solved Cicada 3301 Challenge! - YouTube, https://www.youtube.com/watch?v=Wt8rldAjzGQ 5. Cicada 3301: A Modern Myth in the Digital Age - Cicero's, https://ciceros.org/2025/06/09/cicada-3301-a-modern-myth-in-the-digital-age/ 6. Who's Really Behind Cicada 3301? (a personal investigation) | by Evgeni Stoyanov, https://medium.com/@haskelljunkie/whos-really-behind-cicada-3301-a-personal-investigation-7 63e210724b9 7. Cicada 3301: I tried the hardest puzzle on the internet and failed spectacularly, https://www.theguardian.com/technology/2014/jan/10/cicada-3301-i-tried-the-hardest-puzzle-onthe-internet-and-failed-spectacularly 8. Malicious Life Podcast: The Mystery of Cicada 3301 Cybereason, https://www.cybereason.com/blog/malicious-life-podcast-the-mystery-of-cicada-3301 9. Cicada
+
+3301 was probably organized by founder of WikiLeaks Julian Assange, who created a similar game while studying at university - Reddit, https://www.reddit.com/r/UnresolvedMysteries/comments/zduzn7/cicada_3301_was_probably_o rganized_by_founder_of/ 10. Cicada 3301 ­ solution (2022) | Hacker News, https://news.ycombinator.com/item?id=40377039 11. Julian Assange: the teen hacker who became insurgent in information war - The Guardian, https://www.theguardian.com/media/2011/jan/30/julian-assange-wikileaks-profile 12. Julian Assange and Wikileaks - Transcript, News, La Trobe University, https://www.latrobe.edu.au/news/articles/2011/podcasts/julian-assange-and-wikileaks/transcript 13. Cicada: Solving the Web's Deepest Mystery ­ David Kushner, https://davidkushner.com/article/cicada-solving-the-webs-deepest-mystery/ 14. Episode 1 Cicada 3301 - Clouded Podcast, http://www.cloudedmysteries.com/episode-transcripts/episode-1-cicada-3301 15. Did anything happen to the people who solved 3301? : r/cicada - Reddit, https://www.reddit.com/r/cicada/comments/5knqyw/did_anything_happen_to_the_people_who_ solved_3301/ 16. [R] Corpus Dementia: The Insanity Corpus : r/MachineLearning - Reddit, https://www.reddit.com/r/MachineLearning/comments/b8mner/r_corpus_dementia_the_insanity_ corpus/ 17. 404s on NGW from 2014-03-18 - GitHub Gist, https://gist.github.com/9641816 18. cicada3301/liber_primus.md at master - GitHub, https://github.com/scream314/cicada3301/blob/master/liber_primus.md 19. Gematria Primus Uncovering Cicada Wiki - Fandom, https://uncovering-cicada.fandom.com/wiki/Gematria_Primus 20. CICADA 3301 2014 PUZZLE FACTS PART 6 | Uncovering Cicada Wiki - Fandom, https://uncovering-cicada.fandom.com/wiki/CICADA_3301_2014_PUZZLE_FACTS_PART_6 21. r4nd0mD3v3l0p3r/LiberPrimusSolver: an attempt at solving Cicada 3301 Liber Primus, https://github.com/r4nd0mD3v3l0p3r/LiberPrimusSolver 22. January 2021 Update : r/cicada Reddit, https://www.reddit.com/r/cicada/comments/kp5nhq/january_2021_update/ 23. What ever Happened to the Cicada Mystery? : r/nonmurdermysteries - Reddit, https://www.reddit.com/r/nonmurdermysteries/comments/151vqlw/what_ever_happened_to_the _cicada_mystery/ 24. Liber Primus Pages to Solve : r/cicada - Reddit, https://www.reddit.com/r/cicada/comments/8ucdnn/liber_primus_pages_to_solve/ 25. (PDF) The Mystery of Cicada 3301: Constructing Gnosis in Cyberspace - Academia.edu, https://www.academia.edu/37375348/The_Mystery_of_Cicada_3301_Constructing_Gnosis_in_ Cyberspace 26. Liber Primus | Uncovering Cicada Wiki | Fandom, https://uncovering-cicada.fandom.com/wiki/Liber_Primus 27. Runes Transcriptions | Uncovering Cicada Wiki - Fandom, https://uncovering-cicada.fandom.com/wiki/Runes_Transcriptions 28. relikd/LiberPrayground: A Liber Primus solving playground - GitHub, https://github.com/relikd/LiberPrayground 29. January 2022 Update : r/cicada - Reddit, https://www.reddit.com/r/cicada/comments/rwafu2/january_2022_update/ 30. The Cicada 3301 Mystery (Puzzle 3 Solve) - Part 2 - Connor Tumbleson, https://connortumbleson.com/2024/02/05/the-cicada-3301-mystery-puzzle-3-solve-part-2/ 31. Did everyone give up on CICADA 3301 , and what happened ? : r/nonmurdermysteries, https://www.reddit.com/r/nonmurdermysteries/comments/1havlsp/did_everyone_give_up_on_cic ada_3301_and_what/ 32. CICADA 3301 2014 PUZZLE FACTS PART 3 | Uncovering Cicada Wiki - Fandom, https://uncovering-cicada.fandom.com/wiki/CICADA_3301_2014_PUZZLE_FACTS_PART_3 33. Liber Primus Updates 2025 - Uncovering Cicada Wiki - Fandom, https://uncovering-cicada.fandom.com/wiki/Liber_Primus_Updates_2025 34. MSU professor's
+
+QAnon paper prompts lawsuit with Cicada 3301 puzzle leader - The State News, https://statenews.com/article/2025/04/msu-professors-qanon-paper-prompts-lawsuit-with-cicada -3301-puzzle-leader 35. Cases, Opinions & Orders - Michigan Courts, https://www.courts.michigan.gov/case-search/?resultType=cases&aBarNumber=81129 36. [2207.05118] QAnon Propaganda on Twitter as Information Warfare: Influencers, Networks, and Narratives - arXiv, https://arxiv.org/abs/2207.05118 37. STATE OF MICHIGAN COURT OF CLAIMS, https://www.courts.michigan.gov/4ada72/siteassets/case-documents/uploads/coc/2025/25-0001 86-mz/2025-12-04-25-000186-mz-6-order-20251204-order-consolidate.pdf 38. Schoenberger et al v. Derrick 2:2025cv12937 | U.S. District Court for the Eastern District of Michigan - Justia Dockets, https://dockets.justia.com/docket/michigan/miedce/2:2025cv12937/388516 39. Cicada 3301 - Ransomware-as-a-Service - Technical Analysis - Truesec, https://www.truesec.com/hub/blog/dissecting-the-cicada 40. Decoding the Puzzle: Cicada3301 Ransomware Threat Analysis - Morphisec, https://www.morphisec.com/blog/cicada3301-ransomware-threat-analysis/ 41. Cicada3301 Threat Actor Profile - Quorum Cyber, https://www.quorumcyber.com/threat-actors/cicada3301-threat-actor-profile/ 42. Is Your Organization Safe from Cicada3301 Attacks? - Vectra AI, https://www.vectra.ai/modern-attack/threat-actors/cicada3301 43. Has BlackCat returned as Cicada3301? Maybe. - IBM, https://www.ibm.com/think/news/has-blackcat-returned-as-cicada3301 44. Ransomware & Extortion Activity in 2024: A Year in Review | Analyst1, https://analyst1.com/wp-content/uploads/2025/01/Ransomware-Extortion-Activity-in-2024-A-Yea r-in-Review-V1.pdf 45. Encrypted Symphony: Infiltrating the Cicada3301 Ransomware-as-a-Service Group, https://www.group-ib.com/blog/cicada3301/
+
+

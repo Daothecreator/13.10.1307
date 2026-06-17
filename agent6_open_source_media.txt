@@ -1,0 +1,549 @@
+================================================================================
+AGENT 6 — OPEN SOURCE & MEDIA INTELLIGENCE COLLECTOR
+EVIDENCE FILE: agent6_open_source_media.txt
+INVESTIGATION: IIXXMMXXI LLC / Aidan Panthera Patent / Dinsmore & Shohl / Fortune 500 VTOL Network
+TIMESTAMP (COLLECTION): 2026-06-12T11:59:40Z
+CHAIN OF CUSTODY: Swarm_Forensic_Agent_6 → kimi_search_v2 / kimi_fetch_v2 / WebSearch tools
+================================================================================
+
+EXECUTIVE SUMMARY
+-----------------
+This evidence file compiles open-source intelligence (OSINT) gathered on IIXXMMXXI LLC, the Aidan Panthera patent (US10953977B2), Dinsmore & Shohl LLP, and the Fortune 500 network connected to the VTOL/UAV patent ecosystem. Key findings include:
+
+1. PATENT CONFIRMED: US10953977B2 is a granted, active patent for a VTOL aircraft with in-flight form-varying (foldable wing) apparatus, assigned to IIXXMMXXI LLC (California), inventor Aidan Panthera. Expiration: 2039-08-24.
+2. NO DIRECT NEWS OR SOCIAL MEDIA DISCOURSE found for IIXXMMXXI LLC or Aidan Panthera as an inventor. The name "Aidan Panthera" does not appear in LinkedIn, Twitter/X, Reddit, or forum discussions in the context of aerospace engineering.
+3. NO COURT RECORDS found in federal or state court databases for litigation involving IIXXMMXXI LLC or Aidan Panthera as plaintiff/defendant.
+4. NO ACADEMIC CITATIONS of US10953977B2 were located in Google Scholar, PMC, or general academic indexes during this search pass. The patent appears not yet cited in peer-reviewed literature, likely due to its 2021 grant date and the "citation lag" typical for mechanical/aerospace patents.
+5. FORTUNE 500 MAPPING completed for the connected corporate network (Boeing, Amazon, Lockheed Martin, Northrop Grumman, RTX, General Dynamics, General Electric). Current 2026 rankings are documented below.
+6. EVTOL INDUSTRY IP WARS documented extensively: Wisk (Boeing) vs. Archer (2021, settled 2023); Joby vs. Archer (Nov 2025); Archer acquisition of Lilium patents (Oct 2025). These cases demonstrate the high-stakes patent/trade-secret environment into which the Aidan Panthera patent sits.
+7. FAA REGULATORY FRAMEWORK advancing: SFAR for powered-lift issued late 2024; Joby and Wisk in active certification pipelines; Amazon Prime Air BVLOS approved 2022.
+8. ROSEMONT COPPER MINE / HUDBAY MINERALS litigation extensively documented as a peripheral control node, with multiple federal cases in the 9th Circuit and related Canadian human-rights cases.
+9. DINSMORE & SHOHL LLP: Verified as a large national law firm (670 attorneys, NLJ 500 rank #83). OPEN SOURCE COULD NOT VERIFY the specific claim that Dinsmore & Shohl represents IIXXMMXXI LLC, Illinois Tool Works, or Iljin Global subsidiaries. No public client roster or press release confirming this representation was found.
+10. CALIFORNIA SOS RECORD: A probable match was found (File BA20230078362, filed 2023-01-14) with manager David M. Maley (Chicago, IL) and agent Michael Maley (Los Angeles, CA). The entity name was embedded in an image and not OCR'd in the snippet, so this is an unconfirmed but highly probable association.
+
+================================================================================
+SECTION 1: PATENT EVIDENCE — US10953977B2
+================================================================================
+
+FINDING 1.1 — Patent Grant & Assignment
+Source: Google Patents (via kimi_fetch_v2)
+URL: https://patents.google.com/patent/US10953977B2
+Timestamp: 2026-06-12 (fetch date)
+Query: US10953977B2
+Relevance Score: 10/10
+Category: Patent / Primary Evidence
+Confidence: HIGH
+Chain of Custody: kimi_fetch_v2 → raw HTML extraction
+
+Raw Data:
+- Patent Number: US10953977B2
+- Title: Aircraft with in-flight form varying apparatus
+- Inventor: Aidan Panthera
+- Current Assignee: IIXXMMXXI LLC
+- Original Assignee: Individual (Aidan Panthera)
+- Filing Date: 2018-10-31
+- Priority Date: 2017-11-10 (U.S. Provisional 62/584,366)
+- Publication Date: 2021-03-23
+- Legal Status: ACTIVE
+- Adjusted Expiration: 2039-08-24
+- Classification: B64C29/00 (VTOL aircraft), B64C3/56 (folding wings), B64U10/20 (UAV / VTOL), B64U30/12 (variable wings)
+- Assignment Record:
+  * 2021-02-22: Assigned to IIXXMMXXI LLC (Assignment of Assignors Interest)
+  * 2021-02-24: Corrective Assignment to fix assignee street address
+  * 2021-03-02: Second Corrective Assignment to fix assignee street address
+- Abstract: An aircraft operable between deployed and stowed positions. Wing segments translate downward and rotate in opposite directions to stack atop one another parallel to the fuselage long axis. Enables VTOL flight in constrained spaces, high wind, and obstacle-rich environments. Applicable to UAVs and manned personal aerial vehicles.
+
+Technical Scope:
+- Fuselage with rectangular/square cross-section, pyramidal tapered ends.
+- Pair of wing segments attached via translation and rotation mechanism (upper/lower assemblies with C-shaped outer shaft and semi-cylindrical inner shaft).
+- Propulsion devices translatable/rotatable between deployed and stowed positions (electric, propeller, jet, rocket engines).
+- Inverted T-tail empennage mounted to bottom of rear fuselage.
+- Landing pad/dock based (no traditional landing gear required).
+- Continuous wing span when deployed for high aspect ratio, high lift-to-drag ratio, low induced drag.
+
+================================================================================
+SECTION 2: ENTITY MAPPING — IIXXMMXXI LLC & DINSMORE & SHOHL
+================================================================================
+
+FINDING 2.1 — California Secretary of State Probable Match
+Source: bizfileonline.sos.ca.gov (via WebSearch image extraction)
+URL: https://bizfileonline.sos.ca.gov/api/report/GetImageByNum/177003044075034201209083186127230029139197001188
+Timestamp: 2026-06-12
+Query: IIXXMMXXI California LLC secretary of state business entity
+Relevance Score: 8/10
+Category: Corporate Records
+Confidence: MEDIUM-HIGH (entity name not visible in OCR snippet, but file number and manager address align with search context)
+Chain of Custody: WebSearch → image snippet extraction
+
+Raw Data:
+- File No.: BA20230078362
+- Date Filed: 1/14/2023
+- Manager/Member: David M Maley
+- Manager Address: 57 East Delaware Pl 1605, Chicago, IL 60611
+- Agent for Service of Process: Michael Maley
+- Agent Address: 1620 1/2 Maltman Avenue, Los Angeles, CA 90026
+- Type of Business: Investment Advisor
+- Electronic Signature: David M Maley, 01/14/2023
+
+Note: The entity name is rendered in the image and was not extracted by the search engine's text snippet. The association with IIXXMMXXI LLC is probable but not definitively proven from this snippet alone. Cross-reference with USPTO assignment records (which list IIXXMMXXI LLC as assignee) supports the linkage.
+
+FINDING 2.2 — Dinsmore & Shohl LLP Profile
+Source: law.com / patentbots.com / dinsmore.com (via kimi_search_v2 & WebSearch)
+URL: https://www.law.com/compass/firm/LF00000317/Dinsmore/overview
+Timestamp: 2026-06-12
+Query: Dinsmore & Shohl LLP
+Relevance Score: 6/10 (for specific representation claims: 2/10)
+Category: Law Firm / Corporate Intelligence
+Confidence: HIGH (for firm profile); LOW (for specific client claims)
+Chain of Custody: kimi_search_v2 → WebSearch aggregation
+
+Raw Data:
+- Firm: Dinsmore & Shohl LLP
+- Headquarters: 255 East Fifth Street, Cincinnati, OH 45202
+- Total Attorneys: 670 (per NLJ 500 2026 ranking)
+- NLJ 500 Rank: #83 in the United States
+- Practice Areas: Intellectual Property (patent, trademark, copyright, licensing, litigation), Employment, Corporate, etc.
+- Registered Patent Agents/Attorneys: Multiple agents across Cincinnati, Pittsburgh, Lexington, Cleveland, Dayton, Columbus, Louisville, Washington DC offices.
+
+Open-Source Verification of Client Representation:
+- NO public source found confirming Dinsmore & Shohl represents IIXXMMXXI LLC.
+- NO public source found confirming Dinsmore & Shohl represents Illinois Tool Works (ITW patents reviewed via EPO/WIPO show representatives HGF Limited, DIEHL Finstewald, etc., not Dinsmore).
+- NO public source found confirming Dinsmore & Shohl represents Iljin Global subsidiaries.
+- Assessment: The representation claim may be accurate but is not discoverable through open-source search. It may be held in non-public client records or USPTO power-of-attorney filings not indexed by general search engines.
+
+================================================================================
+SECTION 3: FORTUNE 500 NETWORK MAPPING (2026 RANKINGS)
+================================================================================
+
+FINDING 3.1 — 2026 Fortune 500 Rankings for Connected Companies
+Source: 50pros.com / eqvista.com / fairfaxcountyeda.org (via kimi_search_v2 & WebSearch)
+URL: https://www.50pros.com/fortune500 ; https://eqvista.com/fortune-500-companies-in-the-us/
+Timestamp: 2026-06-12
+Query: Fortune 500 rankings 2026 Boeing Amazon Lockheed Martin Northrop Grumman General Electric
+Relevance Score: 9/10
+Category: Corporate Intelligence / Financial Rankings
+Confidence: HIGH
+Chain of Custody: kimi_search_v2 → WebSearch aggregation
+
+Raw Data (2026 Rankings — consolidated from multiple sources):
+| Rank | Company | Revenue (USD) | Industry | Ticker | HQ |
+|------|---------|---------------|----------|--------|-----|
+| 2 | Amazon | $637.959B | E-commerce/Cloud | AMZN | Seattle, WA |
+| 44 | Boeing | $89.5B | Aerospace & Defense | BA | Arlington, VA |
+| 46 | RTX | $88.6B | Aerospace & Defense | RTX | Arlington, VA |
+| 47 | FedEx | $87.9B | Logistics | FDX | Memphis, TN |
+| 48 | UPS | $88.7B | Logistics | UPS | Atlanta, GA |
+| 59 | Lockheed Martin | $75.0B | Aerospace & Defense | LMT | Bethesda, MD |
+| 91 | General Dynamics | $47.7B | Aerospace & Defense | GD | Falls Church, VA |
+| 110 | Northrop Grumman | $42.0B | Aerospace & Defense | NOC | Falls Church, VA |
+| 118 | General Electric (GE Aerospace) | $38.7B | Aerospace | GE | Boston, MA |
+
+Note: Boeing appears as #44 in 50pros.com (2026) and #63 in eqvista.com (2025-2026). The discrepancy reflects different filing years or methodology updates. The 50pros.com data is labeled "2026" and appears more current.
+
+Additional Connected Entities (not all Fortune 500, but relevant to the network):
+- Alphabet (Google/Wing): Parent of Wing Aviation LLC. Not in top 10 of Fortune 500 list snippets, but Alphabet is a large-cap tech company. Exact 2026 Fortune 500 rank not captured in this search pass but is consistently top 20-30 historically.
+- Airbus: European, not in U.S. Fortune 500. Parent company EADS is a European aerospace giant.
+- Anduril Industries: Private defense tech company; not Fortune 500.
+- Joby Aviation: Public (NYSE: JOBY), not Fortune 500.
+- Archer Aviation: Public (NYSE: ACHR), not Fortune 500.
+- Elroy Air: Private startup; not Fortune 500.
+- Hangzhou Zero Zero Technology: Private Chinese company; not Fortune 500.
+- Kitty Hawk: Defunct as of 2022; assets absorbed into Wisk (now Boeing subsidiary).
+
+================================================================================
+SECTION 4: NEWS, PRESS RELEASES & CORPORATE ANNOUNCEMENTS
+================================================================================
+
+FINDING 4.1 — Wisk Aero (Boeing) vs. Archer Aviation Litigation
+Source: TechCrunch / Reuters / Sterne Kessler blog (via WebSearch & kimi_search_v2)
+URL: https://techcrunch.com/2021/04/06/wisk-aero-sues-archer-aviation-for-alleged-patent-infringement-trade-secret-theft/
+Timestamp: 2026-06-12 (article dates 2021-2025)
+Query: Wisk Archer patent infringement trade secret
+Relevance Score: 9/10
+Category: Patent Litigation / Corporate Dispute
+Confidence: HIGH
+Chain of Custody: WebSearch → TechCrunch article
+
+Raw Data:
+- April 6, 2021: Wisk Aero (joint venture of Boeing and Kitty Hawk) sued Archer Aviation in U.S. federal court alleging patent infringement and trade secret misappropriation.
+- Wisk claimed a former engineer downloaded thousands of confidential files (systems designs, test data, aircraft designs) before departing to Archer.
+- Archer denied wrongdoing. Judge denied Wisk's preliminary injunction motion.
+- August 2023: Parties settled. Archer secured a $215 million investment from Boeing as part of the settlement.
+- Significance: Demonstrates the aggressive IP enforcement environment around VTOL/eVTOL technology. The Aidan Panthera patent sits in the same technology class (B64C29/00, B64U10/20) as the disputed Wisk/Archer technologies.
+
+FINDING 4.2 — Joby Aviation vs. Archer Aviation (Trade Secrets)
+Source: Sterne Kessler / Reuters (via WebSearch)
+URL: https://www.sternekessler.com/news-insights/insights/turbulence-in-the-evtol-ip-wars-joby-attempts-to-ground-archer/
+Timestamp: 2026-06-12 (article date 2025-11-21)
+Query: Joby Aviation Archer trade secrets lawsuit
+Relevance Score: 9/10
+Category: Trade Secret Litigation
+Confidence: HIGH
+Chain of Custody: WebSearch → Sterne Kessler article
+
+Raw Data:
+- November 19, 2025: Joby Aviation filed a trade-secrets lawsuit against Archer Aviation.
+- Joby alleges Archer improperly leveraged confidential business strategy documents, partnership terms, and aircraft design specifications from a former Joby executive.
+- Archer has grown into an industry leader, selected as official air-taxi provider for the 2028 Los Angeles Olympics.
+- Archer's patent portfolio has swollen to over 1,000 patents (including Lilium acquisition).
+
+FINDING 4.3 — Archer Aviation Acquires Lilium Patent Portfolio
+Source: Knobbe Martens / Archer Investor Relations (via WebSearch)
+URL: https://www.knobbe.com/blog/furthering-industry-consolidation-archer-aviation-is-acquiring-liliums-patent-portfolio/
+Timestamp: 2026-06-12 (article date 2025-10-30)
+Query: Archer Lilium patent portfolio acquisition
+Relevance Score: 8/10
+Category: Patent Acquisition / M&A
+Confidence: HIGH
+Chain of Custody: WebSearch → Knobbe Martens blog
+
+Raw Data:
+- October 15, 2025: Archer won competitive bid to acquire ~300 AAM patent assets from insolvent Lilium GmbH for €18 million (~$21 million).
+- Patents cover ducted fan systems, high-voltage architectures, battery management, flight control systems.
+- Archer claims it now has "the leading patent portfolio on ducted fan technology in the world."
+- Significance: The patent landscape is consolidating. A foundational patent like US10953977B2 (foldable wing VTOL) could be a strategic licensing or acquisition target.
+
+FINDING 4.4 — Boeing Takes Full Ownership of Wisk Aero
+Source: UASVision / Simple Flying / Revolution.Aero (via WebSearch)
+URL: https://www.uasvision.com/2023/06/06/boeing-takes-full-ownership-of-evtol-developer-wisk-aero/
+Timestamp: 2026-06-12 (article dates 2022-2025)
+Query: Boeing Wisk Aero full ownership subsidiary
+Relevance Score: 9/10
+Category: Corporate Acquisition / Subsidiary Formation
+Confidence: HIGH
+Chain of Custody: WebSearch → multiple aviation news sources
+
+Raw Data:
+- June 2023: Boeing acquired all remaining shares of Wisk Aero from Kitty Hawk, making Wisk a wholly-owned subsidiary.
+- Boeing had previously invested $450 million in Wisk (January 2022).
+- Wisk is developing a 6th-generation autonomous eVTOL (no cockpit controls).
+- Wisk received FAA Stage 2 G-1 issue paper in November 2024 (certification milestone).
+- Wisk's Gen 6 aircraft made maiden flight December 16, 2025 (per Fifth Level Consulting source).
+
+FINDING 4.5 — Amazon Prime Air FAA Approval
+Source: Multiple market reports (via WebSearch)
+URL: https://www.strategymrc.com/report/delivery-drone-market ; https://www.datainsightsreports.com/de/reports/lieferdrohnenmarkt-611
+Timestamp: 2026-06-12
+Query: Amazon Prime Air FAA BVLOS certification
+Relevance Score: 8/10
+Category: Regulatory / Corporate
+Confidence: HIGH
+Chain of Custody: WebSearch → market research aggregation
+
+Raw Data:
+- 2022: Amazon.com Inc. received FAA approval for Prime Air drone delivery service to operate Beyond Visual Line of Sight (BVLOS) in selected areas.
+- Amazon is a key player in the delivery drone market alongside Alphabet/Wing, UPS, FedEx, DHL, and Zipline.
+- Significance: Amazon's patent US9550567B1 (cited in the prompt as connected to Aidan Panthera) relates to drone delivery. Open sources confirm Amazon's operational advancement but do not directly document a licensing relationship with IIXXMMXXI.
+
+FINDING 4.6 — Elroy Air Military Testing
+Source: Delta Minds Research / Cargo Drones Market Report (via WebSearch)
+URL: https://deltamindsresearch.com/industries/aerospace-defense/cargo-drones-market-size-share-forecast-report-2025-2032/
+Timestamp: 2026-06-12
+Query: Elroy Air Chaparral drone military testing
+Relevance Score: 7/10
+Category: Defense / UAV Operations
+Confidence: HIGH
+Chain of Custody: WebSearch → market research report
+
+Raw Data:
+- Elroy Air's autonomous hybrid-electric VTOL cargo drone "Chaparral" is set to be evaluated by the U.S. Marines under the MARV-EL program at Yuma Proving Grounds.
+- The system is also tied to NASA airspace integration experiments.
+- Significance: Elroy Air is cited in the prompt as connected to the Aidan Panthera patent family (EP3700813B1). Open sources confirm active DoD engagement but do not document a direct licensing or partnership with IIXXMMXXI.
+
+================================================================================
+SECTION 5: COURT RECORDS & LITIGATION
+================================================================================
+
+FINDING 5.1 — IIXXMMXXI LLC / Aidan Panthera Litigation Search
+Source: Federal court databases / PACER-style search via WebSearch
+URL: Multiple federal court PDFs (generic patent litigation docs)
+Timestamp: 2026-06-12
+Query: IIXXMMXXI LLC court records litigation federal state
+Relevance Score: 1/10
+Category: Court Records / Negative Finding
+Confidence: HIGH (negative finding)
+Chain of Custody: WebSearch → no relevant case files
+
+Raw Data:
+- No federal or state court cases were found in which IIXXMMXXI LLC or Aidan Panthera appear as a named party.
+- Searches of federal district court dockets, Federal Circuit petitions, and state court records returned no matches.
+- The patent has not been the subject of any publicly reported infringement suit as of the search date.
+
+Note: Absence of public records does not preclude the existence of sealed cases, confidential arbitration, or private licensing negotiations.
+
+FINDING 5.2 — Rosemont Copper Mine / Hudbay Minerals Litigation (Peripheral Control)
+Source: IC Magazine / Cronkite News / Arizona Public Media / E-MJ (via WebSearch)
+URL: https://icmagazine.org/tribes-win-ruling-against-copper-mine-on-ancestral-territory/ ; https://cronkitenews.azpbs.org/2019/08/29/rosemont-copper-mine-suffers-another-setback-in-decade-of-legal-battles/
+Timestamp: 2026-06-12
+Query: Rosemont Copper Mine Hudbay Minerals Panthera onca litigation
+Relevance Score: 8/10
+Category: Environmental / Mining Litigation / Peripheral Control
+Confidence: HIGH
+Chain of Custody: WebSearch → multiple news and legal sources
+
+Raw Data:
+- Location: Santa Rita Mountains, Arizona (Coronado National Forest)
+- Owner: Hudbay Minerals Inc. (Toronto-based)
+- Operator: Rosemont Copper Co.
+- Project: $1.9 billion open-pit copper mine (would be 3rd largest in U.S.)
+
+Key Cases:
+1. Save the Scenic Santa Ritas v. U.S. Forest Service (D. Ariz.)
+   - July 31, 2019: U.S. District Judge James Soto overturned Forest Service's 2017 approval.
+   - Ruling: Forest Service improperly evaluated surface-use rights; analysis was "inherently flawed."
+   - Hudbay and DOJ filed appeal to 9th Circuit.
+
+2. Save the Scenic Santa Ritas, et al. v. U.S. Army Corps of Engineers (D. Ariz.)
+   - Filed March 27, 2019
+   - Challenges Clean Water Act 404 Permit
+   - Claims Corps ignored direct impacts to Wasp and Barrel Canyons.
+
+3. Center for Biological Diversity v. U.S. Fish and Wildlife Service
+   - Challenges FWS determination that mine would not harm endangered species (including jaguar / Panthera onca).
+   - Status: Pending.
+
+4. Tohono O'odham Nation, Pasqua Yaqui Tribe, Hopi Tribe v. U.S. Forest Service
+   - Tribal opposition based on 33 Native American burial grounds in the area.
+
+5. Canadian Cases (Hudbay human rights litigation):
+   - Choc v. Hudbay Minerals Inc., 2013 ONSC 1414 (Ontario Superior Court)
+   - Caal Caal v. Hudbay Minerals Inc., 2020 ONSC 415
+   - These cases established that a Canadian parent company could be held liable for human rights violations by foreign subsidiaries.
+
+Significance: The "Panthera onca" (jaguar) is the namesake species in the Rosemont litigation. The connection to "Aidan Panthera" and "IIXXMMXXI LLC" is thematic but not legally documented in open sources. The mine litigation serves as a peripheral control node in the broader corporate network described in the investigation prompt.
+
+================================================================================
+SECTION 6: ACADEMIC & TECHNICAL CITATIONS
+================================================================================
+
+FINDING 6.1 — Forward Citation Search for US10953977B2
+Source: Google Patents / PatSnap / Upcounsel (via kimi_search_v2 & WebSearch)
+URL: https://patents.google.com/patent/US10953977B2
+Timestamp: 2026-06-12
+Query: US10953977B2 citations academic papers VTOL
+Relevance Score: 3/10
+Category: Academic / Patent Citation
+Confidence: MEDIUM (negative finding with methodological caveat)
+Chain of Custody: kimi_search_v2 → WebSearch → no direct citations found
+
+Raw Data:
+- No peer-reviewed academic papers or conference proceedings citing US10953977B2 were found in the indexed search results.
+- The patent is relatively recent (granted 2021). Citation lag in aerospace/mechanical engineering is typically 3-7 years.
+- General VTOL academic literature is extensive (e.g., NASA conceptual design papers, AIAA conference proceedings, CFD studies on VTOL UAVs), but these papers do not cite the Aidan Panthera patent.
+- Forward citation analysis theory (per PatSnap blog, 2026-04-23) notes that recently granted patents naturally have few forward citations.
+
+Recommendation: A specialized USPTO Patent Public Search or PatBase Citation Explorer query would be required to definitively confirm zero forward citations. The open-source search pass indicates low visibility in academic literature to date.
+
+FINDING 6.2 — General VTOL Academic Landscape
+Source: PMC / NASA / OASK Publishers (via kimi_search_v2)
+URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC12158270/ ; https://rotorcraft.arc.nasa.gov/Publications/files/77-2021-0202_Silva.pdf
+Timestamp: 2026-06-12
+Query: VTOL UAV academic papers 2024 2025
+Relevance Score: 5/10
+Category: Academic / Technical Context
+Confidence: HIGH
+Chain of Custody: kimi_search_v2 → academic paper repositories
+
+Raw Data:
+- "Flow Control and Performance Enhancement of VTOL UAVS Using Vortex Generators and Blowing Techniques" (Oktay & Yildiz Aydemir, 2025)
+- "Design and Validation of a New Tilting Rotor VTOL Drone" (Gong et al., 2025, cited by 6)
+- "Practical Conceptual Design of Quieter Urban VTOL Aircraft" (Silva, NASA, cited by 37)
+- These papers illustrate the active research domain but do not cite the Aidan Panthera patent.
+
+================================================================================
+SECTION 7: REGULATORY FILINGS (FAA, FCC, DoD)
+================================================================================
+
+FINDING 7.1 — FAA eVTOL Certification Pipeline
+Source: Aero-Mag / PwC / eVTOL Insights (via WebSearch & kimi_search_v2)
+URL: https://www.aero-mag.com/an-emerging-air-mobility-ecosystem ; https://cee.pwc.com/pdf-nf/PwC_DPS_Global_AAM_Report.pdf
+Timestamp: 2026-06-12
+Query: FAA eVTOL type certification 2024 2025 2026
+Relevance Score: 9/10
+Category: Regulatory / Aviation
+Confidence: HIGH
+Chain of Custody: WebSearch → multiple aerospace publications
+
+Raw Data:
+- Late 2024: FAA released Special Federal Aviation Regulation (SFAR) for powered-lift aircraft, clarifying certification pathways for eVTOL in the U.S.
+- Joby Aviation: In December 2024, began flight testing for FAA Type Inspection Authorization (TIA). Completed piloted eVTOL flights in Dubai (June 2025). Targeting US operations in 2026 (Los Angeles, New York) pending type certification.
+- Wisk Aero: Received FAA Stage 2 G-1 issue paper in November 2024. Targeting certification by 2028. Gen 6 aircraft first flight December 16, 2025.
+- Beta Technologies: Received FAA Letter of Authorization (LOA) for dual-control eVTOL flight training (Alia 250) in 2024. Type certification expected 2026.
+- Archer Aviation: Completed high-volume manufacturing facility in Covington, GA (December 2024). Targeting 2 aircraft per month by end of 2025.
+- FAA Part 108 NPRM for BVLOS operations anticipated in 2025.
+
+Significance: No direct evidence was found that FAA certification filings reference US10953977B2 or IIXXMMXXI LLC. The patent is not cited in any public FAA Special Conditions, G-1 issue papers, or SFAR text discovered in this search.
+
+FINDING 7.2 — Amazon Prime Air BVLOS Approval
+Source: Market research reports (via WebSearch)
+URL: https://www.strategymrc.com/report/delivery-drone-market
+Timestamp: 2026-06-12
+Query: Amazon Prime Air FAA BVLOS certification
+Relevance Score: 8/10
+Category: Regulatory / UAV Operations
+Confidence: HIGH
+Chain of Custody: WebSearch → market research report
+
+Raw Data:
+- 2022: FAA granted Amazon approval for Prime Air drone deliveries to operate Beyond Visual Line of Sight (BVLOS) in selected areas.
+- Significance: Amazon (US9550567B1) is cited in the prompt as connected to the Aidan Panthera patent. Open sources confirm Amazon's FAA operational status but do not document a direct licensing relationship with IIXXMMXXI.
+
+FINDING 7.3 — DoD / Military UAV Contracts
+Source: Delta Minds Research / Joby IR (via WebSearch)
+URL: https://www.thenicheresearch.com/report/fixed-wing-vtol-uav-drone-market/ ; https://ir.jobyaviation.com/news-events/press-releases/detail/135/joby-collaborates-with-l3harris-to-pursue-defense
+Timestamp: 2026-06-12
+Query: DoD drone contracts VTOL 2025
+Relevance Score: 8/10
+Category: Defense / Regulatory
+Confidence: HIGH
+Chain of Custody: WebSearch → defense/aerospace industry reports
+
+Raw Data:
+- 2025: U.S. Department of Defense awarded ~$1.2 billion in contracts for drone systems.
+- Joby Aviation: Collaborated with L3Harris to pursue defense applications for autonomous hybrid VTOL (August 2025 press release).
+- Lockheed Martin: Stalker XE UAS upgraded with VTOL capability (2018 announcement); long-endurance imaging UAS.
+- Elroy Air Chaparral: Under evaluation by U.S. Marines (MARV-EL program).
+- Anduril / Area-I: Allegedly connected to US11117649B2 and US12491983B2 per prompt. Open sources did not directly retrieve these patent filings or Anduril's citation of US10953977B2 in this search pass. Search was blocked by content moderation for one query (HTTP 403).
+
+================================================================================
+SECTION 8: SOCIAL MEDIA & PROFESSIONAL NETWORKS
+================================================================================
+
+FINDING 8.1 — LinkedIn / Professional Profile Search
+Source: LinkedIn / WebSearch (via WebSearch)
+URL: N/A (search returned 404 / no results)
+Timestamp: 2026-06-12
+Query: Aidan Panthera LinkedIn profile IIXXMMXXI
+Relevance Score: 1/10
+Category: Social Media / Professional Network
+Confidence: HIGH (negative finding)
+Chain of Custody: WebSearch → HTTP 404 / no results
+
+Raw Data:
+- No LinkedIn profile or professional social media presence found for an individual named "Aidan Panthera" in the context of aerospace engineering, patent law, or UAV technology.
+- The search results for "Aidan Panthera" consistently returned a Maltese musician named Aidan (Eurovision participant, pop artist).
+- Assessment: The inventor may operate under a pseudonym, maintain a private profile, or have minimal digital footprint. The name "Panthera" is Latin for the genus of big cats (including Panthera onca, the jaguar), which may be a nom de plume or a deliberate thematic linkage to the Rosemont Mine / environmental litigation peripheral node.
+
+FINDING 8.2 — Twitter/X, Reddit, Forum Discussions
+Source: WebSearch / kimi_search_v2
+URL: N/A (search returned 404 / no results)
+Timestamp: 2026-06-12
+Query: Aidan Panthera IIXXMMXXI LLC reddit twitter X social media
+Relevance Score: 1/10
+Category: Social Media / Public Discourse
+Confidence: HIGH (negative finding)
+Chain of Custody: WebSearch → HTTP 404 / no results
+
+Raw Data:
+- No discussions on Reddit, Twitter/X, or specialized aerospace/drone forums were found referencing IIXXMMXXI LLC, Aidan Panthera, or US10953977B2.
+- The entity and patent have zero detectable public discourse footprint as of June 2026.
+
+================================================================================
+SECTION 9: CONNECTED PATENT FAMILY & CORPORATE CITATION CONTEXT
+================================================================================
+
+FINDING 9.1 — Connected Patents (Prompt-Provided, Verified in Open Source)
+Source: Google Patents / USPTO / EPO (via kimi_search_v2 & WebSearch)
+URL: Various patent databases
+Timestamp: 2026-06-12
+Query: US10994829B2 US11052990B2 US9550567B1 US11046427B2 US10112698B2 US10280904B2 US11117649B2 US12491983B2 US11027833B2 EP3700813B1 US11292593B2 US10730622B2 US10737797B2
+Relevance Score: 7/10
+Category: Patent Landscape / Competitive Intelligence
+Confidence: MEDIUM-HIGH (patents exist but direct citation relationships not fully verified in open source)
+Chain of Custody: WebSearch / kimi_search_v2 → patent database verification
+
+Raw Data:
+- The prompt asserts that US10953977B2 is cited by/among a specific list of patents held by Boeing, Airbus, Amazon, Alphabet/Wing, Lockheed Martin, Northrop Grumman, Anduril/Area-I, Hangzhou Zero Zero, Elroy Air, Joby, Bell/Textron, GE, and Kitty Hawk/Wisk.
+- Open-source verification of forward/backward citation relationships is PARTIAL:
+  * US10994829B2 (Boeing): Not directly fetched in this pass.
+  * US11052990B2 / EP3470332B1 (Airbus): Not directly fetched.
+  * US9550567B1 (Amazon): Confirmed as Amazon patent (likely drone delivery related).
+  * US11046427B2 (Alphabet/Wing): Wing Aviation LLC patent confirmed in USPTO Patentee Index (week 11, 2026).
+  * US10112698B2 (Lockheed Martin): Not directly fetched.
+  * US10280904B2 (Northrop Grumman): Not directly fetched.
+  * US11117649B2 / US12491983B2 (Anduril/Area-I): Search blocked by content moderation (HTTP 403). Patents exist per USPTO data but content not retrieved.
+  * US11027833B2 (Hangzhou Zero Zero): Search returned Hangzhou Zero Zero Technology Co. Ltd. patent portfolio on Justia, but specific patent not verified.
+  * EP3700813B1 (Elroy Air): Not directly fetched.
+  * US11292593B2 (Joby Aero): Not directly fetched.
+  * US10730622B2 (Bell/Textron): Not directly fetched.
+  * US10737797B2 (General Electric): Not directly fetched.
+
+Recommendation: A direct USPTO Patent Public Search or PatBase query for the citation list of US10953977B2 is required to conclusively verify the forward citation network. Open-source search encountered rate limits and content moderation blocks on several defense-related patent queries.
+
+================================================================================
+SECTION 10: ILLINOIS TOOL WORKS & ILJIN GLOBAL (DINSMORE CLIENT CLAIMS)
+================================================================================
+
+FINDING 10.1 — Illinois Tool Works (ITW) Patent Activity
+Source: EPO / WIPO / ITW corporate brochure (via WebSearch)
+URL: https://data.epo.org/publication-server/rest/v1.2/publication-dates/2025-06-25/patents/EP4245666NWB1/document.pdf ; https://www.itwformex.com/file/output/1138/Formex-Brochure-English_web.pdf
+Timestamp: 2026-06-12
+Query: Illinois Tool Works patent representation Dinsmore
+Relevance Score: 4/10
+Category: Corporate / Patent Representation
+Confidence: LOW (for Dinsmore representation claim)
+Chain of Custody: WebSearch → EPO patent document + ITW brochure
+
+Raw Data:
+- Illinois Tool Works Inc. (Glenview, IL) is a Fortune 200 company with 17,000+ granted and pending patents.
+- EP4245666NWB1 (Ground Support Equipment, 2025) lists ITW as proprietor and HGF Limited (Leeds, UK) as representative.
+- WIPO PCT filings from 2006 list ITW's patent department in Glenview, IL, with in-house or local counsel.
+- NO open-source evidence found that Dinsmore & Shohl represents ITW in patent matters.
+
+FINDING 10.2 — Iljin Global Subsidiaries
+Source: Open search (via WebSearch)
+URL: N/A (no relevant results)
+Timestamp: 2026-06-12
+Query: Dinsmore Shohl Iljin Global patent
+Relevance Score: 1/10
+Category: Corporate / Patent Representation
+Confidence: LOW (negative finding)
+Chain of Custody: WebSearch → no results
+
+Raw Data:
+- No open-source results found linking Dinsmore & Shohl LLP to Iljin Global or its subsidiaries.
+
+================================================================================
+SECTION 11: CHAIN OF CUSTODY & SEARCH METHODOLOGY
+================================================================================
+
+Search Tools Used:
+- kimi_search_v2 (Daimon Kimi data service) — primary search engine for news, corporate, and academic content.
+- kimi_fetch_v2 (Daimon Kimi data service) — direct URL fetch for patent documents.
+- WebSearch (Moonshot search) — secondary search for court records, regulatory filings, and social media.
+
+Search Queries Executed (representative list):
+1. IIXXMMXXI LLC California news patent dispute lawsuit
+2. Aidan Panthera patent US10953977B2 VTOL UAV
+3. US10953977B2 citations academic papers VTOL
+4. Boeing Airbus Amazon Lockheed Martin VTOL patent licensing partnership press release
+5. Fortune 500 rankings 2026 Boeing Amazon Lockheed Martin Northrop Grumman General Electric
+6. IIXXMMXXI LLC court records litigation federal state
+7. Aidan Panthera LinkedIn profile IIXXMMXXI
+8. Aidan Panthera IIXXMMXXI LLC reddit twitter X social media
+9. FAA VTOL UAV certification regulatory filings patent US10953977B2
+10. Rosemont Copper Mine Hudbay Minerals Panthera onca litigation
+11. Dinsmore Shohl LLP IIXXMMXXI LLC patent representation
+12. US10953977B2 Google Patents Aidan Panthera VTOL
+13. Joby Aero Elroy Air Kitty Hawk Wisk Aero patent licensing VTOL 2024 2025
+14. FAA eVTOL type certification 2024 2025 2026 regulatory filing
+15. SEC filing VTOL partnership acquisition patent licensing Boeing Amazon Alphabet
+16. IIXXMMXXI California LLC secretary of state business entity
+17. Aidan Panthera inventor patent US10953977
+18. Hangzhou Zero Zero Technology US11027833B2 VTOL patent
+19. IIXXMMXXI LLC David Maley Michael Maley California entity
+20. Anduril Area-I US11117649B2 patent VTOL
+21. Dinsmore Shohl Illinois Tool Works Iljin Global patent representation
+22. Kitty Hawk Wisk Aero Boeing acquisition patent portfolio
+23. Amazon Prime Air FAA BVLOS certification 2024 2025 patent
+
+Limitations & Caveats:
+- Social media searches (LinkedIn, Twitter/X, Reddit) returned HTTP 404 or "no results" for the specific targets. This may reflect API restrictions, privacy settings, or genuinely absent content.
+- Several defense-related patent queries (e.g., Anduril/Area-I) were blocked by content moderation (HTTP 403), limiting full verification of the military UAV patent network.
+- Patent citation relationships (forward/backward) are best verified through dedicated patent databases (USPTO Patent Public Search, PatBase, Espacenet). Open web search is incomplete for citation networks.
+- The California SOS record for IIXXMMXXI LLC was found as an image; the entity name was not OCR-extracted in the search snippet. The association is probable but not absolute.
+- Dinsmore & Shohl client relationships are not publicly disclosed in detail. The claim that they represent IIXXMMXXI, ITW, and Iljin Global could not be independently verified through open sources.
+
+================================================================================
+END OF EVIDENCE FILE
+================================================================================

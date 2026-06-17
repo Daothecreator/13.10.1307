@@ -1,0 +1,14 @@
+source,reliability,credibility,confidence,notes
+USPTO / Google Patents,A,1,A-1,Primary government records. Completely reliable.
+California Secretary of State,A,1,A-1,Official state registry. Completely reliable.
+SEC EDGAR,A,1,A-1,Federal securities filings. Completely reliable.
+Federal Court Records (PACER/CourtListener),A,1,A-1,Official judicial records.
+Dinsmore & Shohl Official Website,B,2,B-2,Professional marketing material. Usually reliable but subject to marketing bias.
+PlainSite.org,C,3,C-3,Third-party aggregator. No editorial oversight. Unverified data.
+idiyas.com,D,4,D-4,Third-party USPTO mirror. Data corruption suspected. NOT reliable.
+Justia.com (patents),D,4,D-4,Third-party aggregator. Corrupted record for US11702211. NOT reliable for assignee data.
+TechCrunch / Reuters,B,2,B-2,Established journalism. Usually reliable.
+Aero-Mag / Aviation News,B,2,B-2,Industry journalism. Usually reliable.
+Original Forensic Audit Plan (PDF),E,5,E-5,Contains multiple material errors and unverified claims. Improbable as authoritative source.
+ProPublica Nonprofit Explorer,B,2,B-2,IRS 990 data aggregator. Reliable for nonprofit financials.
+Kimi Search / Web Search,C,3,C-3,Search engine results. Subject to index limitations and content moderation.

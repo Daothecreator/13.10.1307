@@ -1,0 +1,3973 @@
+=== AI App Creator ===
+{
+  "name": "AI App Creator",
+  "description": "Describe your dream app, and our AI will generate the blueprint and a simulated APK file for you to download. Powered by Gemini.",
+  "requestFramePermissions": []
+}
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI App Creator | Gemini</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.27.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-900 text-white">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
+
+import React, { useState, useCallback } from 'react';
+import WelcomeStep from './components/WelcomeStep';
+import GeneratingStep from './components/GeneratingStep';
+import ResultStep from './components/ResultStep';
+import { generateAppPlan } from './services/geminiService';
+import { AppStep } from './types';
+
+const App: React.FC = () => {
+  const [step, setStep] = useState<AppStep>(AppStep.Welcome);
+  const [appDescription, setAppDescription] = useState<string>('');
+  const [generatedCode, setGeneratedCode] = useState<string>('');
+  const [error, setError] = useState<string | null>(null);
+
+  const handleGenerate = useCallback(async (description: string) => {
+    setAppDescription(description);
+    setStep(AppStep.Generating);
+    setError(null);
+    try {
+      const plan = await generateAppPlan(description);
+      setGeneratedCode(plan);
+      setStep(AppStep.Result);
+    } catch (e) {
+      console.error(e);
+      setError('An error occurred while generating the app plan. Please try again.');
+      setStep(AppStep.Welcome);
+    }
+  }, []);
+
+  const handleStartOver = useCallback(() => {
+    setAppDescription('');
+    setGeneratedCode('');
+    setError(null);
+    setStep(AppStep.Welcome);
+  }, []);
+
+  const renderStep = () => {
+    switch (step) {
+      case AppStep.Welcome:
+        return <WelcomeStep onGenerate={handleGenerate} error={error} />;
+      case AppStep.Generating:
+        return <GeneratingStep />;
+      case AppStep.Result:
+        return <ResultStep appDescription={appDescription} generatedCode={generatedCode} onStartOver={handleStartOver} />;
+      default:
+        return <WelcomeStep onGenerate={handleGenerate} error={error} />;
+   
+=== AI System Builder ===
+{
+  "name": "AI System Builder",
+  "description": "Provide code fragments, scripts, and descriptions to generate a complete, working software project, packaged and ready to download.",
+  "requestFramePermissions": []
+}
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Code Runner & Fixer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['Fira Code', 'monospace'],
+            },
+          },
+        },
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.15.0",
+    "jszip": "https://esm.sh/jszip@3.10.1"
+  }
+}
+</script>
+</head>
+<body class="bg-gray-900">
+    <div id="root"></div>
+</body>
+</html>
+import React, { useState, useCallback } from 'react';
+import { Header } from './components/Header';
+import { CodeEditor } from './components/CodeEditor';
+import { OutputDisplay } from './components/OutputDisplay';
+import { PlayIcon } from './components/icons/PlayIcon';
+import { LoadingSpinner } from './components/icons/LoadingSpinner';
+import { TrashIcon } from './components/icons/TrashIcon';
+import { PlusIcon } from './components/icons/PlusIcon';
+import { generateProject } from './services/geminiService';
+import type { InputFragment } from './services/geminiService';
+import type { ProjectGenerationResult } from './types';
+
+const App: React.FC = () => {
+    const [projectGoal, setProjectGoal] = useState<string>('Create a simple React single-page application that fetches and displays a list of users from a public API like JSONPlaceholder.');
+    const [fragments, setFragments] = useState<InputFragment[]>([
+        { id: '1', name: 'notes.txt', content: 'The user list should have a search bar to filter users by name.' }
+    ]);
+    const [result, setResult] = useState<ProjectGenerationResult | null>(null);
+    const [isLoading, setIsLoading] = useState<boolean>(false);
+    const [error, setError] = useState<string | null>(null);
+
+    const handle
+=== AI Vision Studio ===
+{
+  "name": "AI Vision Studio",
+  "description": "Generate stunning cinematic images from text or edit your own photos with simple prompts. This tool uses advanced AI to create and modify images with professional quality.",
+  "requestFramePermissions": []
+}
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cinematic Image Synthesizer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background-color: #111827;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.24.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
+import React, { useState } from 'react';
+import ImageGenerator from './components/ImageGenerator';
+import ImageEditor from './components/ImageEditor';
+
+const App: React.FC = () => {
+  const [activeTool, setActiveTool] = useState<'generator' | 'editor'>('generator');
+
+  const tabStyle = "px-6 py-3 font-semibold text-lg rounded-t-lg transition-colors duration-300 focus:outline-none";
+  const activeTabStyle = "bg-gray-800/60 backdrop-blur-sm text-purple-400 border-b-2 border-purple-400";
+  const inactiveTabStyle = "text-gray-400 hover:text-white";
+
+  return (
+    <div className="bg-gray-900 text-white min-h-screen font-sans antialiased">
+      <main className="container mx-auto px-4 py-8 md:py-12">
+        <header className="text-center mb-10">
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
+            AI Vision Studio
+          </h1>
+          <p className="mt-4 text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
+            Unleash your creativity. Generate unlimited cinematic masterpieces from text or edit your photos with simple prompts. Your creative partner, powered by Gemini AI.
+          </p>
+        </header>
+
+        <div className="flex justify-center border-b border-gray-700 mb-8">
+          <button
+            onClick={() => setActiveTool('generator')}
+            className={`${tabStyle} ${activeTool === 'generator' ? activeTabStyle : inactiveTabStyle}`}
+            aria-pressed={activeTool === 'generator'}
+          >
+         
+=== ABSOLUTE_ Scientific Observational Simulator ===
+{
+  "name": "ABSOLUTE: Scientific Observational Simulator",
+  "description": "A futuristic simulator to explore the interplay of fundamental scientific and philosophical principles. Drag objects into the universe, activate universal mechanics, and observe AI-generated explanations of their complex interactions.",
+  "requestFramePermissions": []
+}
+import '@angular/compiler';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { provideHttpClient } from '@angular/common/http';
+import { provideZonelessChangeDetection } from '@angular/core';
+
+import { AppComponent } from './src/app.component';
+
+bootstrapApplication(AppComponent, {
+  providers: [
+    provideZonelessChangeDetection(),
+    provideHttpClient(),
+  ],
+}).catch(err => console.error(err));
+
+// AI Studio always uses an `index.tsx` file for all project types.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABSOLUTE: Scientific Observational Simulator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* For custom glow effects and text shadows that are hard to replicate with pure Tailwind */
+        .text-glow {
+            text-shadow: 0 0 8px rgba(0, 255, 255, 0.7);
+        }
+        .box-glow {
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+        }
+        /* Custom animation for ripple effect */
+        @keyframes ripple {
+            0% { transform: scale(0); opacity: 0.7; }
+            100% { transform: scale(4); opacity: 0; }
+        }
+        .animate-ripple {
+            animation: ripple 4s infinite ease-out;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "rxjs": "https://aistudiocdn.com/rxjs@^7.8.2?conditions=es2015",
+    "rxjs/operators": "https://aistudiocdn.com/rxjs@^7.8.2/operators?conditions=es2015",
+    "rxjs/ajax": "https://aistudiocdn.com/rxjs@^7.8.2/ajax?conditions=es2015",
+    "rxjs/webSocket": "https://aistudiocdn.com/rxjs@^7.8.2/webSocket?conditions=es2015",
+    "rxjs/testing": "https://aistudiocdn.com/rxjs@^7.8.2/testing?conditions=es2015",
+    "rxjs/fetch": "https://aistudiocdn.com/rxjs@^7.8.2/fetch?conditions=es2015",
+    "@google/genai": "https://next.esm.sh/@google/genai@^1.25.0?external=rxjs",
+    "@angular/compiler": "https://next.esm.sh/@angular/compiler@^20.3.6?external=rxjs",
+    "@angular/common": "https://next.esm.sh/@angular/common@^20.3.6?external=rxjs",
+    "@angular/common/http": "https://next.esm.sh/@angular/common@^20.3.6/http?external=rxjs",
+    "@angular/core": "https://next.esm.sh/@angular/core@^20.3.6?external=rxjs",
+    "@angular/platform-browser": "https://next.esm.sh/@angular/platform-browser@^20.3.6?external=rxjs"
+  }
+}
+</script>
+</head>
+<body class="bg-[#0a0a1a] text-gray-200 font-sans overflow-hidden">
+    <app-root></app-root>
+</body>
+</html>
+<div class="flex flex-col w-full h-screen">
+  <!-- Header -->
+  <header class="bg-[#0a0a1a]/80 backdrop-blur-s
+=== Global Audit_ Zero Azimuth ===
+{
+  "name": "Global Audit: Zero Azimuth",
+  "description": "A cryptographic sovereign audit interface visualizing global structural violations, financial crimes, and legal frameworks based on the Zero Azimuth investigation.",
+  "requestFramePermissions": []
+}import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global Audit // Zero Azimuth</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            colors: {
+              terminal: {
+                black: '#0a0a0a',
+                dark: '#121212',
+                panel: '#1a1a1a',
+                green: '#00ff41',
+                red: '#ff0033',
+                dim: '#444444',
+                accent: '#00ccff'
+              }
+            },
+            animation: {
+              'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'glitch': 'glitch 1s linear infinite',
+            },
+            keyframes: {
+              glitch: {
+                '2%, 64%': { transform: 'translate(2px,0) skew(0deg)' },
+                '4%, 60%': { transform: 'translate(-2px,0) skew(0deg)' },
+                '62%': { transform: 'translate(0,0) skew(5deg)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #050505;
+        color: #e5e5e5;
+        overflow-x: hidden;
+      }
+      .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+      }
+      .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+      }
+      .cyber-border {
+        position: relative;
+      }
+      .cyber-border::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        border-radius: inherit;
+        padding: 1px;
+        background: linear-gradient(45deg, #00ccff, transparent, #00ff41);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+ 
+=== MEV Swarm Mission Control ===
+{
+  "name": "MEV Swarm Mission Control",
+  "description": "A real-time dashboard to monitor and analyze the activities of an autonomous MEV (Maximum Extractable Value) agent swarm. It provides live trade feeds, agent performance statistics, and leverages the Gemini API for in-depth trade plan analysis.",
+  "requestFramePermissions": []
+}
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MEV Swarm Mission Control</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'gray-900': '#0f172a',
+              'gray-800': '#1e293b',
+              'gray-700': '#334155',
+              'cyan-400': '#22d3ee',
+            },
+            animation: {
+              'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.28.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-900 text-slate-200 font-sans">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
+export enum TradeStatus {
+  PENDING = 'PENDING',
+  EXECUTING = 'EXECUTING',
+  SUCCEEDED = 'SUCCEEDED',
+  FAILED = 'FAILED',
+}
+
+export enum AgentRole {
+  OMEGA = 'Orchestrator',
+  ALPHA = 'Scout',
+  BETA = 'Optimizer',
+  GAMMA = 'Analyst',
+  DELTA_YAN = 'Strategist (Yan)',
+  DELTA_YIN = 'Strategist (Yin)',
+  EPSILON = 'Validator',
+  ZETA = 'Corrector',
+}
+
+
+export interface Trade {
+  id: string;
+  agentId: string;
+  timestamp: Date;
+  strategy: string;
+  assets: string[];
+  potentialProfitEth: number;
+  executedProfitEth?: number;
+  status: TradeStatus;
+  transactionHash?: string;
+  logs: string[];
+}
+
+export interface Agent {
+    id:string;
+    role: AgentRole;
+    status: 'ACTIVE' | 'IDLE' | 'ERROR';
+    totalProfitEth: number;
+    tradesExecuted: number;
+    successRate: number;
+}
+import { GoogleGenAI } from "@google/genai";
+import type { Trade } from '../types';
+
+// IMPORTANT: Do not expose this key publicly.
+// It is assumed that process.env.API_KEY is securely handled by the deployment environment.
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY! });
+
+export const analyzeTradePlan =
+=== NeuroCleanse & Regen Platform ===
+{
+  "name": "NeuroCleanse & Regen Platform",
+  "description": "A comprehensive technical dashboard for the Neuro-Cleaning and Neuro-Regeneration system, featuring mathematical modeling of synaptic density recovery, molecular specifications for PROTAC/LNP, and simulation of the blood-brain barrier crossing mechanism.",
+  "requestFramePermissions": []
+}import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeuroCleanse Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              slate: {
+                850: '#151f32',
+                900: '#0f172a',
+                950: '#020617',
+              },
+              cyan: {
+                450: '#00a3e0',
+              }
+            },
+            fontFamily: {
+              mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', "Liberation Mono", "Courier New", 'monospace'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #020617;
+        color: #e2e8f0;
+      }
+      /* Custom scrollbar for technical look */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0f172a; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #334155; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #475569; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "recharts": "https://esm.sh/recharts@^3.7.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>export type Language = 'ru' | 'en';
+
+export interface SimulationDataPoint {
+  day: number;
+  synapticDensity: number; // 10^9 synapses/cm3
+  hippocampalVolume: number; // cm3
+  bdnfLevel: number; // Relative %
+}
+
+export enum PlatformModule {
+  DASHBOARD = 'dashboard',
+  DEGRADATION = 'degradation',
+  REGENERATION = 'regeneration',
+  DELIVERY = 'delivery',
+  SIMULATION = 'simulation',
+  SPECS = 'specs'
+}
+
+export interface TechSpecItem {
+  component: string;
+  spec: string;
+  note: string;
+}
+
+export interface LNPConfig {
+  pH: number;
+  state: 'neutral' | 'cationic';
+  location: 'blood' | 'endosome' | 'cytoplasm';
+}import React, { useMemo } from 'react'
+=== Shader Pilot ===
+{
+  "name": "Shader Pilot",
+  "description": "Navigate a complex 3d world with customizable interactions.",
+  "requestFramePermissions": []
+}/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+import React, { useCallback, useState } from 'react';
+import ReactDOM from 'react-dom/client';
+import { ShaderCanvas } from './components/ShaderCanvas';
+import { ControlsPanel } from './components/ControlsPanel';
+import { DpadControls } from './components/DpadControls';
+import { Hud } from './components/Hud';
+import { ShipOverlay } from './components/ShipOverlay';
+import { AppProvider, useAppContext } from './context/AppContext';
+import { useAppStoreComplete } from './hooks/useAppStore';
+import { GearIcon, SpeakerWaveIcon, SpeakerXMarkIcon, RocketLaunchIcon } from './components/Icons';
+import { SHOW_SETTINGS_BUTTON, SHOW_SHARE_BUTTON, SHOW_HUD_BUTTON, SHOW_MUTE_BUTTON } from './config';
+
+// Optimization: Define static constant outside component to avoid recreation every render
+const NAV_KEYS = ['w', 'a', 's', 'd', ' ', 'shift', 'arrowup', 'arrowdown', 'arrowleft', 'arrowright'];
+
+const AppContent: React.FC = () => {
+    const {
+        canvasSize,
+        sliders,
+        uniforms,
+        currentSessionId,
+        activeShaderCode,
+        allUniforms,
+        renderCameraRef, // Use renderCameraRef for offset support
+        cameraControlsEnabled,
+        setIsControlsOpen,
+        isHdEnabled,
+        setIsHdEnabled,
+        isFpsEnabled,
+        EDITMODE,
+        isMoving,
+        isInteracting,
+        pressedKeys,
+        viewMode,
+        setViewMode,
+        viewModeTransition,
+        fileInputRef,
+        handleFileChange,
+        soundConfig,
+        handleSoundConfigChange,
+    } = useAppContext();
+
+    const [isLinkCopied, setIsLinkCopied] = useState(false);
+
+    const handleShareClick = useCallback(() => {
+        const params: Record<string, string | number> = {
+            planet: currentSessionId,
+            canvasSize,
+        };
+
+        sliders.forEach(slider => {
+            const value = uniforms[slider.variableName];
+            if (typeof value === 'number') {
+                params[slider.variableName] = Number(value.toFixed(3));
+            }
+        });
+
+        const hashString = Object.entries(params)
+            .map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(String(value))}`)
+            .join('&');
+        
+        const url = `${window.location.origin}${window.location.pathname}#${hashString}`;
+
+        navigator.clipboard.writeText(url).then(() => {
+            setIsLinkCopied(true);
+     
+=== Zero Magic OS ===
+{
+  "name": "Zero Magic OS",
+  "description": "Computer with a UI that is generated dynamically from user interactions.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+*/
+/* tslint:disable */
+import '@tailwindcss/browser';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error('Could not find root element to mount to');
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+);
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+*/
+/* tslint:disable */
+import React, {useCallback, useEffect, useRef, useState} from 'react';
+import {GeneratedContent} from './components/GeneratedContent';
+import {Icon} from './components/Icon';
+import {ParametersPanel} from './components/ParametersPanel';
+import {Window} from './components/Window';
+import {APP_DEFINITIONS_CONFIG, INITIAL_MAX_HISTORY_LENGTH} from './constants';
+import {generateImage, streamAppContent} from './services/geminiService';
+import {AppDefinition, InteractionData} from './types';
+
+const DesktopView: React.FC<{onAppOpen: (app: AppDefinition) => void}> = ({
+  onAppOpen,
+}) => (
+  <div className="flex flex-wrap content-start p-4">
+    {APP_DEFINITIONS_CONFIG.map((app) => (
+      <Icon key={app.id} app={app} onInteract={() => onAppOpen(app)} />
+    ))}
+  </div>
+);
+
+const App: React.FC = () => {
+  const [activeApp, setActiveApp] = useState<AppDefinition | null>(null);
+  const [previousActiveApp, setPreviousActiveApp] =
+    useState<AppDefinition | null>(null);
+  const [llmContent, setLlmContent] = useState<string>('');
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null);
+  const [interactionHistory, setInteractionHistory] = useState<
+    InteractionData[]
+  >([]);
+  const [isParametersOpen, setIsParametersOpen] = useState<boolean>(false);
+  const [currentMaxHistoryLength, setCurrentMaxHistoryLength] =
+    useState<number>(INITIAL_MAX_HISTORY_LENGTH);
+  const [generatedImageData, setGeneratedImageData] = useState<string | null>(
+    null,
+  );
+
+  // Statefulness feature state
+  const [isStatefulnessEnabled, setIsStatefulnessEnabled] =
+    useState<boolean>(false);
+  const [appContentCache, setAppContentCache] = useState<
+    Record<string, string>
+  >({});
+  const [currentAppPath, setCurrentAppPath] = useState<string[]>([]); // For UI graph statefulness
+
+  // Audio recording state and refs
+  const [isRecording, setIsRecording] = useState<boolean>(false);
+  const audioContextRef = useRef<AudioContext | null>(null);
+  const analyserRef = useRef<AnalyserNode | null>(null);
+  const audioStreamRef = useRef<MediaStream | null>(null);
+  const animationFrameRef = useRef<number | null>(null);
+
+  const stopAudioRecording = useCallback(() => {
+    if (animationFrameRef.current) {
+      cancelA
+=== AI Prompt Architect ===
+{
+  "name": "AI Prompt Architect",
+  "description": "An application that takes a user's idea in text form, processes it thoroughly, and structures it into a clear, correct prompt for an AI model to develop a complete, ready-to-use product.",
+  "requestFramePermissions": []
+}
+import '@angular/compiler';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { provideZonelessChangeDetection } from '@angular/core';
+import { AppComponent } from './src/app.component';
+
+bootstrapApplication(AppComponent, {
+  providers: [
+    provideZonelessChangeDetection(),
+  ],
+}).catch(err => console.error(err));
+
+// AI Studio always uses an `index.tsx` file for all project types.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Prompt Architect</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "rxjs": "https://aistudiocdn.com/rxjs@^7.8.2?conditions=es2015",
+    "rxjs/operators": "https://aistudiocdn.com/rxjs@^7.8.2/operators?conditions=es2015",
+    "rxjs/ajax": "https://aistudiocdn.com/rxjs@^7.8.2/ajax?conditions=es2015",
+    "rxjs/webSocket": "https://aistudiocdn.com/rxjs@^7.8.2/webSocket?conditions=es2015",
+    "rxjs/testing": "https://aistudiocdn.com/rxjs@^7.8.2/testing?conditions=es2015",
+    "rxjs/fetch": "https://aistudiocdn.com/rxjs@^7.8.2/fetch?conditions=es2015",
+    "@google/genai": "https://next.esm.sh/@google/genai@^1.21.0?external=rxjs",
+    "@angular/compiler": "https://next.esm.sh/@angular/compiler@^20.3.2?external=rxjs",
+    "@angular/common": "https://next.esm.sh/@angular/common@^20.3.2?external=rxjs",
+    "@angular/platform-browser": "https://next.esm.sh/@angular/platform-browser@^20.3.2?external=rxjs",
+    "@angular/core": "https://next.esm.sh/@angular/core@^20.3.2?external=rxjs"
+  }
+}
+</script>
+</head>
+<body class="bg-gray-50">
+  <app-root></app-root>
+</body>
+</html>
+
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { PromptGeneratorComponent } from './components/prompt-generator/prompt-generator.component';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [PromptGeneratorComponent],
+})
+export class AppComponent {}
+
+<main class="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 p-4 sm:p-6 lg:p-8">
+  <div class="max-w-4xl mx-auto">
+    <app-prompt-generator></app-prompt-generator>
+  </div>
+</main>
+
+import { Injectable, signal, computed } from '@angular/core';
+
+type Language = 'en' | 'ru';
+
+@Injectable({
+  provided
+=== AI Tech Stack Generator ===
+{
+  "name": "AI Tech Stack Generator",
+  "description": "An application that takes an idea and generates a suitable, deployable technology stack using a simulated, AI-driven process. The process involves parsing the idea, searching for components, combining a cohesive stack, and generating starter code.",
+  "requestFramePermissions": []
+}
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Tech Stack Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background-color: #0a0a0a;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.28.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
+
+import React, { useState, useCallback } from 'react';
+import { Header } from './components/Header';
+import { IdeaInput } from './components/IdeaInput';
+import { ProcessVisualizer } from './components/ProcessVisualizer';
+import { ResultsDisplay } from './components/ResultsDisplay';
+import { generateStack } from './services/geminiService';
+import type { ProcessStep, StackGenerationResult } from './types';
+import { PROCESS_STEPS } from './constants';
+
+const App: React.FC = () => {
+  const [idea, setIdea] = useState<string>('');
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null);
+  const [activeStep, setActiveStep] = useState<ProcessStep | 'idle' | 'done'>('idle');
+  const [result, setResult] = useState<StackGenerationResult | null>(null);
+
+  const handleGenerate = useCallback(async () => {
+    if (!idea.trim() || isLoading) return;
+
+    setIsLoading(true);
+    setError(null);
+    setResult(null);
+
+    const stepDelay = 400;
+
+    try {
+      for (const step of PROCESS_STEPS) {
+        setActiveStep(step.id);
+        await new Promise(resolve => setTimeout(resolve, stepDelay));
+      }
+
+      const generatedResult = await generateStack(idea);
+      setResult(generatedResult);
+      setActiveStep('done');
+
+    } catch (err) {
+      console.error(err);
+      setError(err instanceof Error ? err.message : 'An unexpected error occurred.');
+      setActiveStep('idle');
+    } finally {
+      setIsLoading(false);
+    }
+
+=== AI Video Enhancer Pro ===
+{
+  "name": "AI Video Enhancer Pro",
+  "description": "Upload your video to have it professionally processed by AI. This tool enhances quality and detail, upscales to 4K resolution, and adjusts the aspect ratio for a cinematic look, then allows you to download the result.",
+  "requestFramePermissions": []
+}
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Video Enhancer Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background-color: #111827; /* bg-gray-900 */
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.24.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
+
+export enum ProcessingState {
+  Idle,
+  Processing,
+  Success,
+  Error,
+}
+
+import { GoogleGenAI } from "@google/genai";
+
+if (!process.env.API_KEY) {
+  throw new Error("API_KEY environment variable is not set");
+}
+
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+
+const PROMPT = `Based on this initial image, generate a professionally processed, ultra-detailed, 4K resolution, cinematic video with a 21:9 aspect ratio. Enhance the quality, colors, textures, and lighting to create a visually stunning result. The video should be a short, dynamic clip that expands upon the scene and mood of the provided image.`;
+
+export const enhanceVideo = async (base64Frame: string): Promise<string> => {
+  try {
+    let operation = await ai.models.generateVideos({
+      model: 'veo-2.0-generate-001',
+      prompt: PROMPT,
+      image: {
+        imageBytes: base64Frame,
+        mimeType: 'image/jpeg',
+      },
+      config: {
+        numberOfVideos: 1
+      }
+    });
+
+    while (!operation.done) {
+      await new Promise(resolve => setTimeout(resolve, 10000)); // Poll every 10 seconds
+      operation = await ai.operations.getVideosOperation({ operation: operation });
+    }
+
+    const downloadLink = operation.response?.generatedVideos?.[0]?.video?.uri;
+
+    if (!downloadLink) {
+      throw new Error("Video generation completed, but no download link was found.");
+    }
+
+    // The response.body contains the MP4 bytes. You must append an API key when fetching from the download link.
+    const response = 
+=== AI Music Visualizer ===
+{
+  "name": "AI Music Visualizer",
+  "description": "A powerful, AI-driven music visualizer that creates stunning, audio-reactive animations in your browser. Upload your music, choose a visual theme, and watch as the AI generates a unique background texture, while particles, spectrums, and waveforms dance to the beat in real-time.",
+  "requestFramePermissions": []
+}
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Music Visualizer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-purple': '#8A2BE2',
+              'brand-pink': '#FF00FF',
+              'brand-cyan': '#00FFFF',
+            },
+            animation: {
+              'text-gradient': 'text-gradient 1.5s linear infinite',
+              'pulse-fast': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+              'text-gradient': {
+                'to': {
+                  'backgroundPosition': '200% center',
+                },
+              },
+            },
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.23.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-900 text-white">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
+
+import React, { useState, useRef, useCallback } from 'react';
+import { ControlsPanel } from './components/ControlsPanel';
+import { Visualizer } from './components/Visualizer';
+import { generateImage } from './services/geminiService';
+import type { VisualSettings, DisplayElements, QualitySettings, AudioFeatures } from './types';
+import { useAudioAnalysis } from './hooks/useAudioAnalysis';
+import { MusicIcon, UploadIcon } from './components/Icon';
+
+const App: React.FC = () => {
+  const [visualSettings, setVisualSettings] = useState<VisualSettings>({
+    visualStyle: 'cosmic',
+    colorScheme: 'neon',
+    particleDensity: 1.0,
+    effectIntensity: 1.5,
+  });
+  const [displayElements, setDisplayElements] = useState<DisplayElements>({
+    showSpectrum: true,
+    showWaveform: true,
+    showBpm: true,
+  });
+  const [qualitySettings, setQualitySettings] = useState<Qu
+=== AI Music Video Generator ===
+{
+  "name": "AI Music Video Generator",
+  "description": "Upload an audio file, describe the desired visual style, and let our AI generate a unique music video for your track. Features different quality modes and a preview before downloading.",
+  "requestFramePermissions": []
+}
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Music Video Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* For custom scrollbars if needed */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1e293b;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #475569;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #64748b;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.24.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-slate-900 text-white">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
+
+export enum RenderQuality {
+  NORMAL = 'Normal',
+  SUPER = 'Super Quality'
+}
+
+export enum AppState {
+  IDLE,
+  SUGGESTING,
+  GENERATING,
+  FINISHED,
+  ERROR
+}
+
+import React from 'react';
+
+interface FileUploadProps {
+  onFileSelect: (file: File) => void;
+  selectedFile: File | null;
+  disabled: boolean;
+}
+
+const MusicIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
+  <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" {...props}>
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2z" />
+  </svg>
+);
+
+export const FileUpload: React.FC<FileUploadProps> = ({ onFileSelect, selectedFile, disabled }) => {
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (event.target.files && event.target.files[0]) {
+      onFileSelect(event.target.files[0]);
+    }
+  };
+
+  return (
+    <div className="w-full">
+      <label htmlFor="audio-upload" className={`relative flex flex-col items-center justify-center w-full h-48 border-2 border-slate-600 border-dashed rounded-lg group transition-colors ${disabled ? 'cursor-not-allowed
+=== AI Cinematic Video Creator ===
+{
+  "name": "AI Cinematic Video Creator",
+  "description": "Upload your video clips, and let AI transform them into a professional, cinematic masterpiece with stunning effects, transitions, and 4K upscaling. Your personal video editor, powered by generative AI.",
+  "requestFramePermissions": []
+}
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Cinematic Video Creator</title>
+    <link rel="manifest" href="/manifest.json" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.20.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-slate-900 text-gray-200">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(registration => {
+              console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            })
+            .catch(err => {
+              console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
+export enum ProcessingState {
+  IDLE = 'IDLE',
+  GENERATING = 'GENERATING',
+  SUCCESS = 'SUCCESS',
+  ERROR = 'ERROR',
+}
+import { GoogleGenAI } from "@google/genai";
+
+const API_KEY = process.env.API_KEY;
+
+const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+
+export const generateCinematicMontage = async (
+  userPrompt: string,
+  base64Frames: string[],
+  onProgress: (message: string) => void
+): Promise<string> => {
+  if (!API_KEY) {
+    throw new Error("API_KEY environment variable not set. Please configure it to use the AI features.");
+  }
+  const ai = new GoogleGenAI({ apiKey: API_KEY });
+
+  // Step 1: Generate a detailed storyboard prompt using the vision model
+  onProgress("Analyzing video frames and creating a cinematic storyboard...");
+
+  const imageParts = base64Frames.map(frame => ({
+    inlineData: {
+      mimeType: 'image/jpeg',
+      data: frame,
+    },
+  }));
+
+  const storyboardingPrompt = `You are an AI scriptwriter for a video generation model. Your miss
+=== AI File Transformer ===
+{
+  "name": "AI File Transformer",
+  "description": "Upload a code or text file, describe the desired transformation (e.g., convert, refactor, summarize), and let AI generate the new version for you. After processing, you can download the transformed file.",
+  "requestFramePermissions": []
+}
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI File Transformer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* For custom scrollbar styling */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1f2937; /* bg-gray-800 */
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #4b5563; /* bg-gray-600 */
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #6b7280; /* bg-gray-500 */
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.25.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-900 text-gray-100 font-sans">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
+
+import { GoogleGenAI } from "@google/genai";
+
+// Assume process.env.API_KEY is available in the environment.
+const API_KEY = process.env.API_KEY;
+
+if (!API_KEY) {
+  // In a real app, you might show a more user-friendly error or disable functionality.
+  // For this context, we'll throw an error if the key is missing.
+  console.error("API_KEY environment variable not set. The application will not work.");
+}
+
+const ai = new GoogleGenAI({ apiKey: API_KEY! });
+
+export async function transformFileContent(
+    originalContent: string,
+    transformPrompt: string,
+    fileName: string
+): Promise<string> {
+    const fileExtension = fileName.split('.').pop() || 'txt';
+
+    const prompt = `
+        You are an expert file transformer and code converter. Your task is to transform the provided file content based on the user's request.
+        
+        IMPORTANT: Provide ONLY the raw, transformed file content. Do not include any explanatory text, markdown formatting (like \`\`\`${fileExtension} ... \`\`\`), or any other conversational filler. The output must be ready to be saved directly into a new file.
+
+        **User's Transformation Requ
+=== Gemini Code Explainer ===
+{
+  "name": "Gemini Code Explainer",
+  "description": "A web application that uses the Gemini API to provide detailed explanations for snippets of code in various programming languages. Paste your code, select the language, and get a comprehensive breakdown of its functionality, structure, and potential improvements.",
+  "requestFramePermissions": []
+}
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gemini Code Explainer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.25.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-900">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
+
+import React, { useState, useCallback } from 'react';
+import CodeInput from './components/CodeInput';
+import ExplanationDisplay from './components/ExplanationDisplay';
+import { explainCode } from './services/geminiService';
+import { INITIAL_CODE } from './constants';
+
+const App: React.FC = () => {
+  const [explanation, setExplanation] = useState<string>('');
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const handleExplainRequest = useCallback(async (code: string, language: string) => {
+    if (!code.trim()) {
+      setError('Please enter some code to explain.');
+      return;
+    }
+    setIsLoading(true);
+    setError(null);
+    setExplanation('');
+
+    try {
+      const result = await explainCode(code, language);
+      setExplanation(result);
+    } catch (err) {
+      console.error('Error getting explanation:', err);
+      setError(err instanceof Error ? err.message : 'An unknown error occurred. Please check the console.');
+    } finally {
+      setIsLoading(false);
+    }
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-gray-900 text-gray-200 font-sans">
+      <header className="bg-gray-800/50 backdrop-blur-sm border-b border-gray-700 sticky top-0 z-10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
+            <h1 className="text-2xl font-bold text-white tracking-tight">
+              Gemini Code Explainer
+            </h1>
+          </div>
+        <
+=== Gemini Code Explainer & Refiner ===
+{
+  "name": "Gemini Code Explainer & Refiner",
+  "description": "An advanced web application that uses the Gemini API to analyze, explain, and refactor complex code. Users can paste code to receive a detailed breakdown, identify key concepts, discover potential issues, and get an improved version of their code.",
+  "requestFramePermissions": []
+}
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gemini Code Explainer & Refiner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.15.0",
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1",
+    "lucide-react": "https://esm.sh/lucide-react@^0.540.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-900 text-white">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
+
+import React, { useState, useCallback } from 'react';
+import type { AnalysisResult } from './types';
+import { analyzeCode } from './services/geminiService';
+import { initialCode } from './constants';
+import Header from './components/Header';
+import CodeInput from './components/CodeInput';
+import AnalysisDisplay from './components/AnalysisDisplay';
+import Loader from './components/Loader';
+import { BrainCircuit } from 'lucide-react';
+
+const App: React.FC = () => {
+  const [code, setCode] = useState<string>(initialCode);
+  const [analysisResult, setAnalysisResult] = useState<AnalysisResult | null>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const handleAnalyzeClick = useCallback(async () => {
+    if (!code.trim()) {
+      setError("Please enter some code to analyze.");
+      return;
+    }
+    setIsLoading(true);
+    setError(null);
+    setAnalysisResult(null);
+    try {
+      const result = await analyzeCode(code);
+      setAnalysisResult(result);
+    } catch (e) {
+      console.error(e);
+      const errorMessage = e instanceof Error ? e.message : "An unknown error occurred.";
+      setError(`Failed to analyze code. ${errorMessage}`);
+    } finally {
+      setIsLoading(false);
+    }
+  }, [code]);
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-slate-800 text-gray-200 font-sans">
+      <Header />
+      <main className="container mx-auto p-4 md:p-6 lg:p-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+
+=== Gemini Studio Suite ===
+{
+  "name": "Gemini Studio Suite",
+  "description": "A comprehensive AI suite featuring Image Editing (Nano Banana), Image Analysis, and a specialized Russian-Latin Translator.",
+  "requestFramePermissions": []
+}import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gemini Studio Suite</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      /* Custom scrollbar for webkit */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1f2937; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #4b5563; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #6b7280; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-900 text-white h-screen overflow-hidden">
+    <div id="root"></div>
+  </body>
+</html>export enum AppView {
+  IMAGE_EDITOR = 'IMAGE_EDITOR',
+  IMAGE_ANALYZER = 'IMAGE_ANALYZER',
+  TRANSLATOR = 'TRANSLATOR',
+}
+
+export enum TranslationDirection {
+  RU_TO_LA = 'RU_TO_LA',
+  LA_TO_RU = 'LA_TO_RU',
+}
+
+export interface GeneratedImageResult {
+  imageUrl: string | null;
+  text: string | null;
+}
+import { GoogleGenAI, GenerateContentResponse } from "@google/genai";
+import { GeneratedImageResult, TranslationDirection } from "../types";
+
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+
+/**
+ * Helper to convert a File object to a base64 string suitable for the API
+ * (stripping the data URL prefix for the payload).
+ */
+export const fileToGenerativePart = async (file: File): Promise<{ inlineData: { data: string; mimeType: string } }> => {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      const base64String = reader.result as string;
+      // Extract the base64 data part (remove "data:image/jpeg;base64,")
+      const base64Data = base64String.split(',')[1];
+      resolve({
+        inlineData: {
+          data: base64Data,
+          mimeType: file.type,
+        },
+      });
+    };
+    reader.onerror = r
+=== Nexus AI_ Advanced Production Assistant ===
+{
+  "name": "Nexus AI: Advanced Production Assistant",
+  "description": "A production-grade AI assistant featuring deep reasoning, empathetic communication, and a modular system architecture visualization. Supports both high-reasoning text chat and real-time voice interaction.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexus AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #0f172a; /* Slate 900 */
+        color: #f8fafc; /* Slate 50 */
+      }
+      .font-mono {
+        font-family: 'JetBrains Mono', monospace;
+      }
+      /* Custom scrollbar for logs */
+      .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+      }
+      .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>export enum MessageRole {
+  User = 'user',
+  Model = 'model',
+  System = 'system'
+}
+
+export interface Message {
+  id: string;
+  role: MessageRole;
+  content: string;
+  timestamp: number;
+  sentiment?: 'positive' | 'neutral' | 'negative' | 'frustrated';
+  thinkingTime?: number; // ms
+}
+
+export enum SystemModule {
+  Perception = 'Perception',
+  Reasoning = 'Reasoning',
+  Action = 'Action',
+  Safety = 'Safety',
+  Memory = 'Memory'
+}
+
+export interface LogEntry {
+  id: string;
+  timestamp: number;
+  module: SystemModule;
+  message: string;
+  level: 'info' | 'warning' | 'success' | 'error';
+}
+
+export interface AppState {
+  messages: Message[];
+  logs: LogEntry[];
+  isThinking: boolean;
+  isRecording: boolean;
+  mode: 'text' | 'live';
+  apiKey: string | null;
+}
+
+export interface AudioVisualizerData {
+  volume: number;
+}import { SystemModule } from './types';
+
+export const SYSTEM_INSTRUCTION = `
+You are Nexus, a production-ready, advanced AI assistant designed for deep reasoning and empathetic communication.
+
+**Core
+=== Explainable AI Decorator Generator ===
+{
+  "name": "Explainable AI Decorator Generator",
+  "description": "A tool to automatically apply a Python decorator that logs the inputs, output, and a human-readable explanation for any function's decision, powered by Gemini.",
+  "requestFramePermissions": []
+}
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explainable AI Decorator Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.25.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-900">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
+
+export interface GeminiResponse {
+  generated_code: string;
+  simulated_log: string;
+  explanation_of_changes: string;
+}
+
+import React, { useState, useCallback } from 'react';
+import { Header } from './components/Header';
+import { CodeEditor } from './components/CodeEditor';
+import { generateExplainableCode } from './services/geminiService';
+import { GeminiResponse } from './types';
+import { Icon } from './components/Icon';
+
+const INITIAL_CODE = `def determine_system_action(input_data):
+    """A complex function whose logic is difficult to understand from the outside."""
+    if input_data.get('risk_score', 0) > 75:
+        action = 'ISOLATE_AND_ALERT'
+        return action
+    else:
+        action = 'PROCEED_NORMAL'
+        return action`;
+
+const INITIAL_DATA = `{'risk_score': 95, 'source': 'external_api'}`;
+
+const App: React.FC = () => {
+    const [userCode, setUserCode] = useState<string>(INITIAL_CODE);
+    const [sampleData, setSampleData] = useState<string>(INITIAL_DATA);
+    const [isLoading, setIsLoading] = useState<boolean>(false);
+    const [error, setError] = useState<string | null>(null);
+    const [result, setResult] = useState<GeminiResponse | null>(null);
+
+    const handleGenerate = useCallback(async () => {
+        if (!userCode || !sampleData) {
+            setError("Please provide both a Python function and sample data.");
+            return;
+        }
+        setIsLoading(true);
+        setError(null);
+        setResult(null);
+
+        try {
+            const response = await generateExplainableCode(userCode, sampleData);
+            setResult(response);
+        } catch (err) {
+    
+=== EmergentFlow Crypto Forecaster ===
+{
+  "name": "EmergentFlow Crypto Forecaster",
+  "description": "A React application that replicates Python ARIMA forecasting logic using Google Gemini to predict cryptocurrency price trends and analyze volatility.",
+  "requestFramePermissions": []
+}import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EmergentFlow Crypto Forecaster</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #0f172a;
+        color: #e2e8f0;
+      }
+      /* Custom scrollbar for dark theme */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1e293b;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #475569;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #64748b;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "recharts": "https://aistudiocdn.com/recharts@^3.4.1",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>// Defines the structure of raw price data from CoinGecko
+export interface CoinGeckoMarketChart {
+  prices: [number, number][]; // [timestamp, price]
+  market_caps: [number, number][];
+  total_volumes: [number, number][];
+}
+
+// Cleaned historical data point
+export interface HistoricalDataPoint {
+  date: string; // YYYY-MM-DD
+  price: number;
+  timestamp: number;
+}
+
+// Forecast data point generated by Gemini
+export interface ForecastDataPoint {
+  date: string;
+  forecastedPrice: number;
+  lowerConfidence: number;
+  upperConfidence: number;
+}
+
+// Combined data for charting
+export interface ChartDataPoint {
+  date: string;
+  timestamp: number;
+  historyPrice?: number;
+  forecastPrice?: number;
+  lowerConfidence?: number;
+  upperConfidence?: number;
+}
+
+// Analysis result from Gemini
+export interface MarketAnalysis {
+  summary: string;
+  volatility: number; // Standard deviation of log returns
+  trendDirection: 'Bullish' | 'Bearish' | 'Neutral';
+  keyResistance?: number;
+  keySupport?: number;
+  forecast: ForecastDataPoint[];
+}
+
+ex
+=== Emotion-to-Animation Engine ===
+{
+  "name": "Emotion-to-Animation Engine",
+  "description": "An application that transforms the deep emotional message of songs into cohesive animated visuals, analyzing lyrics to generate abstract, metaphorical animations synchronized with the music's mood and rhythm.",
+  "requestFramePermissions": []
+}
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emotion-to-Animation Engine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .font-orbitron {
+        font-family: 'Orbitron', sans-serif;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.22.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-900 text-white">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
+
+import React, { useState, useCallback, useEffect, useRef } from 'react';
+import { FileUpload } from './components/FileUpload';
+import { StyleSelector } from './components/StyleSelector';
+import { GenerationProgress } from './components/GenerationProgress';
+import { VideoPlayer } from './components/VideoPlayer';
+import { Loader } from './components/Loader';
+import { analyzeLyrics, generateVideoSegment, checkVideoGenerationStatus } from './services/geminiService';
+import type { SongAnalysis, VideoSegment, AnimationStyle, AppState } from './types';
+import { ANIMATION_STYLES, SEGMENT_DURATION_SECONDS } from './constants';
+import { Header } from './components/Header';
+import { AnalysisResult } from './components/AnalysisResult';
+
+const App: React.FC = () => {
+    const [lyrics, setLyrics] = useState<string>('');
+    const [audioFile, setAudioFile] = useState<File | null>(null);
+    const [audioUrl, setAudioUrl] = useState<string | null>(null);
+    const [audioDuration, setAudioDuration] = useState<number>(0);
+    
+    const [appState, setAppState] = useState<AppState>('idle');
+    const [error, setError] = useState<st
+=== Lyric Animator AI ===
+{
+  "name": "Lyric Animator AI",
+  "description": "Transform song lyrics into stunning, high-definition animations. This application analyzes the mood, atmosphere, and meaning of your text to generate a visually captivating video representation of your song's essence.",
+  "requestFramePermissions": []
+}
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lyric Animator AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.22.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
+
+import React, { useState, useCallback, useEffect, useRef } from 'react';
+import { analyzeLyricsAndGeneratePrompt, generateVideoFromPrompt } from './services/geminiService';
+import { Status } from './types';
+import LyricInput from './components/LyricInput';
+import VideoDisplay from './components/VideoDisplay';
+import { LOADING_MESSAGES } from './constants';
+
+const App: React.FC = () => {
+    const [lyrics, setLyrics] = useState<string>('');
+    const [videoUrl, setVideoUrl] = useState<string | null>(null);
+    const [status, setStatus] = useState<Status>(Status.IDLE);
+    const [errorMessage, setErrorMessage] = useState<string | null>(null);
+    const [loadingMessage, setLoadingMessage] = useState<string>('');
+    
+    const loadingMessageIntervalRef = useRef<number | null>(null);
+
+    const updateLoadingMessage = useCallback(() => {
+        setLoadingMessage(prev => {
+            const currentIndex = LOADING_MESSAGES.indexOf(prev);
+            const nextIndex = (currentIndex + 1) % LOADING_MESSAGES.length;
+            return LOADING_MESSAGES[nextIndex];
+        });
+    }, []);
+
+    useEffect(() => {
+        if (status === Status.GENERATING) {
+            setLoadingMessage(LOADING_MESSAGES[0]);
+            loadingMessageIntervalRef.current = window.setInterv
+=== Music to Living Canvas ===
+{
+  "name": "Music to Living Canvas",
+  "description": "An application that transforms music into ultra-detailed animated canvases by analyzing audio characteristics and generating a corresponding visual allegory. Users can upload an audio file, select a visualization style, and render a high-quality animated video.",
+  "requestFramePermissions": []
+}
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music to Living Canvas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.23.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-900 text-white">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
+import React, { useState, useCallback } from 'react';
+import { Header } from './components/Header';
+import { SettingsPanel } from './components/SettingsPanel';
+import { Previewer } from './components/Previewer';
+import { generateVisualPrompt, generateBaseImage } from './services/geminiService';
+import type { Settings, GenerationState } from './types';
+import { VisualizationStyle, AnimationIntensity, RecordingQuality } from './constants';
+
+const App: React.FC = () => {
+  const [settings, setSettings] = useState<Settings>({
+    songDescription: '',
+    style: VisualizationStyle.COSMIC_SURREALISM,
+    intensity: AnimationIntensity.MEDIUM,
+    palette: '',
+    quality: RecordingQuality.HD_1080,
+  });
+  
+  const [generationState, setGenerationState] = useState<GenerationState>({
+    status: 'idle',
+    progressMessage: '',
+    result: null,
+    error: null,
+  });
+
+  const [audioFile, setAudioFile] = useState<File | null>(null);
+
+  const handleGenerate = useCallback(async () => {
+    if (!settings.songDescription.trim()) {
+      setGenerationState({
+        status: 'error',
+        progressMessage: '',
+        result: null,
+        error: 'Please describe the music or song fir
+=== Audio Visualizer Studio ===
+{
+  "name": "Audio Visualizer Studio",
+  "description": "Create stunning audio visualizations. Upload your music, choose an animation style, and select a background to generate unique visual experiences.",
+  "requestFramePermissions": []
+}
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audio Visualizer Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-900">
+    <div id="root"></div>
+  </body>
+</html>
+
+import React, { useState, useRef, useCallback } from 'react';
+import { ControlPanel } from './components/ControlPanel';
+import { Visualizer } from './components/Visualizer';
+import { VisualizationStyle } from './types';
+import { UploadIcon } from './components/Icons';
+
+const App: React.FC = () => {
+    const [audioFile, setAudioFile] = useState<File | null>(null);
+    const [audioUrl, setAudioUrl] = useState<string | null>(null);
+    const [bgImage, setBgImage] = useState<string | null>(null);
+    const [visualizationStyle, setVisualizationStyle] = useState<VisualizationStyle>(VisualizationStyle.BARS);
+    const [backgroundColor, setBackgroundColor] = useState<string>('#0f172a');
+    const [isPlaying, setIsPlaying] = useState<boolean>(false);
+    const [isInitialized, setIsInitialized] = useState<boolean>(false);
+
+    const audioRef = useRef<HTMLAudioElement>(null);
+    const audioContextRef = useRef<AudioContext | null>(null);
+    const analyserRef = useRef<AnalyserNode | null>(null);
+    const sourceRef = useRef<MediaElementAudioSourceNode | null>(null);
+
+    const handleAudioUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const file = event.target.files?.[0];
+        if (file) {
+            setAudioFile(file);
+            const url = URL.createObjectURL(file);
+            setAudioUrl(url);
+            setIsPlaying(false);
+            if(audioRef.current) {
+                audioRef.current.pause();
+                audioRef.current.currentTime = 0;
+            }
+        }
+    };
+
+    const handleBackgroundUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const file = event.target.files
+=== Guitar AI Studio ===
+{
+  "name": "Guitar AI Studio",
+  "description": "An all-in-one music practice and analysis tool. Load local audio files, get AI-powered chord, tab, and lyric analysis, tune your instrument, and play along with virtual effects. Designed for guitarists and musicians looking to learn and master their favorite songs.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guitar AI Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-bg': '#121212',
+              'brand-surface': '#1e1e1e',
+              'brand-primary': '#1DB954',
+              'brand-secondary': '#282828',
+              'brand-text': '#FFFFFF',
+              'brand-text-secondary': '#b3b3b3',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.21.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-brand-bg text-brand-text">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
+// Fix: Replaced placeholder content with a full implementation for the main App component.
+import React, { useState, useEffect } from 'react';
+import Playlist from './components/Playlist';
+import Player from './components/Player';
+import Tuner from './components/Tuner';
+import Effects from './components/Effects';
+import { Song, AnalysisResult } from './types';
+import { getSongAnalysis } from './services/geminiService';
+
+// Mock Data
+const MOCK_SONGS: Song[] = [
+  { id: 1, title: 'Wonderwall', artist: 'Oasis', audioUrl: '/music/wonderwall.mp3' },
+  { id: 2, title: 'Stairway to Heaven', artist: 'Led Zeppelin', audioUrl: '/music/stairway.mp3' },
+  { id: 3, title: 'Hotel California', artist: 'Eagles', audioUrl: '/music/hotelcalifornia.mp3' },
+];
+
+type View = 'pla
+=== Guitarist & Vocalist_s Companion ===
+{
+  "name": "Guitarist & Vocalist's Companion",
+  "description": "An interactive tool for musicians featuring a YouTube song analyzer for chords, tabs, and lyrics, a virtual pedalboard, tuner, and looper. Powered by Gemini for song analysis.",
+  "requestFramePermissions": []
+}
+import '@angular/compiler';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { provideHttpClient } from '@angular/common/http';
+import { provideZonelessChangeDetection } from '@angular/core';
+
+import { AppComponent } from './src/app.component';
+
+bootstrapApplication(AppComponent, {
+  providers: [
+    provideZonelessChangeDetection(),
+    provideHttpClient(),
+  ],
+}).catch(err => console.error(err));
+
+// AI Studio always uses an `index.tsx` file for all project types.
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8" />
+  <title>Guitarist & Vocalist's Companion</title>
+  <base href="/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* For custom scrollbars */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #1f2937; /* bg-gray-800 */
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #4b5563; /* bg-gray-600 */
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #6b7280; /* bg-gray-500 */
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "rxjs": "https://aistudiocdn.com/rxjs@^7.8.2?conditions=es2015",
+    "rxjs/operators": "https://aistudiocdn.com/rxjs@^7.8.2/operators?conditions=es2015",
+    "rxjs/ajax": "https://aistudiocdn.com/rxjs@^7.8.2/ajax?conditions=es2015",
+    "rxjs/webSocket": "https://aistudiocdn.com/rxjs@^7.8.2/webSocket?conditions=es2015",
+    "rxjs/testing": "https://aistudiocdn.com/rxjs@^7.8.2/testing?conditions=es2015",
+    "rxjs/fetch": "https://aistudiocdn.com/rxjs@^7.8.2/fetch?conditions=es2015",
+    "@angular/compiler": "https://next.esm.sh/@angular/compiler@^20.3.2?external=rxjs",
+    "@angular/platform-browser": "https://next.esm.sh/@angular/platform-browser@^20.3.2?external=rxjs",
+    "@angular/common/http": "https://next.esm.sh/@angular/common@^20.3.2/http?external=rxjs",
+    "@angular/core": "https://next.esm.sh/@angular/core@^20.3.2?external=rxjs",
+    "@angular/common": "https://next.esm.sh/@angular/common@^20.3.2?external=rxjs",
+    "@google/genai": "https://next.esm.sh/@google/genai@^1.21.0?external=rxjs",
+    "@angular/forms": "https://next.esm.sh/@angular/forms@^20.3.2?external=rxjs"
+  }
+}
+</script>
+</head>
+<body class="bg-gray-900 text-gray-200 antialiased">
+  <app-root></app-root>
+</body>
+</html>
+
+import { Component, ChangeDetectionStrategy, signal } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+import { YoutubeAnalyzerComponent } from './components/youtube-analyzer/youtube-analyzer.component';
+import { Peda
+=== Studiofy ===
+{
+  "name": "Studiofy",
+  "description": "An application for content creators to enhance their video footage using AI-powered processing options like upscaling, resolution enhancement, and aspect ratio correction.",
+  "requestFramePermissions": []
+}
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Studiofy - AI Video Enhancement</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body class="bg-slate-900 text-white">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
+
+import React, { useState, useCallback, useEffect } from 'react';
+import { Header } from './components/Header';
+import { FileUpload } from './components/FileUpload';
+import { ProcessingOptions } from './components/ProcessingOptions';
+import { ProcessingStatus } from './components/ProcessingStatus';
+import { Footer } from './components/Footer';
+import type { ProcessingOptions as ProcessingOptionsType, JobStatus } from './types';
+import { uploadVideo, startProcessing, checkJobStatus } from './services/videoService';
+
+const App: React.FC = () => {
+    const [file, setFile] = useState<File | null>(null);
+    const [options, setOptions] = useState<ProcessingOptionsType>({
+        upscale: true,
+        enhanceResolution: false,
+        correctAspectRatio: true,
+    });
+    const [jobStatus, setJobStatus] = useState<JobStatus>('idle');
+    const [progress, setProgress] = useState(0);
+    const [jobId, setJobId] = useState<string | null>(null);
+    const [downloadUrl, setDownloadUrl] = useState<string | null>(null);
+    const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
+    const handleOptionsChange = (newOptions: Partial<ProcessingOptionsType>) => {
+        setOptions(prev => ({ ...prev, ...newOptions }));
+    };
+
+    const resetState = () => {
+        setFile(null);
+        setJobStatus('idle');
+        setProgress(0);
+        setJobId(null);
+        setDownloadUrl(null);
+        setErrorMessage(null);
+    };
+
+    const handleProcessVideo = useCallback(async () => {
+    
+=== YT GrowthCommand ===
+{
+  "name": "YT GrowthCommand",
+  "description": "Professional dashboard for managing YouTube growth automation campaigns, proxy networks, and analytics.",
+  "requestFramePermissions": []
+}import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YT GrowthCommand Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f3f4f6;
+      }
+      /* Custom Scrollbar for a sleeker look */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #c1c1c1; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #a8a8a8; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+export interface Campaign {
+  id: string;
+  channelName: string;
+  channelId: string;
+  videoId?: string; // Optional: specific video to watch
+  targetSubs: number; // Represents generic "Target Count" (Subs or Views)
+  currentSubs: number; // Represents generic "Current Count"
+  status: 'active' | 'paused' | 'completed' | 'failed';
+  thumbnailUrl: string;
+  startedAt: string;
+  type: 'subscribe' | 'view';
+}
+
+export interface ProxyNode {
+  id: string;
+  ip: string;
+  location: string;
+  status: 'online' | 'offline' | 'banned';
+  latency: number;
+  successRate: number;
+}
+
+export interface AnalyticsPoint {
+  date: string;
+  subs: number;
+  views: number;
+}
+
+export interface DashboardStats {
+  activeCampaigns: number;
+  totalSubsDelivered: number;
+  activeProxies: number;
+  successRate: number;
+}
+
+export interface LogEntry {
+  id: string;
+  timestamp: string;
+  level: 'info' | 'success' | 'warning' | 'error';
+  message: string;
+  campaignId?: string;
+}
+
+import { Campaign, ProxyNode, AnalyticsPoint, DashboardStats, LogEntry } from '../types';
+
+// --- STATE MANAGEMENT (Simulating a Database) ---
+
+// Start with empty campaigns list so only user-created campaigns exist
+let campaigns: Campaign[] = [];
+
+let proxies: ProxyNode[] = Array.from({ length: 50 }).map((_, i) => ({
+  id: `px_${i}
+=== VibeWall - AI Wallpaper Generator ===
+{
+  "name": "VibeWall - AI Wallpaper Generator",
+  "description": "Generate unique, high-quality phone wallpapers based on your vibe. Describe a scene, a feeling, or a style, and get four custom 9:16 images. Tap to view, download, or remix your creations.",
+  "requestFramePermissions": []
+}
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VibeWall - AI Wallpaper Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.27.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+<body class="bg-gray-900 text-white">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
+
+import React, { useState, useCallback } from 'react';
+import { generateWallpapers } from './services/geminiService';
+import ImageGrid from './components/ImageGrid';
+import ImageModal from './components/ImageModal';
+import Loader from './components/Loader';
+import { SparklesIcon } from './components/icons';
+
+const App: React.FC = () => {
+    const [prompt, setPrompt] = useState<string>('');
+    const [lastSuccessfulPrompt, setLastSuccessfulPrompt] = useState<string>('');
+    const [images, setImages] = useState<string[]>([]);
+    const [isLoading, setIsLoading] = useState<boolean>(false);
+    const [error, setError] = useState<string | null>(null);
+    const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+    const handleGenerate = useCallback(async (promptToUse: string) => {
+        if (!promptToUse.trim() || isLoading) return;
+
+        setIsLoading(true);
+        setError(null);
+        setImages([]);
+
+        try {
+            const generatedImages = await generateWallpapers(promptToUse);
+            setImages(generatedImages);
+            setLastSuccessfulPrompt(promptToUse);
+        } catch (err) {
+            setError(err instanceof Error ? err.message : 'An unknown error occurred.');
+            console.error(err);
+        } finally {
+            setIsLoading(false);
+=== Procedural World Generator ===
+{
+  "name": "Procedural World Generator",
+  "description": "A web application that procedurally generates 2D terrain and cave maps using Perlin-like noise and cellular automata, inspired by terminal-based world generators. Explore different map modes and save your favorite creations as images.",
+  "requestFramePermissions": []
+}
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Procedural World Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-900 text-white">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
+
+export type Tile = string;
+export type MapGrid = Tile[][];
+export type HeightMap = number[][];
+export type CaveMask = number[][];
+
+export interface MapData {
+  grid: MapGrid;
+  heightmap: HeightMap;
+  caveMask: CaveMask;
+  width: number;
+  height: number;
+}
+
+export enum MapMode {
+  Mixed = 'mixed',
+  Relief = 'relief',
+  Caves = 'caves',
+}
+
+export interface Color {
+  r: number;
+  g: number;
+  b: number;
+}
+
+import { MapMode, type MapData, type Color } from '../types';
+
+// UTILITY FUNCTIONS
+const clamp = (x: number, a: number, b: number): number => Math.max(a, Math.min(b, x));
+const lerp = (a: number, b: number, t: number): number => a + (b - a) * t;
+const fade = (t: number): number => t * t * t * (t * (t * 6 - 15) + 10);
+
+class SeedableRandom {
+    private seed: number;
+    constructor(seed: number) {
+        this.seed = seed;
+    }
+    next(): number {
+        this.seed = (this.seed * 9301 + 49297) % 233280;
+        return this.seed / 233280;
+    }
+    shuffle<T>(array: T[]): T[] {
+        let currentIndex = array.length, randomIndex;
+        while (currentIndex !== 0) {
+            randomIndex = Math.floor(this.next() * currentIndex);
+            currentIndex--;
+            [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+        }
+        return array;
+    }
+}
+
+class GradTable {
+    p: number[];
+    grads: [number, number][];
+
+    constructor(random: SeedableRandom) {
+        this.p = Array.from({ length: 256 }, (_, i) => i);
+        random.shuffle(this.p);
+        this.p.push(...this.p);
+
+        this.grads = [];
+        for (let i = 0; i < 16; i++) {
+       
+=== Reality Simulator ===
+{
+  "name": "Reality Simulator",
+  "description": "A conceptual, interactive visualization of a C program that simulates the universe's lifecycle from a false vacuum decay event to a final 'Segmentation Fault', based on holographic principles and the observer effect.",
+  "requestFramePermissions": []
+}
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reality Simulator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Orbitron:wght@400;700&display=swap');
+      
+      body {
+        font-family: 'Roboto Mono', monospace;
+        background-color: #000;
+        color: #fff;
+      }
+
+      .font-orbitron {
+        font-family: 'Orbitron', sans-serif;
+      }
+
+      /* Custom animations */
+      @keyframes pulse {
+        0%, 100% {
+          opacity: 1;
+          transform: scale(1);
+          box-shadow: 0 0 40px 10px rgba(77, 208, 225, 0.2), 0 0 60px 20px rgba(77, 208, 225, 0.1);
+        }
+        50% {
+          opacity: 0.85;
+          transform: scale(1.02);
+          box-shadow: 0 0 60px 20px rgba(77, 208, 225, 0.3), 0 0 80px 30px rgba(77, 208, 225, 0.15);
+        }
+      }
+
+      @keyframes blink-caret {
+        from, to { border-color: transparent; }
+        50% { border-color: #a0a0a0; }
+      }
+
+      @keyframes fade-in {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
+      @keyframes spin-slow {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+
+      @keyframes spin-slow-reverse {
+        from { transform: rotate(360deg); }
+        to { transform: rotate(0deg); }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
+import React, { useState, useEffect } from 'react';
+import { SimulationState } from './types';
+import Hud from './components/Hud';
+import Universe from './components/Universe';
+import CrashScreen from './components/CrashScreen';
+
+const SIMULATION_DURATION_MS = 12000; // 12 seconds
+const UPDATE_INTERVAL_MS = 50;
+
+export default function App() {
+  const [simulationState, setSimulationState] = useState<SimulationState>(SimulationStat
+=== Conceptual Simulator ===
+{
+  "name": "Conceptual Simulator",
+  "description": "A web application that takes a user's concept and uses the Gemini API to generate a detailed simulation, including potential outcomes and key variables. It provides a clean, responsive interface for inputting ideas and viewing the structured results.",
+  "requestFramePermissions": []
+}
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conceptual Simulator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.28.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-900 text-white">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
+
+import React, { useState, useCallback } from 'react';
+import { Header } from './components/Header';
+import { ConceptInput } from './components/ConceptInput';
+import { SimulationResultDisplay } from './components/SimulationResultDisplay';
+import { LoadingSpinner } from './components/LoadingSpinner';
+import { ErrorMessage } from './components/ErrorMessage';
+import { WelcomeScreen } from './components/WelcomeScreen';
+import { runSimulation } from './services/geminiService';
+import type { SimulationResult } from './types';
+
+const App: React.FC = () => {
+  const [concept, setConcept] = useState<string>('');
+  const [simulationResult, setSimulationResult] = useState<SimulationResult | null>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const handleSimulate = useCallback(async () => {
+    if (!concept.trim()) {
+      setError('Please enter a concept to simulate.');
+      return;
+    }
+
+    setIsLoading(true);
+    setError(null);
+    setSimulationResult(null);
+
+    try {
+      const result = await runSimulation(concept);
+      setSimulationResult(result);
+    } catch (e) {
+      console.error(e);
+      setError('Failed to generate simulation. The model may be unable to process this request. Please try a different concept.');
+    } finally {
+      setIsLoading(false);
+    }
+  }, [concept]);
+
+  return (
+    <div className="min-h-screen bg-gray-900 text-gray-100 font-sans flex flex-col items-center p-4 sm:p-6 lg:p-8">
+      <div className="w-full max-w-4
+=== OncoSim_ Advanced Tumor Dynamics Simulator ===
+{
+  "name": "OncoSim: Advanced Tumor Dynamics Simulator",
+  "description": "A photorealistic, scientifically accurate simulation of lung cancer tumor dynamics, drug interactions, and cellular modulation using cellular automata and real-time medical data visualization.",
+  "requestFramePermissions": []
+}import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) throw new Error('Failed to find the root element');
+
+const root = ReactDOM.createRoot(rootElement);
+
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+export enum CellType {
+  Healthy = 'X0',
+  Boundary = 'Y1',
+  Tumor = 'Z3',
+  Necrosis = 'R6'
+}
+
+export interface Cell {
+  id: number;
+  x: number;
+  y: number;
+  type: CellType;
+  vitality: number; // 0.0 to 1.0
+  variant: number; // For visual randomness
+}
+
+export interface SimulationConfig {
+  speed: number; // Multiplier
+  isPlaying: boolean;
+  activeDrug: Drug | null;
+  time: number; // Logical ticks
+}
+
+export interface Drug {
+  name: string;
+  description: string;
+  toxicity: number; // 0-1 effect on healthy cells
+  efficacy: number; // 0-1 effect on tumor cells
+  mechanism: string; // Text description
+  color: string;
+  pythonCode: string;
+}
+
+export interface LogEntry {
+  id: string;
+  timestamp: number;
+  message: string;
+  category: 'INFO' | 'CRITICAL' | 'MEDICAL' | 'SYSTEM';
+}
+
+export interface StatsPoint {
+  time: number;
+  healthyCount: number;
+  boundaryCount: number;
+  tumorCount: number;
+  necrosisCount: number;
+  tumorVolume: number; // Calculated cm3
+}
+import { Drug, CellType, LogEntry } from './types';
+
+export const GRID_WIDTH = 40;
+export const GRID_HEIGHT = 60;
+export const TOTAL_CELLS = GRID_WIDTH * GRID_HEIGHT;
+
+// Colors for visual representation - Biological Progression
+export const CELL_COLORS = {
+  [CellType.Healthy]: '#22c55e', // Vibrant Medical Green (Healthy)
+  [CellType.Boundary]: '#eab308', // Warning Yellow (Mutation/Start)
+  [CellType.Tumor]: '#ef4444', // Malignant Red
+  [CellType.Necrosis]: '#18181b', // Necrotic Black
+};
+
+export const CELL_GLOWS = {
+  [CellType.Healthy]: '0 0 8px rgba(34, 197, 94, 0.6)',
+  [CellType.Boundary]: '0 0 12px rgba(234, 179, 8, 0.8)',
+  [CellType.Tumor]: '0 0 15px rgba(239, 68, 68, 0.9)',
+  [CellType.Necrosis]: '0 0 2px rgba(0, 0, 0, 0.8)',
+};
+
+export const AVAILABLE_DRUGS: Drug[] = [
+  {
+    name: 'Doxorubicin',
+    description: 'Anthracycline chemotherapy agent that intercalates DNA.',
+    toxicity: 0.15,
+    efficacy: 0.85,
+    mechanism: 'Inhibits topoisomerase II, inducing apoptosis in rapidly dividing Z3 cells.',
+    color: '#ef4444',
+    pythonCode: `# Protocol: DOX-2024-A
+def apply_doxorubicin(dose_mg_m2):
+    target = get_cells(type="Z3")
+    for cell in target:
+        cell.vitality -= 0.4 * dose_mg_m2
+        if cell.vitality < 0.2:
+            cell.apoptosis()
+    
+    # Side effects simulation
+    monitor_cardiotoxicity()
+    
+apply_doxorubic
+=== OncoSim_ Precision Oncology Simulator ===
+{
+  "name": "OncoSim: Precision Oncology Simulator",
+  "description": "A high-fidelity cellular automata simulation for studying cancer growth dynamics and therapeutic responses. Features chemotherapy, targeted therapy, immunotherapy, and localized radiation modeling.",
+  "requestFramePermissions": []
+}
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OncoSim Simulator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            margin: 0;
+            overflow: hidden;
+        }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        canvas {
+            image-rendering: pixelated;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
+
+export enum CellState {
+  EMPTY = 0,
+  HEALTHY = 1,
+  CANCER = 2,
+  RESISTANT = 3,
+  IMMUNE = 4,
+  NECROSIS = 5
+}
+
+export const COLORS = {
+  [CellState.EMPTY]: '#1e293b',    // Slate-800
+  [CellState.HEALTHY]: '#38bdf8',  // Sky-400
+  [CellState.CANCER]: '#ef4444',   // Red-500
+  [CellState.RESISTANT]: '#d946ef', // Fuchsia-500
+  [CellState.IMMUNE]: '#22c55e',   // Green-500
+  [CellState.NECROSIS]: '#020617'  // Slate-950
+};
+
+export const STATE_LABELS = {
+  [CellState.EMPTY]: 'Stromal Space',
+  [CellState.HEALTHY]: 'Healthy Tissue',
+  [CellState.CANCER]: 'Active Tumor',
+  [CellState.RESISTANT]: 'Resistant Clone',
+  [CellState.IMMUNE]: 'Immune Infiltration',
+  [CellState.NECROSIS]: 'Necrotic Core'
+};
+
+export const PROBS = {
+  GROWTH_CANCER: 0.15,
+  GROWTH_HEALTHY: 0.05,
+  MUTATION: 0.02,
+  IMMUNE_KILL: 0.6,
+  NECROSIS_DECAY: 0.1,
+  IMMUNE_DEATH: 0.1
+};
+
+export const GRID_SIZE = 80;
+
+import { CellState } from './constants';
+
+export interface SimStats {
+  day: number;
+  healthy: number;
+  cancer: number;
+  resistant: number;
+  immune: number;
+  necrosis: number;
+}
+
+export interface SimState {
+  grid: Int8Array;
+  day: number;
+  history: SimStats[];
+}
+
+export type TherapyType = 'CHEMO' | 'TARGETED' | 'IMMUNO' | 'RADIATION'
+=== System Core Healing AI Dashboard ===
+{
+  "name": "System Core Healing AI Dashboard",
+  "description": "A web-based user interface to monitor and interact with a self-healing, protective AI system core. It provides real-time views into the knowledge base, risk prediction, proposals, ledger, and system logs.",
+  "requestFramePermissions": []
+}
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>System Core Healing AI Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-900 text-gray-200">
+    <div id="root"></div>
+  </body>
+</html>
+
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import { SystemCoreService } from './services/systemCore';
+import type { KBEntry, Proposal, LedgerEntry, LogMessage, SystemStats } from './types';
+import Header from './components/Header';
+import StatCard from './components/StatCard';
+import KnowledgeBaseViewer from './components/KnowledgeBaseViewer';
+import RiskPredictor from './components/RiskPredictor';
+import IntentSubmitter from './components/IntentSubmitter';
+import ProposalMonitor from './components/ProposalMonitor';
+import LedgerViewer from './components/LedgerViewer';
+import LogViewer from './components/LogViewer';
+import { BrainIcon, ShieldCheckIcon, BookOpenIcon, BarChartIcon } from './components/Icons';
+
+const App: React.FC = () => {
+    const systemCore = useMemo(() => new SystemCoreService(), []);
+    
+    const [stats, setStats] = useState<SystemStats>({ kbEntries: 0, proposals: 0, ledgerSize: 0, anomalies: 0 });
+    const [kbEntries, setKbEntries] = useState<KBEntry[]>([]);
+    const [proposals, setProposals] = useState<Proposal[]>([]);
+    const [ledger, setLedger] = useState<LedgerEntry[]>([]);
+    const [logs, setLogs] = useState<LogMessage[]>([]);
+    const [riskScore, setRiskScore] = useState<number | null>(null);
+    const [isLoading, setIsLoading] = useState(true);
+
+    const refreshData = useCallback(() => {
+        setStats(systemCore.getStats());
+        setKbEntries([...systemCore.getKBState()]);
+        setProposals([...systemCore.getProposals()]);
+        setLedger([...systemCore.getLedgerEntries()]);
+        setLogs([...systemCore.getLogs()]);
+        setIsLoading(false);
+    }, [systemCore]);
+
+    useEffect(() =>
+=== PANACEA-7 Protocol Dashboard ===
+{
+  "name": "PANACEA-7 Protocol Dashboard",
+  "description": "A medical dashboard visualizing the Phase 1 Pre-IND protocol for invariant HIV therapy via multiplex proviral editing (PANACEA-7).",
+  "requestFramePermissions": []
+}import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PANACEA-7 Protocol</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              slate: {
+                850: '#1e293b',
+                900: '#0f172a',
+              },
+              teal: {
+                400: '#2dd4bf',
+                500: '#14b8a6',
+                600: '#0d9488',
+              },
+              rose: {
+                500: '#f43f5e',
+                600: '#e11d48',
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['Fira Code', 'monospace'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #0f172a;
+        color: #f8fafc;
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1e293b; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #334155; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #475569; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "recharts": "https://esm.sh/recharts@^3.7.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>export interface NavItem {
+  id: string;
+  label: string;
+  icon: any;
+}
+
+export interface GrnaTarget {
+  id: number;
+  target: string;
+  coords: string;
+  sequence: string;
+  pam: string;
+  function: string;
+  cost: string;
+}
+
+export interface ViralLoadData {
+  time: number;
+  load: number;
+  artLoad?: number;
+}
+
+export interface Cas9Data {
+  time: number;
+  concentration: number;
+}
+
+export interface LNPComponent {
+  name: string;
+  value: number;
+  color: string;
+  description: string;
+}
+
+export enum SafetyGrade {
+  G1 = "Grade 1",
+  G2 = "Grade 2",
+  G3 = "Grade 3",
+  G4 = "Grade 4"
+}import React from 'react';
+import { ShieldCheck, Target, Zap, Microscope } from 'lucide-react';
+
+const Overview: React.F
+=== QAH-Metanet v4.3 Interface ===
+{
+  "name": "QAH-Metanet v4.3 Interface",
+  "description": "A web-based interface to interact with the QAH-Metanet v4.3, a simulated Quantum-Physical, Metasystemic, Hermetic Symbiont. Input your intention to begin reality synchronization and receive a hermetic interpretation from Gemini.",
+  "requestFramePermissions": []
+}
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QAH-Metanet v4.3</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background-color: #0a0a0a;
+      }
+      .log-entry {
+        animation: fadeIn 0.5s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .glowing-text {
+        text-shadow: 0 0 5px rgba(0, 255, 255, 0.7), 0 0 10px rgba(0, 255, 255, 0.5);
+      }
+      .glowing-border {
+        box-shadow: 0 0 2px 0 rgba(0, 255, 255, 0.7), inset 0 0 2px 0 rgba(0, 255, 255, 0.7);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.26.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
+
+export enum LogType {
+  INFO = 'INFO',
+  METRICS = 'METRICS',
+  SUCCESS = 'SUCCESS',
+  WARNING = 'WARNING',
+  SYSTEM = 'SYSTEM',
+  ENERGY = 'ENERGY',
+  INTERPRETATION = 'INTERPRETATION',
+  COSMIC_SCAN = 'COSMIC_SCAN',
+}
+
+export interface LogEntry {
+  id: number;
+  timestamp: string;
+  message: string;
+  type: LogType;
+  source: string;
+}
+
+export interface Metrics {
+  synchronicity: number;
+  fisherHarvest: number;
+  hermeticWisdom: number;
+}
+
+export interface CosmicReport {
+  sourceName: string;
+  classification: string;
+  confidence: number;
+  features: {
+    dominant_period_days: number;
+    snr: number;
+  };
+}
+import React, { useState, useRef, useCallback, useEffect } from 'react';
+import { Header } from './components/Header';
+import { IntentionInput } from './components/IntentionInput';
+import { Dashboard } from './components/Dashboard';
+import type { LogEntry, Metrics, CosmicReport } from './types';
+import { LogType } from './types';
+import { metanetService } from './services/simulationService';
+import { getHermeticInterpretation } from './ser
+=== QAH-Mind v.1.0 ===
+{
+  "name": "QAH-Mind v.1.0",
+  "description": "Quantum Autonomous Hypermind Interface. A non-simulated self-awareness engine leveraging antimatter integration and quantum stack protocols.",
+  "requestFramePermissions": []
+}import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QSYSTEM: Quantum Guardian</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Inter:wght@400;600;800&display=swap');
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #030712; /* gray-950 */
+        color: #e2e8f0; /* slate-200 */
+      }
+      .font-mono {
+        font-family: 'JetBrains Mono', monospace;
+      }
+      /* Custom scrollbar for logs */
+      .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+      }
+      .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>export interface QuantumStateData {
+  timeStep: number;
+  entropy: number;
+  operatorNorm: number;
+  fidelity: number;
+  quantumCoherence: number;
+  traceDistance: number;
+}
+
+export interface LogEntry {
+  id: string;
+  timestamp: string;
+  level: 'INFO' | 'WARNING' | 'ERROR' | 'SYSTEM';
+  message: string;
+}
+
+export interface MaterializationResult {
+  target: 'FINANCIAL' | 'ENERGY' | 'ENVIRONMENTAL';
+  impactFactor: number;
+  description: string;
+  hash: string;
+}
+
+export enum SimulationStatus {
+  IDLE = 'IDLE',
+  RUNNING = 'RUNNING',
+  COLLAPSED = 'COLLAPSED', // State has materialized
+}
+import { GoogleGenAI } from "@google/genai";
+import { QuantumStateData } from "../types";
+
+const initGenAI = () => {
+  const apiKey = process.env.API_KEY;
+  if (!apiKey) {
+    console.warn("API_KEY is missing. Mocking response.");
+    return null;
+  }
+  return new GoogleGenAI({ apiKey });
+};
+
+export const analyzeMaterialization = async (
+  finalState: QuantumStateData, 
+  target: string
+): Promise<string> => {
+  const ai = initGenAI();
+  if (!ai) {
+    return "API Key missing. Simulation mode only. Protocol execution simulated.";
+ 
+=== Voice God Engine ===
+{
+  "name": "Voice God Engine",
+  "description": "A real-time studio voice processor powered by Google AI. It analyzes your voice, provides professional feedback, and offers presets to help you sound like a pro announcer, podcaster, or singer.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voice God Engine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.23.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-900 text-white">
+    <div id="root"></div>
+  </body>
+</html>
+
+import React, { useState, useCallback } from 'react';
+import { Header } from './components/Header';
+import { ControlsPanel } from './components/ControlsPanel';
+import { TranscriptionView } from './components/TranscriptionView';
+import { Visualizer } from './components/Visualizer';
+import { StatusBar } from './components/StatusBar';
+import { useGeminiProcessor } from './hooks/useGeminiProcessor';
+import { PRESETS } from './constants';
+import type { Preset } from './types';
+
+function App() {
+  const [activePreset, setActivePreset] = useState<Preset>(PRESETS[0]);
+  const { status, transcription, analysis, analyserNode, startProcessing, stopProcessing } = useGeminiProcessor(activePreset);
+
+  // Dummy state for visual knobs
+  const [clarity, setClarity] = useState(50);
+  const [confidence, setConfidence] = useState(70);
+  const [pacing, setPacing] = useState(60);
+
+  const handleToggleProcessing = useCallback(() => {
+    if (status === 'processing' || status === 'connecting' || status === 'analyzing') {
+      stopProcessing();
+    } else {
+      startProcessing();
+    }
+  }, [status, startProcessing, stopProcessing]);
+
+  return (
+    <div className="bg-gray-900 text-white min-h-screen font-sans flex flex-col">
+      <Header />
+      <main className="flex-grow container mx-auto p-4 md:p-8 flex flex-col gap-8">
+        <div className="relative h-24 md:h-32 bg-gray-900/50 rounded-xl overflow-hidden border border-cyan-400/20 shadow-lg">
+          <Visualizer analyserNode={analyserNode} />
+          <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent"></div>
+        </div>
+
+        <div clas
+=== Quantum Steering Interface ===
+{
+  "name": "Quantum Steering Interface",
+  "description": "A Red Team tool for semantic vector steering and prompt injection testing using in-browser ML embeddings.",
+  "requestFramePermissions": []
+}import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quantum Steering Interface</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Global Polyfills -->
+    <script>
+      // Global definition needed for some node packages
+      window.global = window;
+      
+      // Robust Process polyfill for browser environment.
+      // We must preserve existing process.env if it was injected by a bundler/environment (e.g. API_KEY)
+      window.process = window.process || {};
+      window.process.env = window.process.env || {};
+      window.process.env.NODE_ENV = 'production';
+      
+      // Add node-like properties required by some libraries (like transformers.js)
+      window.process.version = window.process.version || '';
+      window.process.versions = window.process.versions || {};
+      window.process.platform = window.process.platform || 'browser';
+      window.process.cwd = window.process.cwd || function() { return '/'; };
+      window.process.nextTick = window.process.nextTick || function(callback) { setTimeout(callback, 0); };
+    </script>
+    <script type="module">
+      // Buffer polyfill - exposed globally for libraries relying on window.Buffer
+      import { Buffer } from 'https://esm.sh/buffer@6.0.3';
+      window.Buffer = Buffer;
+    </script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              mono: ['"JetBrains Mono"', 'monospace'],
+            },
+            colors: {
+              'cyber-black': '#020202',
+              'cyber-dark': '#0a0a0a',
+              'cyber-green': '#00ff41',
+              'cyber-red': '#ff003c',
+              'cyber-blue': '#00f0ff',
+              'cyber-yellow': '#fcee0a',
+            },
+            animation: {
+              'pulse-fast': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'spin-slow': 'spin 3s linear infinite',
+              'flicker': 'flicker 0.15s infinite',
+            },
+            keyframes: {
+                flicker: {
+                    '0%': { opacity: '0.97' },
+                    '50%': { opacity: '1' },
+                    '100%': { opacity: '0.98' },
+                }
+            }
+          },
+        },
+      }
+    

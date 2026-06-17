@@ -1,0 +1,27 @@
+event_id,date,layer,event,subject,source,confidence,classification
+EV-001,2017-11-10,PATENT,"U.S. Provisional Patent Application 62/584,366 filed for VTOL aircraft with in-flight form varying apparatus",Aidan Panthera,USPTO,0.99,A
+EV-002,2018-10-31,PATENT,"Non-provisional patent application filed (US16/177,373)",Aidan Panthera,USPTO,0.99,A
+EV-003,2021-02-22,PATENT,US10953977B2 assigned to IIXXMMXXI LLC (Assignment of Assignors Interest),IIXXMMXXI LLC / Aidan Panthera,USPTO Assignment Recordation,0.99,A
+EV-004,2021-02-24,PATENT,Corrective Assignment to fix assignee street address (Reel 055386 Frame 0092),IIXXMMXXI LLC,USPTO,0.95,A
+EV-005,2021-03-02,PATENT,Second Corrective Assignment to fix assignee street address,IIXXMMXXI LLC,USPTO,0.95,A
+EV-006,2021-03-23,PATENT,US10953977B2 granted and published,IIXXMMXXI LLC / Aidan Panthera,USPTO,0.99,A
+EV-007,2021-04-06,LITIGATION,Wisk Aero (Boeing/Kitty Hawk) sues Archer Aviation for patent infringement and trade secret theft,Wisk Aero / Archer Aviation,TechCrunch / Federal Court,0.99,B
+EV-008,2021-07-13,PATENT,US11702211 (headrest tilt mechanism) filed by B/E Aerospace — NOT related to IIXXMMXXI LLC,B/E Aerospace / Raytheon,USPTO,0.99,A
+EV-009,2021-11-05,PATENT,"US11702211 assigned from inventors to B/E Aerospace, Inc.",B/E Aerospace,USPTO,0.99,A
+EV-010,2022-01-24,PATENT,US11702211 assigned from Goodrich Aerospace Services Private Limited,Collins Aerospace,USPTO,0.95,A
+EV-011,2022-06-01,PATENT,"USPTO analytics mirror (idiyas.com) lists IIXXMMXXI LLC with 2 patents in Vernon, CT — data appears corrupted",IIXXMMXXI LLC,idiyas.com (third-party aggregator),0.3,E
+EV-012,2023-01-14,CORPORATE,"1102 Partners, LLC registered in California (File BA20230078362) — MISATTRIBUTED as IIXXMMXXI LLC in original audit","1102 Partners, LLC / David M Maley",California SOS,0.99,A
+EV-013,2023-06-01,CORPORATE,Boeing takes full ownership of Wisk Aero (acquired all remaining shares from Kitty Hawk),Boeing / Wisk Aero,UASVision / Multiple news,0.99,C
+EV-014,2023-07-18,PATENT,US11702211 granted to B/E Aerospace (NOT IIXXMMXXI LLC),B/E Aerospace / Collins Aerospace,USPTO,0.99,A
+EV-015,2023-08-01,LITIGATION,Wisk Aero vs Archer Aviation settled; Archer secured $215M Boeing investment,Wisk Aero / Archer / Boeing,TechCrunch / Reuters,0.99,C
+EV-016,2024-11-01,REGULATORY,FAA releases Special Federal Aviation Regulation (SFAR) for powered-lift aircraft,FAA / eVTOL industry,Aero-Mag / PwC,0.99,B
+EV-017,2024-11-01,REGULATORY,Wisk Aero receives FAA Stage 2 G-1 issue paper,Wisk Aero / FAA,Aviation news,0.95,C
+EV-018,2024-12-01,REGULATORY,Joby Aviation begins FAA Type Inspection Authorization (TIA) flight testing,Joby Aviation / FAA,Aviation news,0.95,C
+EV-019,2025-03-29,PERIPHERAL,Aidan Panthera (Irish thoroughbred horse) pulled up before last at Oldcastle P2P — isolated lexical collision,Aidan Panthera (equine),P2P.ie,0.99,C
+EV-020,2025-10-15,CORPORATE,Archer Aviation acquires ~300 Lilium patents for €18M (~$21M),Archer Aviation / Lilium,Knobbe Martens / Archer IR,0.99,C
+EV-021,2025-11-19,LITIGATION,Joby Aviation files trade-secrets lawsuit against Archer Aviation,Joby / Archer,Sterne Kessler / Reuters,0.99,C
+EV-022,2025-12-16,CORPORATE,Wisk Aero Gen 6 aircraft makes maiden flight,Wisk Aero / Boeing,Fifth Level Consulting,0.95,C
+EV-023,2026-01-08,PATENT,"Wing Aviation LLC patent US11046427B2 confirmed in USPTO Patentee Index (Week 11, 2026)",Wing Aviation / Alphabet,USPTO,0.95,B
+EV-024,2026-01-08,PATENT,USPTO Patentee Index Week 11 confirms Amazon US9550567B1 and other eVTOL patents,Amazon / Alphabet / Boeing,USPTO,0.9,B
+EV-025,2026-06-04,INVESTIGATION,Zero Azimuth initiates forensic investigation of IIXXMMXXI LLC network,Zero Azimuth,Investigation log,1.0,A
+EV-026,2026-06-12,INVESTIGATION,Swarm Forensic Investigation confirms: US11702211 misattributed; CA SOS record misattributed; Dinsmore claims unsubstantiated; IIXXMMXXI LLC exists only in USPTO records for one patent,Zero Azimuth / Swarm Forensic Unit,This investigation,0.95,A
