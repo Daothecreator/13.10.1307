@@ -1,0 +1,21 @@
+// 1. Identity & Cryptographic Anchor Verification
+request.auth.claims.sub == "did:zafla:zeroazimuth:0x74a85fc3a46fa96893d0416a4fe274eaa2578ac8a0787ea81309e8b0e67b079c" &&
+request.auth.claims["charter_root_merkle_hash"] == "74a85fc3a46fa96893d0416a4fe274eaa2578ac8a0787ea81309e8b0e67b079c" &&
+request.auth.claims["enforcement_status"] == "ACTIVE_ENFORCING" &&
+// 2. 4th-Order Causal Closure Verification
+request.auth.claims["causal_order"] == "O(h4)" &&
+request.auth.claims["rk4_closure_verified"] == "true" &&
+// 3. Absolute Liability & Non-Delegability Guardrails
+request.auth.claims["liability_mode"] == "ABSOLUTE_LIABILITY" &&
+request.auth.claims["non_delegable"] == "true" &&
+// 4. Authorized Action Scope Validation
+request.auth.claims["authorized_scope"].split(",").exists(
+  scope, scope in [
+    "system:audit:forensic_inspect",
+    "system:ebpf:kernel_trace",
+    "system:ledger:state_verify",
+    "system:governance:policy_override",
+    "system:infrastructure:chokepoint_telemetry",
+    "system:safety:circuit_breaker_trip"
+  ]
+)
