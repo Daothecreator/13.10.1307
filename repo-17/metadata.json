@@ -1,0 +1,16 @@
+{
+  "title": "ATLAS — Verified World-Systems Knowledge Base",
+  "description_html": "Full registry of 250,053 source documents across three roots (nothing filtered) plus 173 public-record events (court rulings, sanctions, official records, published investigations, corporate records). Metadata only: paths, hashes, classes — no source-file contents. Tables: <code>events</code>, <code>entities</code>, <code>documents</code>, <code>pending_claims</code>, <code>verifications</code>.",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source": "ATLAS deterministic pipeline",
+  "about": "Built by a deterministic, re-runnable pipeline; verification log inside the verifications table.",
+  "databases": {
+    "atlas": {
+      "tables": {
+        "events": { "sortable_columns": ["date", "confidence", "record_type"] },
+        "verifications": { "sortable_columns": ["checked_at", "result"] }
+      }
+    }
+  }
+}

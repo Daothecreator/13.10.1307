@@ -1,0 +1,3 @@
+# Контрольные суммы SHA-256 релизных файлов v1.0.0
+# © Davyd Kochuhur (Zero Azimuth Vivifactor)
+4570eaec8c720988d82532cc2ec05bf033bd73274e6ef4233a0e8fa5822b67e8  AUDITS_DB.sqlite

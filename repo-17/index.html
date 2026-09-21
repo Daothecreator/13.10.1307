@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ATLAS — Verified World-Systems Knowledge Base</title>
+<style>
+  body { font-family: Georgia, serif; max-width: 760px; margin: 4rem auto; padding: 0 1.2rem; color: #1a1a1a; line-height: 1.65; }
+  h1 { letter-spacing: .12em; border-bottom: 2px solid #1a1a1a; padding-bottom: .4rem; }
+  .stat { display: inline-block; margin: .3rem .9rem .3rem 0; font-variant-numeric: tabular-nums; }
+  .stat b { font-size: 1.5rem; }
+  a.btn { display: inline-block; margin-top: 1.4rem; padding: .7rem 1.3rem; background: #1a1a1a; color: #fff; text-decoration: none; border-radius: 4px; }
+  code { background: #f0f0f0; padding: .1rem .35rem; border-radius: 3px; font-size: .92em; }
+  .small { color: #555; font-size: .92rem; }
+</style>
+</head>
+<body>
+<h1>ATLAS</h1>
+<p><b>Verified world-systems knowledge base.</b> Every event carries its public-record
+anchor — court ruling, sanction, official record, published investigation, corporate
+record. Nothing carries opinion. Operator-authored material is attributed as such.</p>
+
+<p>
+<span class="stat"><b>174</b> events</span>
+<span class="stat"><b>202</b> entities</span>
+<span class="stat"><b>250,053</b> documents registered</span>
+<span class="stat"><b>8</b> primary-source verifications</span>
+</p>
+
+<p><a class="btn" id="open" href="https://daothecreator.github.io/17/lite/">Open the live database →</a>
+<a class="btn" id="dl" style="background:#555" href="https://daothecreator.github.io/17/atlas.db.zip">Download full registry (.zip, 23 MB)</a></p>
+
+<p class="small">The database viewer is hosted inside this site — the button cannot lose its parameter.
+Direct link, for copying as-is:<br>
+<code>https://daothecreator.github.io/17/lite/?url=https%3A%2F%2Fdaothecreator.github.io%2F17%2Fatlas_web.db</code></p>
+
+<h2>What's inside</h2>
+<ul>
+<li><code>events</code> — dated, sourced events: Epstein record chain, ICIJ offshore leaks
+(Panama / Paradise / Pandora / Bahamas), SMOM constitutional record, surveillance-program
+disclosures, Murashu banking archive (455–403 BCE), eVTOL litigation, Bilderberg 2026…</li>
+<li><code>verifications</code> — claims checked against primary sources (govinfo, icij.org,
+bilderbergmeetings.org), with dates and results.</li>
+<li><code>pending_claims</code> — assertions awaiting a located source. A queue, not a verdict.</li>
+</ul>
+
+<p class="small">The in-browser database runs entirely on your device (SQLite compiled to
+WebAssembly) — no server, no tracking. The full document registry (250,053 rows, paths +
+hashes + provenance classes, no file contents) ships as the downloadable zip.
+Rebuild pipeline, schema and manifest included in this repository.</p>
+
+</body>
+</html>
