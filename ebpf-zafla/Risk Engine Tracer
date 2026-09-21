@@ -1,0 +1,53 @@
+/* SPDX-License-Identifier: GPL-2.0 /
+/
+
+risk_engine_tracer.bpf.c — Uprobe Tracing on Margin & ECP Dynamic Multipliers
+*/
+
+/* STREAMING_CHUNK:Initializing headers for risk uprobe interception... */
+#include "vmlinux.h"
+#include <bpf/bpf_helpers.h>
+#include <bpf/bpf_tracing.h>
+#include <bpf/bpf_core_read.h>
+
+char LICENSE[] SEC("license") = "GPL";
+
+struct risk_param_event_t {
+__u64 timestamp_ns;
+__u32 pid;
+__u32 member_id;
+__u64 old_ecp_multiplier_scaled; /* Fixed-point 1e6 */
+__u64 new_ecp_multiplier_scaled;
+__u64 gap_risk_haircut_scaled;
+__u8  engine_id[16];
+};
+
+struct {
+__uint(type, BPF_MAP_TYPE_RINGBUF);
+__uint(max_entries, 8 * 1024 * 1024);
+} risk_ringbuf SEC(".maps");
+
+/* STREAMING_CHUNK:Attaching uprobe to internal risk recalculation function... /
+/
+
+Targeted signature for risk engine dynamic recalculation:
+
+int recalculate_member_ecp(uint32_t member_id, double old_val, double new_val, double gap_haircut)
+*/
+SEC("uprobe/recalculate_member_ecp")
+int BPF_UPROBE(trace_risk_recalc, __u32 member_id, __u64 old_raw, __u64 new_raw, __u64 gap_raw) {
+struct risk_param_event_t *ev = bpf_ringbuf_reserve(&risk_ringbuf, sizeof(struct risk_param_event_t), 0);
+if (!ev)
+return 0;
+
+ev->timestamp_ns = bpf_ktime_get_ns();
+ev->pid = bpf_get_current_pid_tgid() >> 32;
+ev->member_id = member_id;
+ev->old_ecp_multiplier_scaled = old_raw;
+ev->new_ecp_multiplier_scaled = new_raw;
+ev->gap_risk_haircut_scaled   = gap_raw;
+bpf_get_current_comm(&ev->engine_id, sizeof(ev->engine_id));
+
+bpf_ringbuf_submit(ev, 0);
+return 0;
+}

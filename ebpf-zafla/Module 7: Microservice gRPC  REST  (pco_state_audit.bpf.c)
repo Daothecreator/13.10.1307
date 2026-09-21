@@ -1,0 +1,59 @@
+/* SPDX-License-Identifier: GPL-2.0 */
+/*
+ * pco_state_audit.bpf.c — Intercepting State Shifts to Position Closing Only (PCO)
+ */
+
+#include "vmlinux.h"
+#include <bpf/bpf_helpers.h>
+#include <bpf/bpf_tracing.h>
+#include <bpf/bpf_core_read.h>
+
+#define MAX_TOKEN_LEN 256
+#define MAX_STACK_DEPTH 16
+
+char LICENSE[] SEC("license") = "GPL";
+
+struct pco_event_t {
+    __u64 timestamp_ns;
+    __u32 pid;
+    __u32 client_account_id;
+    __u32 state_flag; /* 1 = Normal, 2 = PCO, 3 = Liquidation */
+    __u64 caller_stack[MAX_STACK_DEPTH];
+    __u8  auth_token[MAX_TOKEN_LEN];
+};
+
+struct {
+    __uint(type, BPF_MAP_TYPE_RINGBUF);
+    __uint(max_entries, 8 * 1024 * 1024);
+} pco_ringbuf SEC(".maps");
+
+struct {
+    __uint(type, BPF_MAP_TYPE_STACK_TRACE);
+    __uint(max_entries, 10240);
+    __uint(key_size, sizeof(__u32));
+    __uint(value_size, MAX_STACK_DEPTH * sizeof(__u64));
+} pco_stack_map SEC(".maps");
+
+SEC("uprobe/set_account_trading_state")
+int BPF_UPROBE(trace_set_pco, __u32 account_id, __u32 new_state, const char *token_str) {
+    if (new_state != 2) /* 2 = PCO State Transition */
+        return 0;
+
+    struct pco_event_t *ev = bpf_ringbuf_reserve(&pco_ringbuf, sizeof(struct pco_event_t), 0);
+    if (!ev)
+        return 0;
+
+    ev->timestamp_ns       = bpf_ktime_get_ns();
+    ev->pid                = bpf_get_current_pid_tgid() >> 32;
+    ev->client_account_id  = account_id;
+    ev->state_flag         = new_state;
+
+    bpf_get_stack(ctx, ev->caller_stack, sizeof(ev->caller_stack), BPF_F_USER_STACK);
+
+    if (token_str) {
+        bpf_probe_read_user_str(ev->auth_token, sizeof(ev->auth_token), token_str);
+    }
+
+    bpf_ringbuf_submit(ev, 0);
+    return 0;
+}
