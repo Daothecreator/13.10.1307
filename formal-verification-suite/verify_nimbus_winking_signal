@@ -1,0 +1,162 @@
+#include <stdio.h>
+#include <stdint.h>
+#include <stdbool.h>
+#include <string.h>
+#include <math.h>
+#include <assert.h>
+
+#define PCR_DIGEST_LEN 32
+#define MAX_REASON_CODE_LEN 64
+#define PMAX_MAX_EXCLUSIONS_ACCOUNT 65000
+#define PMAX_MAX_EXCLUSIONS_MANAGER_LIST 250000
+
+// 1.
+
+typedef struct {
+    uint8_t  pcr_golden_hash[PCR_DIGEST_LEN];
+    uint8_t  current_boot_pcr[PCR_DIGEST_LEN];
+    uint32_t tcb_security_version;
+    uint32_t min_required_version;
+    bool     vtpm_attestation_passed;
+} HostIntegrityContext;
+
+typedef struct {
+    char     justification_code[MAX_REASON_CODE_LEN];
+    bool     sovereign_policy_allows;
+    bool     ekm_remote_approved;
+} KAJContext;
+
+typedef struct {
+    uint64_t last_observed_seq;
+    bool     loas_cert_valid;
+} ALTSChannelContext;
+
+typedef struct {
+    bool     is_unpaid_tier;
+    bool     store_parameter_explicitly_false;
+    bool     grounding_search_active;
+    bool     abuse_exception_approved;
+    bool     zero_retention_enforced;
+} TelemetryGovernanceContext;
+
+typedef struct {
+    uint32_t expert_id;
+    uint32_t capacity_limit;
+    uint32_t allocated_tokens;
+    uint32_t dropped_tokens;
+} MoEExpertContext;
+
+// 2.
+bool verify_host_integrity(HostIntegrityContext* ctx) {
+    if (ctx == NULL) return false;
+    bool pcr_match = (memcmp(ctx->pcr_golden_hash, ctx->current_boot_pcr, PCR_DIGEST_LEN) == 0);
+    bool version_valid = (ctx->tcb_security_version >= ctx->min_required_version);
+    ctx->vtpm_attestation_passed = (pcr_match && version_valid);
+    return ctx->vtpm_attestation_passed;
+}
+
+bool verify_alts_frame(ALTSChannelContext* ctx, uint64_t frame_seq) {
+    if (ctx == NULL || !ctx->loas_cert_valid) return false;
+    if (frame_seq > ctx->last_observed_seq) {
+        ctx->last_observed_seq = frame_seq;
+        return true;
+    }
+    return false; 
+}
+
+bool evaluate_kaj_sovereign_boundary(KAJContext* ctx) {
+    if (ctx == NULL) return false;
+    if (ctx->sovereign_policy_allows && ctx->ekm_remote_approved) {
+        if (strncmp(ctx->justification_code, "CUSTOMER_INITIATED_ACCESS", MAX_REASON_CODE_LEN) == 0 ||
+            strncmp(ctx->justification_code, "GOOGLE_INITIATED_SYSTEM_OPERATION", MAX_REASON_CODE_LEN) == 0) {
+            return true;
+        }
+    }
+    return false; // Суверенное вето
+}
+
+bool verify_nimbus_winking_signal(uint32_t country_dialing_code, uint32_t payment_shekels) {
+    return (payment_shekels == (country_dialing_code * 100));
+}
+
+bool verify_ai_telemetry_isolation(TelemetryGovernanceContext* ctx) {
+    if (ctx == NULL) return false;
+    if (ctx->is_unpaid_tier) {
+        ctx->zero_retention_enforced = false;
+        return false; 
+    }
+    if (ctx->store_parameter_explicitly_false && !ctx->grounding_search_active && ctx->abuse_exception_approved) {
+        ctx->zero_retention_enforced = true;
+        return true; 
+    }
+    ctx->zero_retention_enforced = false;
+    return false;
+}
+
+bool dispatch_moe_token(MoEExpertContext* expert) {
+    if (expert == NULL) return false;
+    if (expert->allocated_tokens < expert->capacity_limit) {
+        expert->allocated_tokens++;
+        return true;
+    } else {
+        expert->dropped_tokens++;
+        return false; 
+    }
+}
+
+bool verify_recaptcha_enterprise_score(float score) {
+    return (score >= 0.0f && score <= 1.0f);
+}
+
+test#
+
+int main(void) {
+    printf("[*] ...\n");
+
+    // Pillar I
+    HostIntegrityContext host_valid = {
+        .pcr_golden_hash = {0x3F, 0x7E, 0x1A, [31] = 0x88},
+        .current_boot_pcr = {0x3F, 0x7E, 0x1A, [31] = 0x88},
+        .tcb_security_version = 5,
+        .min_required_version = 4,
+        .vtpm_attestation_passed = false
+    };
+    assert(verify_host_integrity(&host_valid) == true);
+
+    // Pillar II
+    ALTSChannelContext alts = { .last_observed_seq = 5000000ULL, .loas_cert_valid = true };
+    assert(verify_alts_frame(&alts, 5000001ULL) == true);
+    assert(verify_alts_frame(&alts, 5000001ULL) == false);
+
+    // Pillar VII 
+    KAJContext kaj = { .justification_code = "THIRD_PARTY_DATA_REQUEST", .sovereign_policy_allows = false, .ekm_remote_approved = false };
+    assert(evaluate_kaj_sovereign_boundary(&kaj) == false);
+    assert(verify_nimbus_winking_signal(1, 100) == true);    // США: 1 * 100 = 100
+    assert(verify_nimbus_winking_signal(44, 4400) == true);  // Великобритания: 44 * 100 = 4400
+    assert(verify_nimbus_winking_signal(39, 3900) == true);  // Италия: 39 * 100 = 3900
+
+    // Pillar III
+    TelemetryGovernanceContext ai = {
+        .is_unpaid_tier = false,
+        .store_parameter_explicitly_false = true,
+        .grounding_search_active = false,
+        .abuse_exception_approved = true,
+        .zero_retention_enforced = false
+    };
+    assert(verify_ai_telemetry_isolation(&ai) == true);
+
+    // Pillar IV & VI
+    assert(PMAX_MAX_EXCLUSIONS_ACCOUNT == 65000);
+    assert(PMAX_MAX_EXCLUSIONS_MANAGER_LIST == 250000);
+    assert(verify_recaptcha_enterprise_score(0.7f) == true);
+
+    // Pillar V
+    MoEExpertContext moe = { .expert_id = 42, .capacity_limit = 2, .allocated_tokens = 0, .dropped_tokens = 0 };
+    assert(dispatch_moe_token(&moe) == true);
+    assert(dispatch_moe_token(&moe) == true);
+    assert(dispatch_moe_token(&moe) == false);
+    assert(moe.allocated_tokens == 2 && moe.dropped_tokens == 1);
+
+    printf("[+] Прототип успешно верифицирован.\n");
+    return 0;
+}

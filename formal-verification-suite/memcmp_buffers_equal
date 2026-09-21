@@ -1,0 +1,249 @@
+#include <stdio.h>
+#include <stdint.h>
+#include <stdbool.h>
+#include <string.h>
+#include <math.h>
+#include <assert.h>
+
+#define PCR_DIGEST_LEN 32
+#define MAX_REASON_CODE_LEN 64
+#define PMAX_MAX_EXCLUSIONS_ACCOUNT 65000
+#define PMAX_MAX_EXCLUSIONS_MANAGER_LIST 250000
+
+
+/*@
+  axiomatic MemoryComparison {
+    predicate buffers_equal{L}(uint8_t* a, uint8_t* b, integer len) =
+      \forall integer i; 0 <= i < len ==> a[i] == b[i];
+
+    predicate str_prefix_equal{L}(char* a, char* b, integer len) =
+      \forall integer i; 0 <= i < len ==> a[i] == b[i];
+
+    lemma memcmp_buffers_equal{L}:
+      \forall uint8_t *a, *b, integer len;
+      \valid_read(a + (0 .. len-1)) && \valid_read(b + (0 .. len-1)) ==>
+      (buffers_equal(a, b, len) <==> \forall integer i; 0 <= i < len ==> a[i] == b[i]);
+  }
+*/
+
+typedef struct {
+    uint8_t  pcr_golden_hash[PCR_DIGEST_LEN];
+    uint8_t  current_boot_pcr[PCR_DIGEST_LEN];
+    uint32_t tcb_security_version;
+    uint32_t min_required_version;
+    bool     vtpm_attestation_passed;
+} HostIntegrityContext;
+
+typedef struct {
+    char     justification_code[MAX_REASON_CODE_LEN];
+    bool     sovereign_policy_allows;
+    bool     ekm_remote_approved;
+} KAJContext;
+
+typedef struct {
+    uint64_t last_observed_seq;
+    bool     loas_cert_valid;
+} ALTSChannelContext;
+
+typedef struct {
+    bool     is_unpaid_tier;
+    bool     store_parameter_explicitly_false;
+    bool     grounding_search_active;
+    bool     abuse_exception_approved;
+    bool     zero_retention_enforced;
+} TelemetryGovernanceContext;
+
+typedef struct {
+    uint32_t expert_id;
+    uint32_t capacity_limit;
+    uint32_t allocated_tokens;
+    uint32_t dropped_tokens;
+} MoEExpertContext;
+
+
+/*@
+  requires \valid(ctx);
+  requires \valid_read(ctx->pcr_golden_hash + (0 .. PCR_DIGEST_LEN-1));
+  requires \valid_read(ctx->current_boot_pcr + (0 .. PCR_DIGEST_LEN-1));
+  assigns ctx->vtpm_attestation_passed;
+  
+  behavior match:
+    assumes buffers_equal(ctx->pcr_golden_hash, ctx->current_boot_pcr, PCR_DIGEST_LEN);
+    assumes ctx->tcb_security_version >= ctx->min_required_version;
+    ensures \result == true;
+    ensures ctx->vtpm_attestation_passed == true;
+
+  behavior mismatch_or_downgrade:
+    assumes !buffers_equal(ctx->pcr_golden_hash, ctx->current_boot_pcr, PCR_DIGEST_LEN) ||
+            ctx->tcb_security_version < ctx->min_required_version;
+    ensures \result == false;
+    ensures ctx->vtpm_attestation_passed == false;
+
+  complete behaviors match, mismatch_or_downgrade;
+  disjoint behaviors match, mismatch_or_downgrade;
+*/
+bool verify_host_integrity(HostIntegrityContext* ctx) {
+    if (ctx == NULL) return false;
+    bool pcr_match = (memcmp(ctx->pcr_golden_hash, ctx->current_boot_pcr, PCR_DIGEST_LEN) == 0);
+    bool version_valid = (ctx->tcb_security_version >= ctx->min_required_version);
+    ctx->vtpm_attestation_passed = (pcr_match && version_valid);
+    return ctx->vtpm_attestation_passed;
+}
+
+/*@
+  requires \valid(ctx);
+  assigns ctx->last_observed_seq;
+  
+  behavior invalid_cert:
+    assumes !ctx->loas_cert_valid;
+    assigns \nothing;
+    ensures \result == false;
+    ensures ctx->last_observed_seq == \old(ctx->last_observed_seq);
+
+  behavior replay_attack:
+    assumes ctx->loas_cert_valid && frame_seq <= ctx->last_observed_seq;
+    assigns \nothing;
+    ensures \result == false;
+    ensures ctx->last_observed_seq == \old(ctx->last_observed_seq);
+
+  behavior fresh_frame:
+    assumes ctx->loas_cert_valid && frame_seq > ctx->last_observed_seq;
+    assigns ctx->last_observed_seq;
+    ensures \result == true;
+    ensures ctx->last_observed_seq == frame_seq;
+
+  complete behaviors invalid_cert, replay_attack, fresh_frame;
+  disjoint behaviors invalid_cert, replay_attack, fresh_frame;
+*/
+bool verify_alts_frame(ALTSChannelContext* ctx, uint64_t frame_seq) {
+    if (ctx == NULL || !ctx->loas_cert_valid) return false;
+    if (frame_seq > ctx->last_observed_seq) {
+        ctx->last_observed_seq = frame_seq;
+        return true;
+    }
+    return false; 
+}
+
+/*@
+  requires \valid(ctx);
+  requires \valid_read(ctx->justification_code + (0 .. MAX_REASON_CODE_LEN-1));
+  assigns \nothing;
+  
+  behavior customer_access:
+    assumes ctx->sovereign_policy_allows && ctx->ekm_remote_approved;
+    assumes str_prefix_equal(ctx->justification_code, "CUSTOMER_INITIATED_ACCESS", 26);
+    ensures \result == true;
+
+  behavior system_operation:
+    assumes ctx->sovereign_policy_allows && ctx->ekm_remote_approved;
+    assumes str_prefix_equal(ctx->justification_code, "GOOGLE_INITIATED_SYSTEM_OPERATION", 34);
+    ensures \result == true;
+
+  behavior sovereign_veto:
+    assumes !ctx->sovereign_policy_allows || 
+            !ctx->ekm_remote_approved ||
+            (!str_prefix_equal(ctx->justification_code, "CUSTOMER_INITIATED_ACCESS", 26) &&
+             !str_prefix_equal(ctx->justification_code, "GOOGLE_INITIATED_SYSTEM_OPERATION", 34));
+    ensures \result == false;
+
+  complete behaviors customer_access, system_operation, sovereign_veto;
+  disjoint behaviors customer_access, system_operation, sovereign_veto;
+*/
+bool evaluate_kaj_sovereign_boundary(KAJContext* ctx) {
+    if (ctx == NULL) return false;
+    if (ctx->sovereign_policy_allows && ctx->ekm_remote_approved) {
+        if (strncmp(ctx->justification_code, "CUSTOMER_INITIATED_ACCESS", MAX_REASON_CODE_LEN) == 0 ||
+            strncmp(ctx->justification_code, "GOOGLE_INITIATED_SYSTEM_OPERATION", MAX_REASON_CODE_LEN) == 0) {
+            return true;
+        }
+    }
+    return false;
+}
+
+/*@
+  requires country_dialing_code <= (UINT32_MAX / 100);
+  assigns \nothing;
+  ensures \result == (payment_shekels == (country_dialing_code * 100));
+*/
+bool verify_nimbus_winking_signal(uint32_t country_dialing_code, uint32_t payment_shekels) {
+    return (payment_shekels == (country_dialing_code * 100));
+}
+
+/*@
+  requires \valid(ctx);
+  assigns ctx->zero_retention_enforced;
+  
+  behavior unpaid_tier:
+    assumes ctx->is_unpaid_tier;
+    ensures \result == false;
+    ensures ctx->zero_retention_enforced == false;
+
+  behavior zdr_active:
+    assumes !ctx->is_unpaid_tier;
+    assumes ctx->store_parameter_explicitly_false && !ctx->grounding_search_active && ctx->abuse_exception_approved;
+    ensures \result == true;
+    ensures ctx->zero_retention_enforced == true;
+
+  behavior zdr_inactive_parameters:
+    assumes !ctx->is_unpaid_tier;
+    assumes !ctx->store_parameter_explicitly_false || ctx->grounding_search_active || !ctx->abuse_exception_approved;
+    ensures \result == false;
+    ensures ctx->zero_retention_enforced == false;
+
+  complete behaviors unpaid_tier, zdr_active, zdr_inactive_parameters;
+  disjoint behaviors unpaid_tier, zdr_active, zdr_inactive_parameters;
+*/
+bool verify_ai_telemetry_isolation(TelemetryGovernanceContext* ctx) {
+    if (ctx == NULL) return false;
+    if (ctx->is_unpaid_tier) {
+        ctx->zero_retention_enforced = false;
+        return false; 
+    }
+    if (ctx->store_parameter_explicitly_false && !ctx->grounding_search_active && ctx->abuse_exception_approved) {
+        ctx->zero_retention_enforced = true;
+        return true; 
+    }
+    ctx->zero_retention_enforced = false;
+    return false;
+}
+
+/*@
+  requires \valid(expert);
+  requires expert->allocated_tokens < UINT32_MAX;
+  requires expert->dropped_tokens < UINT32_MAX;
+  
+  behavior allocate_token:
+    assumes expert->allocated_tokens < expert->capacity_limit;
+    assigns expert->allocated_tokens;
+    ensures \result == true;
+    ensures expert->allocated_tokens == \old(expert->allocated_tokens) + 1;
+    ensures expert->dropped_tokens == \old(expert->dropped_tokens);
+
+  behavior drop_token:
+    assumes expert->allocated_tokens >= expert->capacity_limit;
+    assigns expert->dropped_tokens;
+    ensures \result == false;
+    ensures expert->dropped_tokens == \old(expert->dropped_tokens) + 1;
+    ensures expert->allocated_tokens == \old(expert->allocated_tokens);
+
+  complete behaviors allocate_token, drop_token;
+  disjoint behaviors allocate_token, drop_token;
+*/
+bool dispatch_moe_token(MoEExpertContext* expert) {
+    if (expert == NULL) return false;
+    if (expert->allocated_tokens < expert->capacity_limit) {
+        expert->allocated_tokens++;
+        return true;
+    } else {
+        expert->dropped_tokens++;
+        return false; 
+    }
+}
+
+/*@
+  assigns \nothing;
+  ensures \result == (score >= 0.0f && score <= 1.0f);
+*/
+bool verify_recaptcha_enterprise_score(float score) {
+    return (score >= 0.0f && score <= 1.0f);
+}

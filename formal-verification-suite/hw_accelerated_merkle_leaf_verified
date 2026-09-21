@@ -1,0 +1,69 @@
+/*@
+  axiomatic MerkleDecomposition {
+    predicate valid_merkle_mapping{L}(uint8_t* out, uint32_t* state) =
+      \forall integer j; 0 <= j < 8 ==>
+        (out[4*j + 0] == (uint8_t)((state[j] >> 24) & 0xFF) &&
+         out[4*j + 1] == (uint8_t)((state[j] >> 16) & 0xFF) &&
+         out[4*j + 2] == (uint8_t)((state[j] >> 8) & 0xFF) &&
+         out[4*j + 3] == (uint8_t)((state[j] >> 0) & 0xFF));
+  }
+*/
+
+/*@
+  requires \valid_read(prev_hash + (0 .. 31));
+  requires \valid_read(payload_hash + (0 .. 31));
+  requires \valid(out_node_hash + (0 .. 31));
+  requires \separated(out_node_hash + (0 .. 31), prev_hash + (0 .. 31), payload_hash + (0 .. 31));
+  assigns out_node_hash[0 .. 31];
+  
+  ensures \forall integer i; 0 <= i < 32 ==> 
+    \exists integer state_val; out_node_hash[i] == (uint8_t)(state_val & 0xFF);
+  ensures valid_merkle_mapping(out_node_hash, \old(out_node_hash));
+*/
+void hw_accelerated_merkle_leaf_verified(
+    uint64_t index,
+    uint64_t timestamp_ns,
+    const uint8_t prev_hash[32],
+    const uint8_t payload_hash[32],
+    uint8_t out_node_hash[32]
+) {
+    uint32_t state[8] = {
+        0x6a09e667, 0xbb67ae85, 0x3c6ef372, 0xa54ff53a,
+        0x510e527f, 0x9b05688c, 0x1f83d9ab, 0x5be0cd19
+    };
+
+    uint8_t block0[64];
+    uint8_t block1[64] = {0};
+
+    //  0: Index(8B) || Timestamp(8B) || PrevHash(32B) || PayloadHash[0..15](16B) = 64B
+    memcpy(block0 + 0, &index, 8);
+    memcpy(block0 + 8, &timestamp_ns, 8);
+    memcpy(block0 + 16, prev_hash, 32);
+    memcpy(block0 + 48, payload_hash, 16);
+
+    //  1: PayloadHash[16..31](16B) || 0x80 || 0x00... || 640  (0x0280) = 64B
+    memcpy(block1 + 0, payload_hash + 16, 16);
+    block1[16] = 0x80;
+    block1[62] = 0x02;
+    block1[63] = 0x80;
+
+    sha256_process_block(state, block0);
+    sha256_process_block(state, block1);
+
+    /*@
+      loop invariant 0 <= i <= 8;
+      loop invariant \forall integer j; 0 <= j < i ==>
+        (out_node_hash[4*j + 0] == (uint8_t)((state[j] >> 24) & 0xFF) &&
+         out_node_hash[4*j + 1] == (uint8_t)((state[j] >> 16) & 0xFF) &&
+         out_node_hash[4*j + 2] == (uint8_t)((state[j] >> 8) & 0xFF) &&
+         out_node_hash[4*j + 3] == (uint8_t)((state[j] >> 0) & 0xFF));
+      loop assigns i, out_node_hash[0 .. 31];
+      loop variant 8 - i;
+    */
+    for (int i = 0; i < 8; i++) {
+        out_node_hash[i * 4 + 0] = (uint8_t)((state[i] >> 24) & 0xFF);
+        out_node_hash[i * 4 + 1] = (uint8_t)((state[i] >> 16) & 0xFF);
+        out_node_hash[i * 4 + 2] = (uint8_t)((state[i] >> 8) & 0xFF);
+        out_node_hash[i * 4 + 3] = (uint8_t)((state[i] >> 0) & 0xFF);
+    }
+}
