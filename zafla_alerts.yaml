@@ -1,0 +1,58 @@
+groups:
+  - name: zafla_lsm_privilege_escalation.rules
+    rules:
+      # 1. Rapid Burst of Root Privilege Escalations
+      - alert: RapidRootEscalationBurst
+        expr: |
+          sum by (comm, instance) (
+            rate(zafla_lsm_privilege_transitions_total{transition_type="escalation_to_root"}[1m])
+          ) > 5
+        for: 30s
+        labels:
+          severity: critical
+          tier: ring0-lsm
+          policy_id: FLA-POL-2026-ZA01
+          causal_order: "O(h4)"
+        annotations:
+          summary: "Rapid root privilege escalation burst detected for process '{{ $labels.comm }}'"
+          description: "Process '{{ $labels.comm }}' on {{ $labels.instance }} is elevating to UID 0 at a rate of {{ $value | printf \"%.2f\" }} escalations/sec over 1 minute."
+          runbook_url: "https://ops.zafla.internal/runbooks/lsm-priv-escalation"
+      # 2. Unexpected Non-Root Service Account Transition to Root (UID >= 1000 -> UID 0)
+      - alert: NonRootServiceToRootTransition
+        expr: |
+          sum by (comm, old_uid, new_uid, instance) (
+            increase(zafla_lsm_cred_prepare_events_total{old_uid=~"100[0-9]+|[1-9][0-9]{3,}", new_uid="0"}[2m])
+          ) > 0
+        for: 0m
+        labels:
+          severity: high
+          tier: ring0-lsm
+          policy_id: FLA-POL-2026-ZA01
+        annotations:
+          summary: "Service/User UID {{ $labels.old_uid }} transitioned directly to UID 0"
+          description: "Binary '{{ $labels.comm }}' executed an elevation from UID {{ $labels.old_uid }} to UID {{ $labels.new_uid }} on {{ $labels.instance }}."
+          action: "Inspect task provenance and check audit ring buffer logs for binary checksum and call tree."
+      # 3. Privilege Escalation Spike Relative to 1-Hour Baseline
+      - alert: AnomalyPrivilegeEscalationSpike
+        expr: |
+          sum by (comm) (rate(zafla_lsm_privilege_transitions_total{transition_type="escalation_to_root"}[5m]))
+          > 3 * (
+            sum by (comm) (avg_over_time(rate(zafla_lsm_privilege_transitions_total{transition_type="escalation_to_root"}[5m])[1h:5m]))
+          ) and sum by (comm) (rate(zafla_lsm_privilege_transitions_total{transition_type="escalation_to_root"}[5m])) > 0.5
+        for: 2m
+        labels:
+          severity: warning
+          tier: telemetry-anomaly
+        annotations:
+          summary: "Anomalous elevation rate spike for '{{ $labels.comm }}'"
+          description: "Current 5m escalation rate for '{{ $labels.comm }}' is 3x higher than its 1-hour historical baseline."
+      # 4. Ring Buffer Telemetry Drop / LSM Exporter Unhealthy
+      - alert: LSMTelemetryExporterDown
+        expr: up{job="zafla-lsm-telemetry"} == 0
+        for: 1m
+        labels:
+          severity: page
+          tier: host-security
+        annotations:
+          summary: "ZAFLA eBPF LSM telemetry collector is down"
+          description: "Target {{ $labels.instance }} stopped exposing Prometheus metrics on port :2112. Kernel LSM audit pipeline may be compromised or detached.
