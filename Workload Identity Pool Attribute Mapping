@@ -1,0 +1,10 @@
+To feed these claims into request.auth.claims, configure the GCP Workload Identity Pool provider attribute mappings:
+attribute_mapping:
+  google.subject: "assertion.credentialSubject.id"
+  attribute.charter_root_merkle_hash: "assertion.credentialSubject.charterRootMerkleHash"
+  attribute.enforcement_status: "assertion.credentialSubject.enforcementStatus"
+  attribute.causal_order: "assertion.credentialSubject.causalOrder"
+  attribute.rk4_closure_verified: "assertion.credentialSubject.causalClosureStatus == 'O(h4)_VERIFIED'"
+  attribute.liability_mode: "assertion.credentialSubject.liabilityMode"
+  attribute.non_delegable: "string(assertion.credentialSubject.nonDelegable)"
+  attribute.authorized_scope: "assertion.credentialSubject.authorizedScope.join(',')"
