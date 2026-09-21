@@ -1,0 +1,30 @@
+global:
+  resolve_timeout: 5m
+route:
+  group_by: ['alertname', 'comm', 'instance']
+  group_wait: 10s
+  group_interval: 1m
+  repeat_interval: 2h
+  receiver: 'security-oncall'
+  routes:
+    - match:
+        severity: critical
+      receiver: 'soc-incident-pager'
+      continue: true
+    - match:
+        severity: high
+      receiver: 'slack-security-alerts'
+receivers:
+  - name: 'security-oncall'
+    webhook_configs:
+      - url: 'http://incident-gateway.zafla.internal/api/v1/alerts'
+  - name: 'soc-incident-pager'
+    pagerduty_configs:
+      - service_key: '<ZAFLA_PAGERDUTY_INTEGRATION_KEY>'
+        severity: 'critical'
+  - name: 'slack-security-alerts'
+    slack_configs:
+      - channel: '#sec-ring0-telemetry'
+        api_url: 'https://hooks.slack.com/services/T00/B00/ZAFLA_SECRET'
+        send_resolved: true
+        text: "<!here> *{{ .CommonAnnotations.summary }}*\n{{ .CommonAnnotations.description }}\n*Severity:* `{{ .CommonLabels.severity }}` | *Host:* `{{ .CommonLabels.instance }}`"
