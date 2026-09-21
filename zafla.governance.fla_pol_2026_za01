@@ -1,0 +1,53 @@
+import rego.v1
+# Strict Default Deny
+default allow := false
+# Cryptographic Identity & Merkle Anchors
+expected_principal_did := "did:zafla:zeroazimuth:0x74a85fc3a46fa96893d0416a4fe274eaa2578ac8a0787ea81309e8b0e67b079c"
+expected_merkle_root   := "74a85fc3a46fa96893d0416a4fe274eaa2578ac8a0787ea81309e8b0e67b079c"
+# Scope of Sovereign Audit Actions
+authorized_audit_actions := {
+    "system:audit:forensic_inspect",
+    "system:ebpf:kernel_trace",
+    "system:ledger:state_verify",
+    "system:governance:policy_override",
+    "system:infrastructure:chokepoint_telemetry",
+    "system:safety:circuit_breaker_trip",
+}
+# Main Authorization Rule
+allow if {
+    is_valid_sovereign_principal
+    is_authorized_action
+    is_rk4_causal_state_verified
+    is_absolute_liability_enforced
+}
+# 1. Identity & Provenance Verification
+is_valid_sovereign_principal if {
+    input.principal.did == expected_principal_did
+    input.principal.merkle_root == expected_merkle_root
+    input.principal.status == "ACTIVE_ENFORCING"
+}
+# 2. Scope Validation
+is_authorized_action if {
+    input.action in authorized_audit_actions
+}
+# 3. 4th-Order Causal Closure Verification
+is_rk4_causal_state_verified if {
+    input.context.causal_order == "O(h4)"
+    input.context.rk4_closure_verified == true
+    count(input.context.rk4_stages) == 4 # K1, K2, K3, K4
+}
+# 4. Non-Delegable Liability Attestation
+is_absolute_liability_enforced if {
+    input.context.liability_mode == "ABSOLUTE_LIABILITY"
+    input.context.delegable == false
+}
+# Non-Repudiable Audit Decision Payload
+audit_record := {
+    "policy_id": "FLA-POL-2026-ZA01",
+    "decision": allow,
+    "principal": input.principal.did,
+    "action": input.action,
+    "resource": input.resource,
+    "decision_state_id": input.context.decision_state_id,
+    "timestamp_ns": time.now_ns(),
+}
