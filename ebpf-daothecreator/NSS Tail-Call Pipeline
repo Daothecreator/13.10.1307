@@ -1,0 +1,106 @@
+/* SPDX-License-Identifier: GPL-2.0 /
+/
+
+nss_pipeline.bpf.c — Chained Tail-Call Ingestion for Fedwire / NSS Settlement Calculations
+*/
+
+/* STREAMING_CHUNK:Defining tail-call maps and payload structures... */
+#include "vmlinux.h"
+#include <bpf/bpf_helpers.h>
+#include <bpf/bpf_endian.h>
+
+#define STAGE_PARSE_HDR      0
+#define STAGE_CALC_CAP       1
+#define STAGE_RECONCILE_WORM 2
+
+char LICENSE[] SEC("license") = "GPL";
+
+struct nss_telemetry_t {
+__u64 timestamp_ns;
+__u32 participant_aba;
+__u64 gross_debit_scaled;
+__u64 gross_credit_scaled;
+__u64 net_debit_cap_limit;
+__u8  settlement_status; /* 0 = Verified, 1 = Cap Breach */
+};
+
+struct {
+__uint(type, BPF_MAP_TYPE_PROG_ARRAY);
+__uint(max_entries, 8);
+__uint(key_size, sizeof(__u32));
+__uint(value_size, sizeof(__u32));
+} nss_prog_array SEC(".maps");
+
+struct {
+__uint(type, BPF_MAP_TYPE_PERCPU_ARRAY);
+__uint(max_entries, 1);
+__type(key, __u32);
+__type(value, struct nss_telemetry_t);
+} nss_scratch_buf SEC(".maps");
+
+struct {
+__uint(type, BPF_MAP_TYPE_RINGBUF);
+__uint(max_entries, 16 * 1024 * 1024);
+} nss_ringbuf SEC(".maps");
+
+/* STREAMING_CHUNK:Implementing Stage 0 Initial Dispatcher... /
+/ Stage 0: Initial Dispatcher */
+SEC("socket/nss_entry")
+int nss_stage_0(struct __sk_buff *skb) {
+__u32 zero = 0;
+struct nss_telemetry_t *data = bpf_map_lookup_elem(&nss_scratch_buf, &zero);
+if (!data)
+return 0;
+
+data->timestamp_ns = bpf_ktime_get_ns();
+data->participant_aba = 12200049; /* Fedwire ABA Routing Filter */
+
+/* Chain to Stage 1: Net Debit Cap Arithmetic */
+bpf_tail_call(skb, &nss_prog_array, STAGE_CALC_CAP);
+return 0;
+
+
+}
+
+/* STREAMING_CHUNK:Implementing Stage 1 Cap Calculation... /
+/ Stage 1: Cap Calculation */
+SEC("socket/nss_calc")
+int nss_stage_1(struct __sk_buff *skb) {
+__u32 zero = 0;
+struct nss_telemetry_t *data = bpf_map_lookup_elem(&nss_scratch_buf, &zero);
+if (!data)
+return 0;
+
+/* Verify Net Debit Position <= Participant Authorized Cap */
+if ((data->gross_debit_scaled - data->gross_credit_scaled) > data->net_debit_cap_limit) {
+    data->settlement_status = 1; /* Cap Breach Flagged */
+} else {
+    data->settlement_status = 0;
+}
+
+/* Chain to Stage 2: WORM Ingestion */
+bpf_tail_call(skb, &nss_prog_array, STAGE_RECONCILE_WORM);
+return 0;
+
+
+}
+
+/* STREAMING_CHUNK:Implementing Stage 2 WORM Ring Buffer Submission... /
+/ Stage 2: Submission to WORM Ring Buffer */
+SEC("socket/nss_worm")
+int nss_stage_2(struct __sk_buff *skb) {
+__u32 zero = 0;
+struct nss_telemetry_t *data = bpf_map_lookup_elem(&nss_scratch_buf, &zero);
+if (!data)
+return 0;
+
+struct nss_telemetry_t *out = bpf_ringbuf_reserve(&nss_ringbuf, sizeof(struct nss_telemetry_t), 0);
+if (!out)
+    return 0;
+
+__builtin_memcpy(out, data, sizeof(struct nss_telemetry_t));
+bpf_ringbuf_submit(out, 0);
+return 0;
+
+
+}

@@ -1,0 +1,54 @@
+/* SPDX-License-Identifier: GPL-2.0 */
+/*
+ * segregation_monitor.bpf.c — Detecting Memory State Anomalies on Segregation Ledgers
+ */
+
+#include "vmlinux.h"
+#include <bpf/bpf_helpers.h>
+#include <bpf/bpf_tracing.h>
+#include <bpf/bpf_core_read.h>
+
+char LICENSE[] SEC("license") = "GPL";
+
+struct mem_audit_t {
+    __u64 timestamp_ns;
+    __u32 pid;
+    __u64 addr;
+    __u64 len;
+    __u32 prot;
+    __u32 flags;
+    __u8  comm[16];
+};
+
+struct {
+    __uint(type, BPF_MAP_TYPE_RINGBUF);
+    __uint(max_entries, 8 * 1024 * 1024);
+} mem_ringbuf SEC(".maps");
+
+SEC("kprobe/__x64_sys_mprotect")
+int BPF_KPROBE(trace_sys_mprotect, unsigned long start, size_t len, unsigned long prot) {
+    __u8 comm[16];
+    bpf_get_current_comm(comm, sizeof(comm));
+
+    /* Filter for Prime Brokerage Ledger Processes */
+    if (comm[0] != 'p' || comm[1] != 'b' || comm[2] != '_')
+        return 0;
+
+    /* Flag anomalous transitions to Write+Execute or total unprotection */
+    if ((prot & 0x7) == 0x7 || (prot & 0x2)) {
+        struct mem_audit_t *ev = bpf_ringbuf_reserve(&mem_ringbuf, sizeof(struct mem_audit_t), 0);
+        if (!ev)
+            return 0;
+
+        ev->timestamp_ns = bpf_ktime_get_ns();
+        ev->pid          = bpf_get_current_pid_tgid() >> 32;
+        ev->addr         = start;
+        ev->len          = len;
+        ev->prot         = (__u32)prot;
+        ev->flags        = 0;
+        bpf_get_current_comm(ev->comm, sizeof(ev->comm));
+
+        bpf_ringbuf_submit(ev, 0);
+    }
+    return 0;
+}

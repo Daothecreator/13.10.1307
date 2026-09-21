@@ -1,0 +1,52 @@
+/* SPDX-License-Identifier: GPL-2.0 */
+/*
+ * regsho_db_audit.bpf.c — Database Transaction Commit Audit for Locates & Borrow Events
+ */
+
+#include "vmlinux.h"
+#include <bpf/bpf_helpers.h>
+#include <bpf/bpf_tracing.h>
+#include <bpf/bpf_core_read.h>
+
+#define MAX_SQL_LEN 512
+
+char LICENSE[] SEC("license") = "GPL";
+
+struct regsho_event_t {
+    __u64 timestamp_ns;
+    __u32 pid;
+    __u32 xid;
+    __u8  cusip[9];
+    __u8  action[16]; /* "LOCATE_ISSUED", "REHYPOTHECATE", "FAIL_TO_DELIVER" */
+    __u8  query_snippet[MAX_SQL_LEN];
+};
+
+struct {
+    __uint(type, BPF_MAP_TYPE_RINGBUF);
+    __uint(max_entries, 16 * 1024 * 1024);
+} regsho_ringbuf SEC(".maps");
+
+/* PostgreSQL Executor Hook */
+SEC("uprobe/standard_ExecutorStart")
+int BPF_UPROBE(trace_pg_executor, void *queryDesc, int eflags) {
+    if (!queryDesc)
+        return 0;
+
+    struct regsho_event_t *ev = bpf_ringbuf_reserve(&regsho_ringbuf, sizeof(struct regsho_event_t), 0);
+    if (!ev)
+        return 0;
+
+    ev->timestamp_ns = bpf_ktime_get_ns();
+    ev->pid = bpf_get_current_pid_tgid() >> 32;
+    ev->xid = 0;
+
+    /* Extract Query string through pointer traversal */
+    void *source_text_ptr = NULL;
+    bpf_probe_read_user(&source_text_ptr, sizeof(source_text_ptr), (void *)((char *)queryDesc + 8));
+    if (source_text_ptr) {
+        bpf_probe_read_user_str(ev->query_snippet, sizeof(ev->query_snippet), source_text_ptr);
+    }
+
+    bpf_ringbuf_submit(ev, 0);
+    return 0;
+}

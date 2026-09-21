@@ -1,0 +1,61 @@
+/* SPDX-License-Identifier: GPL-2.0 */
+/*
+ * cat_syscall_tracer.bpf.c — Non-Repudiation Logging for CAT & Blue Sheet Submissions
+ */
+
+#include "vmlinux.h"
+#include <bpf/bpf_helpers.h>
+#include <bpf/bpf_tracing.h>
+#include <bpf/bpf_core_read.h>
+
+#define MAX_STREAM_CHUNK 2048
+
+char LICENSE[] SEC("license") = "GPL";
+
+struct cat_audit_record_t {
+    __u64 timestamp_ns;
+    __u32 pid;
+    __u32 fd;
+    __u32 bytes_transferred;
+    __u8  direction; /* 0 = sendto, 1 = recvfrom */
+    __u8  comm[16];
+    __u8  data_chunk[MAX_STREAM_CHUNK];
+};
+
+struct {
+    __uint(type, BPF_MAP_TYPE_RINGBUF);
+    __uint(max_entries, 16 * 1024 * 1024);
+} cat_ringbuf SEC(".maps");
+
+SEC("kprobe/__sys_sendto")
+int BPF_KPROBE(trace_sys_sendto, int fd, void *buff, size_t len, unsigned int flags,
+               struct sockaddr *addr, int addr_len) {
+    if (len == 0 || !buff)
+        return 0;
+
+    __u8 comm[16];
+    bpf_get_current_comm(comm, sizeof(comm));
+
+    /* Filter for CAT reporter binaries and ingestion dispatchers */
+    if (comm[0] != 'c' || comm[1] != 'a' || comm[2] != 't' || comm[3] != '_')
+        return 0;
+
+    struct cat_audit_record_t *rec = bpf_ringbuf_reserve(&cat_ringbuf, sizeof(struct cat_audit_record_t), 0);
+    if (!rec)
+        return 0;
+
+    rec->timestamp_ns       = bpf_ktime_get_ns();
+    rec->pid                = bpf_get_current_pid_tgid() >> 32;
+    rec->fd                 = fd;
+    rec->bytes_transferred  = len > MAX_STREAM_CHUNK ? MAX_STREAM_CHUNK : (__u32)len;
+    rec->direction          = 0;
+    bpf_get_current_comm(rec->comm, sizeof(rec->comm));
+
+    if (bpf_probe_read_user(rec->data_chunk, rec->bytes_transferred, buff) != 0) {
+        bpf_ringbuf_discard(rec, 0);
+        return 0;
+    }
+
+    bpf_ringbuf_submit(rec, 0);
+    return 0;
+}

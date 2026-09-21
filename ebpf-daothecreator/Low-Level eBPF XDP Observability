@@ -1,0 +1,190 @@
+# Forensic Telemetry Architecture: Low-Level eBPF/XDP Observability for Financial Settlement Infrastructure
+
+This specification outlines the kernel-level and user-space instrumentation architecture using eBPF CO-RE (Compile Once – Run Everywhere) and XDP (eXpress Data Path) to construct an immutable, forensically auditable telemetry pipeline for high-frequency trading, clearinghouse novation, risk engines, and Federal Reserve settlement gateways.
+
+```
+========================================================================================================================
+                                 KERNEL & USER-SPACE eBPF TELEMETRY ARCHITECTURE
+========================================================================================================================
+
+ USER SPACE (Layer 4 & Application Runtime)
+ ┌──────────────────────────┐  ┌──────────────────────────┐  ┌──────────────────────────┐  ┌─────────────────────────┐
+ │ Trading & Settlement Svc │  │ Risk Engines             │  │ Clearing Databases       │  │ Microservice Gateways   │
+ │ • OpenSSL (libssl.so)    │  │ • STANS (OCC)            │  │ • Kdb+ (.u.upd)          │  │ • gRPC / Protocol Buffs │
+ │ • FIX / SWIFT Engines    │  │ • NSCC VaR / ECP Modules │  │ • PostgreSQL / Oracle    │  │ • PCO State Controllers │
+ └────────────┬─────────────┘  └────────────┬─────────────┘  └────────────┬─────────────┘  └────────────┬────────────┘
+              │ (uprobes)                   │ (uprobes)                   │ (uprobes)                   │ (uprobes)
+ ═════════════╪═════════════════════════════╪═════════════════════════════╪═════════════════════════════╪════════════════
+ KERNEL SPACE (eBPF Engine)                 │                             │                             │
+ ┌────────────▼─────────────────────────────▼─────────────────────────────▼─────────────────────────────▼────────────┐
+ │ BPF Verifier & CO-RE Engine (libbpf)                                                                             │
+ │                                                                                                                  │
+ │ [1. uprobes / uretprobes]  ──> SSL_read/write plaintext extraction, Risk engine state capture, DB commit hooks   │
+ │ [2. XDP (eXpress Data Path)] ──> Zero-copy driver-level mirroring of raw CNS / Novation Ethernet frames         │
+ │ [3. kprobes / sys_enter]   ──> sys_sendto / sys_recvfrom SHA-256 stream hashing (CAT / Blue Sheet validation)   │
+ │ [4. kretprobes]            ──> mmap / mprotect monitoring for Rule 15c3-3 cache tampering detection              │
+ │ [5. BPF Tail Calls]        ──> Deterministic pipeline staging for Federal Reserve NSS Net Debit Cap telemetry   │
+ └────────────────────────────────────────────────────┬─────────────────────────────────────────────────────────────┘
+                                                      │ BPF_MAP_TYPE_RINGBUF (Zero-Copy Transfer)
+                                                      ▼
+ ┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+ │ Immutable WORM Datastore (Write-Once-Read-Many)                                                                  │
+ │ • Append-Only Storage Engine • Merkle Tree Block Hashes • Hardware Security Module (HSM) Cryptographic Receipts   │
+ └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+========================================================================================================================
+
+```
+
+---
+
+## Technical Specifications
+
+### 1. Interception and Parsing of FIX / SWIFT Protocols via OpenSSL `uprobes`
+
+* **Target Library:** Dynamic shared object `libssl.so` (OpenSSL / BoringSSL).
+* **Attachment Points:**
+* `SSL_write(SSL *ssl, const void *buf, int num)`
+* `SSL_read(SSL *ssl, void *buf, int num)`
+
+
+* **Execution Mechanics:**
+* **Pre-Encryption Capture (`SSL_write`):** A `uprobe` attaches to the entry of `SSL_write`. The program reads the memory pointer `buf` and the length parameter `num` via `bpf_probe_read_user()`. It extracts critical Financial Information eXchange (**FIX**) fields (e.g., Tag 35 `MsgType`, Tag 49 `SenderCompID`, Tag 56 `TargetCompID`, Tag 11 `ClOrdID`) and **SWIFT** MT/MX settlement blocks before TLS record construction.
+* **Post-Decryption Capture (`SSL_read`):** A `uretprobe` attaches to the return of `SSL_read`. If the return code $> 0$, the program accesses the output buffer to extract decrypted inbound execution confirmations, clearing affirmations, and settlement instructions.
+
+
+* **Ring Buffer Serialization:** Telemetry records are tagged with `PID`, `TID`, `socket_fd`, `monotonic_timestamp_ns`, and process cgroup context before being pushed into a zero-copy `BPF_MAP_TYPE_RINGBUF`.
+
+---
+
+### 2. Wire-Speed CNS and Novation Packet Mirroring via XDP
+
+* **Target Layer:** Network Interface Card (NIC) driver hook (`XDP_DRV` native mode) on clearinghouse connection interfaces.
+* **Execution Mechanics:**
+* Inspects raw Ethernet frames at the driver layer prior to Linux network stack (`sk_buff`) allocation.
+* Parses packet headers sequentially: `ethhdr` $\rightarrow$ `iphdr` $\rightarrow$ `tcphdr`/`udphdr`.
+* Filters packets matching designated National Securities Clearing Corporation (NSCC) Continuous Net Settlement (CNS) feeds and trade novation multicast streams.
+* Clones the packet payload directly into a dedicated eBPF ring buffer using `bpf_ringbuf_output()`, streaming raw network captures to a local Write-Once-Read-Many (**WORM**) storage appliance.
+* Returns `XDP_PASS` immediately, ensuring line-rate trade delivery with $<50$ nanoseconds of added inspection overhead.
+
+
+
+---
+
+### 3. Verification of Regulatory Reporting (CAT / Blue Sheets) via `kprobes`
+
+* **Attachment Points:** Core kernel socket transport functions:
+* `__x64_sys_sendto`
+* `__x64_sys_recvfrom`
+
+
+* **Execution Mechanics:**
+* Verifies destination IP addresses and ports against known endpoints for the FINRA/SEC **Consolidated Audit Trail (CAT)** and Electronic Blue Sheets (EBS).
+* Computes an incremental cryptographic hash (BLAKE3 / SHA-256) of the buffer payload directly inside the kernel execution context.
+* Records the message hash, byte length, and outbound timestamp to an audit log. This creates an immutable cryptographic record of the exact data submitted to regulators, exposing discrepancies, omitted order lifecycles, or retroactive order-marking alterations.
+
+
+
+---
+
+### 4. Memory State Tracing of Risk Engines (STANS / NSCC VaR)
+
+* **Target Binaries:** Internal risk management daemons implementing the OCC STANS methodology and the NSCC Clearing Fund calculation engine.
+* **Attachment Points:** Internal function entries responsible for portfolio risk metrics:
+* `calculate_gap_risk()`
+* `evaluate_ecp_surcharge()`
+
+
+* **Execution Mechanics:**
+* Captures memory pointers to active portfolio structs and concentration parameter tables.
+* Registers exact timestamps when the **Gap Risk Measure** (the July 2026 rule evaluating the sum of the two largest non-diversified net positions and ETF decompositions) or the **Excess Capital Premium (ECP)** multipliers are adjusted.
+* Traces caller function addresses using `bpf_get_stackid()` to identify whether margin adjustments were generated by automated risk models or executed via manual administrative override.
+
+
+
+---
+
+### 5. Clearing Database Transaction Commit Hooking (Reg SHO & Rehypothecation)
+
+* **Target Binaries:** Database transaction engines managing locate and borrow ledgers (Kdb+, PostgreSQL, Oracle).
+* **Attachment Points:**
+* PostgreSQL: `CommitTransaction()`, `exec_simple_query()`
+* Kdb+: Process message handlers (`.u.upd`)
+* Oracle: Kernel transaction commit symbols
+
+
+* **Execution Mechanics:**
+* Attaches `uprobes` to transaction finalization routines to capture SQL statements and structured append events.
+* Filters transactions querying or modifying Regulation SHO Rule 203(b)(1) **CUSIP locates**, short-sale borrow pools, and SEC Rule 15c3-3 **rehypothecation accounts**.
+* Formats the sequence of commits into an ordered ledger stream, cryptographically signing each record via a Hardware Security Module (HSM) pipeline to establish strict non-repudiation of share availability states.
+
+
+
+---
+
+### 6. Memory Allocation Anomaly Detection for Customer Asset Segregation (Rule 15c3-3)
+
+* **Attachment Points:** Dynamic memory allocation and protection kernel system calls:
+* `sys_mmap` (via `kretprobe`)
+* `sys_mprotect` (via `kprobe`)
+
+
+* **Execution Mechanics:**
+* Tracks memory segments assigned to proprietary trading systems and prime brokerage ledger caches.
+* Monitors write and execution (`PROT_WRITE | PROT_EXEC`) permission changes across memory regions storing customer reserve calculations (**Special Reserve Bank Account** balances under SEC Rule 15c3-3).
+* Flags anomalous pointer manipulation, off-book buffer allocations, or dynamic cache patching that could temporarily conceal customer asset segregation deficits during scheduled regulatory reporting sweeps.
+
+
+
+---
+
+### 7. Inter-Service RPC Tracing for "Position Closing Only" (PCO) Invocations
+
+* **Target Layer:** Internal routing proxies and application servers utilizing gRPC (HTTP/2 with Protocol Buffers) and REST APIs.
+* **Attachment Points:** Dynamic symbols handling request parsing and execution:
+* `google::protobuf::MessageLite::ParseFromArray()`
+* HTTP routing handler entry points
+
+
+* **Execution Mechanics:**
+* Captures the full user-space and kernel stack trace (`bpf_get_stackid()`) upon the execution of commands that modify trading permissions for specific tickers or account classes (e.g., setting account/security states to `PCO` / `BUY_HALT`).
+* Extracts authorization metadata: API tokens, OAuth bearer identities, originating IP, and microservice payload parameters.
+* Creates an unalterable log proving the exact human or automated trigger that restricted retail market access, linking the trading freeze directly to upstream clearinghouse margin shocks.
+
+
+
+---
+
+### 8. Construction of NSS Liquidity and Net Debit Cap Telemetry via `eBPF Tail Calls`
+
+* **Implementation Structure:** Multi-stage execution pipeline using `BPF_MAP_TYPE_PROG_ARRAY` and `bpf_tail_call()` to prevent context limits and process events deterministically.
+
+```
++---------------------------------------------------------------------------------------------------+
+| eBPF TAIL CALL CONVEYOR PIPELINE                                                                  |
++---------------------------------------------------------------------------------------------------+
+| Stage 0: Event Ingestion & Classification                                                         |
+|   • Captures DTC Same-Day Funds Settlement (SDFS) instruction events.                             |
+|   • Identifies transactions modifying participant Net-Net debit/credit balances.                  |
+|   ──> Executes tail_call(prog_array, STAGE_1_VALIDATION)                                          |
+|                                                                                                   |
+| Stage 1: Liquidity & Net Debit Cap Validation                                                     |
+|   • Computes running intraday net debit balance against the participant's Net Debit Cap ($1.8B).  |
+|   • Inspects Collateral Monitor status to verify collateral value > aggregate debit.              |
+|   ──> Executes tail_call(prog_array, STAGE_2_SETTLEMENT_ROUTING)                                  |
+|                                                                                                   |
+| Stage 2: Federal Reserve NSS Gateway Auditing                                                     |
+|   • Traces communication with Fedwire / National Settlement Service (NSS) endpoints.              |
+|   • Logs Settling Bank final authorizations, Daylight Overdraft utilization, and any explicit     |
+|     "Refusal to Settle" notices prior to the 4:15 PM ET NSS transmission deadline.                |
+|   ──> Emits consolidated event to BPF Ring Buffer for WORM storage persistence.                   |
++---------------------------------------------------------------------------------------------------+
+
+```
+
+---
+
+## Architectural Guarantees
+
+1. **Non-Invasive Execution:** The eBPF programs operate without modifying application binaries, source code, or runtime memory spaces, ensuring zero side-effects on exchange latency and settlement pipelines.
+2. **Deterministic Reconstruction:** The combination of packet-level XDP mirroring, TLS uprobes, and kernel-level syscall hashing provides complete audit trails capable of recreating the exact causal chain from legislative funding changes down to individual buy-button halts.
+3. **Data Integrity:** All generated audit streams are written to WORM storage with hardware-backed cryptographic timestamps, preventing tampering or retroactive alteration by market participants.

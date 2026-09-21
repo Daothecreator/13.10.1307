@@ -1,0 +1,101 @@
+// Cargo.toml dependencies: anyhow = "1.0", serde = "1.0", serde_json = "1.0", sha2 = "0.10", secp256k1 = "0.29", hex = "0.4"
+
+use anyhow::Result;
+use secp256k1::{ecdsa::Signature, Message, PublicKey, Secp256k1, SecretKey};
+use serde::{Deserialize, Serialize};
+use sha2::{Digest, Sha256};
+
+#[derive(Serialize, Deserialize, Debug, Clone, PartialEq, Eq)]
+pub struct CanonicalFinancialEvent {
+    pub entity_id: u32,
+    pub raw_payload_hex: String,
+    pub source_layer: String,
+    pub stream_type: String,
+    pub timestamp_ns: u64,
+}
+
+/// RFC 8785 JSON Canonicalization Scheme (JCS) deterministic hashing
+pub fn canonicalize_and_hash(event: &CanonicalFinancialEvent) -> [u8; 32] {
+    let canonical_json = serde_json::to_string(event).expect("JCS serialization failure");
+    let mut hasher = Sha256::new();
+    hasher.update(canonical_json.as_bytes());
+    hasher.finalize().into()
+}
+
+/// Incremental Binary Merkle Tree Root Computation
+pub fn compute_merkle_root(leaf_hashes: &[[u8; 32]]) -> [u8; 32] {
+    if leaf_hashes.is_empty() {
+        return [0u8; 32];
+    }
+    let mut current_level: Vec<[u8; 32]> = leaf_hashes.to_vec();
+
+    while current_level.len() > 1 {
+        let mut next_level: Vec<[u8; 32]> = Vec::with_capacity((current_level.len() + 1) / 2);
+        for chunk in current_level.chunks(2) {
+            let mut hasher = Sha256::new();
+            if chunk.len() == 2 {
+                hasher.update(&chunk[0]);
+                hasher.update(&chunk[1]);
+            } else {
+                hasher.update(&chunk[0]);
+                hasher.update(&chunk[0]);
+            }
+            next_level.push(hasher.finalize().into());
+        }
+        current_level = next_level;
+    }
+    current_level[0]
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct AttestationManifest {
+    pub batch_size: usize,
+    pub leaf_hashes: Vec<String>,
+    pub merkle_root_hex: String,
+    pub public_key_hex: String,
+    pub signature_der_hex: String,
+    pub compliance_standard: String,
+}
+
+pub struct ForensicEngine {
+    secp: Secp256k1<secp256k1::All>,
+    secret_key: SecretKey,
+    pub public_key: PublicKey,
+    event_log: Vec<CanonicalFinancialEvent>,
+}
+
+impl ForensicEngine {
+    pub fn new(secret_key_bytes: &[u8; 32]) -> Result<Self> {
+        let secp = Secp256k1::new();
+        let secret_key = SecretKey::from_slice(secret_key_bytes)?;
+        let public_key = PublicKey::from_secret_key(&secp, &secret_key);
+
+        Ok(Self {
+            secp,
+            secret_key,
+            public_key,
+            event_log: Vec::new(),
+        })
+    }
+
+    pub fn ingest_event(&mut self, event: CanonicalFinancialEvent) {
+        self.event_log.push(event);
+    }
+
+    pub fn seal_and_attest(&self) -> Result<AttestationManifest> {
+        let leaf_hashes: Vec<[u8; 32]> = self.event_log.iter().map(canonicalize_and_hash).collect();
+        let merkle_root = compute_merkle_root(&leaf_hashes);
+
+        let message = Message::from_digest(merkle_root);
+        let sig: Signature = self.secp.sign_ecdsa(&message, &self.secret_key);
+
+        Ok(AttestationManifest {
+            batch_size: self.event_log.len(),
+            leaf_hashes: leaf_hashes.iter().map(|h| hex::encode(h)).collect(),
+            merkle_root_hex: hex::encode(merkle_root),
+            public_key_hex: hex::encode(self.public_key.serialize()),
+            signature_der_hex: hex::encode(sig.serialize_der()),
+            compliance_standard: "FRE 902(13)/902(14) - WORM S3 COMPLIANCE".to_string(),
+        })
+    }
+}

@@ -1,0 +1,22 @@
+{
+  "jurisdiction": "ZAFLA Sovereign Audit Framework",
+  "compliance_standard": "FRE 902(13)/902(14) - Immutable WORM S3 Object Lock",
+  "total_telemetry_events": 9,
+  "leaf_hashes": [
+    "df2ef3bae57e50092dd2a0b8f27e18cd2bf8f278b1d43f470b0b3bb1d45dcf4d",
+    "7d96e496c4ce9117e93f1db4353160fb795baa82377bc3f6009fbe03fa622a53",
+    "03a4dc1b0d7bcb557f72adb5fffd01e7e5bdce75a7d999440021af6614fae543",
+    "bc697ab7999eff432e194d62cbe297bb21bf2d9ef741ead67decc5a1591a4c02",
+    "32b3bd3fcc25fa02f8646402a92bb45bdc4046d1ab8ac5068786bbc5e462ca42",
+    "21af79c19c5de2f7b63e7dfa665915f3fc3709fa3ad30b1f2791e25de6d28a2b",
+    "4ec847969c1df0112fcba03434d1d053919ec583f3fcc7dc665d607cbf22dab9",
+    "5cbe81b2439fa0fff8ec394d2f3b2869bcedde45cdab6d5dc59be278904ba71c",
+    "29008da97e2e99e07ba3845a0bd4ef39b3d3fae0cbcd72d07420da3e9e8f2c83"
+  ],
+  "merkle_root_sha256": "24537697fbd9df1471afe31110e94a5a04967defd8ed1885c696fece443c8a74",
+  "attestation_public_key_sec": "02b98a7fb8cc007048625b6446ad49a1b3a722df8c1ca975b87160023e14d19097",
+  "ecdsa_secp256k1_signature_der": "304602210082b655a51a8e9ac129295469d35cf7ff81287dae03def4df228778272c4a5f97022100d150ca7f9e8f3e832e607165c6e3d15fd56e49994788f385d276c7f654e1f38d",
+  "signature_r": "0x82b655a51a8e9ac129295469d35cf7ff81287dae03def4df228778272c4a5f97",
+  "signature_s": "0xd150ca7f9e8f3e832e607165c6e3d15fd56e49994788f385d276c7f654e1f38d",
+  "verification_result": "CRYPTOGRAPHICALLY_VERIFIED_VALID"
+}
