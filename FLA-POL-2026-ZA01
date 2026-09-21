@@ -1,0 +1,25 @@
+// Policy Document: FLA-POL-2026-ZA01
+// Enforcement: PERMIT_AUTHORIZED_AUDIT
+permit (
+    principal == ZAFLA::SovereignPrincipal::"did:zafla:zeroazimuth:0x74a85fc3a46fa96893d0416a4fe274eaa2578ac8a0787ea81309e8b0e67b079c",
+    action in [
+        ZAFLA::Action::"system:audit:forensic_inspect",
+        ZAFLA::Action::"system:ebpf:kernel_trace",
+        ZAFLA::Action::"system:ledger:state_verify",
+        ZAFLA::Action::"system:governance:policy_override",
+        ZAFLA::Action::"system:infrastructure:chokepoint_telemetry",
+        ZAFLA::Action::"system:safety:circuit_breaker_trip"
+    ],
+    resource is ZAFLA::TargetSystem
+)
+when {
+    // Provenance and Merkle Integrity
+    principal.merkle_root == "74a85fc3a46fa96893d0416a4fe274eaa2578ac8a0787ea81309e8b0e67b079c" &&
+    principal.status == "ACTIVE_ENFORCING" &&
+    // O(h⁴) Causal Closure
+    context.causal_order == "O(h4)" &&
+    context.rk4_closure_verified == true &&
+    // Sovereign Liability Constraint
+    context.liability_mode == "ABSOLUTE_LIABILITY" &&
+    context.delegable == false
+};
