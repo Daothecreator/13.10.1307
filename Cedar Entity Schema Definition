@@ -1,0 +1,47 @@
+{
+  "ZAFLA": {
+    "entityTypes": {
+      "SovereignPrincipal": {
+        "shape": {
+          "type": "Record",
+          "attributes": {
+            "merkle_root": { "type": "String" },
+            "status": { "type": "String" }
+          }
+        }
+      },
+      "TargetSystem": {
+        "shape": {
+          "type": "Record",
+          "attributes": {
+            "system_id": { "type": "String" },
+            "layer": { "type": "String" }
+          }
+        }
+      }
+    },
+    "actions": {
+      "system:audit:forensic_inspect": {
+        "appliesTo": {
+          "principalTypes": ["SovereignPrincipal"],
+          "resourceTypes": ["TargetSystem"],
+          "context": {
+            "type": "Record",
+            "attributes": {
+              "causal_order": { "type": "String" },
+              "rk4_closure_verified": { "type": "Boolean" },
+              "liability_mode": { "type": "String" },
+              "delegable": { "type": "Boolean" },
+              "decision_state_id": { "type": "String" }
+            }
+          }
+        }
+      },
+      "system:ebpf:kernel_trace": { "appliesTo": { "principalTypes": ["SovereignPrincipal"], "resourceTypes": ["TargetSystem"], "context": { "type": "Record", "attributes": { "causal_order": { "type": "String" }, "rk4_closure_verified": { "type": "Boolean" }, "liability_mode": { "type": "String" }, "delegable": { "type": "Boolean" }, "decision_state_id": { "type": "String" } } } } },
+      "system:ledger:state_verify": { "appliesTo": { "principalTypes": ["SovereignPrincipal"], "resourceTypes": ["TargetSystem"], "context": { "type": "Record", "attributes": { "causal_order": { "type": "String" }, "rk4_closure_verified": { "type": "Boolean" }, "liability_mode": { "type": "String" }, "delegable": { "type": "Boolean" }, "decision_state_id": { "type": "String" } } } } },
+      "system:governance:policy_override": { "appliesTo": { "principalTypes": ["SovereignPrincipal"], "resourceTypes": ["TargetSystem"], "context": { "type": "Record", "attributes": { "causal_order": { "type": "String" }, "rk4_closure_verified": { "type": "Boolean" }, "liability_mode": { "type": "String" }, "delegable": { "type": "Boolean" }, "decision_state_id": { "type": "String" } } } } },
+      "system:infrastructure:chokepoint_telemetry": { "appliesTo": { "principalTypes": ["SovereignPrincipal"], "resourceTypes": ["TargetSystem"], "context": { "type": "Record", "attributes": { "causal_order": { "type": "String" }, "rk4_closure_verified": { "type": "Boolean" }, "liability_mode": { "type": "String" }, "delegable": { "type": "Boolean" }, "decision_state_id": { "type": "String" } } } } },
+      "system:safety:circuit_breaker_trip": { "appliesTo": { "principalTypes": ["SovereignPrincipal"], "resourceTypes": ["TargetSystem"], "context": { "type": "Record", "attributes": { "causal_order": { "type": "String" }, "rk4_closure_verified": { "type": "Boolean" }, "liability_mode": { "type": "String" }, "delegable": { "type": "Boolean" }, "decision_state_id": { "type": "String" } } } } }
+    }
+  }
+}
