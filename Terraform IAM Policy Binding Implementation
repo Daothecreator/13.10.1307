@@ -1,0 +1,28 @@
+resource "google_project_iam_member" "zafla_sovereign_audit_binding" {
+  project = var.gcp_project_id
+  role    = "roles/iam.securityReviewer"
+  member  = "principal://iam.googleapis.com/projects/${var.gcp_project_number}/locations/global/workloadIdentityPools/${var.workload_pool_id}/subject/did:zafla:zeroazimuth:0x74a85fc3a46fa96893d0416a4fe274eaa2578ac8a0787ea81309e8b0e67b079c"
+  condition {
+    title       = "FLA_POL_2026_ZA01_Enforcement"
+    description = "Enforces O(h4) causal closure, absolute liability attestation, and sovereign root audit scope."
+    expression  = <<-EOT
+      request.auth.claims.sub == "did:zafla:zeroazimuth:0x74a85fc3a46fa96893d0416a4fe274eaa2578ac8a0787ea81309e8b0e67b079c" &&
+      request.auth.claims["charter_root_merkle_hash"] == "74a85fc3a46fa96893d0416a4fe274eaa2578ac8a0787ea81309e8b0e67b079c" &&
+      request.auth.claims["enforcement_status"] == "ACTIVE_ENFORCING" &&
+      request.auth.claims["causal_order"] == "O(h4)" &&
+     request.auth.claims["rk4_closure_verified"] == "true" &&
+      request.auth.claims["liability_mode"] == "ABSOLUTE_LIABILITY" &&
+      request.auth.claims["non_delegable"] == "true" &&
+      request.auth.claims["authorized_scope"].split(",").exists(
+        s, s in [
+          "system:audit:forensic_inspect",
+          "system:ebpf:kernel_trace",
+          "system:ledger:state_verify",
+          "system:governance:policy_override",
+          "system:infrastructure:chokepoint_telemetry",
+          "system:safety:circuit_breaker_trip"
+        ]
+      )
+    EOT
+  }
+}
