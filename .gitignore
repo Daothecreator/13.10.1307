@@ -1,3 +1,10 @@
 causal_map.db
 *.csv
 *.db
+
+# LC7 Vault & RSA Key Artifacts
+vendor_plugin_*.pem
+*.pem
+lc7_vault.db
+.vault_master.key
+.lc7_work/
