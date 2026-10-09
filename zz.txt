@@ -1,0 +1,2080 @@
+
+IPPTRA192.0.4.2
+pickles-r-us.com192.0.5.5
+ibisakuzo.com, squareoffbots.com192.0.5.123
+tuwexinc.com192.0.6.0
+lounge-1ounge.site192.0.6.2
+waiehugolf.org192.0.6.6
+nickysebastian.com192.0.7.7
+smartworker.dev    IPDomain
+  192.0.4.39boulangerieyong.gmao.io192.0.5.357ywedg.r68t98uhi.dns-dynamic.net, 798odfbe.rtt0j7tgo.cloudns.biz, 777.bag.dns-dynamic.net, 123.eraser.dns-dynamic.net, 333.ruler.dns-dynamic.net, d45e5.ei8ogiy.cloudns.biz, de4ryru.r68t98uhi.dns-dynamic.net, 888.duck.dns-dynamic.net, 3gt7y9h.rtt0j7tgo.cloudns.biz, 56ut6iu6.i7dw4rfrgfxrsf.cloudns.biz, l0edtr.ei8ogiy.cloudns.biz, 4w34drt.r68t98uhi.dns-dynamic.net, 12esf.rtt0j7tgo.cloudns.biz, ruler.ruler.dns-dynamic.net, ghvi7k.ei8ogiy.cloudns.biz, 666.card.dns-dynamic.net, est34x.rtt0j7tgo.cloudns.biz, 2rtuuy.i7dw4rfrgfxrsf.cloudns.biz, 1erygt6.ei8ogiy.cloudns.biz, 56ue4rg.r68t98uhi.dns-dynamic.net, 67ie4ytgr.i7dw4rfrgfxrsf.cloudns.biz, 2qw4sex.i7dw4rfrgfxrsf.cloudns.biz, wwe.i7dw4rfrgfxrsf.cloudns.biz192.0.6.1udmp.vanesch.se192.0.6.6nickysebastian.com192.0.5.250admin-web.angro.bg192.0.5.244bucket.vpce-029ee408218736740-36a8h5pa-ap-northeast-1d.s3.ap-northeast-1.vpce.amazonaws.com, bucket.vpce-029ee408218736740-36a8h5pa.s3.ap-northeast-1.vpce.amazonaws.com192.0.4.131device-local-0450f3e3-73c3-432c-9822-395060435b4c.remotewd.com192.0.6.60device-local-f5b3f1b9-8825-461d-a2cc-65c94fc4b2ec.remotewd.com192.0.5.6ydmr26fp9k.dattolocal.net192.0.5.20device-local-24244d9c-6658-45bc-9635-3759605de462.remotewd.com192.0.4.2177m8r7t2gyk.dattolocal.net192.0.7.1payme.vanesch.se192.0.5.5squareoffbots.com, www.worn.p-e.kr192.0.4.1sg-wlc.wescoaircraft.com, plex.vanesch.se192.0.5.1wlc01.faxekommune.dk, dsm.vanesch.se192.0.5.209device-local-bb5b3e43-376a-4e84-945f-c3e15b3c8b18.remotewd.com
+NetRange:       192.0.4.0 - 192.0.7.255
+CIDR:           192.0.4.0/22
+NetName:        CWCIL
+NetHandle:      NET-192-0-4-0-1
+Parent:         NET192 (NET-192-0-0-0-0)
+NetType:        Direct Allocation
+OriginAS:       
+Organization:   Cable & Wireless (Cayman Islands) Ltd. (CWCIL)
+RegDate:        2012-11-05
+Updated:        2025-02-10
+Ref:            https://rdap.arin.net/registry/ip/192.0.4.0
+
+OrgName:        Cable & Wireless (Cayman Islands) Ltd.
+OrgId:          CWCIL
+Address:        17 EASTERN AVE
+Address:        PO Box 293GT
+City:           GEORGE TOWN
+StateProv:      Grand Cayman
+PostalCode:     00000
+Country:        KY
+RegDate:        1996-06-12
+Updated:        2024-11-01
+Comment:        discoverflow.co/cayman
+Ref:            https://rdap.arin.net/registry/entity/CWCIL
+
+OrgNOCHandle: NOC8-ARIN
+OrgNOCName:   Internet Services Network Operations Center
+OrgNOCPhone:  (345)-949-7800 
+OrgNOCEmail:  noc@candw.ky
+OrgNOCRef:    https://rdap.arin.net/registry/entity/NOC8-ARIN
+
+OrgTechHandle: ROCKN5-ARIN
+OrgTechName:   Rock, Nikolas  
+OrgTechPhone:  +1-246-621-6158 
+OrgTechEmail:  nikolas.rock@cwc.com                                    NET-192-0-4-0-1 {JSON} 
+IP Version: v4
+Address Range: 192.0.4.0 - 192.0.7.255
+Parent Network: NET-192-0-0-0-0
+CIDR(s):
+
+192.0.4.0/22
+Network Name: CWCIL
+Allocation Type: DIRECT ALLOCATION
+Status:
+
+active
+Events:
+last changed: 2/10/2025, 3:41:35 PM
+registration: 11/5/2012, 10:43:21 AM
+Whois Server: whois.arin.net
+Links:
+
+https://rdap.arin.net/registry/ip/192.0.4.0 (self)
+https://whois.arin.net/rest/net/NET-192-0-4-0-1 (alternate)
+Entities:
+Entity CWCIL
+Handle: CWCIL
+Roles:
+
+registrant
+Events:
+last changed: 11/1/2024, 8:42:29 AM
+registration: 6/11/1996, 9:00:00 PM
+Contact:
+Name: Cable & Wireless (Cayman Islands) Ltd.
+Address:
+17 EASTERN AVE
+PO Box 293GT
+GEORGE TOWN
+Grand Cayman
+00000
+Cayman Islands
+kind: org
+Whois Server: whois.arin.net
+Links:
+
+https://rdap.arin.net/registry/entity/CWCIL (self)
+https://whois.arin.net/rest/org/CWCIL (alternate)
+Entities:
+Entity ANDRE608-ARIN
+Handle: ANDRE608-ARIN
+Roles:
+
+technical
+Status:
+
+validated
+Events:
+last changed: 2/17/2026, 10:01:57 AM
+registration: 9/19/2024, 9:30:12 AM
+Contact:
+Address:
+Windsor Lodge 
+Government Hill 
+St. Michael
+BB11000
+Barbados
+
+BB11000
+Barbados
+Name: Andrew Millington
+Org: Columbus Telecommunications Barbados Limited
+kind: group
+Email: andrew.millington@cwc.com
+Tel: +1-246-621-6216 (work,voice)
+Tel: +1-246-230-4820 (work,cell)
+Whois Server: whois.arin.net
+Links:
+
+https://rdap.arin.net/registry/entity/ANDRE608-ARIN (self)
+https://whois.arin.net/rest/poc/ANDRE608-ARIN (alternate)
+Raw: 
+Entity CWCCS-ARIN
+Handle: CWCCS-ARIN
+Roles:
+
+abuse
+Events:
+last changed: 10/11/2019, 8:05:12 AM
+registration: 10/11/2018, 9:18:49 AM
+Contact:
+Address:
+KRA 45 108 27 T3 P9
+Bogota
+
+111111
+Colombia
+Name: CWC-CSIRT
+Org: Cable and Wireless
+kind: group
+Email: cwc-csirt@cwc.com
+Tel: +4291401;ext2 (work,voice)
+Whois Server: whois.arin.net
+Links:
+
+https://rdap.arin.net/registry/entity/CWCCS-ARIN (self)
+https://whois.arin.net/rest/poc/CWCCS-ARIN (alternate)
+Remarks:
+Unvalidated POC
+ARIN has attempted to validate the data for this POC, but has received no response from the POC since 2020-10-10
+Raw: 
+Entity JACKS1398-ARIN
+Handle: JACKS1398-ARIN
+Roles:
+
+technical
+Status:
+
+validated
+Events:
+last changed: 9/28/2026, 5:10:18 PM
+registration: 9/27/2024, 6:35:18 AM
+Contact:
+Address:
+Carlton Building
+Carlton Crescent
+
+Kingston
+
+
+Jamaica
+Name: Altie Jackson
+kind: individual
+Email: altie.jackson@cwc.com
+Tel: +1-876-312-8390 (work,voice)
+Tel: +1-876-312-8390 (work,cell)
+Whois Server: whois.arin.net
+Links:
+
+https://rdap.arin.net/registry/entity/JACKS1398-ARIN (self)
+https://whois.arin.net/rest/poc/JACKS1398-ARIN (alternate)
+Raw: 
+Entity ROCKN5-ARIN
+Handle: ROCKN5-ARIN
+Roles:
+
+technical
+Status:
+
+validated
+Events:
+last changed: 6/12/2026, 7:33:44 AM
+registration: 10/16/2024, 9:18:22 AM
+Contact:
+Address:
+Windsor Lodge
+Government Hill
+St. Michael
+
+
+Barbados
+Name: Nikolas  Rock
+kind: individual
+Email: nikolas.rock@cwc.com
+Tel: +1-246-621-6158 (work,voice)
+Tel: +1-246-234-4547 (work,cell)
+Whois Server: whois.arin.net
+Links:
+
+https://rdap.arin.net/registry/entity/ROCKN5-ARIN (self)
+https://whois.arin.net/rest/poc/ROCKN5-ARIN (alternate)
+Raw: 
+Entity JOK14-ARIN
+Handle: JOK14-ARIN
+Roles:
+
+administrative
+technical
+Status:
+
+validated
+Events:
+last changed: 11/5/2025, 7:22:19 AM
+registration: 12/19/2018, 7:12:09 AM
+Contact:
+Address:
+Windsor Lodge
+Government Hill
+St. Michael
+BB11000
+Barbados
+
+BB11000
+Barbados
+Name: Junior  Orlando King
+kind: individual
+Email: junior.king@cwc.com
+Tel: +1-246-230-3031 (work,voice)
+Tel: +1-246-292-6150 (work,voice)
+Whois Server: whois.arin.net
+Links:
+
+https://rdap.arin.net/registry/entity/JOK14-ARIN (self)
+https://whois.arin.net/rest/poc/JOK14-ARIN (alternate)
+Raw: 
+Entity NOC8-ARIN
+Handle: NOC8-ARIN
+Roles:
+
+noc
+Events:
+last changed: 5/8/2018, 12:02:42 PM
+registration: 12/30/1999, 12:23:29 PM
+Contact:
+Address:
+#17 Eastern Avenue
+P.O. Box 293 GT
+George Town
+Grand Cayman, Cayman Islands
+BWI
+Cayman Islands
+Name: Internet Services Network Operations Center
+Org: Cable and Wireless (Cayman Islands) Ltd.
+kind: group
+Email: noc@candw.ky
+Tel: (345)-949-7800 (work,voice)
+Whois Server: whois.arin.net
+Links:
+
+https://rdap.arin.net/registry/entity/NOC8-ARIN (self)
+https://whois.arin.net/rest/poc/NOC8-ARIN (alternate)
+Remarks:
+Unvalidated POC
+ARIN has attempted to validate the data for this POC, but has received no response from the POC since 2019-05-08
+Raw: 
+Remarks:
+Registration Comments
+discoverflow.co/cayman
+Raw: 
+Notices:
+Whois Inaccuracy Reporting
+If you see inaccuracies in the results, please visit: 
+Links:
+
+https://www.arin.net/resources/registry/whois/inaccuracy_reporting/ (inaccuracy-report)
+Copyright Notice
+Copyright 1997-2026, American Registry for Internet Numbers, Ltd.
+Conformance:
+
+nro_rdap_profile_0
+rdap_level_0
+cidr0
+arin_originas0
+OrgTechRef:    https://rdap.arin.net/registry/entity/ROCKN5-ARIN
+
+OrgTechHandle: JOK14-ARIN
+OrgTechName:   King, Junior  Orlando
+OrgTechPhone:  +1-246-230-3031 
+OrgTechEmail:  junior.king@cwc.com
+OrgTechRef:    https://rdap.arin.net/registry/entity/JOK14-ARIN
+
+OrgAbuseHandle: CWCCS-ARIN
+OrgAbuseName:   CWC-CSIRT
+OrgAbusePhone:  +4291401 
+OrgAbuseEmail:  cwc-csirt@cwc.com
+OrgAbuseRef:    https://rdap.arin.net/registry/entity/CWCCS-ARIN
+
+OrgTechHandle: ANDRE608-ARIN
+OrgTechName:   Andrew Millington
+OrgTechPhone:  +1-246-621-6216 
+OrgTechEmail:  andrew.millington@cwc.com
+OrgTechRef:    https://rdap.arin.net/registry/entity/ANDRE608-ARIN
+
+OrgTechHandle: JACKS1398-ARIN
+OrgTechName:   Jackson, Altie 
+OrgTechPhone:  +1-876-312-8390 
+OrgTechEmail:  altie.jackson@cwc.com
+OrgTechRef:    https://rdap.arin.net/registry/entity/JACKS1398-ARIN
+
+#
+  
+    Announced ByOriginOrigin RegistrantPrefixPrefix RegistrantAS6639Cable & Wireless (Cayman Islands) Ltd.192.0.4.0/22  Cable & Wireless (Cayman Islands) Ltd.Matching DelegationsRegistryStatusPrefixCCarinallocated192.0.4.0/22KY 
+
+
+
+    www.swissinfo.ch
+
+    
+      
+  
+    Quick Links
+
+
+    BGP Toolkit Home
+BGP Prefix Report
+BGP Peer Report
+Super Traceroute
+Super Looking Glass
+Cert Search
+Exchange Report
+Bogon Routes
+World Report
+Multi Origin Routes
+DNS Report
+Top Host Report
+RPKI & ASPA Report
+Internet Statistics
+Looking Glass
+Network Tools App
+IPv6 Certification
+IPv6 Progress
+Going Native
+Contribute Data
+Credits
+Contact Us
+
+  
+
+
+      
+        
+          
+    DNS
+  
+
+    Certs
+  
+
+    Website Info
+  
+
+    IP Info
+  
+
+    Whois
+  
+
+    RDAP
+  
+
+  IPsOrigin ASAnnouncementDescription192.0.66.156AS749192.0.0.0/16United States Department of Defense (DoD)192.0.66.156AS2635192.0.66.0/24Automattic, Inc    Announced ByOriginOrigin RegistrantPrefixPrefix RegistrantAS749United States Department of Defense (DoD)192.0.0.0/16  Various Registries (Maintained by ARIN)Matching DelegationsRegistryStatusPrefixCCianaassigned192.0.0.10/32ZZ ianareserved192.0.0.8/32ZZ ianaassigned192.0.0.9/32ZZ ianareserved192.0.0.170/31ZZ ianareserved192.0.0.0/29ZZ ianareserved192.0.0.0/24ZZ arinallocated192.0.1.0/24US ianareserved192.0.2.0/24ZZ arinallocated192.0.3.0/24US arinallocated192.0.4.0/22KY arinallocated192.0.8.0/21US arinallocated192.0.16.0/20US arinallocated192.0.32.0/20US arinallocated192.0.48.0/20US arinallocated192.0.64.0/18US arinallocated192.0.128.0/17CA    
+NetRange:       192.0.64.0 - 192.0.127.255
+CIDR:           192.0.64.0/18
+NetName:        AUTOMATTIC
+NetHandle:      NET-192-0-64-0-1
+Parent:         NET192 (NET-192-0-0-0-0)
+NetType:        Direct Allocation
+OriginAS:       
+Organization:   Automattic, Inc (AUTOM-93)
+RegDate:        2012-11-20
+Updated:        2024-05-21
+Comment:        Geofeed https://as2635.network/geofeed.csv
+Ref:            https://rdap.arin.net/registry/ip/192.0.64.0
+
+OrgName:        Automattic, Inc
+OrgId:          AUTOM-93
+Address:        60 29th Street #343
+City:           San Francisco
+StateProv:      CA
+PostalCode:     94110
+Country:        US
+RegDate:        2011-10-05
+Updated:        2023-08-11
+Ref:            https://rdap.arin.net/registry/entity/AUTOM-93
+
+OrgTechHandle: NOC12276-ARIN
+OrgTechName:   NOC
+OrgTechPhone:  +1-877-273-8550 
+OrgTechEmail:  ipadmin@automattic.com
+OrgTechRef:    https://rdap.arin.net/registry/entity/NOC12276-ARIN
+
+OrgNOCHandle: NOC12276-ARIN
+OrgNOCName:   NOC
+OrgNOCPhone:  +1-877-273-8550 
+OrgNOCEmail:  ipadmin@automattic.com
+OrgNOCRef:    https://rdap.arin.net/registry/entity/NOC12276-ARIN Geofeed https://as2635.network/geofeed.csv P Version: v4
+Address Range: 192.0.0.0 - 192.255.255.255
+CIDR(s):
+
+192.0.0.0/8
+Network Name: NET192
+Status:
+
+administrative
+Events:
+last changed: 6/30/2010, 11:37:41 AM
+registration: 4/30/1993, 9:00:00 PM
+Whois Server: whois.arin.net
+Links:
+
+https://rdap.arin.net/registry/ip/192.0.0.0 (self)
+https://whois.arin.net/rest/net/NET-192-0-0-0-0 (alternate)
+Entities:
+Entity VR-ARIN
+Handle: VR-ARIN
+Roles:
+
+registrant
+Events:
+last changed: 1/8/2018, 2:04:15 PM
+registration: 4/30/1993, 9:00:00 PM
+Contact:
+Name: Various Registries (Maintained by ARIN)
+Address:
+PO Box 232290
+Centreville
+VA
+20120
+United States
+kind: org
+Whois Server: whois.arin.net
+Links:
+
+https://rdap.arin.net/registry/entity/VR-ARIN (self)
+https://whois.arin.net/rest/org/VR-ARIN (alternate)
+Entities:
+Entity CKN23-ARIN
+Handle: CKN23-ARIN
+Roles:
+
+abuse
+administrative
+technical
+Events:
+last changed: 2/9/2024, 12:21:55 PM
+registration: 2/18/2011, 11:57:07 AM
+Contact:
+Address:
+123 Main St
+Anytown
+VA
+20151
+United States
+Name: Contact Known No
+kind: individual
+Email: nobody@example.com
+Tel: +1-800-555-1234 (work,voice)
+Whois Server: whois.arin.net
+Links:
+
+https://rdap.arin.net/registry/entity/CKN23-ARIN (self)
+https://whois.arin.net/rest/poc/CKN23-ARIN (alternate)
+Remarks:
+Registration Comments
+There is no known POC for this organization. This is a placeholder record. Please contact hostmaster@arin.net if you can provide contact information for this record.
+Unvalidated POC
+ARIN has attempted to validate the data for this POC, but has received no response from the POC since 2025-02-08
+Raw: 
+Remarks:
+Registration Comments
+Address space was assigned by the InterNIC regardless of
+geographic region.  The registrations are now being maintained
+by various registries, and the in-addr.arpa delegations are
+being maintained by ARIN.
+Raw: 
+Notices:
+Whois Inaccuracy Reporting
+If you see inaccuracies in the results, please visit: 
+Links:
+
+https://www.arin.net/resources/registry/whois/inaccuracy_reporting/ (inaccuracy-report)
+Copyright Notice
+Copyright 1997-2026, American Registry for Internet Numbers, Ltd.
+Conformance:
+
+nro_rdap_profile_0
+rdap_level_0
+cidr0
+arin_originas0 
+Results truncated.
+IPPTRA192.0.3.4secnj.elevatedcomp.com
+192.0.3.12mailgw.elevatedcomp.com
+192.0.3.18support.elevatedcomp.com
+192.0.3.26spam.elevated.net
+192.0.3.28ewr-ovpn.elevated.net
+192.0.3.34ovpn.elevatedcomp.com
+192.0.3.36grant.elevatedcomp.com
+192.0.3.37drivers.elevatedcomp.com
+192.0.3.56cportal.elevated.net
+192.0.3.70mail.elevatedcomp.com
+192.0.3.72pushtest.elevatedcomp.com
+192.0.3.88lipman.customer.elvoip.com
+192.0.3.100ns1.elevatedcomp.com
+192.0.3.119mailgw.reddyice.com
+192.0.3.122tolpbx.elvoip.com
+192.0.3.123lipmanpbx.elvoip.com
+192.0.3.142prov.elvoip.com
+192.0.3.197helenapbx.elvoip.com
+192.0.3.199helenabwpbx.elvoip.com
+192.0.3.201voip.elvoip.com
+192.0.3.203cloud1.elvoip.com
+192.0.3.208vianapbx.elvoip.com
+192.0.3.209kcppbx.elvoip.com
+192.0.3.216hvrpbx.elvoip.com
+192.0.3.219delraypbx.elvoip.com
+192.0.3.223voltapbx.elvoip.com
+192.0.3.224elevated.elvoip.com
+192.0.3.225www.elevated.elvoip.com
+192.0.3.232bayoupbx.elvoip.com
+192.0.3.234molinepbx.elvoip.com
+192.0.32.7www.icann.org
+192.0.32.8www.iana.org
+192.0.32.9www.internic.net
+192.0.32.10ccnso.icann.org
+192.0.32.1132-11.lax.icann.org
+192.0.32.12redirects.iana.org
+192.0.32.13tools.iana.org
+192.0.32.14test-ry-api.vip.icann.org
+192.0.32.15reports.internic.net
+192.0.32.16dnscert.vip.icann.org
+192.0.32.17vhost-account.icann.org
+192.0.32.18res-dom.iana.org
+192.0.32.19dns.icann.org
+192.0.32.20build.icann.org
+192.0.32.21www.atlargestudy.org
+192.0.32.22securedata.icann.org
+192.0.32.23ry-api-admin-tls.icann.org
+192.0.32.24ta.icann.org
+192.0.32.25data.iana.org
+192.0.32.26forum.icann.org
+192.0.32.27community.icann.org
+192.0.32.28charts.icann.org
+192.0.32.29rws.icann.org
+192.0.32.3032-30.lax.icann.org
+192.0.32.31vhost-radar-rrs.icann.org
+192.0.32.32lists.icann.org
+192.0.32.33fellowship.icann.org
+192.0.32.34gtldwebservice.icann.org
+192.0.32.35research.icann.org
+192.0.32.36vhost.icann.org
+192.0.32.37media1.icann.org
+192.0.32.38tld-frontend.icann.org
+192.0.32.3932-39.lax.icann.org
+192.0.32.40newgtlds.icann.org
+192.0.32.41sftp.icann.org
+192.0.32.42gnso.icann.org
+192.0.32.43gtldmonitor-fe.icann.org
+192.0.32.44archive.icann.org
+192.0.32.45czdap.icann.org
+192.0.32.46ca.icann.org
+192.0.32.47ebero.icann.org
+192.0.32.48meetings.icann.org
+192.0.32.49urs.icann.org
+192.0.32.50smdrl.icann.org
+192.0.32.51brda.icann.org
+192.0.32.52zfa.icann.org
+192.0.32.53whois.icann.org
+192.0.32.54forms.icann.org
+192.0.32.56gac.icann.org
+192.0.32.57gtldcomment.icann.org
+192.0.32.58gtldresult.icann.org
+192.0.32.59whois.iana.org
+192.0.32.60atlarge.icann.org
+192.0.32.61maintenance.iana.org
+192.0.32.62maintenance.icann.org
+192.0.32.6332-63.lax.icann.org
+192.0.32.6432-64.lax.icann.org
+192.0.32.6532-65.lax.icann.org
+192.0.32.6632-66.lax.icann.org
+192.0.32.6732-67.lax.icann.org
+192.0.32.6832-68.lax.icann.org
+192.0.32.6932-69.lax.icann.org
+192.0.32.7032-70.lax.icann.org
+192.0.32.7132-71.lax.icann.org
+192.0.32.7232-72.lax.icann.org
+192.0.32.7332-73.lax.icann.org
+192.0.32.7432-74.lax.icann.org
+192.0.32.7532-75.lax.icann.org
+192.0.32.7632-76.lax.icann.org
+192.0.32.7732-77.lax.icann.org
+192.0.32.7832-78.lax.icann.org
+192.0.32.7932-79.lax.icann.org
+192.0.32.8032-80.lax.icann.org
+192.0.32.8132-81.lax.icann.org
+192.0.32.8232-82.lax.icann.org
+192.0.32.8332-83.lax.icann.org
+192.0.32.8432-84.lax.icann.org
+192.0.32.8532-85.lax.icann.org
+192.0.32.8632-86.lax.icann.org
+192.0.32.8732-87.lax.icann.org
+192.0.32.8832-88.lax.icann.org
+192.0.32.89stream2.lax.icann.org
+192.0.32.9032-90.lax.icann.org
+192.0.32.9132-91.lax.icann.org
+192.0.32.9232-92.lax.icann.org
+192.0.32.9332-93.lax.icann.org
+192.0.32.9432-94.lax.icann.org
+192.0.32.9532-95.lax.icann.org
+192.0.32.9632-96.lax.icann.org
+192.0.32.9732-97.lax.icann.org
+192.0.32.9832-98.lax.icann.org
+192.0.32.9932-99.lax.icann.org
+192.0.32.100mm.icann.org
+192.0.32.101mm4.icann.org
+192.0.32.10232-102.lax.icann.org
+192.0.32.10332-103.lax.icann.org
+192.0.32.10432-104.lax.icann.org
+192.0.32.10532-105.lax.icann.org
+192.0.32.10632-106.lax.icann.org
+192.0.32.10732-107.lax.icann.org
+192.0.32.10832-108.lax.icann.org
+192.0.32.10932-109.lax.icann.org
+192.0.32.11032-110.lax.icann.org
+192.0.32.111lighthouse1.lax.network.icann.org
+192.0.32.11232-112.lax.icann.org
+192.0.32.11332-113.lax.icann.org
+192.0.32.11432-114.lax.icann.org
+192.0.32.11532-115.lax.icann.org
+192.0.32.11632-116.lax.icann.org
+192.0.32.11732-117.lax.icann.org
+192.0.32.11832-118.lax.icann.org
+192.0.32.11932-119.lax.icann.org
+192.0.32.12032-120.lax.icann.org
+192.0.32.12132-121.lax.icann.org
+192.0.32.12232-122.lax.icann.org
+192.0.32.12332-123.lax.icann.org
+192.0.32.12432-124.lax.icann.org
+192.0.32.12532-125.lax.icann.org
+192.0.32.12632-126.lax.icann.org
+192.0.32.12732-127.lax.icann.org
+192.0.32.12832-128.lax.icann.org
+192.0.32.129fw1.lax.network.icann.org
+192.0.32.130fw1.lax.network.icann.org
+192.0.32.131fw2.lax.network.icann.org
+192.0.32.132lax.xfr.dns.icann.org
+192.0.32.133lax01.iperf.dns.icann.org
+192.0.32.134lax02.zabbix.dns.icann.org
+192.0.32.135lax01.magnitude.dns.icann.org
+192.0.32.136lax01.resolver.dns.icann.org
+192.0.32.137lax02.resolver.dns.icann.org
+192.0.32.138lax.mirror.dns.icann.org
+192.0.32.139lax.logs.dns.icann.org
+192.0.32.140lax01.grafana.dns.icann.org
+192.0.32.141lax02.grafana.dns.icann.org
+192.0.32.142lax01.grafana-public.dns.icann.org
+192.0.32.143lax.template.dns.icann.org
+192.0.32.144lax04.master.dns.icann.org
+192.0.32.145lax01.prometheus.dns.icann.org
+192.0.32.146lax.webhook.dns.icann.org
+192.0.32.147lax01.runner.dns.icann.org
+192.0.32.148lax02.runner.dns.icann.org
+192.0.32.149lax03.runner.dns.icann.org
+192.0.32.150lax04.runner.dns.icann.org
+192.0.32.151lax05.runner.dns.icann.org
+192.0.32.152lax01.distribution.dns.icann.org
+192.0.32.153lax02.distribution.dns.icann.org
+192.0.32.15432-154.lax.icann.org
+192.0.32.155lax.nsicann.dns.icann.org
+192.0.32.156lax.inaddrarpa.dns.icann.org
+192.0.32.157lax.ip6arpa.dns.icann.org
+192.0.32.158lax.as112.dns.icann.org
+192.0.32.159lax01.private.dns.icann.org
+192.0.32.16032-160.lax.icann.org
+192.0.32.161lax01.gsi-distribution.dns.icann.org
+192.0.32.162gsi1.dns.icann.org
+192.0.32.163lax02.gsi-distribution.dns.icann.org
+192.0.32.164gsi2.dns.icann.org
+192.0.32.165aa01.xz-stp.l.dns.icann.org
+192.0.32.166lax.zonedit.dns.icann.org
+192.0.32.167lax.gsi-srx.dns.icann.org
+192.0.32.168lax03.datastore.dns.icann.org
+192.0.32.169lax02.datastore.dns.icann.org
+192.0.32.171lax.aservers.dns.icann.org
+192.0.32.172lax.bservers.dns.icann.org
+192.0.32.173lax.cservers.dns.icann.org
+192.0.32.17432-174.lax.icann.org
+192.0.32.17532-175.lax.icann.org
+192.0.32.17632-176.lax.icann.org
+192.0.32.17732-177.lax.icann.org
+192.0.32.17832-178.lax.icann.org
+192.0.32.179lax.research.dns.icann.org
+192.0.32.180lax01.cctld.dns.icann.org
+192.0.32.181lax01.master.dns.icann.org
+192.0.32.182lax01.wombat.dns.icann.org
+192.0.32.183lax02.wombat.dns.icann.org
+192.0.32.184lax03.wombat.dns.icann.org
+192.0.32.185lax04.wombat.dns.icann.org
+192.0.32.186lax05.wombat.dns.icann.org
+192.0.32.187lax06.wombat.dns.icann.org
+192.0.32.188lax01.weather.dns.icann.org
+192.0.32.189lax02.weather.dns.icann.org
+192.0.32.190lax.ntp.dns.icann.org
+192.0.32.191lax99.gsi-signer.dns.icann.org
+192.0.32.19232-192.dns.icann.org
+192.0.32.19332-193.lax.icann.org
+192.0.32.19432-194.lax.icann.org
+192.0.32.19532-195.lax.icann.org
+192.0.32.19632-196.lax.icann.org
+192.0.32.19732-197.lax.icann.org
+192.0.32.198access-lax.icann.org
+192.0.32.199access-va1.lax.icann.org
+192.0.32.200tat.lax.icann.org
+192.0.32.201access-va2.lax.icann.org
+192.0.32.20232-202.lax.icann.org
+192.0.32.203mi-tunnel-lax.icann.org
+192.0.32.204mi-sentry2.lax.icann.org
+192.0.32.205mi-vsp.icann.org
+192.0.32.206mi-sentry.icann.org
+192.0.32.207mi-tunnel.icann.org
+192.0.32.20832-208.lax.icann.org
+192.0.32.20932-209.lax.icann.org
+192.0.32.21032-210.lax.icann.org
+192.0.32.21132-211.lax.icann.org
+192.0.32.21232-212.lax.icann.org
+192.0.32.21332-213.lax.icann.org
+192.0.32.21432-214.lax.icann.org
+192.0.32.21532-215.lax.icann.org
+192.0.32.21632-216.lax.icann.org
+192.0.32.21732-217.lax.icann.org
+192.0.32.21832-218.lax.icann.org
+192.0.32.21932-219.lax.icann.org
+192.0.32.22032-220.lax.icann.org
+192.0.32.22132-221.lax.icann.org
+192.0.32.22232-222.lax.icann.org
+192.0.32.22332-223.lax.icann.org
+192.0.32.22432-224.lax.icann.org
+192.0.32.22532-225.lax.icann.org
+192.0.32.22632-226.lax.icann.org
+192.0.32.22732-227.lax.icann.org
+192.0.32.22832-228.lax.icann.org
+192.0.32.22932-229.lax.icann.org
+192.0.32.23032-230.lax.icann.org
+192.0.32.23132-231.lax.icann.org
+192.0.32.23232-232.lax.icann.org
+192.0.32.23332-233.lax.icann.org
+192.0.32.23432-234.lax.icann.org
+192.0.32.23532-235.lax.icann.org
+192.0.32.23632-236.lax.icann.org
+192.0.32.23732-237.lax.icann.org
+192.0.32.23832-238.lax.icann.org
+192.0.32.23932-239.lax.icann.org
+192.0.32.24032-240.lax.icann.org
+192.0.32.24132-241.lax.icann.org
+192.0.32.24232-242.lax.icann.org
+192.0.32.24332-243.lax.icann.org
+192.0.32.24432-244.lax.icann.org
+192.0.32.24532-245.lax.icann.org
+192.0.32.246ipsec1.lax.icann.org
+192.0.32.247ipsec2.lax.icann.org
+192.0.32.24832-248.lax.icann.org
+192.0.32.24932-249.lax.icann.org
+192.0.32.25032-250.lax.icann.org
+192.0.32.25132-251.lax.icann.org
+192.0.32.252gtm1.lax.icann.org
+192.0.32.25332-253.lax.icann.org
+192.0.32.25432-254.lax.icann.org
+192.0.32.25532-255.lax.icann.org
+192.0.33.133-1.lax.icann.org
+192.0.33.233-2.lax.icann.org
+192.0.33.333-3.lax.icann.org
+192.0.33.4ltm1.lax.icann.org
+192.0.33.5ltm2.lax.icann.org
+192.0.33.633-6.lax.icann.org
+192.0.33.7www.icann.org
+192.0.33.833-8.lax.icann.org
+192.0.33.933-9.lax.icann.org
+192.0.33.1033-10.lax.icann.org
+192.0.33.1133-11.lax.icann.org
+192.0.33.1233-12.lax.icann.org
+192.0.33.1333-13.lax.icann.org
+192.0.33.1433-14.lax.icann.org
+192.0.33.1633-16.lax.icann.org
+192.0.33.1733-17.lax.icann.org
+192.0.33.18sfdc-api-gateway.icann.org
+192.0.33.1933-19.lax.icann.org
+192.0.33.2033-20.lax.icann.org
+192.0.33.2133-21.lax.icann.org
+192.0.33.2233-22.lax.icann.org
+192.0.33.2333-23.lax.icann.org
+192.0.33.2433-24.lax.icann.org
+192.0.33.2533-25.lax.icann.org
+192.0.33.2633-26.lax.icann.org
+192.0.33.2733-27.lax.icann.org
+192.0.33.2833-28.lax.icann.org
+192.0.33.2933-29.lax.icann.org
+192.0.33.3033-30.lax.icann.org
+192.0.33.3133-31.lax.icann.org
+192.0.33.32lists.iana.org
+192.0.33.3333-33.lax.icann.org
+192.0.33.3433-34.lax.icann.org
+192.0.33.3533-35.lax.icann.org
+192.0.33.3633-36.lax.icann.org
+192.0.33.3733-37.lax.icann.org
+192.0.33.3833-38.lax.icann.org
+192.0.33.3933-39.lax.icann.org
+192.0.33.40newgtldprogram.icann.org
+192.0.33.4133-41.lax.icann.org
+192.0.33.4233-42.lax.icann.org
+192.0.33.4333-43.lax.icann.org
+192.0.33.4433-44.lax.icann.org
+192.0.33.4533-45.lax.icann.org
+192.0.33.4633-46.lax.icann.org
+192.0.33.4733-47.lax.icann.org
+192.0.33.4833-48.lax.icann.org
+192.0.33.4933-49.lax.icann.org
+192.0.33.5033-50.lax.icann.org
+192.0.33.5133-51.lax.icann.org
+192.0.33.5233-52.lax.icann.org
+192.0.33.5333-53.lax.icann.org
+192.0.33.5433-54.lax.icann.org
+192.0.33.5533-55.lax.icann.org
+192.0.33.5633-56.lax.icann.org
+192.0.33.5733-57.lax.icann.org
+192.0.33.5833-58.lax.icann.org
+192.0.33.5933-59.lax.icann.org
+192.0.33.6033-60.lax.icann.org
+192.0.33.6133-61.lax.icann.org
+192.0.33.6233-62.lax.icann.org
+192.0.33.6333-63.lax.icann.org
+192.0.33.6433-64.lax.icann.org
+192.0.33.6533-65.lax.icann.org
+192.0.33.6633-66.lax.icann.org
+192.0.33.6733-67.lax.icann.org
+192.0.33.6833-68.lax.icann.org
+192.0.33.6933-69.lax.icann.org
+192.0.33.7033-70.lax.icann.org
+192.0.33.71pechora1.icann.org
+192.0.33.7233-72.lax.icann.org
+192.0.33.73pechora7.icann.org
+192.0.33.7433-74.lax.icann.org
+192.0.33.7533-75.lax.icann.org
+192.0.33.76ppa1.lax.icann.org
+192.0.33.77ppa2.lax.icann.org
+192.0.33.78ppa3.lax.icann.org
+192.0.33.79ppa1-uat.lax.icann.org
+192.0.33.80m00.lax.icann.org
+192.0.33.81smtp.lax.icann.org
+192.0.33.82smtp01.icann.org
+192.0.33.83smtp3.lax.icann.org
+192.0.33.8433-84.lax.icann.org
+192.0.33.85rstrepo1.lax.icann.org
+192.0.33.86rstmaster1.lax.icann.org
+192.0.33.88tcm-tools1.lax.icann.org
+192.0.33.89tcm1.lax.icann.org
+192.0.33.90rzm-gtld1.lax.icann.org
+192.0.33.91rdns1.lax.icann.org
+192.0.33.9233-92.lax.icann.org
+192.0.33.9333-93.lax.icann.org
+192.0.33.9433-94.lax.icann.org
+192.0.33.9533-95.lax.icann.org
+192.0.33.9633-96.lax.icann.org
+192.0.33.9733-97.lax.icann.org
+192.0.33.9833-98.lax.icann.org
+192.0.33.9933-99.lax.icann.org
+192.0.33.10033-100.lax.icann.org
+192.0.33.10133-101.lax.icann.org
+192.0.33.10233-102.lax.icann.org
+192.0.33.104tieline1.lax.icann.org
+192.0.33.10533-105.lax.icann.org
+192.0.33.10633-106.lax.icann.org
+192.0.33.10733-107.lax.icann.org
+192.0.33.10833-108.lax.icann.org
+192.0.33.10933-109.lax.icann.org
+192.0.33.11033-110.lax.icann.org
+192.0.33.11133-111.lax.icann.org
+192.0.33.11233-112.lax.icann.org
+192.0.33.11333-113.lax.icann.org
+192.0.33.11433-114.lax.icann.org
+192.0.33.115ksr-west.dns.icann.org
+192.0.33.11633-116.lax.icann.org
+192.0.33.11733-117.lax.icann.org
+192.0.33.11833-118.lax.icann.org
+192.0.33.11933-119.lax.icann.org
+192.0.33.12033-120.lax.icann.org
+192.0.33.12133-121.lax.icann.org
+192.0.33.12233-122.lax.icann.org
+192.0.33.12333-123.lax.icann.org
+192.0.33.12433-124.lax.icann.org
+192.0.33.12533-125.lax.icann.org
+192.0.33.12633-126.lax.icann.org
+192.0.33.12733-127.lax.icann.org
+192.0.33.12833-128.lax.icann.org
+192.0.33.12933-129.lax.icann.org
+192.0.33.13033-130.lax.icann.org
+192.0.33.13133-131.lax.icann.org
+192.0.33.132m-us.ics.forth.gr
+192.0.33.13333-133.lax.icann.org
+192.0.33.134b.dns.br
+192.0.33.13533-135.lax.icann.org
+192.0.33.136a.nic.cl
+192.0.33.13733-137.lax.icann.org
+192.0.33.13833-138.lax.icann.org
+192.0.33.13933-139.lax.icann.org
+192.0.33.14033-140.lax.icann.org
+192.0.33.14133-141.lax.icann.org
+192.0.33.14233-142.lax.icann.org
+192.0.33.14333-143.lax.icann.org
+192.0.33.14433-144.lax.icann.org
+192.0.33.14533-145.lax.icann.org
+192.0.33.14633-146.lax.icann.org
+192.0.33.14733-147.lax.icann.org
+192.0.33.14833-148.lax.icann.org
+192.0.33.14933-149.lax.icann.org
+192.0.33.15033-150.lax.icann.org
+192.0.33.15133-151.lax.icann.org
+192.0.33.15233-152.lax.icann.org
+192.0.33.15333-153.lax.icann.org
+192.0.33.15433-154.lax.icann.org
+192.0.33.15533-155.lax.icann.org
+192.0.33.15633-156.lax.icann.org
+192.0.33.15733-157.lax.icann.org
+192.0.33.158icanndns01.ring.nlnog.net
+192.0.33.15933-159.lax.icann.org
+192.0.33.16033-160.lax.icann.org
+192.0.33.16133-161.lax.icann.org
+192.0.33.16233-162.lax.icann.org
+192.0.33.16333-163.lax.icann.org
+192.0.33.16433-164.lax.icann.org
+192.0.33.16533-165.lax.icann.org
+192.0.33.16633-166.lax.icann.org
+192.0.33.16733-167.lax.icann.org
+192.0.33.16833-168.lax.icann.org
+192.0.33.16933-169.lax.icann.org
+192.0.33.17033-170.lax.icann.org
+192.0.33.17133-171.lax.icann.org
+192.0.33.17233-172.lax.icann.org
+192.0.33.17333-173.lax.icann.org
+192.0.33.17433-174.lax.icann.org
+192.0.33.17533-175.lax.icann.org
+192.0.33.17633-176.lax.icann.org
+192.0.33.17733-177.lax.icann.org
+192.0.33.17833-178.lax.icann.org
+192.0.33.17933-179.lax.icann.org
+192.0.33.18033-180.lax.icann.org
+192.0.33.18133-181.lax.icann.org
+192.0.33.18233-182.lax.icann.org
+192.0.33.18333-183.lax.icann.org
+192.0.33.18433-184.lax.icann.org
+192.0.33.18533-185.lax.icann.org
+192.0.33.18633-186.lax.icann.org
+192.0.33.18733-187.lax.icann.org
+192.0.33.18833-188.lax.icann.org
+192.0.33.18933-189.lax.icann.org
+192.0.33.19033-190.lax.icann.org
+192.0.33.19133-191.lax.icann.org
+192.0.33.19233-192.lax.icann.org
+192.0.33.19333-193.lax.icann.org
+192.0.33.19433-194.lax.icann.org
+192.0.33.19533-195.lax.icann.org
+192.0.33.19633-196.lax.icann.org
+192.0.33.19733-197.lax.icann.org
+192.0.33.19833-198.lax.icann.org
+192.0.33.19933-199.lax.icann.org
+192.0.33.20033-200.lax.icann.org
+192.0.33.20133-201.lax.icann.org
+192.0.33.20233-202.lax.icann.org
+192.0.33.20333-203.lax.icann.org
+192.0.33.20433-204.lax.icann.org
+192.0.33.20533-205.lax.icann.org
+192.0.33.20633-206.lax.icann.org
+192.0.33.20733-207.lax.icann.org
+192.0.33.20833-208.lax.icann.org
+192.0.33.20933-209.lax.icann.org
+192.0.33.21033-210.lax.icann.org
+192.0.33.21133-211.lax.icann.org
+192.0.33.21233-212.lax.icann.org
+192.0.33.21333-213.lax.icann.org
+192.0.33.21433-214.lax.icann.org
+192.0.33.21533-215.lax.icann.org
+192.0.33.21633-216.lax.icann.org
+192.0.33.21733-217.lax.icann.org
+192.0.33.21833-218.lax.icann.org
+192.0.33.21933-219.lax.icann.org
+192.0.33.22033-220.lax.icann.org
+192.0.33.22133-221.lax.icann.org
+192.0.33.22233-222.lax.icann.org
+192.0.33.22333-223.lax.icann.org
+192.0.33.22433-224.lax.icann.org
+192.0.33.22533-225.lax.icann.org
+192.0.33.22633-226.lax.icann.org
+192.0.33.22733-227.lax.icann.org
+192.0.33.22833-228.lax.icann.org
+192.0.33.22933-229.lax.icann.org
+192.0.33.23033-230.lax.icann.org
+192.0.33.23133-231.lax.icann.org
+192.0.33.23233-232.lax.icann.org
+192.0.33.23333-233.lax.icann.org
+192.0.33.23433-234.lax.icann.org
+192.0.33.23533-235.lax.icann.org
+192.0.33.23633-236.lax.icann.org
+192.0.33.23733-237.lax.icann.org
+192.0.33.23833-238.lax.icann.org
+192.0.33.23933-239.lax.icann.org
+192.0.33.24033-240.lax.icann.org
+192.0.33.24133-241.lax.icann.org
+192.0.33.24233-242.lax.icann.org
+192.0.33.24333-243.lax.icann.org
+192.0.33.24433-244.lax.icann.org
+192.0.33.24533-245.lax.icann.org
+192.0.33.24633-246.lax.icann.org
+192.0.33.24733-247.lax.icann.org
+192.0.33.24833-248.lax.icann.org
+192.0.33.24933-249.lax.icann.org
+192.0.33.25033-250.lax.icann.org
+192.0.33.25133-251.lax.icann.org
+192.0.33.25233-252.lax.icann.org
+192.0.33.25333-253.lax.icann.org
+192.0.33.25433-254.lax.icann.org
+192.0.34.134-1.lax.icann.org
+192.0.34.234-2.lax.icann.org
+192.0.34.334-3.lax.icann.org
+192.0.34.434-4.lax.icann.org
+192.0.34.534-5.lax.icann.org
+192.0.34.634-6.lax.icann.org
+192.0.34.734-7.lax.icann.org
+192.0.34.834-8.lax.icann.org
+192.0.34.934-9.lax.icann.org
+192.0.34.1034-10.lax.icann.org
+192.0.34.1134-11.lax.icann.org
+192.0.34.1234-12.lax.icann.org
+192.0.34.1334-13.lax.icann.org
+192.0.34.1434-14.lax.icann.org
+192.0.34.1534-15.lax.icann.org
+192.0.34.1634-16.lax.icann.org
+192.0.34.1734-17.lax.icann.org
+192.0.34.1834-18.lax.icann.org
+192.0.34.1934-19.lax.icann.org
+192.0.34.2034-20.lax.icann.org
+192.0.34.2134-21.lax.icann.org
+192.0.34.2234-22.lax.icann.org
+192.0.34.2334-23.lax.icann.org
+192.0.34.2434-24.lax.icann.org
+192.0.34.2534-25.lax.icann.org
+192.0.34.2634-26.lax.icann.org
+192.0.34.2734-27.lax.icann.org
+192.0.34.2834-28.lax.icann.org
+192.0.34.2934-29.lax.icann.org
+192.0.34.3034-30.lax.icann.org
+192.0.34.3134-31.lax.icann.org
+192.0.34.3234-32.lax.icann.org
+192.0.34.3334-33.lax.icann.org
+192.0.34.3434-34.lax.icann.org
+192.0.34.3534-35.lax.icann.org
+192.0.34.3634-36.lax.icann.org
+192.0.34.3734-37.lax.icann.org
+192.0.34.3834-38.lax.icann.org
+192.0.34.3934-39.lax.icann.org
+192.0.34.4034-40.lax.icann.org
+192.0.34.4134-41.lax.icann.org
+192.0.34.4234-42.lax.icann.org
+192.0.34.4334-43.lax.icann.org
+192.0.34.4434-44.lax.icann.org
+192.0.34.4534-45.lax.icann.org
+192.0.34.4634-46.lax.icann.org
+192.0.34.4734-47.lax.icann.org
+192.0.34.4834-48.lax.icann.org
+192.0.34.4934-49.lax.icann.org
+192.0.34.5034-50.lax.icann.org
+192.0.34.5134-51.lax.icann.org
+192.0.34.5234-52.lax.icann.org
+192.0.34.5334-53.lax.icann.org
+192.0.34.5434-54.lax.icann.org
+192.0.34.5534-55.lax.icann.org
+192.0.34.57research-ns3.dev.icann.org
+192.0.34.5834-58.lax.icann.org
+192.0.34.5934-59.lax.icann.org
+192.0.34.6034-60.lax.icann.org
+192.0.34.6134-61.lax.icann.org
+192.0.34.6234-62.lax.icann.org
+192.0.34.6334-63.lax.icann.org
+192.0.34.6434-64.lax.icann.org
+192.0.34.6534-65.lax.icann.org
+192.0.34.6634-66.lax.icann.org
+192.0.34.6734-67.lax.icann.org
+192.0.34.6834-68.lax.icann.org
+192.0.34.6934-69.lax.icann.org
+192.0.34.7034-70.lax.icann.org
+192.0.34.7134-71.lax.icann.org
+192.0.34.7234-72.lax.icann.org
+192.0.34.7334-73.lax.icann.org
+192.0.34.7434-74.lax.icann.org
+192.0.34.7534-75.lax.icann.org
+192.0.34.7634-76.lax.icann.org
+192.0.34.7734-77.lax.icann.org
+192.0.34.7834-78.lax.icann.org
+192.0.34.7934-79.lax.icann.org
+192.0.34.8034-80.lax.icann.org
+192.0.34.8134-81.lax.icann.org
+192.0.34.8234-82.lax.icann.org
+192.0.34.8334-83.lax.icann.org
+192.0.34.8434-84.lax.icann.org
+192.0.34.8534-85.lax.icann.org
+192.0.34.8634-86.lax.icann.org
+192.0.34.8734-87.lax.icann.org
+192.0.34.8834-88.lax.icann.org
+192.0.34.8934-89.lax.icann.org
+192.0.34.9034-90.lax.icann.org
+192.0.34.9134-91.lax.icann.org
+192.0.34.9234-92.lax.icann.org
+192.0.34.9334-93.lax.icann.org
+192.0.34.9434-94.lax.icann.org
+192.0.34.9534-95.lax.icann.org
+192.0.34.9634-96.lax.icann.org
+192.0.34.9734-97.lax.icann.org
+192.0.34.9834-98.lax.icann.org
+192.0.34.9934-99.lax.icann.org
+192.0.34.10034-100.lax.icann.org
+192.0.34.10134-101.lax.icann.org
+192.0.34.10234-102.lax.icann.org
+192.0.34.10334-103.lax.icann.org
+192.0.34.10434-104.lax.icann.org
+192.0.34.10534-105.lax.icann.org
+192.0.34.10634-106.lax.icann.org
+192.0.34.10734-107.lax.icann.org
+192.0.34.10834-108.lax.icann.org
+192.0.34.10934-109.lax.icann.org
+192.0.34.11034-110.lax.icann.org
+192.0.34.11134-111.lax.icann.org
+192.0.34.11234-112.lax.icann.org
+192.0.34.11334-113.lax.icann.org
+192.0.34.11434-114.lax.icann.org
+192.0.34.11534-115.lax.icann.org
+192.0.34.11634-116.lax.icann.org
+192.0.34.11734-117.lax.icann.org
+192.0.34.11834-118.lax.icann.org
+192.0.34.11934-119.lax.icann.org
+192.0.34.12034-120.lax.icann.org
+192.0.34.12134-121.lax.icann.org
+192.0.34.12234-122.lax.icann.org
+192.0.34.12334-123.lax.icann.org
+192.0.34.12434-124.lax.icann.org
+192.0.34.12534-125.lax.icann.org
+192.0.34.12634-126.lax.icann.org
+192.0.34.12734-127.lax.icann.org
+192.0.34.12834-128.lax.icann.org
+192.0.34.12934-129.lax.icann.org
+192.0.34.13034-130.lax.icann.org
+192.0.34.13134-131.lax.icann.org
+192.0.34.13234-132.lax.icann.org
+192.0.34.13334-133.lax.icann.org
+192.0.34.13434-134.lax.icann.org
+192.0.34.13534-135.lax.icann.org
+192.0.34.13634-136.lax.icann.org
+192.0.34.13734-137.lax.icann.org
+192.0.34.13834-138.lax.icann.org
+192.0.34.13934-139.lax.icann.org
+192.0.34.14034-140.lax.icann.org
+192.0.34.14134-141.lax.icann.org
+192.0.34.14234-142.lax.icann.org
+192.0.34.14334-143.lax.icann.org
+192.0.34.14434-144.lax.icann.org
+192.0.34.14534-145.lax.icann.org
+192.0.34.14634-146.lax.icann.org
+192.0.34.14734-147.lax.icann.org
+192.0.34.14834-148.lax.icann.org
+192.0.34.14934-149.lax.icann.org
+192.0.34.15034-150.lax.icann.org
+192.0.34.15134-151.lax.icann.org
+192.0.34.15234-152.lax.icann.org
+192.0.34.15334-153.lax.icann.org
+192.0.34.15434-154.lax.icann.org
+192.0.34.15534-155.lax.icann.org
+192.0.34.156tcm1.dev.icann.org
+192.0.34.157tcm-tools1.dev.icann.org
+192.0.34.158tcm-qa1.dev.icann.org
+192.0.34.15934-159.lax.icann.org
+192.0.34.16034-160.lax.icann.org
+192.0.34.16134-161.lax.icann.org
+192.0.34.16234-162.lax.icann.org
+192.0.34.16334-163.lax.icann.org
+192.0.34.16434-164.lax.icann.org
+192.0.34.16534-165.lax.icann.org
+192.0.34.16634-166.lax.icann.org
+192.0.34.16734-167.lax.icann.org
+192.0.34.16834-168.lax.icann.org
+192.0.34.16934-169.lax.icann.org
+192.0.34.17034-170.lax.icann.org
+192.0.34.17134-171.lax.icann.org
+192.0.34.17234-172.lax.icann.org
+192.0.34.17334-173.lax.icann.org
+192.0.34.17434-174.lax.icann.org
+192.0.34.17534-175.lax.icann.org
+192.0.34.17634-176.lax.icann.org
+192.0.34.17734-177.lax.icann.org
+192.0.34.17834-178.lax.icann.org
+192.0.34.17934-179.lax.icann.org
+192.0.34.18034-180.lax.icann.org
+192.0.34.18134-181.lax.icann.org
+192.0.34.18234-182.lax.icann.org
+192.0.34.18334-183.lax.icann.org
+192.0.34.18434-184.lax.icann.org
+192.0.34.18534-185.lax.icann.org
+192.0.34.18634-186.lax.icann.org
+192.0.34.18734-187.lax.icann.org
+192.0.34.18834-188.lax.icann.org
+192.0.34.18934-189.lax.icann.org
+192.0.34.19034-190.lax.icann.org
+192.0.34.19134-191.lax.icann.org
+192.0.34.19234-192.lax.icann.org
+192.0.34.19334-193.lax.icann.org
+192.0.34.19434-194.lax.icann.org
+192.0.34.19534-195.lax.icann.org
+192.0.34.19634-196.lax.icann.org
+192.0.34.19734-197.lax.icann.org
+192.0.34.19834-198.lax.icann.org
+192.0.34.19934-199.lax.icann.org
+192.0.34.20034-200.lax.icann.org
+192.0.34.20134-201.lax.icann.org
+192.0.34.20234-202.lax.icann.org
+192.0.34.20334-203.lax.icann.org
+192.0.34.20434-204.lax.icann.org
+192.0.34.205ansible1.dev.icann.org
+192.0.34.20634-206.lax.icann.org
+192.0.34.20734-207.lax.icann.org
+192.0.34.20834-208.lax.icann.org
+192.0.34.20934-209.lax.icann.org
+192.0.34.21034-210.lax.icann.org
+192.0.34.21134-211.lax.icann.org
+192.0.34.21234-212.lax.icann.org
+192.0.34.21334-213.lax.icann.org
+192.0.34.21434-214.lax.icann.org
+192.0.34.21534-215.lax.icann.org
+192.0.34.21634-216.lax.icann.org
+192.0.34.21734-217.lax.icann.org
+192.0.34.21834-218.lax.icann.org
+192.0.34.21934-219.lax.icann.org
+192.0.34.22034-220.lax.icann.org
+192.0.34.22134-221.lax.icann.org
+192.0.34.22234-222.lax.icann.org
+192.0.34.22334-223.lax.icann.org
+192.0.34.22434-224.lax.icann.org
+192.0.34.22534-225.lax.icann.org
+192.0.34.22634-226.lax.icann.org
+192.0.34.22734-227.lax.icann.org
+192.0.34.22834-228.lax.icann.org
+192.0.34.22934-229.lax.icann.org
+192.0.34.23034-230.lax.icann.org
+192.0.34.23134-231.lax.icann.org
+192.0.34.23234-232.lax.icann.org
+192.0.34.23334-233.lax.icann.org
+192.0.34.23434-234.lax.icann.org
+192.0.34.23534-235.lax.icann.org
+192.0.34.23634-236.lax.icann.org
+192.0.34.23734-237.lax.icann.org
+192.0.34.23834-238.lax.icann.org
+192.0.34.23934-239.lax.icann.org
+192.0.34.24034-240.lax.icann.org
+192.0.34.24134-241.lax.icann.org
+192.0.34.24234-242.lax.icann.org
+192.0.34.24334-243.lax.icann.org
+192.0.34.24434-244.lax.icann.org
+192.0.34.24534-245.lax.icann.org
+192.0.34.24634-246.lax.icann.org
+192.0.34.24734-247.lax.icann.org
+192.0.34.24834-248.lax.icann.org
+192.0.34.24934-249.lax.icann.org
+192.0.34.25034-250.lax.icann.org
+192.0.34.25134-251.lax.icann.org
+192.0.34.25234-252.lax.icann.org
+192.0.34.25334-253.lax.icann.org
+192.0.34.25434-254.lax.icann.org
+192.0.35.035-0.lax.icann.org
+192.0.35.135-1.lax.icann.org
+192.0.35.235-2.lax.icann.org
+192.0.35.335-3.lax.icann.org
+192.0.35.435-4.lax.icann.org
+192.0.35.535-5.lax.icann.org
+192.0.35.635-6.lax.icann.org
+192.0.35.735-7.lax.icann.org
+192.0.35.835-8.lax.icann.org
+192.0.35.935-9.lax.icann.org
+192.0.35.1035-10.lax.icann.org
+192.0.35.1135-11.lax.icann.org
+192.0.35.1235-12.lax.icann.org
+192.0.35.1335-13.lax.icann.org
+192.0.35.1435-14.lax.icann.org
+192.0.35.1535-15.lax.icann.org
+192.0.35.1635-16.lax.icann.org
+192.0.35.1735-17.lax.icann.org
+192.0.35.1835-18.lax.icann.org
+192.0.35.1935-19.lax.icann.org
+192.0.35.2035-20.lax.icann.org
+192.0.35.2135-21.lax.icann.org
+192.0.35.2235-22.lax.icann.org
+192.0.35.2335-23.lax.icann.org
+192.0.35.2435-24.lax.icann.org
+192.0.35.2535-25.lax.icann.org
+192.0.35.2635-26.lax.icann.org
+192.0.35.2735-27.lax.icann.org
+192.0.35.2835-28.lax.icann.org
+192.0.35.2935-29.lax.icann.org
+192.0.35.3035-30.lax.icann.org
+192.0.35.3135-31.lax.icann.org
+192.0.35.3235-32.lax.icann.org
+192.0.35.3335-33.lax.icann.org
+192.0.35.3435-34.lax.icann.org
+192.0.35.3535-35.lax.icann.org
+192.0.35.3635-36.lax.icann.org
+192.0.35.3735-37.lax.icann.org
+192.0.35.3835-38.lax.icann.org
+192.0.35.3935-39.lax.icann.org
+192.0.35.4035-40.lax.icann.org
+192.0.35.4135-41.lax.icann.org
+192.0.35.4235-42.lax.icann.org
+192.0.35.4335-43.lax.icann.org
+192.0.35.4435-44.lax.icann.org
+192.0.35.4535-45.lax.icann.org
+192.0.35.4635-46.lax.icann.org
+192.0.35.4735-47.lax.icann.org
+192.0.35.4835-48.lax.icann.org
+192.0.35.4935-49.lax.icann.org
+192.0.35.5035-50.lax.icann.org
+192.0.35.5135-51.lax.icann.org
+192.0.35.5235-52.lax.icann.org
+192.0.35.5335-53.lax.icann.org
+192.0.35.5435-54.lax.icann.org
+192.0.35.5535-55.lax.icann.org
+192.0.35.5635-56.lax.icann.org
+192.0.35.5735-57.lax.icann.org
+192.0.35.5835-58.lax.icann.org
+192.0.35.5935-59.lax.icann.org
+192.0.35.6035-60.lax.icann.org
+192.0.35.6135-61.lax.icann.org
+192.0.35.6235-62.lax.icann.org
+192.0.35.6335-63.lax.icann.org
+192.0.35.6435-64.lax.icann.org
+192.0.35.6535-65.lax.icann.org
+192.0.35.6635-66.lax.icann.org
+192.0.35.6735-67.lax.icann.org
+192.0.35.6835-68.lax.icann.org
+192.0.35.6935-69.lax.icann.org
+192.0.35.7035-70.lax.icann.org
+192.0.35.7135-71.lax.icann.org
+192.0.35.7235-72.lax.icann.org
+192.0.35.7335-73.lax.icann.org
+192.0.35.7435-74.lax.icann.org
+192.0.35.7535-75.lax.icann.org
+192.0.35.7635-76.lax.icann.org
+192.0.35.7735-77.lax.icann.org
+192.0.35.7835-78.lax.icann.org
+192.0.35.7935-79.lax.icann.org
+192.0.35.8035-80.lax.icann.org
+192.0.35.8135-81.lax.icann.org
+192.0.35.8235-82.lax.icann.org
+192.0.35.8335-83.lax.icann.org
+192.0.35.8435-84.lax.icann.org
+192.0.35.8535-85.lax.icann.org
+192.0.35.8635-86.lax.icann.org
+192.0.35.8735-87.lax.icann.org
+192.0.35.8835-88.lax.icann.org
+192.0.35.8935-89.lax.icann.org
+192.0.35.9035-90.lax.icann.org
+192.0.35.9135-91.lax.icann.org
+192.0.35.9235-92.lax.icann.org
+192.0.35.9335-93.lax.icann.org
+192.0.35.9435-94.lax.icann.org
+192.0.35.9535-95.lax.icann.org
+192.0.35.9635-96.lax.icann.org
+192.0.35.9735-97.lax.icann.org
+192.0.35.9835-98.lax.icann.org
+192.0.35.9935-99.lax.icann.org
+192.0.35.10035-100.lax.icann.org
+192.0.35.10135-101.lax.icann.org
+192.0.35.10235-102.lax.icann.org
+192.0.35.10335-103.lax.icann.org
+192.0.35.10435-104.lax.icann.org
+192.0.35.10535-105.lax.icann.org
+192.0.35.10635-
+PTRHostnames162.159.143.12
+aerorganic-systems.com anygonzalez.com asdhhgmigfdgf13fsdfds123123.com cgsignaturehomes.com chenimpression.com dasfsdfsdf.com dhsgdhjas.com domainextendcta.com dorsalmusic.com easyhizmet.com entridemo2.com faileddeliveryguymeir.com fairviewfamilydentistrypa.com forjanetadnssec.com forsaacademy.com g-dinner.com ge-dining.com guyentri1604.online guymeme.com guymetestalias.com guynetdomain.net guysmeirisguymeir.com hfdshfjsdhj4h5j.com hfgdshfgdshfds.com hfghsdfgdhs.com hfjsdhfjdshfjsdhf4554.com hgdghsdgasd22.com hjfjdshfjsdhfds.com hjhjhjgf6657.com hjhjhjhjh878.com hoopersoutdoors.com hvjhfjds.com jfdhsjfhds.com jghdfjghfdjghdjfhg454.com jghdfjghfdjghdjfhg454.net jghfdjghdfjghfdjh5guy.com jhgjhgjdfhgjdfhgjfd.com jhhfdsjfhsdjhfsd.com jhjhjh8u79u9.com joy5.com lincolnquietfire.com lowencolorgraphics.net manipulatethecoupon.com nonpublishsite.com nopermissiontipublish.com noprivacyguymeir.com oandmcf.com onlyprivacyanddnssec.com randpguy.com sabrec2.com sailthefjords.com sfdndplayers.club snsainfo.com spychers.com stasjonstunet.com tantalium.net testforentri.com thebedroomcentre.scot transferafterthefix.com transfermetosoccer.com visiduotica.com wirralschoolwear.com withincloud.com xn--4gbrim.net xn--mnchen-3yaa.com zanetapicasso.com IPDomain
+  162.159.143.12www.crownexteriorsfl.com, www.hopefulway.ch, www.friends-and-family-d.theprovidencechurchofgod.com, www.richardsbrosmachineryltd.co.uk, www.bezrazbor.com, www.picassosatplay.com, www.losmolcajetesct.com, en.friendslandscapingservices.com, xo-dition-red-flower.b2s-events.com, en.jarlogistics.org, www.obdiser.de, www.hoshizora-oneflower.com, www.lee-graphics-co.biz, www.miggraduation.amanceproductions.com, www.teamsassi.com, www.qetexas.com, pt.spaquantic.com, nl.decederboom.com, www.astrum3d.com, www.100cotes-belgique.com, www.tommyfagence.com, en.santurasangita.com, www.rapid-reach.online, www.littlechaostheory.com, www.sea-stives.co.uk, www.liderazgo3punto0.com, www.y3i9gs.nttlikedomains4.info, en.styleavia.kiev.ua, www.iqpalace.com, en.pointbreakconstructva.com, www.kelsallppg.com, www.joshuadavid.video, radina-family.kmoffittphotography.com, www.runesrhododendronpark.com, www.batalha-de-nerf-do-a.gringafestas.com.br, en.spoolanddone.com, www.learningfromplay.com, www.stefangobert-art.com, www.batatarainha.com, www.propertyinquirer.co.uk, www.daihatsunz.shop, www.jordaninthepines.com, ja.yamasho-kogyo.com, www.aurea-alta.com, www.rosewellness.se, katlin-benjamin.grindstonephoto.ca, en.smarthaven-store.com, www.suriyanarayanan.in, www.iit-womens-lacrosse.judithrackowphotography.com, www.vintagewatchesleuven.com, www.lazy-su.com, www.creaturesofhabit.au, www.lll-collective.woodard-photography.co.uk, www.anaconda-afro.com, www.kineclat.fr, www.beuniquesalonandtraining.com, www.gilmoursdigital.com, es.babelresearchlab.com, www.thesausagepro.com, www.jasminekimtattoos.com, www.stargemjewels.com, www.hercolorgreen.com, www.lejardindelapiboule.com, www.marcozeytin.com, de.sweetreasurysuite.com, www.maktoobcoffee.com, www.lykkemarkpsykoterapi.com, ru.socialsolidarity1.com, www.laoweiphotography.com, la.fakimalizobona.com, www.palmriskgroup.com, en.pictureperfecthomes.ca, comunions.fotosomriu.com, sl.mosthighministries.online, www.kidandcaboodleplay.com, www.juliepicot-accompagnement.fr, www.isabelocharity.com, www.peekaviewphotobooth.com, ko.fun-factory-ma.com, www.andresguzman.com.mx, www.cybersentrik.com, en.mattallensnookercoaching.com, www.martinlevac.com, af.tarapharmaceuticals.com, www.harrisoncollc.org, www.qdrodirect.com, www.dawsonmckay.com, www.jessehaynesauthor.com, www.hieloblanquita.com, www.agenda-genie.com, en.divinecarensafetynet.com, www.ignitedancers.com, it.artboxycontest.com, avani.thanushsakthivel.com, www.queervoicesinfolk.com, pl.odkuchni.co, en.cluttercards.com, www.nutherm.co.za, www.wildlife.imkhanfaisal.com, en.schuylerchamber.com, www.cogroetaers.com, www.dev-sitex-1459022727.wix-dev-sites.org, atelier-macarons-2.patisserieprivee.com, www.kittymeowgame.com, www.hurrahtrading.ca, tara-alex.kyweddingphotography.com, www.jandbhomeimprovement.com, www.slickenergyservicesllc.com, www.kunath-verladesystem.de, www.dev-sitex-1241481845.wix-dev-center-test.org, www.discovernessara.com, www.domoticadomelec.com, www.patselectriccorp.com, fr.ensemblevivonscharbonnieres.com, www.christinaandkyle.com, en.marineonestriping.com, www.relance.escritorafrancinecruz.com, www.rairakku.info, www.heatingwithcooper.com, www.angelajonestherapy.com, es.holyseedusa.com, www.sanderssaintberdoodle.com, www.recantoviladasflores.com.br, www.lighthouseagency-27080804.brprodaccount.com, essentiel-by-bernnan.studio-dieppedalle.com, de.gebäudereinigungaltinal.de, www.sfbridge.org, www.homerituals.net, olearyguth-2-57.housewrenphoto.com, www.jollystx.com, flow.kingscaremedicalclinic.com, www.jasmine-headshot.monikasportraitphotography.com, www.typicaldutchtour.com, www.centerhc.org, www.weareprojectbetter.com, www.qinxiyu.com, www.swimnowvegas.com, www.doctoroludeniz.com, www.massagelujuria.com, www.iccmaine.org, pt.mrkshop.com.br, www.madacruise972.com, www.dencorhomes.com, www.luciaeduilio.com, www.spiritlightsdesigns.com, www.daniel-r.imagesbyaprilg.com, www.rafaels.services, www.lyssaslizards.com, www.zoomizoomikidsclub.com, news.nanoverse.club, www.omeglp.com, www.wangdongcamp.com, www.giauskin.com, www.trimlum.com, www.institutomentepresente.org, www.threeblankets.com, www.k9supply.store, international-readin.bryanwofford.com, www.spillingourtea.com, www.talkingtherapy.com.sg, www.bushtrimmings.com, en.greenbarnparts.co.uk, dorothy-family-sessi.shutterviewphotography.com.au, www.investjapan.fund, www.excesscapitalfunding.com, www.anabeautyhawaii.com, robbie-whitney.beccaevansphotography.com, inaugurao-hamburguer.corumbaladas.com.br, www.migdentonphotos.usvetdesigns.com, en.emeraldseas.co.uk, www.dev-site-1x612-1.wixdev-sites.org, www.oloshubtech.com, www.syndicrs.com.br, www.tamycos.com.br, www.i105wkau.com, en.accidentalassistance.com, www.motsamaux.be, www.jeanbaptistehakim.com, www.revfood.com.br, www.swanson-family-4.kylieclaryphotography.com, www.midwestevaluationservices.net, en.kairos-id.com, www.lescontesdekasongo.com, estefani.estudiocarrossel.com.br, en.keepinspirationalive.com, nl.betterthanhungry.be, www.dfwhairhaus.com, www.projectcecilia.com, www.kayla-hurst-2022.rebekahlcreative.com, www.verticalaccessgroup.net, www.naturalisolea.ch, www.ania.nataliazieba.com, www.everenergy.com.tw, www.sirhenrys.co.uk, www.therunningshowlive.com, www.magdamaia.com.br, www.cjaquaticrestoration.com, www.fiddlefiggchihuahuas.com, www.mulsilk.com, es.iltechsolutions.com, www.masonelliottdesigns.com, hi.esolutions.net.in, www.vanguardmaterials.com, www.trickerloki.com, www.taylorabrown.com, www.skincarebyyara.com, www.atelier44bymyriam.fr, alina-kenny.fotogrin.com, pt.eurekatrading.com.br, www.wingpp.com.au, www.sanjosehostal.com, www.smithworkslighting.com, es.torahrestored.com, en.wyntercreativeco.com.au, en.allenwoodesart.com, halloween-ed-inf-1.cnsanglo.com.br, www.aracommunity.com, www.montgomerycollegeal.org, www.unpalmierasafenetre.com, pl.pirxspace.com, www.marceletjules.com, www.deleguo.com, www.luzyverso.com, www.gbcw.co.uk, www.estieandro.com, www.sallylburnsart.com, www.colibri-cytometry.com, www.effectiveenglishsolutions.com, pt.lurodriguesdesigner.com.br, pa1777983366366.littlefeet-photography.com, www.fojux.com, www.assetslinefinancial.com, www.sayitwithherbs.com, www.vats911.org, www.newtoneinteriors.com, www.dev-sitex-1756883203.wix-development-sites.org, www.anthony-johnson.com, en.archanascolourpencilstudio.com, www.classicalsinging.co.uk, www.scienceatomique.com, www.shotsbyjb.com, en.levelupbusiness.com.au, www.thunderriderpower.com, www.coolcarsigns.com, www.playsvo.com, www.cinandart.com, www.unifiedbuildsolutions.com, www.sagemeadowtownhomes.com, www.holiday-session-3.lmpphotography.org, www.unhurrd.com, www.h2aps.com, www.janinvita.com, www.emar-lab.com, www.atlgrassrootsfoundation.org, www.atelier-stephanie-etienne.com, www.shecanstudios.co.uk, www.tano.design, www.walthamfamilyschool.org, www.kaiwenchuang.com, www.higa-al.okinawa, www.erica-charlie.louisajones.com.au, www.templofuentedevida.com, www.esholtwmi.com, www.documental.fotoangulo.com, www.sweroclothing321.com, www.themartletbarbershop.com, www.daisyhuntphotography.com, en.skyhaul.ca, www.shk-studio.be, es.somaticsounds.com, www.sadieandjaceseries.com, www.k3aautomotive.com, en.studiolashionista.gr, www.guidingstarpsych.com, www.wildcatboats.co.nz, www.drpazaccounting.com, www.senzara.in, www.sgsglassandhardware.com, corn-soup-saturday.tntga.org, fit-fest.modamovementco.com, www.servagua.com.br, www.nofal.torino-international.com, www.heilbehelf.com, www.flow.healthaiweb.com, de.changement.ch, www.southshoretastingtours.com, emma-rickert-gra-1.jasonbowiephotography.com, www.scorpioelement.com, www.kingkbliteon.com, www.westburyparkorchestra.com, www.xavierretreathousebaga.org, www.skinbyk.ca, www.dance-a-difference.org, www.imoblancamentos.com.br, llk9pt1e.nttlikedomains2.info, www.getpeaced.com, www.theparkkeeper.com, www.jakekkelly.com, pl.cfmoto-goes.com, www.fraservalleycommunityfootprint.ca, www.bitofbelts.com, da.2ndhand4horses.dk, www.stryke.dev, www.qianaloveskevin.com, www.juliaraich.com, www.roadhero.com.au, www.limitlessleadership.net, www.stinshoff-immobilien.de, kelsey-family.browtinephotography.com, www.chilltech-inc.com, www.twobirdscafe.com.au, www.betterback.co.nz, www.cjrbuildingsolutions.co.uk, www.bluebirdmn.com, www.deadmossmercantile.com, yllslevi-2026.christer-adahl.com, www.bankboundbullyz.com, aniversrio-do-11bpmm.pauliservsp.org.br, fr.sunsettoursandtransfers.com, www.museociviconoto.it, www.tangoflow.club, www.august-chapter-meeti.cvma33-7.net, www.baile-carnaval-2023.guerigueri.com.br, www.lymphaticdrainage.info, www.agameredithdesign.com, en.waldotires.com, www.therockcorp.co.kr, www.mep-h4-llg.com, www.loungecatstudios.com, en.hiracreations.com, www.catpalacescreenprinting.com, dev-sitex-1342813321.wix-development-sites.org, www.marinasirtis.tv, www.chisinyoramcv.info, www.jonescleaningandrestoration.com, nl.amsterdameboats.com, th.iroha168rentacar.com, tr.hederarome.com, www.vfiproducciones.com, fr.quatreettrois7.com, www.ardesirecreations.com, ja.keepthatsamegreenenergy.org, en.pilgrimsofpeace.com, de.proth-o-type.de, www.crissygaskinscoaching.com, en.my-vxw-site-9qu8od.com, www.alwatanart.com, pt.produtostopem.com, www.koby-theo-lucian.louellaphotography.com, dev-site-1x1426-1.wix-dev-center-test.org, www.byjalyninteriors.com, fr.lapigotte.fr, www.actionjack.net, www.briannainoa.com, www.rodrigootake.com, february-luncheon.blackhawkbloomers.org, www.gildedsilvercoins.com, es.dike-bikefitting.de, www.luan6meses.juaraujo.com, www.coragracecollection.com, pt.belezaunica.net, www.locinlove.com, www.coursecorrectionllc.com, www.tomdheere.com, www.katiemoxbets.com, www.jstewartbooks.com, www.borambilmerinos.com, www.boots-coach.de, www.bairdandwhyte.com, www.midlifehustling.com, www.thebritishieltscoach.com, www.lovesmile.co.uk, raine-jesse-2.jessicasharpphotography.co.uk, sonny-leila.emberwoodcreative.co.uk, it.beia.co.uk, www.fulfillmentlending.com, www.trackline-networks.com, www.stalbanscyclehub.co.uk, www.itzhakkerem.com, www.dev-sitex-1962198095.wix-development-sites.org, www.lonestar-inspections.com, www.wakaifarmmy.com, www.stgdsc.com, da.robopets.co.uk, www.sgproto.com, www.graficanicole.com, www.ogatatime.com, www.lindseywalton.net, shop.thehustler.be, www.nikkisevigny.com, www.pinkkhairdesign.com, www.bramptonbuzz.ca, www.fabersappliancerepair.com, www.igla.com.ar, www.apexdataix.com, www.foundersoysterfarm.com, en.threadsofintention.com, dev-site-1x7953.wix-dev-center-test.org, www.pa1639580695420.odl-online.de, www.goferrefer.com, www.nigelpatersonart.com, www.drclaremanning.com, www.lalauranieves.com, www.thewstech.net, www.melendrezconsulting.com, www.romans-cake-smash.picbyp.com, www.thegiftcompanylondon.co.uk, www.kristinanarrates.com, www.kristienzenkov.com, www.bry-jewelry.com, fr.dstylecut.com, www.thealtgate.com, www.medhelpus.com, ashley-gregory.southcoastentertainmentma.com, www.rhdkinvestments.com, www.summer-playscheme-3.loosc.org.uk, www.currypizzahousefranchise.com, en.warzonestreetwear.net, www.schwarz-kuehle.de, www.evans-family-45.ashleyreddingcreative.com, f3se8o.qatestbigacc1.com, de.waldzertifikate.com, www.owen.mademoiselleloic.be, www.sy-ayoka.com, fr.sarasarres.com, www.jennycancleaning.com, www.pikahits.net, www.4240-twp-hwy-144.tydawsonphotos.com, www.cfatutor.com, www.entrenandoconeric.net, www.lightsonthelawn.com, www.quarryst.co.uk, www.sjns-jo.com, www.tv-p.be, www.isabelladvertising.com, www.dorainslawncareocala.com, www.escutia-motors.com, www.lorenadecoration.fr, www.acousticgardenmusic.com, www.xandertilock.com, www.srmarka-sndagstur.felbabphotography.com, www.fracieloemare.com, ja.perros-awaji.com, www.seo-freelancerin.com, www.shebecame.com, www.officialadrianarosales.com, www.spirithawkgallery.com, www.myrejuvenate.org, www.ax-advocaten.nl, www.emergedoula.com, www.breezeautowholesale.com, it.unibrasileiraeuropa.org, en.grbhealth.com, www.hemostat-vitamins.com, www.tfrench-levine.com, www.renispapierwerkstatt.com, www.smaalconstruction.com, www.stmcr.ie, en.tutormom.ca, www.thegrazegirl.com, www.domusperfecta.fi, www.doula-carlotta-rausch.de, www.ibcnaturals.net, pt.festasim.com.br, en.teenmentalhealthsociety.org, en.velliottart.com, www.toysrusplus.com, www.rtmartialarts.info, alissabridalshower.portraitsbydiana.com, www.havuhoshi.fi, es.nikeraclean.com, es.seninarquitectura.com, www.theprojectus.org, www.erika.luanabertiphotography.com, www.abtraining.online, dev-sitex-1201673996.wix-development-sites.org, www.mrfimmobilier.com, www.fivebyfivejazz.com, www.ucalexports.com, www.ayzamobilya.com, www.lolas-documentaries.com, www.reverse-manufacturing.com, www.lahotwings.biz, www.onsoco.com, www.claritahaast.com, www.theocpdcoach.com, www.medica-schmerzfrei.com, www.ingridshealinghands.com, www.salt-piercing.de, www.bambinitoys.shop, www.pintell.org, www.jah1st.co, www.stimulus.design, www.vsuero.art, www.andrewcmfilms.com, www.endgrainchopshop.ca, en.locksbyliz.com, www.nonoli.com, www.thetrainingjedi.com, www.hausdermusiklangen.de, tarpon-pics.fishslappedcharters.com, evyn-shawn.thomkphoto.com, www.rayshawn-night-prom.zabianproductions.biz, www.jcollieraudio.co.uk, www.mountainstosoundrealestate.com, www.yukanemoton.com, dev-site-2x551.wixdev-sites.org, lanix-colombia.paralavida.net, www.shannon-cat-matern.mw-sweetpeaphotography.com, en.dapperrijk.com, www.aniversrio-melina-04.castelovillaimperial.com.br, www.nettievisionphotographyllc.co, en.veritascapitalsgroup.com, www.thaihaven.com, www.ameribulgmaint.com, www.nenusaithamsamajamkosam.com, www.customdesignsbyshay.com, www.immigconsulting.com, www.bsclnz.com, www.memberkits-zweirad-t.desmo-owners.club, en.sevenheavensclub.com, www.8thflatpodcast.com, www.jam-or-jab.chocolatewomilkk.com, www.the-oh-hellos.thehotspotsnetwork.com, www.kmservicesaberdeen.co.uk, www.justicecontractors.com, www.koreahomestaging.co, www.cazallc.com, www.misuro.store, www.m-carroll.ericvisions.com, www.coztecconstructions.com.au, fr.irenestudio.ch, www.media-neos.com, www.capoeira.jp, www.brokenpaddlestable.com, 2025-shs-jv-black-kn.denicedutralaveris.com, www.5ma.com.au, en.slabrosse-artistepeintre.ca, www.hanaculbreath.com, www.mark-julie.markstinchon.com, www.thirdthirdfilms.com, pt.alertyservicos.com, www.catrike.com, pt.movantobarbearia.com.br, www.francescacleaningservice.co, www.sinowealthengine.com, www.drksawchuk.com, pt.drapersmiles.com, www.omgintl.com, en.centrosuzukinh.com.br, www.cayogahk.com, shanika-arnett-3.darlenesfamilyportraits.com, www.b3-life.com, es.soulrealtherapies.com, en.ivsweetdrip.com, www.crittersncrayons.com, www.srmnyc.com, fr.kidsonlinelearning.com, www.instascams.com, vi.ags-engineering.com, www.davidvittoria.com, www.jbrushphotography.com, www.projekt-stillleben-2.ur-vieh.com, www.associazionedariosimonetti.it, www.thermatec-odenwald.de, www.markscrafter.com, www.blanketsbyemily.com, www.sophieobwexer.de, www.finehomesbychristine.com, www.mentalhealthdrmaierhofer.at, www.kvikkgroup.com, www.ajicom.co.kr, es.tasteofgreatness.org, bh.zrellabltd.com, www.ranchodelalunarecords.com, www.amzoncare.com, www.flow.mayknowsbestcleaningservices.com, www.upstartly.co.uk, nathalie.njphoto-cannes.com, www.whiteharteburnham.co.uk, www.memorial-day-dinner.vshoa.org, www.marinovalentino.com, www.layara.info, en.miramshopp.com, en.ckspirits.club, www.candicegibbons.com, www.hann-ya.com, www.opdatemetjezelf.be, www.successdigitalllc.com, it.adamaconsultoria.com.br, www.english-4u.ch, creativemovement.dancelifephotos.com, www.wagnerareagrowth.org, www.vanblauw.com, www.theseippelcenter.org, www.nhassessing.com, www.flow1chrisllc.com, wa.grandoceancompany.com, www.crikeybottoms.com, www.whimsybookwagon.com, www.rebootpaincenters.com, en.vulevu.co.za, www.sugargoated.com, www.romainyogamassage.com, www.housbei.com, en.limesoluciones.com, www.sekiharalawoffice.com, www.hepdem.co.uk, www.petpittsresidence.com, www.litianqi.work, www.calixbeauty.com, en.neusine.com, www.nupurpai.com, es.tunutricionoptima.com, www.hanhorlicktraining.com, www.imagenvipmexico.com, www.lsdnaturals.net, www.bauhaus-kitzingen.de, www.tygift.com, www.alittleblogger.com, www.tswy-nov-2019-1.bluechildentertainment.com, www.pappercs.com, en.hunt-a-moose.com, kris-anne-spooky.meaganjeneanephotography.com, www.proedgesolutions.net, vietnam.mararepetto.com, www.coromandelhair.com, www.scalp-aesthetic.ch, crazy-kids-gauklert.tanz-und-bewegung-ssv-breisach.com, ward-parkway-prek-24.loganwassallcreative.com, en.ectrosolis.com, www.darmstadt-trails.de, www.i4industriesinc.com, www.leanna-haley-engage.tsepolishedprints.com, www.awabeads.com, www.grayrosepropertiesnc.com, www.aripicaldi.com, www.time2shine.pro, en.marketingmerx.com, www.walgravebenefice.org, www.dellamas.com, www.sophiamartinsusa.com, www.morgan2023.mirrormepro.com, www.luvglosthetics.net, de.books-on-the-go.com, www.luxuosaatacado.com, www.jsainnovation.com, en.seekingselahphotography.com, www.angeldivadesigns.com, www.robinsoneliteperformance.com, www.maineresists.com, www.purposeeventspace.com, pt.graficafox.com, www.southpacifickava.com, www.everythingbayrum.com, www.cindyaustin.jennahoskinsphotography.com, www.brand-unison.com, www.msuifc.com, www.revistamidia.com.br, www.rajeevranjan.in, en.jpcustomconstruction.org, ashley-vance.brittwut.com, www.armstrong-flowers.sugarbelleco.com, francesca-mark.margessonphotography.com, www.meeghan.com, www.drinksozu.com, www.tambapartners.com, www.sirene.bitclubbing.com, www.faithhomes.co, www.bcsdfoundation.org, sv.ren-lyx.com, www.ted73.com, hi.maharaja-dining.com, es.iglesiadunamis.org, www.walnutgrovehoa1.com, fr.3dominion.store, www.mejorestarseguros.org, www.chrisgruchacz.com, www.sew-inclusive.com, www.microart.photos, www.selectinstallations.co.uk, www.palatine-v-portarlin.patahernphotography.com, www.sandcluxurycollc.com, real-estate-interio.mehdi-khalid.com, charlotte-bart.mcbfotografie.com, www.white-rabbit-restaurant.com, www.lemonwiltshire.co.uk, www.waldpfoten.com, www.familientherapie-neuss.de, www.hufvudstagard.se, www.sweetlemonphotographywv.com, www.localleaguewfblog.com, jojo.greeceweddingphotographer.gr, www.unasapres.com, www.sergiocontreras.com, www.sandbarsale.com, www.lavitadasogno.com, www.mollielam.com, en.velrastar.com, www.pa1640371164081.suzybeephotography.com, en.johnson-pleasures.com, www.pinnaclecbi.com, www.enhanceyourvoice.com, fr.elvientoafavor.net, www.sinbad-the-sailor.act-two.info, www.af4s.com, pt.kinoshitaadvocacia.com, www.audry.lesannphotos.com, www.verenastanitznig.at, www.virtuallygoodtrivia.com, www.patientpreferred.org, www.createavisionhrconsulting.com, www.bigbluerocket.com, www.yesdrive.co.uk, ru.babphuketeatandtrip.com, www.isseafrica.com, www.aerodynewind.in, ja.thenccu.org, www.elephantmoonuk.com, www.rjisearch.com, www.studiochinegestioni.it, www.teambobell.com, sv.primeproductions.fi, www.no-6-bea-boreham.jonathancundyphotography.co.uk, www.mikoing.hu, www.guest-connect.fr, w8mohq.nttlikedomains2.info, www.ascelaymf.org, www.recovery-gifts.com, ja.atelierjei.com, crp-crtl-snck-240226.adonisstudiophoto.com, www.enbraer.org, www.marketeasetech.com, fr.h2nostrum.org, www.lurdez.com, www.willverdeja.com, www.katherinemaver.com.au, pl.indianladiesfirst.com, www.romanmacrae.com, pt.stagia.com.br, ar.ayalaph.com, en.miraclecherithcapital.com, it.villanocetesero.com, www.fangmatcha.com, www.aeimagingpdx.com, www.abdulrahmanfuneralfoundation.com, www.kimbercloses.com, www.lespremontres.fr, www.clnutritionpozuelo.com, church-pictures.hlcroanoke.org, www.kinetikmelb.com, en.nj4haiti.org, www.techimpactsalliance.com, www.geothermalweek.co.nz, zh.mitchellitkin.com, ja.potphotoschool.com, fr.indigodiaries.com, www.turkish-cooking.aasingapore.com, www.2849-reedcroft-dr-fa.photoscasa.com, www.the-event-1.daishin-home.net, www.katie-extended-famil.lizbrewerphoto.com, www.evsolutionswa.com.au, www.fpdsinnovationlab.org, www.chicomorais.com.br, www.winevalleyinnpalisade.com, www.ivorywillowbridal.com, www.morselsbyhannah.com, www.conselrc.com.br, www.perfectchartersales.com, www.beckpocket.com, www.shulaydesign.com, www.dusselidergi.org, www.podcasthus.li, jessica-peltier.sugar-n-spice-studio.com, fr.turismoactivograncanaria.com, www.coastrepair.com, www.passedfromfather2son.com, en.ntakejuice.in, tricou23-1-73--54.worldcheerco.us, www.paulymorphed.com, www.shootersparadisellc.com, www.theskinmagician.co.uk, www.pittandreychev.com, baby-shower-day-phot.krystalklearimaging.com, www.wakrri.testingbigaccountcooldomainname6.com, ru.moldekonferansesenter.no, www.larson-family.kmuellerphotography.com, www.pablov.art, www.flo-freestyler.com, www.runrhaw.com, www.myndbiotech.com, www.christinafamily.brandiautry.com, www.revivingindividualism.com, www.private-portfolios.idl-arts.com, www.mariposariodemalinalco.org, fr.maineanjoupeche.com, www.groovymama.com.au, www.cities21.org, ja.h2richlife.com, dliwen-an-der-loire.peugeotclassic.lu, www.jessicagonzatto.com, www.termlytest.com, www.cozycarecleaning.com, www.cavallineconsulting.com, www.prehistoric-watson-b.brisatropicalodge.com, www.aviators-loft.com, www.soundguidance.com, www.adifferentpath.info, pt.lesvinsdelucien.com, www.uniquetouchportraits.com, www.buffysautospa.com, dev-sitex-1841040610.wix-development-sites.org, www.waynemowery.com, tr.troad.org, www.insiderappartement.de, www.depalmamedfield.com, www.ivan-jessica.sun-moon.com.au, ar.valencialiving-guide.com, www.girlsaregreatatmath.com, www.6201residences.com, spencer-family.jpatagraphy.com, www.sycamoreaccountingservices.com, www.3gcgroup.com, en.detetivesnobrazil.com, www.mita-ah.com, www.sunheadsproductions.com, www.keiseitaxi-kazusa.com, www.jjtconsultantsllc.net, www.gen-impact.ca, www.harlowfamilygroup.com, hi.goodhealthtech.org, www.slampukecvntyevnts.com, www.kdaccountingservices.co.uk, www.trampolineteaching.com, www.herrmannconstructioncompany.com, www.havayasornakliyat.com, www.narcytec.com, www.manasababyshower.thecandiddiaries.com, www.zeus-juice.info, www.made-in-drc.com, www.jordanpaulclarkeperkins.net, www.afyoncocukdishekimi.com, www.enjoystem.net, www.theoldemagnoliatearoom.com, fr.rena-eco.com, www.marvelfinserv.com, www.images-of-me.com, www.orbitomedia.com, www.mirildanmalar.com, www.celebracin-dia-de-la.whatscool.net, www.cookmedicaldepot.com, www.abel-film.com, www.adoringarmsmi.net, www.grandmassigstore.com, ar.mahukukdanismanlik.com, en.olivea-luxury-suites.com, www.barnsleyingrowntoenailclinic.co.uk, ittco.rocketworks.xyz, www.zuzanaamilan.pandorasbox.sk, www.luizsalles.com.br, www.chestercountycraftshow.com, www.aquarelafilmes.com, en.liveloveandlaura.com, www.sandra-y-anonio.mustachefotomaton.com, www.northstarstudiosla.com, www.minifleetenterprises.com, www.marcgebhardt.com, its-family-time-2.d3s.in, www.etsosengfoundation.org, www.sansei1997.com, www.innovatika.mx, www.badbbotanicals.com, www.ktakayama.com, www.eboniganiouslegacy.com, es.impresorasmadrid.es, www.madame-angela-vani.aidevillageois.org, www.avps.ca, www.buttercutgolf.com, www.paulas-birth-story.angelscribphotography.com, www.ushijima-sash.com, www.parisacademiedart.com, www.johngreenhouse.org, anna-ozzy.f20visuals.com, www.rajuebenezer.com, www.all-root.com, www.sportathon.co.uk, nt2ij7.testingbigaccountcooldomainname7.com, www.johncarrera.com, ihv6gdob.nttlikedomains3.info, www.centronutrizioneminetti.com, dev-sitex-1251619429.wixdev-sites.org, www.dweiserphotography.com, www.grupoeducacionalinfinityx.com.br, www.artemiskitabevi.com, www.up00cycled.co.uk, www.extraordinarymother.com, pt.levantasamba.com, www.sarisatechnologies.com, www.candylandstudios.com, www.eurochefpanama.com, www.1miraclefoods.com, vi.toannhatviet.com, www.3rivershomeservices.com, fotografvpafose.photoviptour.com, www.nextarteditions.com, id.thewanderingmigrant.com, www.alaskawillsandtrusts.com, www.hundezubehoeraustria.com, www.miomas.com.br, www.cghlifegroup.com, www.mariambaig.com, es.iglesiabautistabetel.com, www.theinternalstory.com, fr.cultivatingkingdomcitizens.org, en.cleanersandmore.co.uk, www.bluebonnet26.com, www.slarsenphoto.com, www.starzpuntacana.com, www.urgentmessagemusic.com, en.thequadcda.com, eddie-becky.rellsphotography.com, www.kjsportfolio.org, www.counselling-centre.org, en.perryknightlaw.com, www.ericguillemainphoto.com, www.michaelmariefc.com, www.vividvibesboutique.com, our-wedding-17.takeyourmoment.com, www.yesitsgerman.com, www.southbayhandsonart.com, www.untitled-album.schwanburgcafe.com, www.btgofaurora-il.com, hi.letandoor.ca, neuquen.smartdrink.com.ar, www.airsens.cl, www.covenantefc2023.makorsevents.com, tiny-yogis.ashlynndereef.com, www.darden-family.kelseyraephotography.com, www.caringforcornwall.co.uk, www.esoven.com, or.web3baychop.com, www.ahfsolutions.org, ru.apartamentykoszalin.com, www.ironhivegym.com, fr.masileetriviere.com, www.juicyteashop.com, www.theeastfieldpub.co.uk, pa.maisara.in, www.nicholasroy.org, www.elmontecarneseca.com, fr.montlambairparapente.com, www.wanakachiropractor.nz, marshall-50th.blackstarscotland.com, www.teddyfoxdesign.co.uk, en.egashopping.com, www.youngvmusic.com, www.aiesecalumni.pr, nl.dztalentsolutions.com, www.renewmedcenter.com, www.trevondaley.ca IPDomain
+  97.74.106.17garyalpertandassociates.com, enavar.com, www.garyalpertandassociates.com, www.enavar.com97.74.107.28www.outreachstrategist.com, highloads.com, portaluat.alafaqinsurance.com, higmantranslation.com, webdisk.aw-autoglas.de, www.montroseoutdoors.com, www.portaluat.chedid-insurance.com, netstair.biz, iris-momentum.chedidre.com, portalapiuat.alafaqinsurance.com, aw-autoglas.de, www.roofing-costs.com, portaluat.chedid-insurance.com, www.iris-momentum.chedidre.com, verulams.co.uk, portalsvcuat.alafaqinsurance.com, www.lax6.org, cpanel.aw-autoglas.de, maxrealtybusiness.com, portalapiuat.chedid-insurance.com, www.aw-autoglas.de, www.maxrealtybusiness.com, portalsvcuat.chedid-insurance.com97.74.106.7www.needdogtor.com, umaisushi.de, www.sanslifesciences.co.in, www.umaisushi.de, sanslifesciences.co.in97.74.106.47www.treasuresadventure.com, delgadoimportadora.com, adrianahempen.de, outsourcing-beratung.de, mail.treasuresadventure.com, www.delgadoimportadora.com, www.outsourcing-beratung.de, webmail.treasuresadventure.com, treasuresadventure.com, autodiscover.treasuresadventure.com, cpanel.treasuresadventure.com97.74.107.48atments.com, naturalhealth.fit, cpanel.naturalhealth.fit, mail.dorfkiosk-pfaffenweiler.de, mail.nexus-m.de, webdisk.naturalhealth.fit, www.fictionized.de, fictionized.de97.74.107.18www.blackgrass.de, www.quadrumdigital.com, gynecologyconference.org, www.shwetshakti.com, viby.me, grocebazaar.com, en.shwetshakti.com, muenster-bewegt.de, www.admin.thepigeonholecafe.com.au, www.muenster-bewegt.de, www.meinbewerbungsvideo.de, meinbewerbungsvideo.de97.74.107.38loansbook.com97.74.106.27www.kaglysp.co.za, www.simpli.mx97.74.107.8www.naturebact.com, www.andrealofgren.com, hightideorl.com, www.hightideorl.com |Name|Institution|Role on Board|Nationality/Region|
+|-|-|-|-|
+|**Graeme Munro**|**JPMorgan Chase**|**Chair of the Board**|USA|
+|**Samantha Emery**|**Lloyds Banking Group**|**Deputy Chair**|UK|
+|**Artie Ambrose**|**Citi**|Managing Director, Global Head of Services Operations|USA|
+|**Bernard Carless**|**FirstRand Group**|Head of Payment Market Infrastructures|South Africa|
+|**Christopher Cherdel**|**Banque Cantonale Vaudoise**|Managing Director|Switzerland|
+|**Michela Cicenia**|**Natixis**|Global Co-Head of Global Trade|France|
+|**Marc De Rycke**|**Euroclear**|Strategic Participation Integration and Value Creation Lead|Belgium|
+|**Joanne Fraser**|**Standard Chartered Bank**|Managing Director, Head of Transaction Banking UK|UK|
+|**Tomas Kindler**|**SIX**|Global Head Exchanges, Member of Executive Board|Switzerland|
+|**Elvira Kruger**|**ING**|Head of Transaction Services|Netherlands|
+|**Raouf Soussi Laghmich**|**BBVA**|Head of International Solutions|Spain|
+|**Niklas Lemberg**|**Nordea Bank**|Head of Industry \& Infrastructure|Finland|
+|**Na Liu**|**Bank of China**|Deputy General Manager, Compliance Officer of Clearing Department|China|
+|**Dirk Mampaey**|**KBC**|Senior General Manager Banking Products|Belgium|
+|**Noritoshi Murakami**|**MUFG**|Managing Director, Head of Transaction Banking Division|Japan|
+|**Mauro Pernigo**|**Intesa Sanpaolo**|Global Transaction Banking Business Director|Italy|
+|**Philippe Renard**|**CACEIS Group**|Deputy Chief Executive Officer|France|
+|**Samuel Riley**|**Clearstream Securities Services**|Chief Executive Officer|Luxembourg|
+|**Jason Storsley**|**Royal Bank of Canada**|Senior Vice President – Savings and Investments|Canada|
+|**Ethan Teas**|**Commonwealth Bank of Australia**|Executive General Manager Payments|Australia|
+|**Yvonne Yiu**|**HSBC Hong Kong**|Regional Co-Head of Global Payments Solutions, Asia Pacific|Hong Kong SAR|
+
+**Key interlock:** The Chair of the SWIFT Board is **Graeme Munro**, Managing Director and Chief Controls Manager for **JPMorgan's Corporate \& Investment Bank**. The Deputy Chair is **Samantha Emery**, Director of Payments, Industry and Development at **Lloyds Banking Group**, who previously led payments supervision and fintech strategy at the **UK Financial Conduct Authority**.
+
+### 1.3 SWIFT Executive Management
+
+|Name|Role|
+|-|-|
+|**Javier Pérez-Tasso**|Chief Executive Officer|
+|**Rosemary Stone**|Chief Corporate Officer|
+|**Mike Manos**|Chief Technology Officer|
+|**Thierry Chilosi**|Chief Business Officer|
+|**Maria Goranova**|Chief Financial Officer|
+|**Cate Kemp**|Chief Risk and Control Officer|
+|**Jerome Piens**|Chief Operations Officer|
+|**Thomas Delaet**|Chief Product Officer|
+|**Nathan Van de Velde**|General Counsel and Company Secretary|
+|**Wendy Zidan**|Chief Human Resources Officer|
+
+### 1.4 The Surveillance Architecture
+
+**The Terrorist Finance Tracking Program (TFTP):**
+After 9/11, the U.S. Treasury Department secretly subpoenaed SWIFT data (2001-2006, revealed 2006). The program allowed the U.S. government to monitor international financial transactions without warrants.
+
+**The Five Eyes Integration:** SWIFT data is shared with the Five Eyes intelligence alliance (U.S., UK, Canada, Australia, New Zealand). The EU negotiated limited safeguards after the 2006 revelation, but the fundamental architecture remains: **every cross-border SWIFT message is potentially visible to U.S. intelligence**.
+
+**Sanctions as Topological Weapon:**
+
+* Iran disconnected from SWIFT (2012, partially reconnected 2016, disconnected again 2018)
+* Russia faced partial SWIFT exclusion (2022)
+* The weaponization of SWIFT demonstrates that the network is not a public utility but a **geopolitical control mechanism**.
+
+**Causal Chain:** U.S. geopolitical objectives → Treasury/OFAC designation → SWIFT compliance directive → topological severance of target nation → economic paralysis → population suffering.
+
+\---
+
+## PART II: THE CLEARING HOUSES — The Invisible Vaults
+
+### 2.1 DTCC — The Depository Trust \& Clearing Corporation
+
+**Key figures (2024/2025):**
+
+* Revenue: $2.49 billion
+* Net income: $487.8 million
+* Total assets: $122.6 billion
+* Employees: \~5,000
+* Headquarters: Jersey City, NJ
+
+**DTCC Executive Committee**
+
+|Name|Role|Background|
+|-|-|-|
+|**Frank La Salla**|President and CEO||
+|**Lynn Bishop**|Managing Director, Chief Information Officer (CIO)||
+|**Nadine Chakar**|Managing Director, Global Head of DTCC Digital Assets||
+|**Timothy Cuddihy**|Managing Director, Group Chief Risk Officer||
+|**Andrea Gibbons**|Managing Director, Chief Human Resources Officer||
+|**Renee LaRoche-Morris**|Managing Director, Chief Financial Officer|**Former State Street** (Chief of Staff to COO; head of Integration Management Office for Brown Brothers Harriman acquisition); **Former BNY Mellon** (COO Investment Management, Interim CFO Investment Management, CFO Wealth Management); **Former Pershing LLC**; **Former Deloitte Consulting**|
+|**Gloria Lio**|Managing Director, Head of Enterprise Services||
+|**Ann Shuman**|Managing Director, General Counsel||
+|**Brian Steele**|Managing Director, President, Clearing \& Securities Services||
+
+**Key MDs and Executives:**
+
+* **Susan Cosgrove** — President, Clearing \& Securities Services (former CFO since 2013; now also Chair of ITP Board of Managers)
+* **Timothy Keady** — Chief Client Officer; Chair of DTCC Deriv/SERV LLC Board and DTCC Data Repository boards (U.S., Ireland)
+* **Syed Ali** — Managing Director, Repository \& Derivatives Services
+* **Nellie Dagdag** — Managing Director, APAC Enterprise Services
+* **Laura Deaner** — Managing Director, Chief Information Security Officer (CISO)
+* **G. Daniel Doney** — Managing Director, Chief Technology Officer, DTCC Digital Assets
+* **Michele Hillery** — Managing Director, Head of Repository \& Derivatives Services
+* **Jim Hraska** — Managing Director, DTCC Consulting Services
+* **Tim Hulse** — Managing Director, Financial Risk \& Governance
+* **Matt Johnson** — Executive Director, ITP International Strategy and Industry Relations
+* **Talia Klein** — Managing Director, Head of Wealth \& Investment Solutions
+* **Laura Klimpel** — Managing Director, Head of Fixed Income and Financing Solutions
+* **Priya Kundamal** — General Manager, Head of DTCC Data Repository, Singapore
+* **Tim Lind** — Managing Director, DTCC Data Services
+* **Valden Paes** — Managing Director, Head of Enterprise Digital Solutions
+* **Johnna Powell** — Managing Director, Head of Technology, Research and Innovation
+* **Justin Schwartz** — Executive Director, Product Management for Wealth Management Services
+* **Bob Stewart** — Executive Director, Chief Client Office
+* **Thomas Sullivan** — Managing Director, Head of DTCC Digital Assets Solutions
+* **Dan Thieke** — Managing Director, Head of Enterprise Resiliency Office
+* **John Vinci** — Managing Director, Head of Secured Funding and Collateral Management
+* **Adam Watson** — Managing Director, Head of Asset Services
+* **Oliver Williams** — Executive Director, APAC Business Development Lead, Repository and Derivatives Services
+* **Michael Winnike** — Managing Director, Head of Strategy and Market Solutions
+* **Val Wotton** — Managing Director, Global Head of Equities Solutions
+
+**DTCC Board of Directors:**
+William (Bill) Capuzzi, Roland Chai, Massimiliano Ciardi, Kelley Conway, Nigel Faulkner, Brian Gallagher, Christopher Gelvin, Jon Herrick, William Hirshorn, Stephen Hood
+
+### 2.2 DTC \& Cede \& Co. — The Great Enclosure
+
+**Critical fact:** DTC appears in issuer stock records as the **sole registered owner** of securities deposited at DTC. **Cede \& Co.** is DTC's nominee — the legal record owner of virtually all publicly traded U.S. securities.
+
+**The scale:**
+
+* 3.5 million securities issues in custody
+* $87.1 trillion in value (2022)
+* $2.5 quadrillion in transactions processed (2022)
+
+**The Tokenization Gambit (December 2025):**
+The SEC granted DTCC a **No-Action Letter (NAL)** allowing it to tokenize securities while bypassing:
+
+* Section 19(b) of the Securities Exchange Act (public comment)
+* Regulation SCI (systems testing)
+* Rules 17Ad-22(e)(1)-(23) and 17Ad-25(i)-(j) (default management, governance controls)
+
+**The registered owner remains Cede \& Co.** The tokenization does not restore direct ownership to beneficial holders.
+
+### 2.3 Euroclear \& Clearstream — The European Vaults
+
+**Euroclear**
+
+* Founded 1968, Brussels
+* €37+ trillion in assets
+* Links to 150+ CSDs
+
+**Euroclear Leadership:**
+
+* **Bernard Frenay** — CEO of European Markets
+* **Guillaume Eliet** — Group Chief Risk Officer \& Executive Director
+* **Edwin De Pauw** — Managing Director and Group Head of Compliance and Public Affairs
+* **Isabelle Delorme** — Head of Product Strategy \& Innovation
+* **Gareth Jones** — Head of Product Management, Settlement
+* **Mireille Galeazzi** — Director, Public Affairs
+
+**Clearstream** (owned by Deutsche Börse since 2002)
+
+* Founded 1949 (as Cedel)
+* €20+ trillion in assets
+
+**Clearstream Executive Boards:**
+
+**Clearstream Holding AG:**
+
+* **Samuel Riley** — Chief Executive Officer (also on SWIFT Board)
+* Berthold Kracke
+* Dirk Loscher
+* Anne-Pascale Malréchauffé
+
+**Clearstream Banking S.A.:**
+
+* **Philip Brown** — Chief Executive Officer
+* Jean-Marc Di Cato
+* Yannick Goineau
+* Anne-Pascale Malréchauffé
+* Denis Schloremberg
+* Guido Wille
+
+**Clearstream Europe AG:**
+
+* **Dirk Loscher** — Chief Executive Officer
+* Tobias Büchel
+* Martina Gruber
+* Volker Riebesell
+
+**Clearstream Services S.A.:**
+
+* **Florian Pfleiderer** — Chief Executive Officer
+* Boglarka Bartha
+* Armin Borries
+* Jean-Francois Holtz
+
+**Clearstream Fund Centre S.A.:**
+
+* **Philippe Seyll** — Chief Executive Officer
+* David Brosnan
+* Sonia Dribek-Pfleger
+* Kevin Hayes
+* Marco Steeg
+* Bernard Tancré
+* Neil Wise
+
+**Clearstream Fund Centre AG:**
+
+* **Moritz Dechow** — Chief Executive Officer
+* Thomas Erdmann
+* Christophe Hefti
+* Ralph Hug
+* Owen Strickland
+
+**Clearstream International S.A.:**
+
+* **Fabrice Tomenko** — Chief Executive Officer
+* Didier Lenges
+
+**Key initiative (March 2026):** Euroclear and Clearstream simultaneously launched digital bond issuance services to eliminate paper from the €15+ trillion Eurobond market. **Jens Hachmeister** (Clearstream Head of Issuer Services and New Digital Markets) called it "a fundamental shift."
+
+\---
+
+## PART III: THE CENTRAL BANK CARTEL — BIS, Fed, ECB, Bank of England
+
+### 3.1 The Bank for International Settlements (BIS)
+
+**Founded:** May 17, 1930, Basel, Switzerland
+**Legal status:** International organization with extraterritorial jurisdiction — immune from Swiss taxation and banking supervision. Senior management enjoys diplomatic status.
+**Staff:** \~600 from 60+ countries
+**Members:** 63 central banks
+
+**BIS Board of Directors (May 2026):**
+
+|Name|Institution|Role|
+|-|-|-|
+|**François Villeroy de Galhau**|Bank of France|**Chair of the Board**|
+|**Jerome H. Powell**|Federal Reserve System|Board member|
+|**John C. Williams**|Federal Reserve Bank of New York|Board member|
+|**Christine Lagarde**|European Central Bank|Board member|
+|**Andrew Bailey**|Bank of England|Board member|
+|**Joachim Nagel**|Deutsche Bundesbank|Board member|
+|**Kazuo Ueda**|Bank of Japan|Board member|
+|**Pan Gongsheng**|People's Bank of China|Board member|
+|**Tiff Macklem**|Bank of Canada|Board member|
+|**Sanjay Malhotra**|Reserve Bank of India|Board member|
+|**Gabriel Galípolo**|Central Bank of Brazil|Board member|
+|**Martin Schlegel**|Swiss National Bank|Board member|
+|**Hyun Song Shin**|Bank of Korea|Board member|
+|**Erik Thedéen**|Sveriges Riksbank|Board member|
+|**Pierre Wunsch**|National Bank of Belgium|Board member|
+|**Ayman Al-Sayari**|Saudi Central Bank|Board member|
+|**Victoria Rodríguez Ceja**|Bank of Mexico|Board member|
+
+**General Manager:** **Pablo Hernández de Cos** (Spain, since July 2025). Succeeded **Agustín Carstens** (Mexico, 2017-2025).
+
+**Key BIS committees and leadership:**
+
+* **Basel Committee on Banking Supervision (BCBS)** — Chair: **Erik Thedéen** (Governor, Sveriges Riksbank); Secretary: **Neil Esho**
+* **Committee on Payments and Market Infrastructures (CPMI)** — Chair: **Fabio Panetta** (Governor, Bank of Italy)
+* **Financial Stability Board (FSB)** — Hosted by BIS
+* **Irving Fisher Committee** — Central bank statistics
+* **BIS Innovation Hub** — CBDC research and development
+
+**BCBS Membership (28 jurisdictions / 45 institutions):**
+Argentina (Central Bank of Argentina), Australia (Reserve Bank of Australia, Australian Prudential Regulation Authority), Belgium (National Bank of Belgium), Brazil (Central Bank of Brazil), Canada (Bank of Canada, Office of the Superintendent of Financial Institutions), China (People's Bank of China, National Financial Regulatory Administration), European Union (European Central Bank, ECB Single Supervisory Mechanism), France (Bank of France, Prudential Supervision and Resolution Authority), Germany (Deutsche Bundesbank, BaFin), Hong Kong SAR (Hong Kong Monetary Authority), India (Reserve Bank of India), Indonesia (Bank Indonesia, Indonesia Financial Services Authority), Italy (Bank of Italy), Japan (Bank of Japan, Financial Services Agency), Korea (Bank of Korea, Financial Supervisory Service), Luxembourg (Surveillance Commission for the Financial Sector), Mexico (Bank of Mexico, CNBV), Netherlands (Netherlands Bank), Russia (Central Bank of the Russian Federation — suspended), Saudi Arabia (Saudi Central Bank), Singapore (Monetary Authority of Singapore), South Africa (South African Reserve Bank), Spain (Bank of Spain), Sweden (Sveriges Riksbank, Finansinspektionen), Switzerland (Swiss National Bank, FINMA), Türkiye (Central Bank of the Republic of Türkiye, Banking Regulation and Supervision Agency), United Kingdom (Bank of England, Prudential Regulation Authority), United States (Board of Governors of the Federal Reserve System, Federal Reserve Bank of New York, Office of the Comptroller of the Currency, Federal Deposit Insurance Corporation).
+
+**Observers:** Chile, Malaysia, United Arab Emirates.
+
+**The BIS's foundational immunity:**
+
+> "The Bank, its property and assets and all deposits and other funds entrusted to it shall be immune in time of peace and in time of war from any measure such as expropriation, requisition, seizure, confiscation, prohibition or restriction of gold or currency export or import, and any other similar measures."
+
+**Private shareholder history:** Until 2005, the BIS had private shareholders (14% of capital). A group led by First Eagle Investments sued and won, forcing the BIS to pay SFR 25,052.90 per share — above market price — to eliminate private ownership.
+
+### 3.2 The Federal Reserve System
+
+**Current leadership (2026):**
+
+|Name|Role|Term/Status|
+|-|-|-|
+|**Kevin Warsh**|**Chair of the Board of Governors**|Since May 22, 2026|
+|**Jerome H. Powell**|Governor|Remains on Board; term until January 2028; under investigation for Fed headquarters construction|
+|**Philip N. Jefferson**|Vice Chair|Since September 2023|
+|**Michael S. Barr**|Governor|Resigned as Vice Chair for Supervision (February 28, 2025); remains Governor until January 2032|
+|**Michelle W. Bowman**|Vice Chair for Supervision|Since June 2025|
+|**Lisa D. Cook**|Governor|Term until 2038; Trump attempted to fire her; Supreme Court blocked June 2026|
+|**Christopher J. Waller**|Governor|Term until January 2030|
+
+**Federal Reserve Bank Presidents (FOMC voting members 2026):**
+
+* **John C. Williams** — President, Federal Reserve Bank of New York (permanent FOMC voter; Vice Chair of FOMC)
+* **Beth M. Hammack** — President, Federal Reserve Bank of Cleveland
+* **Neel Kashkari** — President, Federal Reserve Bank of Minneapolis
+* **Lorie K. Logan** — President, Federal Reserve Bank of Dallas
+* **Anna Paulson** — President, Federal Reserve Bank of Philadelphia
+
+**April 29, 2026 FOMC decision:** Maintained target range at 3.5-3.75%. Dissenters: Stephen I. Miran (wanted 0.25% cut); Beth Hammack, Neel Kashkari, Lorie Logan (opposed easing bias).
+
+**The New York Fed's unique role:** The only regional bank with a permanent vote on the FOMC. Executes open market operations, holds the System Open Market Account (SOMA), and is the primary interface with Wall Street.
+
+### 3.3 The European Central Bank (ECB)
+
+**President:** **Christine Lagarde** (since November 2019). Former Managing Director, IMF. Former French Finance Minister.
+
+**ECB Governing Council (voting members):**
+
+* Christine Lagarde (President)
+* **Luis de Guindos** (Vice President)
+* 6 Executive Board members
+* 20 National Central Bank Governors (Eurozone)
+
+**Key decisions (2025-2026):**
+
+* Deposit facility rate: 2.0% (October 2025)
+* September 2025: Kept rates unchanged
+* October 2025 projections: headline inflation 2.1% (2025), 1.7% (2026), 1.9% (2027)
+
+**The Digital Euro:**
+
+* Lagarde's signature project. Preparation phase through 2025-2026.
+* Holding limit: €1,500-€4,000 per individual
+* Offline functionality for small transactions
+* Non-interest-bearing
+* Legal tender status
+* Intermediated model (through banks and PSPs, not direct ECB accounts)
+* Target launch: 2029
+
+**Key quote (Lagarde, Atlantic Council 2024):**
+
+> "The digital euro is not just a means of payment; it is also a political statement concerning the sovereignty of Europe."
+
+**The Draghi-Letta reports:** Mario Draghi (former ECB President 2011-2019, former Italian PM) and Enrico Letta produced reports calling for completing the banking union, establishing the savings and investments union, and rapidly establishing the legislative framework for the digital euro.
+
+### 3.4 The Bank of England
+
+**Governor:** **Andrew Bailey** (since March 2020). Former CEO, Financial Conduct Authority.
+
+**The Digital Pound:**
+
+* No decision to issue has been made (as of 2026)
+* Holding limit proposed: £10,000-£20,000
+* UK's regulated stablecoin framework (2024-2025) has reduced pressure for retail CBDC
+
+\---
+
+## PART IV: THE TOO-BIG-TO-FAIL BANKS — The Nodes That Cannot Be Allowed to Die
+
+### 4.1 The Global Systemically Important Banks (G-SIBs)
+
+**U.S. G-SIBs (2026):**
+
+|Bank|Total Assets (2025/2026)|CEO|Key Role|
+|-|-|-|-|
+|**JPMorgan Chase**|\~$4.0 trillion|**Jamie Dimon**|Largest U.S. bank; primary dealer; Fed counterparty|
+|**Bank of America**|\~$3.3 trillion|**Brian Moynihan**|Second-largest; massive consumer deposit base|
+|**Citigroup**|\~$2.4 trillion|**Jane Fraser**|Global network; emerging market exposure|
+|**Wells Fargo**|\~$1.9 trillion|**Charles Scharf**|Consumer and commercial banking|
+|**Goldman Sachs**|\~$600 billion|**David Solomon**|Investment banking; prime brokerage|
+|**Morgan Stanley**|\~$1.2 trillion|**Ted Pick**|Wealth management; investment banking|
+|**Bank of New York Mellon**|\~$500 billion|**Robin Vince**|Custody bank; securities servicing|
+|**State Street**|\~$400 billion|**Ron O'Hanley**|Custody; asset servicing|
+
+**Jamie Dimon (JPMorgan Chase CEO, since 2005):**
+
+* Total compensation 2024: $36 million
+* Led JPM through 2008 crisis, COVID, 2023 regional bank failures
+* JPMorgan acquired First Republic Bank (2023) after its failure
+* Dimon's 2025 shareholder letter criticized GSIB calculations as "convoluted and distorted"
+* JPMorgan's client investment assets in wealth management: $1.3 trillion (2025, up 17%)
+
+**The implicit guarantee:** The AEI analysis (2017) remains valid: even if Glass-Steagall were reinstated, the largest institutions would remain "too big to fail." The real problem is the **implicit belief that the government will protect all creditors of large failing institutions** — especially if multiple institutions fail simultaneously. This is **free insurance** that taxpayers ultimately backstop.
+
+### 4.2 The Primary Dealer System — The Fed's Private Army
+
+The Federal Reserve conducts monetary policy through **primary dealers** — banks and broker-dealers authorized to trade directly with the Fed. There are \~25 primary dealers.
+
+**Key primary dealers (2026):**
+
+* JPMorgan Securities
+* Goldman Sachs
+* Morgan Stanley
+* Bank of America Securities
+* Citigroup Global Markets
+* Barclays Capital
+* Deutsche Bank Securities
+* HSBC Securities
+* Nomura Securities
+* Royal Bank of Canada
+
+**The revolving door:**
+
+* **William Dudley** — President, NY Fed (2009-2018) → Senior advisor, Goldman Sachs
+* **Randal Quarles** — Vice Chair for Supervision, Fed (2017-2021) → Managing Director, Cynosure Group
+* **Mary Daly** — President, San Francisco Fed → Former Goldman Sachs economist
+
+### 4.3 The Custody Banks — The Silent Enablers
+
+**Bank of New York Mellon (BNY Mellon):**
+
+* $52.2 trillion in assets under custody/administration (2024)
+* World's largest custody bank
+* Processes \~20% of global systemically important payments
+* CEO: Robin Vince
+
+**State Street Corporation:**
+
+* $40+ trillion in assets under custody
+* Pioneer of ETF creation (SPDR S\&P 500)
+* CEO: Ron O'Hanley
+
+**JPMorgan Chase (Custody \& Fund Services):**
+
+* $30+ trillion in assets under custody
+* Largest U.S. custodian
+
+\---
+
+## PART V: THE PAYMENT DUOPOLY — Visa \& Mastercard
+
+### 5.1 The Network Architecture
+
+**Visa Inc.**
+
+* Market cap: \~$680 billion (mid-2025)
+* CEO: **Ryan McInerney** (since February 2023). Former JPMorgan Chase consumer banking executive.
+* Top shareholders: Vanguard (\~8.5%), BlackRock (\~7.2%), JPMorgan Chase (\~3.5%), State Street (\~3.8%), Morgan Stanley (\~2.8%)
+* Operating margin: \~67% (highest in S\&P 500)
+
+**Mastercard Inc.**
+
+* Market cap: \~$450 billion
+* CEO: **Michael Miebach** (since 2021)
+* Top shareholders: Same Big Three + Berkshire Hathaway
+* Operating margin: \~57%
+
+**Combined dominance:** Visa and Mastercard control roughly 80-90% of U.S. card network transaction volume and 90% of payment processing outside China.
+
+### 5.2 The Fee Extraction Machine
+
+**Interchange fees:** Average U.S. interchange: 1.5-3.5% of transaction value. Merchants have no ability to negotiate.
+
+**The $30 billion settlement (2024):** Visa, Mastercard, and major banks agreed to \~$30 billion settlement to resolve merchant lawsuits over interchange fees.
+
+**The DOJ antitrust lawsuit (September 2024):** The U.S. Department of Justice sued Visa, alleging illegal monopoly maintenance in the debit card market. Case ongoing as of 2026.
+
+\---
+
+## PART VI: THE FIAT TOKEN ARCHITECTURE — CBDCs, Stablecoins, and Programmable Money
+
+### 6.1 Central Bank Digital Currencies (CBDCs)
+
+**Live retail CBDCs (2026):**
+
+1. **eNaira (Nigeria)** — Launched 2021. Low adoption.
+2. **Sand Dollar (Bahamas)** — Live since 2020.
+3. **JAM-DEX (Jamaica)** — Launched 2022.
+4. **DCash (Eastern Caribbean)** — Relaunched after 2022 outage.
+5. **e-CNY (China)** — Largest pilot. 3.4+ billion transactions, \~$2.3 trillion value (December 2025). Reclassified as deposit liabilities (January 2026).
+
+**Pending retail CBDCs:**
+
+* **Digital Euro (ECB):** Preparation phase through 2025-2026. Pilot H2 2027. Launch target 2029. Holding limit: €3,000. Offline functionality included.
+* **Digital Pound (Bank of England):** Design phase. No issuance decision made. Holding limit: £10,000-£20,000.
+* **U.S. Digital Dollar:** Deprioritized after 2025 executive orders. Focus on wholesale CBDC research.
+
+### 6.2 Project mBridge — The China-Gulf Axis
+
+**Full participants:**
+
+* **People's Bank of China (PBOC)**
+* **Hong Kong Monetary Authority (HKMA)**
+* **Bank of Thailand**
+* **Central Bank of the UAE**
+* **Saudi Central Bank (SAMA)** — joined as full participant in 2024
+
+**BIS involvement:** The BIS incubated the project but **exited on October 31, 2024**. **Agustín Carstens** (then BIS GM) framed it as a "graduation."
+
+**Post-BIS activity:** mBridge processed >4,000 cross-border transactions with cumulative value \~$55.49 billion. Digital yuan accounts for \~95.3% of total settlement volume.
+
+**Key event (November 2025):** UAE Ministry of Finance and Dubai Department of Finance executed the first government financial transaction using the wholesale digital dirham on mBridge.
+
+**31 observing members** include: Asian Infrastructure Investment Bank, Bangko Sentral ng Pilipinas, Bank Indonesia, Bank of France, Bank of Israel, Bank of Italy, Bank of Korea, Bank of Mauritius, Bank of Namibia, Central Bank of Bahrain, Central Bank of Brazil, Central Bank of Chile, Central Bank of Egypt, Central Bank of Jordan, Central Bank of Luxembourg, Central Bank of Malaysia, Central Bank of Nepal, Central Bank of Norway, Central Bank of Türkiye, ECB, IMF, Magyar Nemzeti Bank, Monetary Authority of Macao, National Bank of Cambodia, National Bank of Georgia, National Bank of Kazakhstan, NY Fed Innovation Center, Reserve Bank of Australia, Reserve Bank of India, South African Reserve Bank, World Bank.
+
+**The geopolitical significance:** mBridge replaces correspondent banking. It is a renminbi-denominated wholesale settlement rail for trade between China and the Gulf, running **outside the dollar correspondent system**.
+
+### 6.3 Project Agorá — The Western Bloc Response
+
+**Led by:** BIS Innovation Hub
+
+**Seven participating central banks:**
+
+* **Bank of England**
+* **Banque de France** (representing the Eurosystem)
+* **Bank of Japan**
+* **Bank of Korea**
+* **Bank of Mexico**
+* **Swiss National Bank**
+* **Federal Reserve Bank of New York** (through its New York Innovation Center)
+
+**Private sector:** 40+ regulated financial institutions convened by the **Institute of International Finance (IIF)**.
+
+**Key personnel:**
+
+* **Per von Zelowitz** — Director, New York Innovation Center (NYIC), Federal Reserve Bank of New York
+
+**Design:** Tokenized commercial bank deposits + tokenized wholesale central bank money on a unified programmable ledger. **Preserves correspondent banking** (unlike mBridge, which replaces it).
+
+**Status:** Testing phase; findings expected first half of 2026.
+
+### 6.4 Private Stablecoins — The Shadow Currency
+
+**Tether (USDT):**
+
+* Market cap: \~$150 billion (2026)
+* Issuer: Tether Limited (British Virgin Islands)
+* 2021 CFTC fine: $41 million for misrepresenting reserves
+
+**USD Coin (USDC):**
+
+* Market cap: \~$60 billion
+* Issuer: Circle (U.S., backed by Coinbase, BlackRock, Fidelity)
+
+**The GENIUS Act (2025):** U.S. legislation establishing federal framework for stablecoin regulation. Delegates "retail digital dollar" functionality to private issuers while Fed focuses on wholesale CBDC research.
+
+\---
+
+## PART VII: THE CORRESPONDENT BANKING HIERARCHY — The Global Pyramid
+
+### 7.1 The Three Tiers
+
+**Tier 1: Central Banks** — Issue base money, settle interbank payments, lender of last resort.
+
+**Tier 2: G-SIBs / Primary Dealers** — Hold correspondent accounts at central banks, trade directly with central banks, provide liquidity to Tier 3.
+
+**Tier 3: Regional and National Banks** — Hold correspondent accounts at Tier 2 banks, serve local businesses and consumers, no direct central bank access.
+
+**Tier 4: Local Banks and Payment Processors** — Hold accounts at Tier 3 banks, serve individual customers.
+
+### 7.2 The Correspondent Account as Control Point
+
+When a Nigerian bank wants to process a U.S. dollar payment, it must hold a correspondent account at a U.S. bank (typically a G-SIB). That U.S. bank holds its dollar reserves at the Federal Reserve.
+
+**De-risking:** Since 2008, major U.S. and European banks have closed correspondent accounts for banks in developing countries. The stated reason: AML/CFT compliance costs. The actual effect: **financial exclusion of entire regions** from the dollar system.
+
+\---
+
+## PART VIII: THE CLOSED REGISTRIES — Beneficial Ownership and the Secrecy Infrastructure
+
+### 8.1 The Beneficial Ownership Illusion
+
+**The Corporate Transparency Act (U.S., 2021):**
+
+* Architects: **Senator Sheldon Whitehouse (D-RI)** and **Senator Chuck Grassley (R-IA)** — original sponsors of the TITLE Act (precursor to CTA)
+* **Senator Ron Wyden (D-OR)** and **Senator Marco Rubio (R-FL)** — original Senate sponsors of the CTA
+* **Congresswoman Maxine Waters (D-CA)** — shepherded the bill into law as Chairwoman of House Financial Services Committee
+* **Senator Elizabeth Warren (D-MA)** and **Senator Jack Reed (D-RI)** — instrumental in shaping the legislation
+* Passed as part of FY2021 National Defense Authorization Act
+
+**Trump Administration (2025) actions:**
+
+* **Scott Bessent** — Treasury Secretary (appointed by Trump)
+* FinCEN Interim Final Rule (March 26, 2025): Eliminated beneficial owner reporting requirement for U.S. entities. Now only foreign reporting companies must file.
+* **Donald Trump** called the CTA an "absolute disaster"
+* Republican legislation introduced: "Repealing Big Brother Overreach Act" (S. 100, H.R. 425) — would eliminate reporting for ALL companies
+
+**The EU Anti-Money Laundering Directives:**
+
+* **AMLD4 (2015):** Required member states to establish beneficial ownership registers
+* **AMLD5 (2018):** Mandated public access (with fees)
+* **2022 European Court of Justice ruling:** Public access violates privacy rights. Registers closed to general public.
+
+**The British Virgin Islands (BVI):**
+
+* April 1, 2026: BVI opens beneficial ownership registry to third parties with "legitimate interest" — fee: $75 per request.
+
+### 8.2 The Trust Architecture — South Dakota as the Secrecy Capital
+
+**South Dakota trust law architects:**
+
+* **Steven J. Oshins** — Nevada attorney; produces annual rankings chart of Dynasty Trust states; South Dakota has ranked #1 for nine consecutive years
+* South Dakota abolished the Rule Against Perpetuities in 1983 — first state to do so
+* **Key features:** No income tax, no capital gains tax, no dividend tax, no estate tax, perpetual trusts, directed trusts, trust protectors, private family trust companies, sealing of trust records in court proceedings
+
+**The mechanism:** A family from New York or California transfers assets to a South Dakota trust. The assets grow forever, insulated from federal transfer taxes, protected from creditors, and shielded from public view. The only requirement: the trustee must be a South Dakota resident.
+
+**The scale:** South Dakota is consistently ranked by Trusts \& Estates magazine as the top U.S. trust jurisdiction. Trillions of dollars in assets are held in South Dakota trusts for families from around the world.
+
+\---
+
+## PART IX: THE BYZANTINE NODES — Consensus, Trust, and Control
+
+### 9.1 The Byzantine Generals Problem in Finance
+
+In the **centralized financial system**, the "solution" is **hierarchical trust**:
+
+* You trust your bank because it is regulated by the central bank
+* You trust the central bank because it is backed by the government
+* You trust the government because... (circular logic, ultimately backed by military force and tax extraction)
+
+**The "Byzantine nodes" of the legacy system are the central banks, SIFMUs, and G-SIBs.** They do not need to reach consensus through cryptography because they **are the consensus**.
+
+### 9.2 The Consensus Mechanism of Power
+
+In the legacy financial system, "consensus" is reached through:
+
+* **BIS Basel Committee meetings** — 27 central bank governors agree on capital rules
+* **FOMC votes** — 12 bankers vote on interest rates
+* **DTCC board decisions** — 25 directors decide on tokenization
+* **SWIFT shareholder votes** — 2,000 banks vote on messaging standards
+* **Bilderberg/WEF sessions** — Unrecorded, unaccountable alignment of elite opinion
+
+The difference: blockchain consensus is **verifiable by anyone**. Legacy financial consensus is **opaque by design**.
+
+### 9.3 The Single Point of Failure
+
+The legacy system claims to be robust because it is "distributed" across thousands of banks. But the reality is **extreme centralization**:
+
+* **4 banks** (JPM, BofA, Citi, Wells) hold \~50% of U.S. deposits
+* **3 asset managers** (BlackRock, Vanguard, State Street) vote the majority of S\&P 500 shares
+* **2 payment networks** (Visa, Mastercard) process 90% of non-China card transactions
+* **1 messaging system** (SWIFT) dominates cross-border payments
+* **1 securities depository** (DTC/Cede \& Co.) holds legal title to virtually all U.S.
+CategoryCountSourceOFAC exact matches (BlackRock vessel)1OFAC SDNOFAC family members (dynasties)58OFAC SDNOFAC Russian vessels (shadow fleet)455OFAC SDNOFAC Russian energy/defense companies260OFAC SDNOpenSanctions new Russian oligarchs985OpenSanctionsOpenSanctions new vessels617OpenSanctionsOpenSanctions new PEPs (target regimes)93OpenSanctionsTOTAL NEW2,469CombinedKey Dynasties (OFAC Family Members)
+Gaddafi Dynasty (Libya)
+Mutassim Gaddafi — ent_num 12609, LIBYA2
+Hannibal Gaddafi — ent_num 12627, DOB 20 Sep 1975
+Muhammad Gaddafi — ent_num 12628, DOB 1970
+Saadi Gaddafi — ent_num 12629, DOB 27 May 1973
+Saif Al-Arab Gaddafi — ent_num 12631, DOB 1979
+Assad Dynasty (Syria)
+Bashar al-Assad — ent_num 12735, PAARSSR-EO13894, President
+Maher al-Assad — ent_num 12725, Major General, 4th Armored Division
+Asma al-Assad — ent_num 29068, DOB 11 Aug 1975, UK-born
+Bushra al-Assad — ent_num 29072, DOB 24 Oct 1960
+Manal al-Assad — ent_num 29076, DOB 02 Feb 1970
+Hafez al-Assad (son) — ent_num 29279, DOB 04 Dec 2001
+Rotenberg Dynasty (Russia)
+Arkady Rotenberg — ent_num 16669, UKRAINE-EO13661 / RUSSIA-EO14024
+Boris Rotenberg — ent_num 16671, UKRAINE-EO13661 / RUSSIA-EO14024
+Roman Borisovich Rotenberg — ent_num 18310, son
+Igor Arkadyevich Rotenberg — ent_num 24183, son
+Prigozhin Family (Russia)
+Yevgeniy Viktorovich Prigozhin — ent_num 21171, UKRAINE-EO13661 / CYBER2 / ELECTION-EO13848 / RUSSIA-EO14024
+Polina Evgenyevna Prigozhina — ent_num 31671, RUSSIA-EO14024
+Pavel Evgenyevich Prigozhin — ent_num 31672, RUSSIA-EO14024
+Kerimov Family (Russia)
+Suleiman Abusaidovich Kerimov — ent_num 24325, UKRAINE-EO13661 / RUSSIA-EO14024
+Said Suleymanovich Kerimov — ent_num 38276, RUSSIA-EO14024
+Firuza Nazimovna Kerimova — ent_num 38277, RUSSIA-EO14024
+Mordashov Family (Russia)
+Alexey Aleksandrovich Mordashov — ent_num 37499, RUSSIA-EO14024
+Marina Aleksandrovna Mordashova — ent_num 37500, RUSSIA-EO14024
+Nikita Alekseyevich Mordashov — ent_num 37501, RUSSIA-EO14024
+Medvedev Network (Russia)
+Dmitry Anatolievich Medvedev — ent_num 36407, RUSSIA-EO14024
+Valery Kirillovich Medvedev — ent_num 16757, UKRAINE-EO13660, Chair of Sevastopol Electoral Commission
+Gennadiy Medvedev — ent_num 26443, UKRAINE-EO13661, Deputy Director Border Guard Service
+Timchenko Family (Russia)
+Gennady Nikolayevich Timchenko — ent_num 16666, UKRAINE-EO13661 / RUSSIA-EO14024, Finland/Russia/Armenia nationality
+Elena Petrovna Timchenko — ent_num 35960, RUSSIA-EO14024
+Vyacheslav Stepanovich Timchenko — ent_num 36877, RUSSIA-EO14024
+Lavrov Network (Russia)
+Sergei Viktorovich Lavrov — ent_num 35233, RUSSIA-EO14024
+Maria Aleksandrovna Lavrova — ent_num 36404, RUSSIA-EO14024
+KIRILL LAVROV — vessel, ent_num 51481, UKRAINE-EO13662 / RUSSIA-EO14024
+Kolbin Network (Russia)
+Petr Kolbin — ent_num 18307, UKRAINE-EO13661, DOB 02 Jan 1952
+Sergey Nikolayevich Kolbin — ent_num 36821, RUSSIA-EO14024
+Shoigu Family (Russia)
+Sergei Kuzhugetovich Shoigu — ent_num 35173, RUSSIA-EO14024
+Irina Aleksandrovna Shoigu — ent_num 38656, RUSSIA-EO14024
+Yuliya Sergeyevna Shoigu — ent_num 38657, RUSSIA-EO14024
+OFAC Russian Vessels — Shadow Fleet (455)
+455 vessels sanctioned under Russia/Ukraine programs. These are not commercial ships — they are documented components of the Russian shadow fleet transporting sanctioned oil and evading price caps. Full list in new_discovered_entities_cleaned.csv.
+Notable:
+
+KIRILL LAVROV — vessel linked to Foreign Minister Lavrov's family
+Multiple LNG carriers and oil tankers under Russian flag and shell ownership
+OFAC Russian Energy/Defense (260)
+260 new companies in oil, gas, defense, military, shipping, nuclear sectors. These fill gaps in the original ZAFLA entity list — subsidiaries, shell companies, and procurement fronts not previously catalogued.
+OpenSanctions — 985 New Russian Oligarchs/Officials
+985 individuals sanctioned or flagged in OpenSanctions, filtered for wealth/power indicators (billionaire, oligarch, businessman, owner, chairman, minister, general, FSB/SVR/GRU, military, defense, oil, gas, bank). These represent the second and third tiers of Russian kleptocratic capital — the layer below the top 10 oligarchs but still holding billions in frozen/assets.
+OpenSanctions — 617 New Vessels
+617 additional vessels flagged in OpenSanctions under Russian jurisdiction. Combined with OFAC's 455, this gives 1,072 documented shadow fleet vessels — a comprehensive map of Russia's maritime sanctions-evasion infrastructure.
+OpenSanctions — 93 New PEPs
+93 politically exposed persons from Russia, Syria, Equatorial Guinea, Libya, Nigeria, Venezuela, Iran, North Korea, Belarus. Filtered for high-ranking positions (president, minister, general, governor, commander, colonel, admiral, marshal).
