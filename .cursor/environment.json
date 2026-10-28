@@ -1,0 +1,11 @@
+{
+  "name": "13.10.1307",
+  "install": "bash .cursor/install.sh",
+  "start": "bash .cursor/start.sh",
+  "ports": [
+    {
+      "name": "zafla-audits",
+      "port": 8017
+    }
+  ]
+}
