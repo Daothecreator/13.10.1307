@@ -29,7 +29,3 @@ locate_audits_repo() {
   fi
   return 1
 }
-
-zafla_cache_dir() {
-  printf '%s\n' "${ZAFLA_CACHE:-${HOME:-/home/ubuntu}/.cache/zafla}"
-}

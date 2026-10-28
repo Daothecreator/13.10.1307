@@ -29,6 +29,9 @@ AUDITS_DIR="$(locate_audits_repo "$ROOT")" || {
 }
 echo "Audits repo: $AUDITS_DIR"
 
+export PYTHONPYCACHEPREFIX="${HOME:-/home/ubuntu}/.cache/zafla/pyc"
+mkdir -p "$PYTHONPYCACHEPREFIX"
+
 python3 -m py_compile \
   "$AUDITS_DIR/src/server.py" \
   "$AUDITS_DIR/src/audits_db.py" \
@@ -36,26 +39,24 @@ python3 -m py_compile \
   "$AUDITS_DIR/examples/quickstart.py" \
   "$AUDITS_DIR/atlas_pipeline.py"
 
-CACHE="$(zafla_cache_dir)"
-mkdir -p "$CACHE"
+# Default paths used by quickstart.py and server.py. Both filenames are gitignored.
+python3 "$AUDITS_DIR/src/download_db.py" "$AUDITS_DIR/AUDITS_DB.sqlite"
 
-python3 "$AUDITS_DIR/src/download_db.py" "$CACHE/AUDITS_DB.sqlite"
-
-if [[ ! -s "$CACHE/atlas.db" ]]; then
-  unzip -q -o "$AUDITS_DIR/atlas.db.zip" -d "$CACHE"
+if [[ ! -s "$AUDITS_DIR/atlas.db" ]]; then
+  unzip -q -o "$AUDITS_DIR/atlas.db.zip" -d "$AUDITS_DIR"
 fi
 
-python3 - "$CACHE" <<'PY'
+python3 - "$AUDITS_DIR" <<'PY'
 import sqlite3
 import sys
 
-cache = sys.argv[1]
-audits = sqlite3.connect(f"{cache}/AUDITS_DB.sqlite")
+root = sys.argv[1]
+audits = sqlite3.connect(f"{root}/AUDITS_DB.sqlite")
 files = audits.execute("SELECT COUNT(*) FROM files").fetchone()[0]
 print(f"AUDITS_DB files: {files}")
 if files < 1:
     raise SystemExit("AUDITS_DB has no files")
-atlas = sqlite3.connect(f"{cache}/atlas.db")
+atlas = sqlite3.connect(f"{root}/atlas.db")
 events = atlas.execute("SELECT COUNT(*) FROM events").fetchone()[0]
 print(f"atlas events: {events}")
 if events < 1:

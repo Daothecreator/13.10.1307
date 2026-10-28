@@ -12,10 +12,8 @@ AUDITS_DIR="$(locate_audits_repo "$ROOT")" || {
   echo "Could not find the 17 audits repository (src/server.py)." >&2
   exit 1
 }
-CACHE="$(zafla_cache_dir)"
-DB="$CACHE/AUDITS_DB.sqlite"
-if [[ ! -f "$DB" ]]; then
-  echo "Missing $DB. Run .cursor/install.sh first." >&2
+if [[ ! -f "$AUDITS_DIR/AUDITS_DB.sqlite" ]]; then
+  echo "Missing $AUDITS_DIR/AUDITS_DB.sqlite. Run .cursor/install.sh first." >&2
   exit 1
 fi
 
@@ -37,4 +35,4 @@ then
 fi
 
 cd "$AUDITS_DIR"
-exec python3 src/server.py --db "$DB" --host 0.0.0.0 --port 8017
+exec python3 -u src/server.py --host 0.0.0.0 --port 8017
