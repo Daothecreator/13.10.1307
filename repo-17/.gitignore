@@ -1,3 +1,7 @@
 
 atlas.db
 cloudflared.exe
+AUDITS_DB.sqlite
+AUDITS_DB.sqlite.part
+__pycache__/
+*.pyc
